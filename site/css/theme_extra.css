@@ -1,0 +1,252 @@
+/*
+ * Tweak the overal size to better match RTD.
+ */
+html {
+    font-size: 90%;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+  font-family: 'Lato', Times, serif;
+}
+
+h3, h4, h5, h6 {
+    color: #2980b9;
+    font-weight: 300
+}
+
+a {
+  color: #4183C4;
+}
+
+/* top content */
+.top {
+  max-width: 100%;
+  height: 30% !important;
+}
+
+.wy-nav-content-wrap {
+  background: #fff;
+}
+
+/*
+ * Sphinx doesn't have support for section dividers like we do in
+ * MkDocs, this styles the section titles in the nav
+ *
+ * https://github.com/mkdocs/mkdocs/issues/175
+ */
+
+.wy-side-nav-search {
+  background-color: #fff;
+}
+
+.wy-side-nav-search input[type=text] {
+  border-color: #424242;
+  opacity: 0.6;
+}
+
+.wy-menu-vertical span {
+    line-height: 18px;
+    padding: 0.4045em 1.618em;
+    display: block;
+    position: relative;
+    font-size: 90%;
+    color: #838383;
+}
+
+.wy-menu-vertical .subnav a {
+    padding: 0.4045em 2.427em;
+}
+
+.wy-nav-content {
+  padding-top: 0.8em;
+}
+
+/*
+ * Long navigations run off the bottom of the screen as the nav
+ * area doesn't scroll.
+ *
+ * https://github.com/mkdocs/mkdocs/pull/202
+ */
+.wy-nav-side {
+  height: 100%;
+  box-shadow: 3px 0px 8px 0px #8e927e;
+  overflow-y: auto;
+  background: #bdbdbd;
+}
+
+.wy-menu-vertical a {
+  color: #424242;
+}
+
+.wy-menu-vertical li ul li a {
+  color: #424242;
+}
+
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a:active {
+  color: #404040;
+}
+
+.wy-menu-vertical a:active {
+  background-color: #bdbdbd;
+}
+
+.wy-menu-vertical a:focus {
+  background-color: #bdbdbd;
+}
+
+.wy-menu-vertical a:hover {
+  background-color: #9e9e9e;
+}
+
+.wy-nav-title {
+  padding-right: 0; 
+  display: inline-block; 
+  position: relative; 
+  line-height: 50px;
+}
+
+.wy-side-nav-search img {
+  width: 65%;
+  height: 60px;
+  position: relative;
+  display: inline;
+  top: 5px;
+  margin-left: -10px;
+  border-radius: 0%;
+  background-color: #fff !important;
+}
+.rst-versions {
+  background: none;
+  border-top: none; 
+}
+
+.rst-versions .rst-current-version {
+  background-color: #616161;
+}
+
+/*
+ * readthedocs theme hides nav items when the window height is
+ * too small to contain them.
+ *
+ * https://github.com/mkdocs/mkdocs/issues/#348
+ */
+.wy-menu-vertical ul {
+  margin-bottom: 2em;
+}
+
+.wy-menu-vertical a {
+  font-size: 95%;
+}
+
+/*
+ * Fix wrapping in the code highlighting
+ *
+ * https://github.com/mkdocs/mkdocs/issues/233
+ */
+code, .rst-content tt {
+    white-space: pre;
+    font-family:  Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 80%;
+    color: black;
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+/*
+ * Wrap inline code samples otherwise they shoot of the side and
+ * can't be read at all.
+ *
+ * https://github.com/mkdocs/mkdocs/issues/313
+ */
+p code {
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+
+/*
+ * The CSS classes from highlight.js seem to clash with the
+ * ReadTheDocs theme causing some code to be incorrectly made
+ * bold and italic.
+ *
+ * https://github.com/mkdocs/mkdocs/issues/411
+ */
+code.cs, code.c {
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+/*
+ * Fix some issues with the theme and non-highlighted code
+ * samples. Without and highlighting styles attached the
+ * formatting is broken.
+ *
+ * https://github.com/mkdocs/mkdocs/issues/319
+ */
+.no-highlight {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+}
+
+
+/*
+ * Additions specific to the search functionality provided by MkDocs
+ */
+
+#mkdocs-search-results article h3
+{
+    margin-top: 23px;
+    border-top: 1px solid #E1E4E5;
+    padding-top: 24px;
+}
+
+#mkdocs-search-results article:first-child h3 {
+    border-top: none;
+}
+
+#mkdocs-search-query{
+    width: 100%;
+    border-radius: 50px;
+    padding: 6px 12px;
+    border-color: #D1D4D5;
+}
+
+.wy-menu-vertical li ul {
+    display: inherit;
+}
+
+.wy-menu-vertical li ul.subnav ul.subnav{
+    padding-left: 1em;
+}
+
+
+/*
+ * Improve inline code blocks within admonitions.
+ *
+ * https://github.com/mkdocs/mkdocs/issues/656
+ */
+ div.admonition code {
+  color: #404040;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/*
+* Make the code block scroll-bar always visible
+*/
+.hljs::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 7px;    
+}
+
+.hljs::-webkit-scrollbar-thumb {
+   border-radius: 2px;
+   background-color: gray; 
+ }
+
+ @media screen and (max-width: 767px) {
+  .wy-nav-top {
+    background-color: #47354c;
+  }
+ }

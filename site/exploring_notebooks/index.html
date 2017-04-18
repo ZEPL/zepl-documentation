@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="ZEPL">
+  
+  <title>Explore Public Notebooks - ZEPL Documentation</title>
+  
+
+  <link rel="shortcut icon" href="favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Explore Public Notebooks";
+    var mkdocs_page_input_path = "exploring_notebooks.md";
+    var mkdocs_page_url = "/exploring_notebooks/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="../js/extra.js"></script>
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-38575365-14', 'docs.zepl.com');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="..">
+          <img src="/img/zepl_logo.png" alt="ZeppelinHub-Logo" class="wy-side-nav-search">
+        </a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Welcome</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Key Concepts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Guide</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../zeppelin_integration/">Integration with Apache Zeppelin</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sharing_notebooks/">Sharing Notebooks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Explore Public Notebooks</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#what-is-the-showcase">What is the Showcase ?</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../support/">Support</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../release_note/">Release Notes</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ZEPL Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <img src="../img/zeppelinhub_ad.png" class="top" />
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User Guide &raquo;</li>
+        
+      
+    
+    <li>Explore Public Notebooks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><span class="header-font">Explore Public Notebooks</span></p>
+<p><a href="https://www.zepl.com/explore">ZEPL Explore</a> is a community page for sharing Apache Zeppelin notebooks. 
+As long as the notebook is set as <strong>Published(a.k.a Public)</strong>, you can get the public URI and anyone(even non-ZEPL users) can see the notebook.</p>
+<p><center><img src="../img/explore_notebook_main.png" class="big-img"/></center></p>
+<p><br/></p>
+<h1 id="what-is-the-showcase">What is the Showcase ?</h1>
+<p>ZEPL has number of showcase available.</p>
+<p><img src="../img/showcases.png" class="image-box"/></p>
+<p>You can label your notebook with one of the showcase tags, so it will appear under particular Showcase section inside <strong>Explore</strong> page.</p>
+<p>If you select the showcases when you set your notebook to <strong>Published(a.k.a Public)</strong> mode, the notebook will be added under that showcase. 
+Now you can show off awesome notebooks through the ZEPL!</p>
+<p><img src="../img/showcase_example.png" class="image-box big-img"/></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../support/" class="btn btn-neutral float-right" title="Support">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sharing_notebooks/" class="btn btn-neutral" title="Sharing Notebooks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../sharing_notebooks/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../support/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
