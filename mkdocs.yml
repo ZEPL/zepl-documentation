@@ -1,0 +1,29 @@
+# Site Information
+site_name: ZEPL Documentation
+site_url: http://docs.zepl.com/
+site_description: ZEPL Documentation Site
+site_author: ZEPL
+site_favicon: favicon.ico
+
+# repo_url: https://github.com/ZEPL/zepl-documentation
+
+# Included pages list
+pages:
+- Welcome: index.md
+- Key Concepts: overview.md
+- User Guide: 
+    - Integration with Apache Zeppelin: zeppelin_integration.md
+    - Sharing Notebooks: sharing_notebooks.md
+    - Explore Public Notebooks: exploring_notebooks.md
+- Support: support.md
+- Release Notes: release_note.md
+
+# Theme & Javascript & CSS
+theme_dir: 'custom_theme'
+extra_javascript:  
+  - js/extra.js
+extra_css: 
+  - css/extra.css
+
+# Google Analytics 
+google_analytics: ['UA-38575365-14', 'docs.zepl.com']
