@@ -83,6 +83,9 @@ After then, let's deploy it to ZEPL Documentation site.
 $ mkdocs gh-deploy --clean
 ```
 
-# Documentation URL
-After complete the deploy, you can see the final result.
-[http://docs.zepl.com/](http://docs.zepl.com/) 
+Check the final result at [http://docs.zepl.com/](http://docs.zepl.com/) 
+
+# GA Tracking
+
+ - Tracking ID : *UA-38575365-18*
+ - [Tracking Dashboard](https://analytics.google.com/analytics/web/#realtime/rt-overview/a38575365w143724583p148362231/)

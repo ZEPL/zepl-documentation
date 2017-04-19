@@ -26,4 +26,4 @@ extra_css:
   - css/extra.css
 
 # Google Analytics 
-google_analytics: ['UA-38575365-14', 'docs.zepl.com']
+google_analytics: ['UA-38575365-18', 'docs.zepl.com']
