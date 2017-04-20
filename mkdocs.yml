@@ -27,3 +27,8 @@ extra_css:
 
 # Google Analytics 
 google_analytics: ['UA-38575365-18', 'docs.zepl.com']
+
+# Markdown Extension
+markdown_extensions:
+    - toc:
+        permalink: True
