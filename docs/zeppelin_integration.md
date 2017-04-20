@@ -68,7 +68,7 @@ export ZEPPELINHUB_USER_KEY="YOUR_USER_KEY"
 ```
 
 <br/>
-<span class="version-font"> Zeppelin-0.6.X or later </span>
+<span class="version-font"> Zeppelin-0.6.X</span>
 
 ```sh
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.VFSNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
@@ -79,6 +79,25 @@ export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
 export ZEPPELINHUB_USER_KEY="YOUR_USER_KEY"
 ```
 As you can see, only `ZEPPELIN_NOTEBOOK_STORAGE` was updated on **Zeppelin-0.6.X**.
+
+<br/>
+<span class="version-font"> Zeppelin-0.7.x single user</span>
+
+```sh
+export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.VFSNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
+export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
+export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
+```
+<br/>
+<span class="version-font"> Zeppelin-0.7.x multiple users on Zeppelin server</span>
+
+```sh
+export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.VFSNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
+export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
+```
+As you can see, you don't need `ZEPPELINHUB_API_TOKEN` in this case, and you can utilize login with your ZEPL account, as described in the next section. In this case your token will be automatically recognized from your `instance` information and default one will be loaded.
+
+
 You may also find up-to-date instructions on integrating latest Apache Zeppelin master branch with ZEPL on corresponding [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
 
 <br/>
