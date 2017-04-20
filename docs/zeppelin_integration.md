@@ -97,18 +97,6 @@ As you can see, you don't need `ZEPPELINHUB_API_TOKEN` in this case, and you can
 You may also find up-to-date instructions on integrating latest Apache Zeppelin master branch with ZEPL on corresponding [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
 
 <br/>
-Now, start (or restart) Apache Zeppelin.
-
-```
-$ cd ZEPPELIN_HOME
-$ ./bin/zeppelin-daemon.sh start (or restart)
-```
-
-Then come back to ZEPL and check whether the green light is turned on or not.
-
-<img src="../img/connected_instance.png" class="image-box small-img"/>
-
-<br/>
 ## Login to Apache Zeppelin 0.7.x with ZEPL credentials
 Starting from 0.7.x release Apache Zeppelin has added more multi-user support functionality, so we made it possible to login to Zeppelin with ZEPL credentials in case multiple users use same Zeppelin server. For better experience with integration we recommend you to use the latest release of `0.7.x` branch (e.g. `0.7.1`).
 
@@ -129,7 +117,22 @@ securityManager.realms = $zeppelinHubRealm
 ```
 note that instead of `service_url` you should have URL of your ZEPL service (e.g. https://preview.zepl.com).
 
-Now you can login to Zeppelin with your ZEPL account credentials.
+It completes this section by letting you login to Zeppelin with your ZEPL account credentials.
+
+<br/>
+## Start Apache Zeppelin daemon
+<br/>
+Finally, start (or restart) Apache Zeppelin.
+
+```
+$ cd ZEPPELIN_HOME
+$ ./bin/zeppelin-daemon.sh start (or restart)
+```
+
+Then come back to ZEPL and check whether the green light is turned on or not.
+
+<img src="../img/connected_instance.png" class="image-box small-img"/>
+
 <br/>
 ## Migrating Configurations
 If you upgraded Zeppelin-0.5.X to later version, you need to change some configurations in Apache Zeppelin.
