@@ -110,7 +110,7 @@ Then come back to ZEPL and check whether the green light is turned on or not.
 
 <br/>
 ## Login to Apache Zeppelin 0.7.x with ZEPL credentials
-Starting from 0.7.x release Apache Zeppelin has added more multi-user support functionality, so we made it possible to login to Zeppelin with ZEPL credentials in case multiple users use same Zeppelin server.
+Starting from 0.7.x release Apache Zeppelin has added more multi-user support functionality, so we made it possible to login to Zeppelin with ZEPL credentials in case multiple users use same Zeppelin server. For better experience with integration we recommend you to use the latest release of `0.7.x` branch (e.g. `0.7.1`).
 
 So, first you'll need to modify your `conf/shiro.ini` security configuration file. If you don't have this file, you can create it from `ZEPPELIN_HOME/conf/shiro.ini.template`.
 
