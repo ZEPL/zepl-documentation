@@ -74,11 +74,7 @@ export ZEPPELINHUB_USER_KEY="YOUR_USER_KEY"
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.VFSNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
 export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
 export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
-
-# With user key if provided
-export ZEPPELINHUB_USER_KEY="YOUR_USER_KEY"
 ```
-As you can see, only `ZEPPELIN_NOTEBOOK_STORAGE` was updated on **Zeppelin-0.6.X**.
 
 <br/>
 <span class="version-font"> Zeppelin-0.7.x single user</span>
