@@ -29,16 +29,6 @@ So it will remove all notebook information included the instance from ZEPL.
 <br/>
 # Connect ZEPL with Apache Zeppelin
 
-## (Deprecated) Download integration library
-<span class="note-font">**NOTE : ** This section is only for Zeppelin-0.5.X users.
-If you are using Zeppelin-0.6.X or later, you can skip this section.</span>
-
-First of all, you need a library for integration.
-Please click this [download link](https://s3-ap-northeast-1.amazonaws.com/zeppel.in/zeppelinhub-integration-v0.4.0-all.jar) for the latest version.
-Then copy your library into `lib` directory under your ZEPPELIN_HOME ( Apache Zeppelin installation directory ).
-If you don't have `lib` folder, just create a new one.
-
-<br/>
 ## Setting Apache Zeppelin environment variables
 
 When you connect a instance to your ZEPL account, you need to set the following **environment variables** into your `ZEPPELIN_HOME/conf/zeppelin-env.sh` file.
@@ -57,6 +47,11 @@ Don't forget to copy your **Token** generated before.
 Below steps are little bit different according to your Apache Zeppelin version. So please check the version first.  
 
 ### (Deprecated) Zeppelin-0.5.X
+
+First of all, you need a library for integration.
+Please click this [download link](https://s3-ap-northeast-1.amazonaws.com/zeppel.in/zeppelinhub-integration-v0.4.0-all.jar) and copy it into `lib` directory under your ZEPPELIN_HOME (Apache Zeppelin installation directory).
+If you don't have `lib` folder, just create a new one.
+
 
 ```sh
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.VFSNotebookRepo, com.nflabs.zeppelinhub.notebook.repo.ZeppelinHubRepo"
@@ -100,7 +95,7 @@ You may also find up-to-date instructions on integrating latest Apache Zeppelin 
 ## Login to Apache Zeppelin 0.7.x with ZEPL credentials
 Starting from 0.7.x release Apache Zeppelin has added more multi-user support functionality, so we made it possible to login to Zeppelin with ZEPL credentials in case multiple users use same Zeppelin server. For better experience with integration we recommend you to use the latest release of `0.7.x` branch (e.g. `0.7.1`).
 
-So, first you'll need to modify your `conf/shiro.ini` security configuration file. If you don't have this file, you can create it from `ZEPPELIN_HOME/conf/shiro.ini.template`.
+After you set the environment variables mentioned in [the previous section](#zeppelin-07x-multiple-users-on-zeppelin-server), first you'll need to modify your `conf/shiro.ini` security configuration file. If you don't have this file, you can create it from `ZEPPELIN_HOME/conf/shiro.ini.template`.
 
 ```
 $ cd ZEPPELIN_HOME/conf
