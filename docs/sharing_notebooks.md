@@ -24,8 +24,11 @@ Now you're an owner of this Space. You can invite collaborators and manage the s
 <img src="../img/after_add_space.png" class="image-box big-img"/>
 
 <br/ >
-## Sharing Notebooks to the Space
-You can share/[publish the notebook](exploring_notebook.md) in **Shared** main page. 
+## Sharing Notebooks
+Notebooks can be shared to a space or can be shared directly to another
+user, or you can [publish the notebook](exploring_notebook.md) to the web.
+<br />
+You can share/ in **Shared** main page.
 
 <img src="../img/card_share_menu.png" class="card-img" />
 
@@ -34,6 +37,32 @@ Or you can find **Share and Publish** button in top-right corner of each noteboo
 <img src="../img/sharing_dialog.png" class="image-box big-img"/>
 
 Find proper place by typing a Space name.
+<br/ >
+## More about sharing options
+While you are sharing your notebook to other users or to spaces, you can
+configure three options:
+
+**Permission**
+
+* View - Allows others to only view the notebook
+* Edit - Allows shared party to edit the notebook(If you share notebooks
+with this option enabled, your interpreter will be used when the
+notebook is executed)
+
+**Format**
+
+Same as three visual modes in Zeppelin
+
+* Default
+* Simple
+* Report
+
+You can allow the shared party to access your notebooks only in the specified visual mode
+
+**Version**
+
+ZEPL can leverage the version control system system as in Zeppelin,
+you can share a specific revision of your notebook with a user or a space
 
 <br/>
 # Publishing Notebooks to web
@@ -61,7 +90,25 @@ In the space, you can invite collaborators. Once someone is added to your space,
 
 <img src="../img/invite_people.png" class="image-box big-img"/>
 
-Give some feedback by leaving comments on the shared notebook. 
+<br/>
+## User roles in space
+
+While adding new members to space, you can decide what role they have in
+your space. Each role will have specific powers over the space
+
+* Manager: Manager of space can add or remove users, change user roles,
+add or remove notebooks from space and view or edit notebooks that are
+shared to the space
+
+* Collaborator: Collaborator of a space can add or remove notebooks and
+view or edit notebooks that are shared to the space
+
+* Members: Members can only view or edit notebooks that are shared to
+the space
+
+<br/>
+
+Give some feedback by leaving comments on the shared notebook.
 You can find **conversation button** <img src="../img/conversation_button.png" class="button-img"/>at the top of the each paragraph and start a conversation with your people about the report.
 
 <img src="../img/conversation.png" class="image-box big-img"/>
