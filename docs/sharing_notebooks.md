@@ -33,12 +33,12 @@ You can share/ in **Shared** main page.
 <img src="../img/card_share_menu.png" class="card-img" />
 
 Or you can find **Share and Publish** button in top-right corner of each notebook and directly do in it.
+<br />
 
+## More about sharing options
 <img src="../img/sharing_dialog.png" class="image-box big-img"/>
 
-Find proper place by typing a Space name.
-<br/ >
-## More about sharing options
+<br />
 While you are sharing your notebook to other users or to spaces, you can
 configure three options:
 
