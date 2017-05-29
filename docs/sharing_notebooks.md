@@ -51,7 +51,7 @@ notebook is executed)
 
 **Format**
 
-Same as three visual modes in Zeppelin
+Same as three visual modes in Apache Zeppelin
 
 * Default
 * Simple
@@ -61,7 +61,7 @@ You can allow the shared party to access your notebooks only in the specified vi
 
 **Version**
 
-ZEPL can leverage the version control system system as in Zeppelin,
+ZEPL can leverage the version control system as in Apache Zeppelin,
 you can share a specific revision of your notebook with a user or a space
 
 <br/>
