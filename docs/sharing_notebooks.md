@@ -26,7 +26,7 @@ Now you're an owner of this Space. You can invite collaborators and manage the s
 <br/ >
 ## Sharing Notebooks
 Notebooks can be shared to a space or can be shared directly to another
-user, or you can [publish the notebook](exploring_notebook.md) to the web.
+user, or you can [publish the notebook](exploring_notebooks.md) to the web.
 <br />
 You can share/ in **Spaces** main page.
 
