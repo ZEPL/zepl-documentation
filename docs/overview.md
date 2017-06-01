@@ -4,17 +4,17 @@
 
 <center><img src="../img/zepl_concept.png" height="80%" width="80%"></center>
 
-<span class="middle-font">Instances? Spaces?</span>
+<span class="middle-font">Repositories? Spaces?</span>
 
 For truly using ZEPL service, there are two terms need to be understood. 
 <br/>
 
-<span class="submenu-font">Instance</span>
+<span class="submenu-font">Repository</span>
 
-**Instance** is not a new word. It is just a unit for which you can connect [Apache Zeppelin](http://zeppelin.apache.org/).
-As you can see in the above illustration, you can manage several **Apache Zeppelin Instances** in your ZEPL account. 
-Once you add a new instance to ZEPL, it will generate a **Unique Token** only for that instance. 
-This token is used to identify your instance with ZEPL. You can find more detailed information about Apache Zeppelin integration in [Integration with Apache Zeppelin](zeppelin_integration.md) section.
+**Repository** is not a new word. It is just a unit for which you can connect [Apache Zeppelin](http://zeppelin.apache.org/).
+As you can see in the above illustration, you can manage several **Apache Zeppelin repositories** in your ZEPL account. 
+Once you add a new repository to ZEPL, it will generate a **Unique Token** only for that repository. 
+This token is used to identify your repository with ZEPL. You can find more detailed information about Apache Zeppelin integration in [Integration with Apache Zeppelin](zeppelin_integration.md) section.
 
 <span class="note-font">You might wonder how you can install and configure Apache Zeppelin. 
 If so, please read [Apache Zeppelin Quickstart](http://zeppelin.apache.org/docs/latest/install/install.html) and [Configuration](https://zeppelin.apache.org/docs/0.7.1/install/configuration.html) first.</span>
