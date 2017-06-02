@@ -6,10 +6,10 @@ In this section, we will explain how you can create a new space and share Apache
 # What is Space?
 
 ZEPL Space is a kind of room for sharing notebooks. 
-You can gather your own and shared notebooks shared from your team members efficiently in Space.
+You can gather your own and shared notebooks with your team members efficiently in Space.
 When you create a space, you can invite your team members. Only invited people can have an access permission to the shared notebooks.
 
-You can find the list of Spaces in **Shared** page.
+You can find the list of Spaces in **Spaces** page.
 
 <img src="../img/shared_main.png" class="image-box big-img"/>
 
@@ -24,11 +24,9 @@ Now you're an owner of this Space. You can invite collaborators and manage the s
 <img src="../img/after_add_space.png" class="image-box big-img"/>
 
 <br/ >
-## Sharing Notebooks
-Notebooks can be shared to a space or can be shared directly to another
-user, or you can [publish the notebook](exploring_notebooks.md) to the web.
-<br />
-You can share/ in **Spaces** main page.
+
+## Sharing Notebooks to the Space
+You can share and [publish the notebook](exploring_notebook.md) in **Spaces** main page. 
 
 <img src="../img/card_share_menu.png" class="card-img" />
 
