@@ -11,22 +11,21 @@ site_favicon: favicon.ico
 pages:
 - Welcome: index.md
 - Key Concepts: overview.md
-- User Guide:
+- User Guide: 
     - Integration with Apache Zeppelin: zeppelin_integration.md
     - Sharing Notebooks: sharing_notebooks.md
     - Explore Public Notebooks: exploring_notebooks.md
-    - Integration with s3: s3_intergration.md
 - Support: support.md
 - Release Notes: release_note.md
 
 # Theme & Javascript & CSS
 theme_dir: 'custom_theme'
-extra_javascript:
+extra_javascript:  
   - js/extra.js
-extra_css:
+extra_css: 
   - css/extra.css
 
-# Google Analytics
+# Google Analytics 
 google_analytics: ['UA-38575365-18', 'docs.zepl.com']
 
 # Markdown Extension
