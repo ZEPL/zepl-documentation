@@ -12,11 +12,13 @@ pages:
 - Welcome: index.md
 - Key Concepts: overview.md
 - User Guide:
-    - How to connect github: github_integration.md
-    - Integration with Apache Zeppelin: zeppelin_integration.md
+    - Fetch notebooks:
+      - How to connect Apache Zeppelin: zeppelin_integration.md
+      - How to connect Github: github_integration.md
+      - How to connect S3: s3_integration.md
+    - Import Notebook: import_notebook.md
     - Sharing Notebooks: sharing_notebooks.md
     - Explore Public Notebooks: exploring_notebooks.md
-    - Import Notebook: import_notebook.md
 - Support: support.md
 - Release Notes: release_note.md
 
