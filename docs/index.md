@@ -2,6 +2,9 @@
 
 <p class="middle-font">All-in-one platform, build and share it to the world.<br />
 You’ll never send a graph in PDF or Powerpoint again.</p><br/>
+[ZEPL](https://www.zepl.com/) is where data professionals meet to build amazing graphical reports and collaborate on analytic workflows online.
+
+<center><img src="../img/zepl_concept.png" height="80%" width="80%"></center>
 
 <img src="img/instant_feedback.png" class="concept-img"><span class="image-font"> Modular notebooks</span>
 
