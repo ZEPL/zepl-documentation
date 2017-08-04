@@ -12,6 +12,7 @@ pages:
 - Welcome: index.md
 - Key Concepts: overview.md
 - User Guide:
+    - How to connect github: github_integration.md
     - Integration with Apache Zeppelin: zeppelin_integration.md
     - Sharing Notebooks: sharing_notebooks.md
     - Explore Public Notebooks: exploring_notebooks.md
