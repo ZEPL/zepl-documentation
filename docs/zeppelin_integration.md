@@ -174,3 +174,4 @@ $ ./bin/zeppelin-daemon.sh restart (or start)
 Then come back to ZEPL and check whether the green light is turned on or not.
 
 <img src="../img/connected_instance.png" class="image-box small-img"/>
+
