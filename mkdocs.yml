@@ -10,14 +10,14 @@ site_favicon: favicon.ico
 # Included pages list
 pages:
 - Welcome: index.md
-- Key Concepts: overview.md
+# - Key Concepts: overview.md
 - User Guide:
-    - Fetch notebooks:
-      - How to connect Apache Zeppelin: zeppelin_integration.md
-      - How to connect Github: github_integration.md
-      - How to connect S3: s3_integration.md
-    - Import Notebook: import_notebook.md
     - Sharing Notebooks: sharing_notebooks.md
+    - Fetch notebooks:
+      - How to connect to Apache Zeppelin: zeppelin_integration.md
+      - How to connect to Github: github_integration.md
+      - How to connect to S3: s3_integration.md
+    - Import Notebook: import_notebook.md
     - Explore Public Notebooks: exploring_notebooks.md
 - Support: support.md
 - Release Notes: release_note.md

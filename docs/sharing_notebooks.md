@@ -1,31 +1,38 @@
-<span class="header-font">Sharing your Notebooks</span>
+<span class="header-font">Sharing Notebooks</span>
 
-In this section, we will explain how you can create a new space and share Apache Zeppelin notebooks to communicate with your team members.
+In this section, we will explain how you can create a new space and share notebooks to communicate with your team members.
 
-<br/>
 # What is Space?
 
-ZEPL Space is a kind of room for sharing notebooks. 
+ZEPL space is a place for sharing notebooks. 
 You can gather your own and shared notebooks with your team members efficiently in Space.
-When you create a space, you can invite your team members. Only invited people can have an access permission to the shared notebooks.
-
-You can find the list of Spaces in **Spaces** page.
+When you create a space, you can invite your team members. Only invited people can have an access permission for the shared notebooks.
 
 <img src="../img/shared_main.png" class="image-box big-img"/>
 
 <br/>
 # Create a new Space
-To create a new Space, click **Space** in the dropdown menu, then type a Space name with short description. 
+To create a new space, click **Space** in the dropdown menu.
+There are four types of spaces that you can create in here. 
+If you just want to share and save notebooks in space, create a space as "ZEPL" type.
 
 <img src="../img/create_new_space.png" class="image-box big-img"/>
 
-Now you're an owner of this Space. You can invite collaborators and manage the shared notebooks in here.
+And write a space name with short description. 
+
+But if you want to connect to an external repository like AWS S3, Github or Apache Zeppelin and sync your notebooks, see below pages for the detailed informtation.
+  
+  * [How to connect to Apache Zeppelin](../zeppelin_integration)
+  * [How to connect to Github](../github_integration)
+  * [How to connect to S3](../s3_integration)
+
+Now you're an owner of this space. You can invite collaborators and manage the shared notebooks in here.
 
 <img src="../img/after_add_space.png" class="image-box big-img"/>
 
 <br/ >
 
-## Sharing Notebooks to the Space
+## Sharing Notebooks to the space
 You can share and [publish the notebook](exploring_notebook.md) in **Spaces** main page. 
 
 <img src="../img/card_share_menu.png" class="card-img" />
