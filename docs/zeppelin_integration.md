@@ -1,23 +1,21 @@
 <span class="header-font">Integration with Apache Zeppelin</span>
 
-In this section, we will explain how you can create a Apache Zeppelin type of space and seamlessly connect it with your **Apache Zeppelin**.
+In this section, we will explain how you can create a Apache Zeppelin space in ZEPL and seamlessly connect it with your **Apache Zeppelin** instance.
 
-# Create a Space
-To create a new Apache Zeppelin type of space, click **Space** in the dropdown menu and type a name with short description for the new space.
+# Create an Zeppelin Instance Space
+To create a new Apache Zeppelin space, select **Space** in the **New** dropdown menu. Select **Zeppelin** in the dialog box and enter a name with a short description for your space.
 
 <img src="../img/select_zeppelin_space.png" class="image-box big-img"/>
 
-Then it will give you **a Unique Token** which will be used when you connect ZEPL with your Apache Zeppelin.
-You can see the other properties of the space.
+Once created, ZEPL should provide a **Unique Token** which will can be used when you connect ZEPL with your Apache Zeppelin instance.
 
 <img src="../img/zeppelin-space-empty.png" class="image-box big-img"/>
 
-To edit the space information such as name & description or to delete it, open a dialog using **Edit space** located in top-right corner of the page.
+To edit the space's information such as name & description or to delete the space, open a dialog using **Edit space** located in top-right corner of the page.
 
 <img src="../img/manage_space.png" class="image-box big-img"/>
 
-But be carefull. Deleting a space means you no longer want to syncronize that space with Apache Zeppelin.
-So it will remove all notebook information included the space from ZEPL.
+Be cautious when deleting an Apache Zeppelin space. Deleting the space will stop synchronization with Apache Zeppelin and will remove all notebooks, not only from ZEPL, but also from all shared spaces in ZEPL.
 
 
 <br/>
@@ -80,9 +78,11 @@ export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.GitNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
 export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
 ```
-As you can see, you don't need `ZEPPELINHUB_API_TOKEN` in this case, and you can utilize login with your ZEPL account, as described in the next section.
+
+You may have noticed that you don't need **ZEPPELINHUB_API_TOKEN** in this scenario, and instead you can login with your ZEPL account, as described in the next section.
+
 In this case your token will be automatically recognized from your `space` information and default one will be loaded. 
-Note that if you're following this scenario, you'll need to complete the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials) as well in order to login with your ZEPL credentials.
+In order to login with your ZEPL credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
 
 
 You may also find up-to-date instructions on integrating latest Apache Zeppelin master branch with ZEPL on corresponding [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
@@ -121,7 +121,7 @@ $ cd ZEPPELIN_HOME
 $ ./bin/zeppelin-daemon.sh start (or restart)
 ```
 
-Then come back to ZEPL and check whether the green light is turned on or not.
+Return to ZEPL. An indicator should indicate whether Zeppelin is properly connected.
 
 <img src="../img/connected_zeppelin.png" class="image-box middle-img"/>
 

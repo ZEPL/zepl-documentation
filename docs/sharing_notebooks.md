@@ -1,12 +1,11 @@
 <span class="header-font">Sharing Notebooks</span>
 
-In this section, we will explain how you can create a new space and share notebooks to communicate with your team members.
+In this section, we will explain how you can create a new space and share notebooks to other spaces, users and team members.
 
 # What is Space?
 
-ZEPL space is a place for sharing notebooks. 
-You can gather your own and shared notebooks with your team members efficiently in Space.
-When you create a space, you can invite your team members. Only invited people can have an access permission for the shared notebooks.
+A ZEPL space is like a folder where notebooks can be collected and shared to others.
+Once a space is created, you have the ability to invite other team members to join the space. Only members of the space have access to the shared notebooks that is contained in that space.
 
 <img src="../img/shared_main.png" class="image-box big-img"/>
 
@@ -20,19 +19,19 @@ If you just want to share and save notebooks in space, create a space as "ZEPL" 
 
 And write a space name with short description. 
 
-But if you want to connect to an external repository like AWS S3, Github or Apache Zeppelin and sync your notebooks, see below pages for the detailed informtation.
+To connect the space to an external repository like AWS S3, Github or Apache Zeppelin and sync your notebooks, see the following links for the detailed information.
   
   * [How to connect to Apache Zeppelin](../zeppelin_integration)
   * [How to connect to Github](../github_integration)
   * [How to connect to S3](../s3_integration)
 
-Now you're an owner of this space. You can invite collaborators and manage the shared notebooks in here.
+Since you created this space, you are also the space's owner. You can invite collaborators and manage the shared notebooks in here.
 
 <img src="../img/after_add_space.png" class="image-box big-img"/>
 
 <br/ >
 
-## Sharing Notebooks to the space
+## Sharing Notebooks to Spaces
 You can share and [publish the notebook](exploring_notebook.md) in **Spaces** main page. 
 
 <img src="../img/card_share_menu.png" class="card-img" />
