@@ -1,30 +1,21 @@
 <span class="header-font">Integration with Apache Zeppelin</span>
 
-In this section, we will explain how you can create a repository and seamlessly connect it with your **Apache Zeppelin**.
+In this section, we will explain how you can create a Apache Zeppelin space in ZEPL and seamlessly connect it with your **Apache Zeppelin** instance.
 
-<br/>
-# Hosted repository?
-It is a repository provided from ZEPL by default.
-You can find some tutorial notes in it to play around.
+# Create an Zeppelin Instance Space
+To create a new Apache Zeppelin space, select **Space** in the **New** dropdown menu. Select **Zeppelin** in the dialog box and enter a name with a short description for your space.
 
-<img src="../img/my_notebooks_main.png" class="image-box big-img"/>
+<img src="../img/select_zeppelin_space.png" class="image-box big-img"/>
 
-# Create a new Repository
-To create a new repository, click **Repository** in the dropdown menu and type a repository name with short description for the new repository.
+Once created, ZEPL should provide a **Unique Token** which will can be used when you connect ZEPL with your Apache Zeppelin instance.
 
-<img src="../img/add_new_instance.png" class="image-box big-img"/>
+<img src="../img/zeppelin-space-empty.png" class="image-box big-img"/>
 
-Then it will give you **a Unique Token** which will be used when you connect ZEPL with your Apache Zeppelin.
-You can see the other properties of the repository. (e.g. IP and repository creation time)
+To edit the space's information such as name & description or to delete the space, open a dialog using **Edit space** located in top-right corner of the page.
 
-<img src="../img/after_creating_instance.png" class="image-box big-img"/>
+<img src="../img/manage_space.png" class="image-box big-img"/>
 
-To edit the repository information such as name & description or to delete it, open a dialog using **Edit repository** located in top-right corner of the page.
-
-<img src="../img/manage_instance.png" class="image-box big-img"/>
-
-But be carefull. Deleting a repository means you no longer want to syncronize that repository with Apache Zeppelin.
-So it will remove all notebook information included the repository from ZEPL.
+Be cautious when deleting an Apache Zeppelin space. Deleting the space will stop synchronization with Apache Zeppelin and will remove all notebooks, not only from ZEPL, but also from all shared spaces in ZEPL.
 
 
 <br/>
@@ -32,7 +23,7 @@ So it will remove all notebook information included the repository from ZEPL.
 
 ## Setting Apache Zeppelin environment variables
 
-When you connect a repository to your ZEPL account, you need to set the following **environment variables** into your `ZEPPELIN_HOME/conf/zeppelin-env.sh` file.
+When you connect a space to your ZEPL account, you need to set the following **environment variables** into your `ZEPPELIN_HOME/conf/zeppelin-env.sh` file.
 If you don't have this file, you can create it from `ZEPPELIN_HOME/conf/zeppelin-env.sh.template`.
 
 ```
@@ -87,7 +78,11 @@ export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.GitNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
 export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
 ```
-As you can see, you don't need `ZEPPELINHUB_API_TOKEN` in this case, and you can utilize login with your ZEPL account, as described in the next section. In this case your token will be automatically recognized from your `repository` information and default one will be loaded. Note that if you're following this scenario, you'll need to complete the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials) as well in order to login with your ZEPL credentials.
+
+You may have noticed that you don't need **ZEPPELINHUB_API_TOKEN** in this scenario, and instead you can login with your ZEPL account, as described in the next section.
+
+In this case your token will be automatically recognized from your `space` information and default one will be loaded. 
+In order to login with your ZEPL credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
 
 
 You may also find up-to-date instructions on integrating latest Apache Zeppelin master branch with ZEPL on corresponding [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
@@ -126,9 +121,9 @@ $ cd ZEPPELIN_HOME
 $ ./bin/zeppelin-daemon.sh start (or restart)
 ```
 
-Then come back to ZEPL and check whether the green light is turned on or not.
+Return to ZEPL. An indicator should indicate whether Zeppelin is properly connected.
 
-<img src="../img/connected_instance.png" class="image-box small-img"/>
+<img src="../img/connected_zeppelin.png" class="image-box middle-img"/>
 
 <br/>
 ## Migrating Configurations
@@ -173,4 +168,5 @@ $ ./bin/zeppelin-daemon.sh restart (or start)
 
 Then come back to ZEPL and check whether the green light is turned on or not.
 
-<img src="../img/connected_instance.png" class="image-box small-img"/>
+<img src="../img/connected_zeppelin.png" class="image-box middle-img"/>
+

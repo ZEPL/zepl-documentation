@@ -10,22 +10,26 @@ site_favicon: favicon.ico
 # Included pages list
 pages:
 - Welcome: index.md
-- Key Concepts: overview.md
-- User Guide: 
-    - Integration with Apache Zeppelin: zeppelin_integration.md
+# - Key Concepts: overview.md
+- User Guide:
     - Sharing Notebooks: sharing_notebooks.md
+    - Fetch notebooks:
+      - How to connect to Apache Zeppelin: zeppelin_integration.md
+      - How to connect to Github: github_integration.md
+      - How to connect to S3: s3_integration.md
+    - Import Notebook: import_notebook.md
     - Explore Public Notebooks: exploring_notebooks.md
 - Support: support.md
 - Release Notes: release_note.md
 
 # Theme & Javascript & CSS
 theme_dir: 'custom_theme'
-extra_javascript:  
+extra_javascript:
   - js/extra.js
-extra_css: 
+extra_css:
   - css/extra.css
 
-# Google Analytics 
+# Google Analytics
 google_analytics: ['UA-38575365-18', 'docs.zepl.com']
 
 # Markdown Extension
