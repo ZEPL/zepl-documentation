@@ -1,0 +1,14 @@
+<div class="bs-sidebar">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs">
+	</form>
+    {% for nav_item in nav %}
+        {% if nav_item.children %}
+            {% for guide_item in nav_item.children %}
+                {% include "guide-nav-sub.html" %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    </ul>
+</div>

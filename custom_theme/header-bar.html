@@ -1,0 +1,57 @@
+<span>
+  <nav class="navbar navbar-default landing-navbar">
+    <div class="landing-navbar-container">
+      <div class="navbar-header">
+        <div class="landing-navbar__mobile-menu-button visible-xs">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="zepl-sidebar__wrapper">
+          <div class="zepl-sidebar__header">
+            <a>
+              <span>BACK</span>
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <title>icons/arrow-head-right</title>
+                <path d="M6.293 17.293a1 1 0 0 0 1.414 1.414l8-8a1 1 0 0 0 0-1.414l-8-8a1 1 0 0 0-1.414 1.414L13.586 10l-7.293 7.293z" fill="#FFF" fill-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="zepl-sidebar__menu">
+            <div class="zepl-sidebar__menu-divider"></div>
+            <ul>
+              <li><a href="{{base_url}}/">Introduction</a></li>
+              <li><a href="{{base_url}}/faq/">FAQ</a></li>
+              <li><a href="{{base_url}}/guide/user_guide/">User Guide</a></li>
+              <li><a href="{{base_url}}/release_note/">Releases</a></li>
+              <li><a href="{{base_url}}/support/">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <a class="navbar-brand landing-navbar__zepl-logo" href="/">
+          <img alt="ZEPL logo" src="/img/zepl-beta-icon.png" class="landing-navbar__zepl-logo-img">
+        </a>
+      </div>
+      <div class="hidden-xs">
+        <ul class="nav navbar-nav landing-navbar__navtab-list">
+          <li>
+            <a href="{{base_url}}/">Introduction</a>
+          </li>
+          <li>
+            <a href="{{base_url}}/faq/" class="{% if '/faq' in page.canonical_url %}current{% endif %}">FAQ</a>
+          </li>
+          <li>
+            <a href="{{base_url}}/guide/user_guide/" class="{% if '/guide' in page.canonical_url %}current{% endif %}">User Guide</a>
+          </li>
+          <li>
+            <a href="{{base_url}}/release_note/" class="{% if '/release_note' in page.canonical_url %}current{% endif %}">Releases</a>
+          </li>
+          <li>
+            <a href="{{base_url}}/support/" class="{% if '/support' in page.canonical_url %}current{% endif %}">Support</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</span>

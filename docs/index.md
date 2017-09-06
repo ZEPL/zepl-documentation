@@ -1,7 +1,7 @@
-<span class="main-headline">ZEPL Documentation</span>
+# Welcome to Zepl
 
-<p class="middle-font">All-in-one platform, build and share it to the world.<br />
-You’ll never send a graph in PDF or Powerpoint again.</p><br/>
+<span class="middle-font">All-in-one platform, build and share it to the world.</span><br/>
+<span class="middle-font">You’ll never send a graph in PDF or Powerpoint again.</span><br/>
 [ZEPL](https://www.zepl.com/) is where data professionals meet to build amazing graphical reports and collaborate on analytic workflows online.
 
 <center><img src="../img/zepl_concept.png" height="80%" width="80%"></center>
@@ -20,14 +20,14 @@ Share your notebook with anyone, anywhere. Instantly communicate and show your c
 
 <br/>
 
-<span class="middle-font">Who uses ZEPL?</span>
+## Who uses ZEPL?
 
 <img src="img/who_uses_big.png" class="who-uses-zepl-big" />
 <img src="img/who_uses_small.png" class="who-uses-zepl-small" />
 
 <br/>
 
-<span class="middle-font">Show your notebooks on ZEPL</span>
+## Show your notebooks on ZEPL
 
 Visualize your public notebooks hosted anywhere and share the best of your work in [ZEPL Explore](https://www.zepl.com/explore) page.
 See [Explore Public Notebooks](exploring_notebooks.md) section for more detailed information.

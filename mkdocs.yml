@@ -1,3 +1,4 @@
+
 # Site Information
 site_name: ZEPL Documentation
 site_url: http://docs.zepl.com/
@@ -10,17 +11,19 @@ site_favicon: favicon.ico
 # Included pages list
 pages:
 - Welcome: index.md
+- FAQ: faq.md
 # - Key Concepts: overview.md
 - User Guide:
-    - Sharing Notebooks: sharing_notebooks.md
-    - Fetch notebooks:
-      - How to connect to Apache Zeppelin: zeppelin_integration.md
-      - How to connect to Github: github_integration.md
-      - How to connect to S3: s3_integration.md
-    - Import Notebook: import_notebook.md
-    - Explore Public Notebooks: exploring_notebooks.md
-- Support: support.md
+    - User Guide: guide/user_guide.md
+    - Sharing Notebooks: guide/sharing_notebooks.md
+    - External Notebooks:
+      - Apache Zeppelin: guide/zeppelin_integration.md
+      - Github: guide/github_integration.md
+      - Amazon S3: guide/s3_integration.md
+    - Import Notebook: guide/import_notebook.md
+    - Explore Public Notebooks: guide/exploring_notebooks.md
 - Release Notes: release_note.md
+- Support: support.md
 
 # Theme & Javascript & CSS
 theme_dir: 'custom_theme'
@@ -35,4 +38,4 @@ google_analytics: ['UA-38575365-18', 'docs.zepl.com']
 # Markdown Extension
 markdown_extensions:
     - toc:
-        permalink: True
+        anchorlink: True
