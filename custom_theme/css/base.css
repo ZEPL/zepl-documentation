@@ -205,6 +205,15 @@ li > a.current {
     overflow-y: scroll;
 }
 
+.toc-menu::-webkit-scrollbar { 
+    background-color: #F3F2FA;
+    width: 5px;
+}
+
+.toc-menu::-webkit-scrollbar-thumb { 
+    background-color: #CCC;
+}
+
 .toc-menu ul {
 
 }
@@ -221,7 +230,7 @@ li > a.current {
 }
 
 .guide-content {
-    margin-left: 260px;
+    margin-left: 270px;
 }
 
 a.toclink {
@@ -234,6 +243,10 @@ a.toclink {
 }*/
 
 #rtd-search-form {
+    margin: 10px;
+}
+
+#mkdocs-search-query {
     margin: 10px;
 }
 
