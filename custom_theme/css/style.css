@@ -3460,7 +3460,7 @@ body {
 
 .landing-navbar__mobile-menu-button {
   float: left;
-  padding: 17.5px 0;
+  padding: 17.5px 14px 35px;
   height: 20px;
   cursor: pointer;
 }
@@ -3473,7 +3473,6 @@ body {
 @media screen and (max-width: 768px) {
   .landing-navbar__zepl-logo-img {
     height: 24px;
-    padding-right: 10px;
   }
 }
 
@@ -3527,6 +3526,10 @@ li.landing-navbar__right-button {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar-brand {
+    padding: 15px 0;
+  }
+
   .landing-navbar-container .navbar-brand {
     padding: 17.5px 0;
   }
