@@ -2,7 +2,7 @@
 
 In this section, we will explain how you can create a Apache Zeppelin space in ZEPL and seamlessly connect it with your **Apache Zeppelin** instance.
 
-## Create an Zeppelin Instance Space
+## Create a Zeppelin Instance Space
 To create a new Apache Zeppelin space, select **Space** in the **New** dropdown menu. Select **Zeppelin** in the dialog box and enter a name with a short description for your space.
 
 <img src="../../img/select_zeppelin_space.png" class="image-box big-img"/>

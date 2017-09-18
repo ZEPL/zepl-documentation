@@ -9,7 +9,7 @@ We would like to thank you all for your continued patronage of ZEPL.
 We encourage everyone to try using ZEPL new release. <br/>
 Any feedbacks through [support@zepl.com](mailto:support@zepl.com) are always welcome, so please do not hesitate to send us emails.
 
-## Public Release 3 (15 July 2016)
+## Public Release 3 (Released on 15 July 2016)
 
 ### Features
 
@@ -46,7 +46,7 @@ There is now a notification feature that notifies you on actions such as being a
 
 <br/>
 
-## Public Release 1 (Released on 1 April 2016<()
+## Public Release 1 (Released on 1 April 2016)
 
 ### Features
 
@@ -69,9 +69,9 @@ Build new notebooks and use it like a dashboard.<br/>
 
 <br/>
 
-## Beta Released on 12 Oct 2015
+## Beta (Released on 12 Oct 2015)
 
-### Features]
+### Features
 
 #### Connect & Save Apache Zeppelin notebooks
 You can connect your Apache Zeppelin instances as many as you want. 
