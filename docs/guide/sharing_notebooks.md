@@ -1,4 +1,4 @@
-<span class="header-font">Sharing Notebooks</span>
+# Sharing Notebooks
 
 In this section, we will explain how you can create a new space and share notebooks to other spaces, users and team members.
 
@@ -7,7 +7,7 @@ In this section, we will explain how you can create a new space and share notebo
 A ZEPL space is like a folder where notebooks can be collected and shared to others.
 Once a space is created, you have the ability to invite other team members to join the space. Only members of the space have access to the shared notebooks that is contained in that space.
 
-<img src="../img/shared_main.png" class="image-box big-img"/>
+<img src="../../img/shared_main.png" class="image-box big-img"/>
 
 <br/>
 # Create a new Space
@@ -15,7 +15,7 @@ To create a new space, click **Space** in the dropdown menu.
 There are four types of spaces that you can create in here. 
 If you just want to share and save notebooks in space, create a space as "ZEPL" type.
 
-<img src="../img/create_new_space.png" class="image-box big-img"/>
+<img src="../../img/create_new_space.png" class="image-box big-img"/>
 
 And write a space name with short description. 
 
@@ -27,20 +27,20 @@ To connect the space to an external repository like AWS S3, Github or Apache Zep
 
 Since you created this space, you are also the space's owner. You can invite collaborators and manage the shared notebooks in here.
 
-<img src="../img/after_add_space.png" class="image-box big-img"/>
+<img src="../../img/after_add_space.png" class="image-box big-img"/>
 
 <br/ >
 
 ## Sharing Notebooks to Spaces
 You can share and [publish the notebook](exploring_notebook.md) in **Spaces** main page. 
 
-<img src="../img/card_share_menu.png" class="card-img" />
+<img src="../../img/card_share_menu.png" class="card-img" />
 
 Or you can find **Share and Publish** button in top-right corner of each notebook and directly do in it.
 <br />
 
 ## More about sharing options
-<img src="../img/sharing_dialog.png" class="image-box big-img"/>
+<img src="../../img/sharing_dialog.png" class="image-box big-img"/>
 
 <br />
 While you are sharing your notebook to other users or to spaces, you can
@@ -73,12 +73,12 @@ you can share a specific revision of your notebook with a user or a space
 
 You can set your notebook to public or private mode in the same dialog used when you share a notebook.
 
-<img src="../img/publish_dialog_initial.png" class="image-box big-img"/>
+<img src="../../img/publish_dialog_initial.png" class="image-box big-img"/>
 
 The default value of each notebook is **Unpublished**. It means the notebook is set as private mode.
 So no one would be able to access the notebook, except the ZEPL users that it has been shared with, and public URI won't work in this status.
 
-<img src="../img/publish_dialog.png" class="image-box big-img"/>
+<img src="../../img/publish_dialog.png" class="image-box big-img"/>
 
 If you want to make your notebook public and anyone can access to it, just slide the toggle bar.
 It will generate the public URL for the notebook. Just copy to the clipboard and visit the site.
@@ -92,7 +92,7 @@ Then you can see your notebook under the showcase you chose in **Explore** tab.
 # Inviting people to the Space
 In the space, you can invite collaborators. Once someone is added to your space, he/ she can see your space in his **Shared** page.
 
-<img src="../img/invite_people.png" class="image-box big-img"/>
+<img src="../../img/invite_people.png" class="image-box big-img"/>
 
 <br/>
 ## User roles in space
@@ -113,6 +113,6 @@ the space
 <br/>
 
 Give some feedback by leaving comments on the shared notebook.
-You can find **conversation button** <img src="../img/conversation_button.png" class="button-img"/>at the top of the each paragraph and start a conversation with your people about the report.
+You can find **conversation button** <img src="../../img/conversation_button.png" class="button-img"/>at the top of the each paragraph and start a conversation with your people about the report.
 
-<img src="../img/conversation.png" class="image-box big-img"/>
+<img src="../../img/conversation.png" class="image-box big-img"/>

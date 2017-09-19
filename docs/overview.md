@@ -1,4 +1,4 @@
-<span class="header-font">New to ZEPL? Start here</span>
+# New to ZEPL? Start here
 
 [ZEPL](https://www.zepl.com/) is where data professionals meet to build amazing graphical reports and collaborate on analytic workflows online.
 

@@ -1,4 +1,4 @@
-<span class="header-font">Sometimes, you just need a little help</span>
+# Support
 
 <br/>
 <span class="fa fa-wrench support-icon" aria-hidden="true"></span> &nbsp;&nbsp;
