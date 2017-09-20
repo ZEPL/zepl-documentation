@@ -50,7 +50,7 @@ $ cd ZEPPELIN_HOME/conf
 $ cp zeppelin-env.cmd.template zeppelin-env.cmd
 ```
 
-After activating this configuration file,  add below three lines to `zeppelin-env.sh` file.
+After activating this configuration file,  add below three lines to `zeppelin-env.cmd` file.
 Don't forget to copy your **Token** generated before.
 
 <img src="../../img/copy_token.gif" class="image-box small-img"/>
