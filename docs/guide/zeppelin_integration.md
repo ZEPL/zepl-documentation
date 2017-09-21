@@ -23,6 +23,8 @@ Be cautious when deleting an Apache Zeppelin space. Deleting the space will stop
 
 ### Setting Apache Zeppelin environment variables
 
+#### Preparation For Linux, OSX
+
 When you connect a space to your ZEPL account, you need to set the following **environment variables** into your `ZEPPELIN_HOME/conf/zeppelin-env.sh` file.
 If you don't have this file, you can create it from `ZEPPELIN_HOME/conf/zeppelin-env.sh.template`.
 
@@ -38,7 +40,24 @@ Don't forget to copy your **Token** generated before.
 
 Below steps are little bit different according to your Apache Zeppelin version. So please check the version first.  
 
-#### (Deprecated) Zeppelin-0.5.X
+#### Preparation For Windows
+
+When you connect a space to your ZEPL account, you need to set the following **environment variables** into your `ZEPPELIN_HOME/conf/zeppelin-env.cmd` file.
+If you don't have this file, you can create it from `ZEPPELIN_HOME/conf/zeppelin-env.cmd.template`.
+
+```
+$ cd ZEPPELIN_HOME/conf
+$ cp zeppelin-env.cmd.template zeppelin-env.cmd
+```
+
+After activating this configuration file,  add below three lines to `zeppelin-env.cmd` file.
+Don't forget to copy your **Token** generated before.
+
+<img src="../../img/copy_token.gif" class="image-box small-img"/>
+
+Below steps are little bit different according to your Apache Zeppelin version. So please check the version first.  
+
+#### (Deprecated) Zeppelin-0.5.X for Linux, OSX
 
 First of all, you need a library for integration.
 Please click this [download link](https://s3-ap-northeast-1.amazonaws.com/zeppel.in/zeppelinhub-integration-v0.4.0-all.jar) and copy it into `lib` directory under your ZEPPELIN_HOME (Apache Zeppelin installation directory).
@@ -55,7 +74,8 @@ export ZEPPELINHUB_USER_KEY="YOUR_USER_KEY"
 ```
 
 <br/>
-#### Zeppelin-0.6.X
+
+#### Zeppelin-0.6.X for Linux, OSX
 
 ```sh
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.VFSNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
@@ -63,16 +83,37 @@ export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://ww
 export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
 ```
 
+#### Zeppelin-0.6.X for Windows
+
+```sh
+set ZEPPELIN_NOTEBOOK_STORAGE=org.apache.zeppelin.notebook.repo.VFSNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo
+set ZEPPELINHUB_API_ADDRESS=https://www.zepl.com
+set ZEPPELINHUB_API_TOKEN=YOUR_TOKEN_STRING
+```
+
 <br/>
-#### Zeppelin-0.7.x single user
+
+#### Zeppelin-0.7.x single user for Linux, OSX
 
 ```sh
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.GitNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
 export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
 export ZEPPELINHUB_API_TOKEN="YOUR_TOKEN_STRING"
 ```
+
 <br/>
-#### Zeppelin-0.7.x multiple users on Zeppelin server
+
+#### Zeppelin-0.7.x single user for Windows
+
+```sh
+set ZEPPELIN_NOTEBOOK_STORAGE=org.apache.zeppelin.notebook.repo.GitNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo
+set ZEPPELINHUB_API_ADDRESS=https://www.zepl.com
+set ZEPPELINHUB_API_TOKEN=YOUR_TOKEN_STRING
+```
+
+<br/>
+
+#### Zeppelin-0.7.x multiple users on Zeppelin server for Linux, OSX
 
 ```sh
 export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.GitNotebookRepo, org.apache.zeppelin.notebook.repo.zeppelinhub.ZeppelinHubRepo"
@@ -88,6 +129,7 @@ In order to login with your ZEPL credentials, you will need to complete the step
 You may also find up-to-date instructions on integrating latest Apache Zeppelin master branch with ZEPL on corresponding [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
 
 <br/>
+
 ### Login to Apache Zeppelin 0.7.x with ZEPL credentials
 Starting from 0.7.x release Apache Zeppelin has added more multi-user support functionality, so we made it possible to login to Zeppelin with ZEPL credentials in case multiple users use same Zeppelin server. For better experience with integration we recommend you to use the latest release of `0.7.x` branch (e.g. `0.7.1`).
 
