@@ -22,7 +22,7 @@ pages:
       - Amazon S3: guide/s3_integration.md
     - Import Notebook: guide/import_notebook.md
     - Explore Public Notebooks: guide/exploring_notebooks.md
-- Release Notes: release_note.md
+# - Release Notes: release_note.md
 - Support: support.md
 
 # Theme & Javascript & CSS
