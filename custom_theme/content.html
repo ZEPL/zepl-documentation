@@ -1,1 +1,4 @@
+{% if page.canonical_url == site_url %}
+  {% include "index.html" %}
+{% endif %}
 {{ content }}
