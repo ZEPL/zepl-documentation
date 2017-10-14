@@ -14,7 +14,7 @@ ZEPL currently runs single node Apache Spark 2.1.0 in the containers of each not
 
 To load data from AWS S3, first you need configure access key and secret key.
 
-```
+```scala
 %spark
 sc.hadoopConfiguration.set("fs.s3n.awsAccessKeyId", "[YOUR_ACCESS_KEY]")
 sc.hadoopConfiguration.set("fs.s3n.awsSecretAccessKey", "[YOUR_SECRET_KEY]")
@@ -22,7 +22,7 @@ sc.hadoopConfiguration.set("fs.s3n.awsSecretAccessKey", "[YOUR_SECRET_KEY]")
 
 And then your Spark context will able to access data from S3
 
-```
+```scala
 %spark
 val data = sc.textFile("s3n://....")
 ```
@@ -35,7 +35,7 @@ When your code requires external library, `%spark.dep` helps load additional lib
 
 Usages
 
-```
+```scala
 %spark.dep
 z.reset() // clean up previously added artifact and repository
 
