@@ -145,3 +145,7 @@ body {
   }
 }
 
+.container code {
+    background-color: #F1F4F9;
+    color: black;
+}

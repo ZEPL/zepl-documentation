@@ -15,13 +15,17 @@ pages:
 # - Key Concepts: overview.md
 - User Guide:
     - User Guide: guide/user_guide.md
-    - Sharing Notebooks: guide/sharing_notebooks.md
-    - External Notebooks:
-      - Apache Zeppelin: guide/zeppelin_integration.md
-      - Github: guide/github_integration.md
-      - Amazon S3: guide/s3_integration.md
-    - Import Notebook: guide/import_notebook.md
-    - Explore Public Notebooks: guide/exploring_notebooks.md
+    - Notebook:
+      - Sharing Notebooks: guide/sharing_notebooks.md
+      - External Notebooks:
+        - Apache Zeppelin: guide/zeppelin_integration.md
+        - Github: guide/github_integration.md
+        - Amazon S3: guide/s3_integration.md
+      - Import Notebook: guide/import_notebook.md
+      - Explore Public Notebooks: guide/exploring_notebooks.md
+    - Interpreter:
+      - Apache Spark: guide/interpreter/spark.md
+
 # - Release Notes: release_note.md
 - Support: support.md
 
