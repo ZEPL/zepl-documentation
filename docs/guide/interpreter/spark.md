@@ -31,7 +31,7 @@ Check [data loading example](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb
 
 ## Load dependencies
 
-When your code requires external library, `%spark.dep` helps load additional libraries from maven repository. `spark.dep` interpreter leverages Scala environment. You can write scala expressions to call dependency load APIs.
+When your code requires external library, `%spark.dep` helps load additional libraries from maven repository. `%spark.dep` interpreter leverages Scala environment. You can write scala expressions to call dependency load APIs.
 
 Usages
 
