@@ -33,6 +33,10 @@ Check [data loading example](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb
 
 When your code requires external library, `%spark.dep` helps load additional libraries from maven repository. `%spark.dep` interpreter leverages Scala environment. You can write scala expressions to call dependency load APIs.
 
+Note that `%spark.dep` should be the first interpreter run in the notebook before `%spark`, `%spark.pyspark`, `%spark.sql`. Otherwise, `%spark.dep` will print error message and you need to shutdown and start the container for the notebook again.
+
+Check [Dependency loading example](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u) notebook.
+
 Usages
 
 ```scala
@@ -68,7 +72,3 @@ z.load("groupId:artifactId:version").exclude("groupId:*")
 // local() skips adding artifact to spark clusters (skipping sc.addJar())
 z.load("groupId:artifactId:version").local()
 ```
-
-Note that `%spark.dep` should be the first interpreter run in the notebook before `%spark`, `%spark.pyspark`, `%spark.sql`. Otherwise, `%spark.dep` will print error message and you need to shutdown and start the container for the notebook again.
-
-Check [Dependency loading example](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u) notebook.
