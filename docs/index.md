@@ -5,6 +5,8 @@
 
 ### Load additional libraries
   - [Load dependency libraries from maven repository into Apache Spark](guide/interpreter/spark/#load-dependencies)
+### Secure JDBC connection
+  - [Whitelist IP addresses](guide/interpreter/jdbc/#whitelist-ip-addresses)
   </div>
   <div class="col-md-6">
 ### Import existing notebooks

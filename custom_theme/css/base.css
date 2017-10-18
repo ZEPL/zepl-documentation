@@ -222,6 +222,7 @@ li > a.current {
 
 .guide-content {
     margin-left: 280px;
+    min-height: 700px;
 }
 
 a.toclink {
