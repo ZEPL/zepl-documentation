@@ -23,16 +23,9 @@
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
                 {% for nav_item in nav %}
-                    <!-- This is a hack because MKdocs doesn't allow parent index page -->
-                    {% if nav_item.title == "User Guide" %}
-                         <li {% if nav_item.active %}class="active"{% endif %}>
-                            <a href="/guide">{{ nav_item.title }}</a>
-                        </li>
-                    {% else %}
-                        <li {% if nav_item.active %}class="active"{% endif %}>
-                            <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-                        </li>
-                    {% endif %}
+                    <li {% if nav_item.active %}class="active"{% endif %}>
+                        <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                    </li>
                 {% endfor %}
                 </ul>
             {% endif %}

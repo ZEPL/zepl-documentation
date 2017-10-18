@@ -62,12 +62,12 @@
 <body{% if current_page and current_page.is_homepage %} class="homepage" {% endif %}>
     {% include "header-bar.html" %}
     <div class="container">
-        {% if '/guide' in page.canonical_url %}
+        {% if '/guide' in page.canonical_url or page.canonical_url == site_url %}
             <div class="toc-menu hidden-xs">{% include "guide-nav.html" %}</div>
             <div class="visible-xs">{% include "search-form.html" %}</div>
         {% endif %}
         {% block content %}
-            {% if '/guide' in page.canonical_url %}
+            {% if '/guide' in page.canonical_url or page.canonical_url == site_url %}
                 <!-- Hack to get side menu only to appear if it's a content menu-->
                 <div class="guide-content hidden-xs">{% include "content.html" %}</div>
                 <div class="visible-xs">{% include "content.html" %}</div>

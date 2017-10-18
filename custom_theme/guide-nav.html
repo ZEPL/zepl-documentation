@@ -1,5 +1,5 @@
 <div class="bs-sidebar">
-	{% include "search-form.html" %}
+    {% include "search-form.html" %}
     {% for nav_item in nav %}
         {% if nav_item.children %}
             {% for guide_item in nav_item.children %}
@@ -7,6 +7,4 @@
             {% endfor %}
         {% endif %}
     {% endfor %}
-
-    </ul>
 </div>
