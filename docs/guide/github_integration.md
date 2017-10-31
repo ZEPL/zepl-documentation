@@ -3,8 +3,8 @@
 In this section, we will explain how you can create a Github Space and synchronize your Github notebooks.
 
 ## Create a Github Repository Space
-Click on **New** from the navbar dropdown and select **Space**.
-The first step is to choose the **type** of your space. Select the **Github** space **type** from the dropdown menu.
+Click **"New Space"** button in the main page to create a new Space and check "External Repository".
+Then select the **Github** from the dropdown menu.
 
 <img src="../../img/select_github_space.png" class="image-box big-img" />
 
@@ -36,7 +36,7 @@ In our example, the dialog form would look similar to the image below:
 You can now click on **Apply** to create your Github space. ZEPL will first test the connection to the Github repository. If the test succeeds, you will be redirected to the newly created space. 
 ZEPL will connect automatically to your Github repository and load any notebook it finds. The loaded notebooks should appear inside your repository space.
 
-<img src="../..f/img/github_space.png" class="image-box big-img"/>
+<img src="../../img/github_space.png" class="image-box big-img"/>
 
 The Github space will automatically re-synchronize to the Github repository every 10 mins and will add new notebooks, update any modified notebooks, and remove any deleted notebooks. You can also manually retrigger the synchronization.
 

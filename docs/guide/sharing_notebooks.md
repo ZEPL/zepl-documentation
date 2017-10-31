@@ -11,13 +11,12 @@ Once a space is created, you have the ability to invite other team members to jo
 
 <br/>
 # Create a new Space
-To create a new space, click **Space** in the dropdown menu.
-There are four types of spaces that you can create in here. 
-If you just want to share and save notebooks in space, create a space as "ZEPL" type.
+Click **"New Space"** button in the main page to create a new Space.
 
 <img src="../../img/create_new_space.png" class="image-box big-img"/>
 
 And write a space name with short description. 
+(In this case, you don't need to care about any external repositories)
 
 To connect the space to an external repository like AWS S3, Github or Apache Zeppelin and sync your notebooks, see the following links for the detailed information.
   
