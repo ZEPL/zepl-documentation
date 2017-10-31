@@ -9,9 +9,7 @@ ZEPL is a service where your Apache Zeppelin and Jupyter Notebooks can be brough
 
 ## Upload Notebooks
 
-Click **New** button from the title bar.
-
-Select the **Import** option.
+Select the **Import** option from either each (default type) of Space menu or a title bar inside of the space.
 
 <img src="../../img/import_dropdown.png" class="image-box big-img"/>
 

@@ -3,8 +3,8 @@
 In this section, we will explain how you can create an [Amazon Web Service](https://aws.amazon.com/) S3 Space in Zepl and seamlessly synchronize your notebooks from your own [**S3 Bucket**](https://aws.amazon.com/s3/).
 
 ## Create an AWS S3 Repository Space
-Click on **New** from the navbar dropdown and select **Space**.
-The first step is to choose the **type** of your space. Select the **Github** space **type** from the dropdown menu.
+Click **"New Space"** button in the main page to create a new Space and check "External Repository".
+Then select the **S3** from the dropdown menu.
 
 ### Connecting to a S3 Repository
 > In order for ZEPL to connect to your S3 repository, you will need to know your **Access key**, **Private key**, **Bucket** and **Region** for your S3 Bucket.

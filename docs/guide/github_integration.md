@@ -3,8 +3,8 @@
 In this section, we will explain how you can create a Github Space and synchronize your Github notebooks.
 
 ## Create a Github Repository Space
-Click on **New** from the navbar dropdown and select **Space**.
-The first step is to choose the **type** of your space. Select the **Github** space **type** from the dropdown menu.
+Click **"New Space"** button in the main page to create a new Space and check "External Repository".
+Then select the **Github** from the dropdown menu.
 
 <img src="../../img/select_github_space.png" class="image-box big-img" />
 
