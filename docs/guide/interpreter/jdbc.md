@@ -52,12 +52,12 @@ and **52.32.218.160** through your firewall.
 ```
 ubuntu@user:~$ sudo useradd zepl
 ```
-* Note there's no password, as ZEPL authenticates via public key.
-Authorize that key by opening up zepl.rsa.pub and pasting its contents
-into a new line in /home/user/.ssh/authorized_keys.
+* Since ZEPL authenticates via public key, there's no need to set a password.
+Authorize the key by opening up `zepl.rsa.pub`(the downloaded file)
+and pasting its contents into a new line in `/home/user/.ssh/authorized_keys`.
 
 * In most cases the SSH Port will be default 22. Check the Port variable in
-/etc/ssh/sshd_config to see which port is used for SSH.
+`/etc/ssh/sshd_config` to see which port is used for SSH.
 
 ```
 ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
