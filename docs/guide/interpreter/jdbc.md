@@ -32,3 +32,37 @@ SELECT * from my_table
 ### Whitelist IP addresses
 ZEPL connects your database using two IP addresses **52.38.31.66** and **52.32.218.160**. It's recommended to setup firewall and whitelist the IP.
 
+## Connecting to a database in private network with an SSH tunnel
+
+To connect to a database in a private network, create an SSH tunnel using the following steps:
+
+### Create a new JDBC interpreter
+* Go to ZEPL Interpreters page and click **Create interpreter**.
+* Select **JDBC** from the **Interpreter group**.
+* Check **SSH tunnel ON/OFF**.
+
+<img src="../../../img/jdbc_tunnel.png" class="image-box big-img" />
+
+### Setup the public key
+* Download our public key from the popup and whitelist **52.38.31.66**
+and **52.32.218.160** through your firewall.
+
+* Create a user account for ZEPL:
+
+```
+ubuntu@user:~$ sudo useradd zepl
+```
+* Since ZEPL authenticates via public key, there's no need to set a password.
+Authorize the key by opening up `zepl.rsa.pub`(the downloaded file)
+and pasting its contents into a new line in `/home/user/.ssh/authorized_keys`.
+
+* In most cases the SSH Port will be default 22. Check the Port variable in
+`/etc/ssh/sshd_config` to see which port is used for SSH.
+
+```
+ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
+Port 22
+```
+
+Now you can use your newly created interpreter with your notebooks
+to query and process data.
