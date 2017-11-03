@@ -44,8 +44,8 @@ To connect to a database in a private network, create an SSH tunnel using the fo
 <img src="../../../img/jdbc_tunnel.png" class="image-box big-img" />
 
 ### Setup the public key
-* Download our public key from the popup and whitelist 52.38.31.66
-and 52.32.218.160 through your firewall.
+* Download our public key from the popup and whitelist **52.38.31.66**
+and **52.32.218.160** through your firewall.
 
 * Create a user account for ZEPL:
 
