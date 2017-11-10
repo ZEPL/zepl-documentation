@@ -10,9 +10,25 @@
 A single Spark context is shared among `%spark`, `%spark.pyspark`, `%spark.sql` sessions.
 ZEPL currently runs single node Apache Spark 2.1.0 in the containers of each notebooks.
 
+
 ## Load data from AWS S3
 
-To load data from AWS S3, first you need configure access key and secret key.
+To create dataset from AWS S3, it is recommended to use `s3a`. First, you need to configure access key and secret key.
+
+```scala
+%spark
+sc.hadoopConfiguration.set("fs.s3a.access.key", "[YOUR_ACCESS_KEY]")
+sc.hadoopConfiguration.set("fs.s3a.secret.key", "[YOUR_SECRET_KEY]")
+```
+
+And then your Spark context will able to create dataset from S3
+
+```scala
+%spark
+val data = spark.read.text("s3a://apache-zeppelin/tutorial/bank/bank.csv")
+```
+
+Alternatively, you can load data using `s3n`. In this case, access key and secret key can be configured in following way.
 
 ```scala
 %spark
