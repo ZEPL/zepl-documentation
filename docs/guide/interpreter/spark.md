@@ -17,8 +17,8 @@ To create dataset from AWS S3, it is recommended to use `s3a`. First, you need t
 
 ```scala
 %spark
-sc.hadoopConfiguration.set("fs.s3a.access.key", "YOUR_AWS_ACCESS_KEY")
-sc.hadoopConfiguration.set("fs.s3a.secret.key", "YOUR_AWS_SECRET_KEY")
+sc.hadoopConfiguration.set("fs.s3a.access.key", "[YOUR_ACCESS_KEY]")
+sc.hadoopConfiguration.set("fs.s3a.secret.key", "[YOUR_SECRET_KEY]")
 ```
 
 And then your Spark context will able to create dataset from S3
