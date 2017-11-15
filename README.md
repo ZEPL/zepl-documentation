@@ -11,9 +11,10 @@ pip 1.5.X
 ```
 
 Install the mkdocs package using pip:
+(Since 0.17.0, mkdocs dropped python 2.6 support, 0.16.3 supports both for 2.6.x, 2.7.x)
 
 ```
-$ pip install mkdocs
+$ pip install -I mkdocs==0.16.3
 ```
 
 ## 2. Clone this repository
