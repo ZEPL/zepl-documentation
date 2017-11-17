@@ -23,6 +23,7 @@ pages:
     - Explore Public Notebooks: guide/exploring_notebooks.md
   - Interpreter:
     - Apache Spark: guide/interpreter/spark.md
+    - Python: guide/interpreter/python.md
     - JDBC : guide/interpreter/jdbc.md
 # - Release Notes: release_note.md
 - FAQ: faq.md

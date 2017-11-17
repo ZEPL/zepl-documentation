@@ -5,6 +5,7 @@
 
 ### Load additional libraries
   - [Load dependency libraries from maven repository into Apache Spark](guide/interpreter/spark/#load-dependencies)
+  - [Load python libraries via conda interpreter](guide/interpreter/python/#manage-python-environment)
 ### Secure JDBC connection
   - [Whitelist IP addresses](guide/interpreter/jdbc/#whitelist-ip-addresses)
   </div>
