@@ -1,6 +1,11 @@
 <h1> Integration with Github </h1>
 
-In this section, we will explain how you can create a Github Space and synchronize your Github notebooks.
+Github is one of the popular choices that data scientists prefer for
+storing their notebooks. In this section, we will explain how you can
+create a Github Space and synchronize your Github notebooks.
+
+Note that files should be saved in **Apache Zeppelin(note.json)** or
+**Ipython(note.ipynb)** format.
 
 ## Create a Github Repository Space
 Click **"New Space"** button in the main page to create a new Space and check "External Repository".
@@ -21,14 +26,15 @@ The access scope that ZEPL requires is the **repo** scope, as is pictured below.
 
 The following fields will need to be filled in: the Github credentials, the repository URL, and the branch name.
 
-- Github Auth Token: Copy the Github access token that you generated in the previous section.
+<ul>
+  <li>Github Auth Token: Copy the Github access token that you generated in the previous section.</li>
 
-- Github URL: Set the URL of your Github repository. In our example we will use: **https://github.com/apache/zeppelin**.
+  <li>Github URL: Set the URL of your Github repository. In our example we will use: <strong>https://github.com/apache/zeppelin</strong>.</li>
 
-- Branch name: Set the branch name for the repo.  If no branch name is set, ZEPL will use the **master** branch by default.
+  <li>Branch name: Set the branch name for the repo.  If no branch name is set, ZEPL will use the <strong>master</strong> branch by default.</li>
 
-- (Optional field) Folder to search notebooks: ZEPL will recursively search this directory path for notebook files. If this field is not set, then ZEPL will search from the repository's root path. In our example repo **https://github.com/apache/zeppelin**, the notebooks are contained inside the notebook folder. So we can set this field to notebook.
-
+  <li id="github-path-guide">(Optional field) Base Path: ZEPL will recursively search this directory path for notebook files. If this field is not set, then ZEPL will search from the repository's root path. In our example repo <strong>https://github.com/apache/zeppelin</strong>, the notebooks are contained inside the notebook folder. So we can set this field to notebook.</li>
+</ul>
 In our example, the dialog form would look similar to the image below:
 
 <img src="../../img/github_space_filled.png" class="image-box big-img"/>
