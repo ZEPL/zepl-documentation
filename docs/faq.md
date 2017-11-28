@@ -140,7 +140,7 @@ Please take the time and [Explore](https://www.zepl.com/explore).
 <br />
 
 ### What versions of Python, Scala, and Spark does ZEPL support?
-Currently ZEPL supports Python 2.7 and 3.5, Spark 2.1.0, Scala 2.11.
+Currently ZEPL supports Python 2.7 and 3.5, Spark 2.1.0, Scala 2.11, R 3.3.2.
 
 <br />
 

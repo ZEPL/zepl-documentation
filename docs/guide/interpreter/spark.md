@@ -6,8 +6,9 @@
  * `%spark.pyspark` - Provides a Python environment
  * `%spark.sql` - Provides SparkSQL environment
  * `%spark.dep` - Load dependency libraries into Spark environment
+ * `%spark.r` - Provides R environment
 
-A single Spark context is shared among `%spark`, `%spark.pyspark`, `%spark.sql` sessions.
+A single Spark context is shared among `%spark`, `%spark.pyspark`, `%spark.sql`, `%spark.r` sessions.
 ZEPL currently runs single node Apache Spark 2.1.0 in the containers of each notebooks.
 
 
@@ -87,4 +88,36 @@ z.load("groupId:artifactId:version").exclude("groupId:*")
 
 // local() skips adding artifact to spark clusters (skipping sc.addJar())
 z.load("groupId:artifactId:version").local()
+```
+
+## SparkR
+
+Installed libraries - `ggplot2`, `googleVis`, `knitr`, `data.table`, `devtools`
+
+
+```r
+%spark.r
+library(googleVis)
+bubble <- gvisBubbleChart(Fruits, idvar="Fruit",
+                          xvar="Sales", yvar="Expenses",
+                          colorvar="Year", sizevar="Profit",
+                          options=list(
+                            hAxis='{minValue:75, maxValue:125}'))
+print(bubble, tag = 'chart')
+```
+
+```r
+%spark.r
+plot(iris, col = heat.colors(3))
+```
+
+```r
+%spark.r
+library(ggplot2)
+pres_rating <- data.frame(
+  rating = as.numeric(presidents),
+  year = as.numeric(floor(time(presidents))),
+  quarter = as.numeric(cycle(presidents))
+)
+p <- ggplot(pres_rating, aes(x=year, y=quarter, fill=rating))
 ```
