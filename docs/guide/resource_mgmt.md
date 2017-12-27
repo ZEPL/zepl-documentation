@@ -20,8 +20,8 @@ Click "New Resource" then you'll see below creation form.
 ### Configurations
 
   - **Resource type**: Each resource type consumes hours units at different rates
-  - **Idle shutdown time**: If the idle time is over, the container will be shutdowned
-  - **Max concurrent running notebooks**: The maximum number of notebooks which can be attached in the resource at the same time
+  - **Idle shutdown time**: If you don't use a container for certain amount of time, the idle container will be stopped
+  - **Max concurrent running notebooks**: The maximum number of notebooks which can be attached to the resource at the same time
   - **Processing time limit**: (please update)
   - **Default resource setting**: Set default resource which can be displayed as a top priority when you create(clone) a notebook 
   - **Image type**: Different image types provide different ZEPL interpreters
