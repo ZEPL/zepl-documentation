@@ -43,8 +43,8 @@ You can update the resource settings by clicking its the name or by clicking on 
 
 <img src="../../img/resource_menu.png" width="180px" class="image-box small-img" />
 
-Please note that you cannot change the container type or the image type after the Resource is created.
-Create new one if you want bigger/smaller resource type capacity. 
+You cannot change the container type or the image type after the Resource is created.
+Create new Resource if you want a different container resource type and image type.
 <br>
 ### Delete Resource
 
