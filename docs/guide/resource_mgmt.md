@@ -1,6 +1,7 @@
 <h1>Resources in ZEPL</h1>
 
-Before you can execute a ZEPL Notebook, you will need attach a Resource to it. Resources in ZEPL determine which interpreters will be available and which and physical resources will be allocated to execute the notebook.
+A Resource must be attached to a ZEPL Notebook before it can be executed.
+Resources in ZEPL determine which interpreters will be available and which and physical resources will be allocated to execute the notebook.
 
 ## Attach Resource to Notebook
 
