@@ -13,7 +13,7 @@ pages:
 - Welcome: index.md
 # - Key Concepts: overview.md
 - User Guide:
-  - Notebook:
+  - Notebooks:
     - Sharing Notebooks: guide/sharing_notebooks.md
     - External Notebooks:
       - Apache Zeppelin: guide/zeppelin_integration.md
@@ -21,11 +21,11 @@ pages:
       - Amazon S3: guide/s3_integration.md
     - Import Notebook: guide/import_notebook.md
     - Explore Public Notebooks: guide/exploring_notebooks.md
-  - Interpreter:
+  - Interpreters:
     - Apache Spark: guide/interpreter/spark.md
     - Python: guide/interpreter/python.md
     - JDBC : guide/interpreter/jdbc.md
-  - Resource Management: guide/resource_mgmt.md  
+  - Resources: guide/resource_mgmt.md  
 # - Release Notes: release_note.md
 - FAQ: faq.md
 - Support: support.md
