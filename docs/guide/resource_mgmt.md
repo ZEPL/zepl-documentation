@@ -8,8 +8,8 @@ You can select a resource when you create(or clone) a notebook.
 
 <img src="../../img/create_new_notebook.png" class="image-box big-img" />
 
-You can also switch the resource after the creation in "Notebook Settings" (click gear icon in top-right side corner of the notebook).
-But please note that if the container is running, it will be shutdowned after switching.
+You can also switch a notebook's attached Resource after the notebook has been created throught the "Notebook Settings" menu item (click gear icon in top-right side corner of the notebook).
+Changing the attached Resource will cause any running containers to be shutdown.
 
 <img src="../../img/notebook_settings.png" class="image-box big-img" />
 
