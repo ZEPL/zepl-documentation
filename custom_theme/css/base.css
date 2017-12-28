@@ -25,8 +25,6 @@ div.col-md-3 {
     padding-left: 0;
 }
 
-
-
 div.col-md-9 {
     padding-bottom: 100px;
     max-width: 1220px;
@@ -106,6 +104,7 @@ li > a.current {
     padding-left: 30px;
     font-size: 90%;
 }
+
 
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
@@ -214,6 +213,10 @@ li > a.current {
 .toctree-l1 {
     list-style-type: none;
     margin: 2px 6px 2px 14px;
+}
+
+.toctree-l4 {
+    list-style-type: circle;
 }
 
 .toc-menu a {
