@@ -11,7 +11,7 @@ ZEPL is a service where your Apache Zeppelin and Jupyter Notebooks can be brough
 
 Select the **Import** option from either each (default type) of Space menu or a title bar inside of the space.
 
-<img src="../../img/import_dropdown.png" class="image-box big-img"/>
+<img src="../../img/import_dropdown.png" height="280px" class="image-box big-img"/>
 
 Click **Select File** to upload a new file.
 

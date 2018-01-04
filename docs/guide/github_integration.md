@@ -4,7 +4,7 @@ Github is one of the popular choices that data scientists prefer for
 storing their notebooks. In this section, we will explain how you can
 create a Github Space and synchronize your Github notebooks.
 
-Note that files should be saved in **Apache Zeppelin(note.json)** or
+Note that files should be saved in **Apache Zeppelin(*.json)** or
 **Ipython(*.ipynb)** format.
 
 ## Create a Github Repository Space
@@ -39,7 +39,7 @@ In our example, the dialog form would look similar to the image below:
 
 <img src="../../img/github_space_filled.png" class="image-box big-img"/>
 
-You can now click on **Apply** to create your Github space. ZEPL will first test the connection to the Github repository. If the test succeeds, you will be redirected to the newly created space. 
+You can now click on **Apply** to create your Github space. ZEPL will first test the connection to the Github repository. If the test succeeds, you will be redirected to the newly created space.
 ZEPL will connect automatically to your Github repository and load any notebook it finds. The loaded notebooks should appear inside your repository space.
 
 <img src="../../img/github_space.png" class="image-box big-img"/>

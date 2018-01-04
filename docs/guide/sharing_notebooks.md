@@ -15,11 +15,11 @@ Click **"New Space"** button in the main page to create a new Space.
 
 <img src="../../img/create_new_space.png" class="image-box big-img"/>
 
-And write a space name with short description. 
+And write a space name with short description.
 (In this case, you don't need to care about any external repositories)
 
 To connect the space to an external repository like AWS S3, Github or Apache Zeppelin and sync your notebooks, see the following links for the detailed information.
-  
+
   * [How to connect to Apache Zeppelin](../zeppelin_integration)
   * [How to connect to Github](../github_integration)
   * [How to connect to S3](../s3_integration)
@@ -31,9 +31,9 @@ Since you created this space, you are also the space's owner. You can invite col
 <br/ >
 
 ## Sharing Notebooks to Spaces
-You can share and [publish the notebook](exploring_notebook.md) in **Spaces** main page. 
+You can share and [publish the notebook](exploring_notebook.md) in **Spaces** main page.
 
-<img src="../../img/card_share_menu.png" class="card-img" />
+<img src="../../img/share_dropdown.png" class="card-img" />
 
 Or you can find **Share and Publish** button in top-right corner of each notebook and directly do in it.
 <br />
@@ -83,8 +83,8 @@ If you want to make your notebook public and anyone can access to it, just slide
 It will generate the public URL for the notebook. Just copy to the clipboard and visit the site.
 
 Optionally you can select the showcase where your public notebook is located.
-Of course you can choose multiple showcases at a time. If you have no idea about **Showcases** yet, please read [What is the showcase?](exploring_notebooks.md#what-is-the-showcase) section first. 
-Then you can see your notebook under the showcase you chose in **Explore** tab. 
+Of course you can choose multiple showcases at a time. If you have no idea about **Showcases** yet, please read [What is the showcase?](exploring_notebooks.md#what-is-the-showcase) section first.
+Then you can see your notebook under the showcase you chose in **Explore** tab.
 
 
 <br/>
