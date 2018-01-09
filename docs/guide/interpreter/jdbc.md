@@ -32,9 +32,9 @@ SELECT * from my_table
 ### Whitelist IP addresses
 ZEPL connects your database using two IP addresses **52.38.31.66** and **52.32.218.160**. It's recommended to setup firewall and whitelist the IP.
 
-### Connecting to a database in private network with SSH tunnel
+### Connecting to a database in private network with an SSH tunnel
 
-To connect to a database in a private network, create SSH tunnel using the following steps:
+To connect to a database in a private network, create an SSH tunnel using the following steps:
 
 #### Create a new JDBC interpreter
 * Go to ZEPL Interpreters page and click **Create interpreter**.
