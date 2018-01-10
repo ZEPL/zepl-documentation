@@ -66,13 +66,18 @@ Help
 
 ## IPython support
 
-You can use IPython commands with the python interpreter.
+You can use [IPython commands](http://ipython.readthedocs.io/en/stable/interactive/tutorial.html) with the default python interpreter in ZEPL.
 
-```
+```python
 %python
 
+# !ls Run a shell command.
+# Install additional packages
 !pip install keras
+
+# object? Details about the object
 help?
-%alias say_hello echo "Hello <%l>"
-%say_hello IPython
+
+# Time execution of a Python statement or expression
+%timeit range(1000)
 ```
