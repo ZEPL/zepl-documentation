@@ -31,6 +31,9 @@ List your environments
 Create an environment
 ```
 %python.conda create --name [ENV_NAME]
+
+# or if you want to specify python version (e.g 3.6)
+%python.conda create --name [ENV_NAME] python=3.6
 ```
 Activate the environment
 ```
@@ -47,6 +50,9 @@ List installed package
 Install packages
 ```
 %python.conda install [PACKAGE1 PACKAGE2 ...]
+
+# or if you want to specify env name
+%python.conda install -n [ENV_NAME] [PACKAGE1 PACKAGE2 ...]
 ```
 Uninstall packages
 ```
