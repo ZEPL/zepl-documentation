@@ -50,6 +50,9 @@ List installed package
 Install packages
 ```
 %python.conda install [PACKAGE1 PACKAGE2 ...]
+
+# or if you want to specify env name
+%python.conda install -n [ENV_NAME] [PACKAGE1 PACKAGE2 ...]
 ```
 Uninstall packages
 ```
