@@ -62,3 +62,17 @@ Help
 ```
 %python.conda help
 ```
+
+
+## IPython support
+
+You can use IPython commands with the python interpreter.
+
+```
+%python
+
+!pip install keras
+help?
+%alias say_hello echo "Hello <%l>"
+%say_hello IPython
+```
