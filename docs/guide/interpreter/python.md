@@ -62,3 +62,22 @@ Help
 ```
 %python.conda help
 ```
+
+
+## IPython support
+
+You can use [IPython commands](http://ipython.readthedocs.io/en/stable/interactive/tutorial.html) with the default python interpreter in ZEPL.
+
+```python
+%python
+
+# !ls Run a shell command.
+# Install additional packages
+!pip install keras
+
+# object? Details about the object
+help?
+
+# Time execution of a Python statement or expression
+%timeit range(1000)
+```
