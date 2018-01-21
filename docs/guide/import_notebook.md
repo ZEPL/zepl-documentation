@@ -1,6 +1,7 @@
 <h1> Importing Jupyter notebooks into ZEPL and JUNO </h1>
 
 ZEPL is a service where your Apache Zeppelin and Jupyter Notebooks can be brought together to the same platform for sharing and collaboration. You can import your Apache Zeppelin and Jupyter notebooks into ZEPL. There are two methods to import a notebook:
+
 * Upload notebooks directly to ZEPL
 * Fetch from a publically hosted location
 
