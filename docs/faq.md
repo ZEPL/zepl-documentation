@@ -53,7 +53,7 @@ You simply need to make sure that each Zeppelin is setup with its unique token w
 
 ### How can I use ZEPL on Apache Zeppelin running on EMR?
 ZEPL enables close integration with Apache Zeppelin so you can setup Zeppelin in EMR and use ZEPL not only for sync-ing and backing up of your notebooks, but you can leverage ZEPL as the authentication portal for Zeppelin.
-Details of how you can set this up can be found [here](https://www.zepl.com/spaces/S3pWITo5J/7a3f177ff7da4359938aea3a69d2ca73).
+Details of how you can set this up can be found [here](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
 
 <br />
 
