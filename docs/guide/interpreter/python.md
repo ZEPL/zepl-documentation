@@ -14,6 +14,30 @@ ZEPL provides python interpreter with popular python libraries pre-installed:
  * [scikit-learn](http://scikit-learn.org/): Machine Learning tool for data mining ad data analysis
  * [tensorflow](https://www.tensorflow.org/): Machine intelligent library helps developer to design, build, and train deep learning models easily
 
+
+## Pip
+
+Install additional libraries using `pip`. 
+
+Usages
+
+```
+%python
+!pip install [packages]
+```
+
+for example
+
+```
+%python
+!pip install -q keras
+import keras
+```
+
+`pip` command install packages in current environment. When other environment is activated, `pip` command install packages in the particular environment activated. Check next section to create and switch multiple python environments.
+
+
+
 ## Manage Python Environment
 
 If you need different environment other than the default environment or external packages, you can use conda interpreter bundled with python interpreter. [Conda](https://conda.io/docs/) is open source package and environment management system helps easy package installation and environment switch.
@@ -43,11 +67,12 @@ Deactivate the environment
 ```
 %python.conda deactivate
 ```
+
 List installed package
 ```
 %python.conda list
 ```
-Install packages
+Install packages (see previous section to install packages via `pip`)
 ```
 %python.conda install [PACKAGE1 PACKAGE2 ...]
 
