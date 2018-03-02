@@ -1,7 +1,7 @@
 <h1>Resources in ZEPL</h1>
 
 A Resource must be attached to a ZEPL Notebook before it can be executed.
-Resources in ZEPL determine which interpreters will be available and which and physical resources will be allocated to execute the notebook.
+Resources in ZEPL determine which interpreters will be available and what type of physical resource will be allocated to execute the notebook.
 
 ## Attach Resource to Notebook
 
