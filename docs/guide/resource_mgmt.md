@@ -52,18 +52,18 @@ Create new resource if you want a different container resource type and image ty
 After a resource is deleted, all containers for that resource will be shutdown, and any notebooks that have the deleted resource attached will be set to the default resource.
 If you're trying to remove **Default Resource**, the next available resource in the resource list will be set as the next default resource.
 
-## ACL for resources
+## Permissions for resources
 
-Inside organizations, users share its resources. To control the usage of
-resources in an organization, you can make use of resource ACL. Please note
-that after introduction of resources ACL, inside organizations, users can
-attach resources to notebooks and run them. View only and edit in space ACL
-only works in restricting edit of notebooks, not with the execution of
-notebooks.
+Inside an organization, users share its resources. To control the usage of
+resources in an organization, you can make use of resource permissions.
+After the introduction of resources permissions users can attach resources
+to notebooks and run them. View only and edit permissions set while sharing
+notebooks can only be used to restrict editting of notebooks, they wont
+restrict the execution of notebooks.
 
-There are three different permissions to notebook which can be applied to
-various users or user groups - such as team groups(members/ managers), space
-user groups(members/ collaborators / managers)
+There are three different permissions which can be applied to users
+or user groups such as team groups(members/ managers) or space user groups
+(members/ collaborators / managers)
 
 * Allow Attach, Detach Resource on a notebook
 * Allow Start, Stop, Execute Resource
@@ -78,12 +78,13 @@ doesnt give edit permission to managers of that space.
 
 ### Create a resource permission
 
-* Initially, only resource admins can configure ACLs to resources. Later, users
-with edit permission would be able to do this.
+* Initially, only resource admins can configure permissions to resources.
+Later, users with edit permission would be able to do this.
 
 <img src="../../img/resource-add-permission-button.png" class="image-box middle-img" />
 
-* To add an ACL, go to edit page of a resource and click `add permission` button.
+* To add a permissions, go to edit page of a resource and click
+`add permission` button.
 
 <img src="../../img/resource-permission-popup.png" class="image-box middle-img" />
 
