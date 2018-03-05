@@ -145,4 +145,4 @@ Currently ZEPL supports Python 2.7 and 3.5, Spark 2.1.0, Scala 2.11, R 3.3.2.
 <br />
 
 ### How can I load external Python libraries?
-You can load external Python libraries by using the following command: ``%python.conda install libname``
+You can load external Python libraries by using the following command: ``%python.conda install libname`` or ``%python !pip install libname``
