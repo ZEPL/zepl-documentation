@@ -52,3 +52,52 @@ Create new resource if you want a different container resource type and image ty
 After a resource is deleted, all containers for that resource will be shutdown, and any notebooks that have the deleted resource attached will be set to the default resource.
 If you're trying to remove **Default Resource**, the next available resource in the resource list will be set as the next default resource.
 
+## ACL for resources
+
+Inside organizations, users share its resources. To control the usage of
+resources in an organization, you can make use of resource ACL. Please note
+that after introduction of resources ACL, inside organizations, users can
+attach resources to notebooks and run them. View only and edit in space ACL
+only works in restricting edit of notebooks, not with the execution of
+notebooks.
+
+There are three different permissions to notebook which can be applied to
+various users or user groups - such as team groups(members/ managers), space
+user groups(members/ collaborators / managers)
+
+* Allow Attach, Detach Resource on a notebook
+* Allow Start, Stop, Execute Resource
+* Allow Modify Resource Setting
+
+Please note that these permissions does not depend on each other or have
+precedence over each other. You will have to be explicit on permissions.
+A user who doesnt have attach permission still can have edit permission.
+Also, giving permission to a specific user group doesn't give permission
+to a higher user group. Example - giving edit permission to space users
+doesnt give edit permission to managers of that space.
+
+### Create a resource permission
+
+* Initially, only resource admins can configure ACLs to resources. Later, users
+with edit permission would be able to do this.
+
+<img src="../../img/resource-add-permission-button.png" class="image-box middle-img" />
+
+* To add an ACL, go to edit page of a resource and click `add permission` button.
+
+<img src="../../img/resource-permission-popup.png" class="image-box middle-img" />
+
+* Fill the users or space or team name.
+
+* If you choose space or team, select the specific user group
+(managers/members) etc.
+
+* Check the required permissions and click `Submit`.
+
+### Edit or delete a resource permission
+
+<img src="../../img/resource-permission-context-menu.png"
+  class="image-box middle-img"
+/>
+
+You can use the context menu to edit or delete specific resource permissions.
