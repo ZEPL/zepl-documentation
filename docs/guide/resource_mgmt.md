@@ -57,13 +57,13 @@ If you're trying to remove **Default Resource**, the next available resource in 
 Inside an organization, users share its resources. To control the usage of
 resources in an organization, you can make use of resource permissions.
 After the introduction of resource permissions users can attach resources
-to notebooks and run them. View only and edit permissions set while sharing
+to notebooks and run them. [View only and edit permissions](/guide/sharing_notebooks/#more-about-sharing-options) set while sharing
 notebooks can only be used to restrict editing of notebooks, they won't
 restrict the execution of notebooks.
 
 There are three different permissions which can be applied to users
-or user groups such as team groups(members/ managers) or space user groups
-(members/ collaborators / managers)
+or [user groups](/faq/#what-are-the-different-roles-available-in-zepl-what-rights-do-each-have) such as team groups(members/managers) or space user groups
+(members/collaborators/managers)
 
 * Allow Attach, Detach Resource on a notebook
 * Allow Start, Stop, Execute Resource
