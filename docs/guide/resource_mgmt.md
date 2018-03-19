@@ -52,3 +52,53 @@ Create new resource if you want a different container resource type and image ty
 After a resource is deleted, all containers for that resource will be shutdown, and any notebooks that have the deleted resource attached will be set to the default resource.
 If you're trying to remove **Default Resource**, the next available resource in the resource list will be set as the next default resource.
 
+## Permissions for resources
+
+Inside an organization, users share its resources. To control the usage of
+resources in an organization, you can make use of resource permissions.
+After the introduction of resource permissions users can attach resources
+to notebooks and run them. [View only and edit permissions](/guide/sharing_notebooks/#more-about-sharing-options) set while sharing
+notebooks can only be used to restrict editing of notebooks, they won't
+restrict the execution of notebooks.
+
+There are three different permissions which can be applied to users
+or [user groups](/faq/#what-are-the-different-roles-available-in-zepl-what-rights-do-each-have) such as team groups(members/managers) or space user groups
+(members/collaborators/managers)
+
+* Allow Attach, Detach Resource on a notebook
+* Allow Start, Stop, Execute Resource
+* Allow Modify Resource Setting
+
+Please note that these permissions do not depend on each other or have
+precedence over each other. You will have to be explicit on permissions.
+A user who doesn't have attach permission still can have edit permission.
+Also, giving permission to a specific user group doesn't give permission
+to a higher user group. Example - giving edit permission to space users
+doesn't give edit permission to managers of that space.
+
+### Create a resource permission
+
+* Initially, only resource admins can configure permissions to resources.
+Later, users with edit permission would be able to do this.
+
+<img src="../../img/resource-add-permission-button.png" class="image-box middle-img" />
+
+* To add a permission, go to edit page of a resource and click
+`add permission` button.
+
+<img src="../../img/resource-permission-popup.png" class="image-box middle-img" />
+
+* Fill the users or space or team name.
+
+* If you choose space or team, select the specific user group
+(managers/members) etc.
+
+* Check the required permissions and click `Submit`.
+
+### Edit or delete a resource permission
+
+<img src="../../img/resource-permission-context-menu.png"
+  class="image-box middle-img"
+/>
+
+You can use the context menu to edit or delete specific resource permissions.
