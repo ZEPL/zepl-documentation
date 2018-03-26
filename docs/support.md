@@ -11,7 +11,7 @@ please contact to us at [support@ZEPL.com](mailto:support@ZEPL.com)
 <span class="fa fa-usd support-icon" aria-hidden="true"></span> &nbsp;&nbsp;
 <span class="support-font">PRICING</span>
 
-Please visit [ZEPL Pricing Guide](https://www.zepl.com/pricing).
+Please visit [ZEPL Pricing Guide](https://www.zepl.com/plans-and-pricing).
 Or you can directly contact to us at [info@zepl.com](mailto:info@zepl.com)
 
 <br/>
