@@ -3,6 +3,11 @@
 ### Load your data
   - [Load data from S3 using Apache Spark](guide/interpreter/spark/#load-data-from-aws-s3)
 
+### Interpreters
+  - [Apache Spark](guide/interpreter/spark) - scala, pyspark, sparksql
+  - [Python](guide/interpreter/python) - python2, python3
+  - [JDBC](guide/interpreter/jdbc) - mysql, postgresql, oracle
+  - [Config](guide/interpreter/config) - inline configuration
 ### Load additional libraries
   - [Load dependency libraries from maven repository into Apache Spark](guide/interpreter/spark/#load-dependencies)
   - [Install python packages using Pip](guide/interpreter/python/#pip)
@@ -12,6 +17,8 @@
   </div>
   <div class="col-md-6">
 ### Import existing notebooks
+  Import Jupyter (.ipynb) or Zeppelin notebooks
+
   - External notebooks:
     - [Apache Zeppelin](guide/zeppelin_integration.md)
     - [Github](guide/github_integration.md)

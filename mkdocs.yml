@@ -25,6 +25,7 @@ pages:
     - Apache Spark: guide/interpreter/spark.md
     - Python: guide/interpreter/python.md
     - JDBC : guide/interpreter/jdbc.md
+    - Config : guide/interpreter/config.md
   - Resources: guide/resource_mgmt.md  
 # - Release Notes: release_note.md
 - FAQ: faq.md
