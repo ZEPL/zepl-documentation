@@ -45,8 +45,10 @@ To connect to a database in a private network, create an SSH tunnel using the fo
 
 
 #### Setup the public key
-* Download our public key from the popup and whitelist **52.38.31.66**
-and **52.32.218.160** through your firewall.
+* Download our public key from the popup and whitelist these IPs through your firewall.
+    - **35.164.138.115**
+    - **52.24.205.101** 
+    - **34.214.146.198**
 
 * Create a user account for ZEPL:
 ```
