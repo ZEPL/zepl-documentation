@@ -46,6 +46,7 @@ ZEPL connects your database using IPs addresses above Thus it's required to setu
 To connect to a database in a private network, create an SSH tunnel using the following steps:
 
 #### Create a new JDBC interpreter
+
 * Go to ZEPL Interpreters page and click **Create interpreter**.
 * Select **JDBC** from the **Interpreter group**.
 * Enable SSH tunneling.
@@ -55,15 +56,16 @@ To connect to a database in a private network, create an SSH tunnel using the fo
 <br/>
 
 #### Setup the public key
+
 * Download our public key from the popup and whitelist these IPs through your firewall.
     - **35.164.138.115**
     - **52.24.205.101** 
     - **34.214.146.198**
 
 * Create a user account for ZEPL:
-```
-ubuntu@user:~$ sudo useradd zepl
-```
+    ```
+    ubuntu@user:~$ sudo useradd zepl
+    ```
 
 * Since ZEPL authenticates via public key, there's no need to set a password.
 Authorize the key by opening up `default.ssh.public_key` (the downloaded file)
@@ -73,10 +75,10 @@ Make sure `authorized_keys` file has **600** permission.
 * In most cases the SSH Port will be 22 by default. Check the Port variable in
 `/etc/ssh/sshd_config` to see which port is used for SSH.
 
-```
-ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
-Port 22
-```
+    ```
+    ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
+    Port 22
+    ```
 
 Now you can use your newly created interpreter with your notebooks
 to query and process data.
