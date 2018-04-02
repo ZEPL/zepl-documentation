@@ -57,23 +57,23 @@ To connect to a database in a private network, create an SSH tunnel using the fo
 
 #### Setup the public key
 
-1. Download our public key from the popup and whitelist these IPs through your firewall.
+(1) Download our public key from the popup and whitelist these IPs through your firewall.
     - **35.164.138.115**
     - **52.24.205.101** 
     - **34.214.146.198**
 
-2. Create a user account for ZEPL
+(2) Create a user account for ZEPL
 
 ```sh
 ubuntu@user:~$ sudo useradd zepl
 ```
 
-3. Since ZEPL authenticates via public key, there's no need to set a password.
+(3) Since ZEPL authenticates via public key, there's no need to set a password.
 Authorize the key by opening up `default.ssh.public_key` (the downloaded file)
 and pasting its contents into a new line in `/home/zepl/.ssh/authorized_keys`.
 Make sure `authorized_keys` file has **600** permission.
 
-4. In most cases the SSH Port will be 22 by default. Check the Port variable in
+(4) In most cases the SSH Port will be 22 by default. Check the Port variable in
 `/etc/ssh/sshd_config` to see which port is used for SSH.
 
 ```sh
