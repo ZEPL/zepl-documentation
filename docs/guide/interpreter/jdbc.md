@@ -5,6 +5,8 @@ ZEPL supports JDBC interpreter with drivers for popular databases. Before connec
   - Database is currently up and running
   - Database is accessible from public internet
   - You have proper credentials to access database
+  
+<br/>
 
 ## Create new JDBC Interpreter
 
@@ -17,8 +19,6 @@ First, you'll need to create an intepreter to provide database connection inform
 5. Select a **JDBC driver**
 
 Use the **Test connection** button to test the connection.
-
-<br/>
 
 ### Use your JDBC Interpreter
 
