@@ -103,7 +103,9 @@ Later, users with edit permission would be able to do this.
 
 You can use the context menu to edit or delete specific resource permissions.
 
-To give a permission to  all users of a certain criteria, such as -
+#### Creating generic permissions
+
+To give a permission to all users of a certain criteria, such as -
 all users or all space collaborators or all team managers, type `all`
 in the search box.
 
