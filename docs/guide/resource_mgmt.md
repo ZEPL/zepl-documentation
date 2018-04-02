@@ -102,3 +102,17 @@ Later, users with edit permission would be able to do this.
 />
 
 You can use the context menu to edit or delete specific resource permissions.
+
+#### Creating generic permissions
+
+To give a permission to all users of a certain criteria, such as -
+all users or all space collaborators or all team managers, type `all`
+in the search box.
+
+<img src="../../img/resource-permission-all.png"
+  class="image-box middle-img"
+/>
+
+* Specific user rule will overwrite all-user rule.
+* Specific team rule will overwrite all-team rule.
+* Specific space rule will overwrite all-space rule.
