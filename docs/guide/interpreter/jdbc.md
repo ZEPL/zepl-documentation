@@ -5,6 +5,8 @@ ZEPL supports JDBC interpreter with drivers for popular databases. Before connec
   - Database is currently up and running
   - Database is accessible from public internet
   - You have proper credentials to access database
+  
+<br/>
 
 ## Create new JDBC Interpreter
 
@@ -27,43 +29,55 @@ Once you have created the JDBC interpreter, you can use it in your notebook by p
 SELECT * from my_table
 ```
 
+<br/>
+
 ## Secure database connection
 
 ### Whitelist IP addresses
-ZEPL connects your database using two IP addresses **52.38.31.66** and **52.32.218.160**. It's recommended to setup firewall and whitelist the IP.
+ZEPL connects your database using IPs addresses above Thus it's required to setup firewall and whitelist the IP.
+    - **35.164.138.115**
+    - **52.24.205.101** 
+    - **34.214.146.198**
+
+<br/>
 
 ### Connecting to a database in private network with an SSH tunnel
 
 To connect to a database in a private network, create an SSH tunnel using the following steps:
 
 #### Create a new JDBC interpreter
+
 * Go to ZEPL Interpreters page and click **Create interpreter**.
 * Select **JDBC** from the **Interpreter group**.
 * Enable SSH tunneling.
 
 <img src="../../../img/jdbc_tunnel.png" class="image-box big-img" />
 
+<br/>
 
 #### Setup the public key
-* Download our public key from the popup and whitelist these IPs through your firewall.
-    - **35.164.138.115**
-    - **52.24.205.101** 
-    - **34.214.146.198**
 
-* Create a user account for ZEPL:
-```
+(1) Download our public key from the popup and whitelist these IPs through your firewall.
+
+- **35.164.138.115**
+- **52.24.205.101** 
+- **34.214.146.198**
+
+(2) Create a user account for ZEPL
+
+```sh
 ubuntu@user:~$ sudo useradd zepl
 ```
 
-* Since ZEPL authenticates via public key, there's no need to set a password.
+(3) Since ZEPL authenticates via public key, there's no need to set a password.
 Authorize the key by opening up `default.ssh.public_key` (the downloaded file)
 and pasting its contents into a new line in `/home/zepl/.ssh/authorized_keys`.
 Make sure `authorized_keys` file has **600** permission.
 
-* In most cases the SSH Port will be 22 by default. Check the Port variable in
+(4) In most cases the SSH Port will be 22 by default. Check the Port variable in
 `/etc/ssh/sshd_config` to see which port is used for SSH.
 
-```
+```sh
 ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
 Port 22
 ```
