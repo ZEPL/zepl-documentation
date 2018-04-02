@@ -34,10 +34,12 @@ SELECT * from my_table
 ## Secure database connection
 
 ### Whitelist IP addresses
+
 ZEPL connects your database using IPs addresses above Thus it's required to setup firewall and whitelist the IP.
-    - **35.164.138.115**
-    - **52.24.205.101** 
-    - **34.214.146.198**
+
+- **35.164.138.115**
+- **52.24.205.101** 
+- **34.214.146.198**
 
 <br/>
 
