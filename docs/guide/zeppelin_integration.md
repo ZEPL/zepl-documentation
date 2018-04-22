@@ -166,7 +166,7 @@ $ ./bin/zeppelin-daemon.sh start (or restart)
 
 Return to ZEPL. An indicator should indicate whether Zeppelin is properly connected.
 
-<img src="../../img/connected_zeppelin.png" class="image-box middle-img"/>
+<img src="../../img/connected_zeppelin.png" class="image-box small-img"/>
 
 <br/>
 ### Migrating Configurations
@@ -211,5 +211,5 @@ $ ./bin/zeppelin-daemon.sh restart (or start)
 
 Then come back to ZEPL and check whether the green light is turned on or not.
 
-<img src="../../img/connected_zeppelin.png" class="image-box middle-img"/>
+<img src="../../img/connected_zeppelin.png" class="image-box small-img"/>
 
