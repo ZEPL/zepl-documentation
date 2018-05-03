@@ -4,7 +4,7 @@
 
 * `ctrl + .` : autocompletion shotcut
 
-The Code Autocompletion can use in ZEPL notebook. When you code in Python, Spark and SQL, The Autocompletion in nodebook support a better enviroment.
+The Code Autocompletion can use in ZEPL notebook. When you code in Python, Spark and SQL, The Autocompletion in notebook support a better environment.
 
 <img src="../../img/autocompletion_demo.gif" class="image-box big-img" />
 
