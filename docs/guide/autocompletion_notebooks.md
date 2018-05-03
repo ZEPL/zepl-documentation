@@ -2,14 +2,15 @@
 
 ## How to use autocompletion in ZEPL
 
-`ctrl + .` : autocompletion shotcut
+* `ctrl + .` : autocompletion shotcut
 
 The Code Autocompletion can use in ZEPL notebook. When you code in Python, Spark and SQL, The Autocompletion in nodebook support a better enviroment.
 
 <img src="../../img/autocompletion_demo.gif" class="image-box big-img" />
 
+<br>
 Don't forget that before you use autocompletion feature, the notebook should `run` at first.
-
+If you find warning messsage, check to run notebook.
 <img src="../../img/autocompletion_error_message.png" class="image-box big-img" />
 
 <br>
