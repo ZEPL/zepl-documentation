@@ -31,5 +31,9 @@
 ### Publish your notebooks
   - [Publish a notebook](guide/sharing_notebooks/#publishing-notebooks-to-web)
   - [Explore public notebooks](guide/exploring_notebooks.md)
+  
+### Managing notebook versions 
+  - [How to manage notebook versions](guide/feature_versioning.md)
+ 
   </div>
 </div>

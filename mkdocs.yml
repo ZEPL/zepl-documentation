@@ -21,6 +21,7 @@ pages:
       - Amazon S3: guide/s3_integration.md
     - Import Notebook: guide/import_notebook.md
     - Explore Public Notebooks: guide/exploring_notebooks.md
+    - Notebook Versoining: guide/feature_versioning.md
   - Interpreters:
     - Apache Spark: guide/interpreter/spark.md
     - Python: guide/interpreter/python.md
