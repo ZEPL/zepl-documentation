@@ -2,22 +2,22 @@
 
 ## How to use autocompletion in ZEPL
 
-* `ctrl + .` : autocompletion shotcut
+* `ctrl + .` : autocompletion shortcut
 
-The Code Autocompletion can use in ZEPL notebook. When you code in Python, Spark and SQL, The Autocompletion in notebook support a better environment.
+ZEPL supports autocompletion for Python, Spark, and SQL. To begin using the autocompletion feature, simply the run the paragraph you're working on. You can run the paragraph after you select the interpreter you want to use.
 
 <img src="../../img/autocompletion_demo.gif" class="image-box big-img" />
 
 <br>
-Don't forget that before you use autocompletion feature, the notebook should `run` at first.
-If you find warning messsage, check to run notebook.
+Don't forget that before you use the autocompletion feature, first run the paragraph.
+If you see a warning message, check that the notebook or paragraph has run. You can do this by checking both the paragraph and the container status.
 <img src="../../img/autocompletion_error_message.png" class="image-box big-img" />
 
 <br>
 
 ## Supported Interpreter Type
 
-Before starting to use it, please check autocompletion supported interpreter such as Apache Spark, Python, JDBC Interpreter.
+Here is the list of interpreters and their specific autocompletion supported features.
 
 <br>
 #### Spark Interpreter
