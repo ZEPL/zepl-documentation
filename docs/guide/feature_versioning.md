@@ -46,7 +46,7 @@ Also, we can change the name of the versions. Click the **Rename** menu.
 
 ## 4. Versions automatically created
 
-When a paragraph is executed or code is modified in a paragraph, ZEPL creates versions automatically for the notebook. (`periodically`) Of course, we can rename the automatically created versions too. 
+When a paragraph is executed or code is modified in a paragraph, ZEPL creates notebook versions automatically (at short time intervals). Of course, we can rename the automatically created versions too. 
 
 <br/>
 
