@@ -30,6 +30,7 @@ Value is separated by spaces or tabs from Key. Value can include any character e
 
  - `100`, `true`, `/dir/path`, `spark app name`
 
+If value need to include new line (multi-line) wrap value using `"""` (triple double quote).
 
 
 ### Example
@@ -41,6 +42,9 @@ Value is separated by spaces or tabs from Key. Value can include any character e
 spark.app.name = ZEPL            # override default spark app name
 AWS_ACCESS_KEY_ID = ....         # AWS access key environment variable
 AWS_SECRET_ACCESS_KEY = ....     # AWS secret key environment variable
+MY_VAR = """multiple
+line
+value"""
 ```
 
 ```
