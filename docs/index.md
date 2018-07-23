@@ -14,6 +14,8 @@
   - [Load python libraries via conda interpreter](guide/interpreter/python/#manage-python-environment)
 ### Secure JDBC connection
   - [Whitelist IP addresses](guide/interpreter/jdbc/#whitelist-ip-addresses)
+### Work with external clusters
+  - [Amazon EMR](guide/emr_integration)
   </div>
   <div class="col-md-6">
 ### Import existing notebooks

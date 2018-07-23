@@ -23,6 +23,8 @@ pages:
     - Explore Public Notebooks: guide/exploring_notebooks.md
     - Notebook Versoining: guide/feature_versioning.md
     - Autocompletion: guide/autocompletion_notebooks.md
+    - External Clusters:
+      - Amazon EMR: guide/emr_integration.md
   - Interpreters:
     - Apache Spark: guide/interpreter/spark.md
     - Python: guide/interpreter/python.md
