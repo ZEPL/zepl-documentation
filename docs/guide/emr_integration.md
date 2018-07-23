@@ -2,7 +2,7 @@
 
 [Amazon EMR](https://aws.amazon.com/emr/) is a managed cluster platform that simplifies running big data frameworks, such as Apache Hadoop and Apache Spark, on AWS to process and analyze vast amounts of data.
 
-> Important: This article applies to the Enterprise plan (with AWS Cloud) only.
+> Important: This article applies to the [Enterprise plan](https://www.zepl.com/plans-and-pricing/) (with AWS Cloud) only.
 
 ## Working with Amazon EMR Clusters
 
