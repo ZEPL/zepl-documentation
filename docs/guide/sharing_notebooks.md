@@ -32,16 +32,15 @@ Notebooks can also be shared directly to a user or a team.
 <br />
 
 <br />
-## Sharing option
-While you are sharing your space or notebook to other users,
-you can configure three options.
+## Sharing Notebooks
+ZEPL provides fine grained access control to notebooks you want to share with others.
 
 <img src="../../img/sharing_option.png" class="image-box"/>
 <br />
 
 **Permission**
 
-There are three preset permission policy - Full Read Access,
+There are three preset permission policies - Full Read Access,
 Full Collaborate Access, Full Manage Access - provided by ZEPL. You can choose
 either one of them or you can grant your own custom permission set. One thing
 you should note is that execution permission is coupled with resource, so to
