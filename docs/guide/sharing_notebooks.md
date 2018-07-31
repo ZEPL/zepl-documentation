@@ -1,10 +1,10 @@
 # Sharing Notebooks
 
-In this section, we will explain how you can create a new space and share notebooks to other users, teams.
+In this section, we will explain how you can create a new space and share notebooks to other users and teams.
 
 # What is Space?
 
-A ZEPL space is collection of notebooks where you can organization your notebooks by putting them into different spaces depending on the contents or people who work on. You can collaborate on space by inviting your coworkers or team and granting them permission.
+A ZEPL space is a collection of notebooks. Users can be invited into a space and can be granted permission to share and collaborate on these notebook.
 
 <img src="../../img/shared_main.png" class="image-box big-img"/>
 
@@ -16,7 +16,7 @@ Click **"New Space"** button in the main page to create a new Space.
 
 And write a space name with short description.
 
-**External Repository** is an option for the one who wants to load notebooks from external storages such as AWS S3, Github and Apache Zeppelin. See following links for the detailed information.
+**External Repositories** are spaces where the contents of the space are synchronized from external storages or repositories. These notebooks are read-only and cannot be executed. ZEPL supports synchronization from AWS S3, Github and Apache Zeppelin. For more information, please use the following link.
 
   * [How to connect to Apache Zeppelin](../zeppelin_integration)
   * [How to connect to Github](../github_integration)
@@ -24,8 +24,9 @@ And write a space name with short description.
 
 <br/ >
 ## Share Spaces and Notebooks
-After creating new space, you can invite collaborators into space. You can share notebooks as well.
-Normally space members should be able to access all notebooks that belongs to space, except for the case that notebook is shared to specific user or team.
+After creating new space, you can share a space or a notebook to others.
+Members of a space are able to access all notebooks that belongs to the space.
+Notebooks can also be shared directly to a user or a team.
 
 <img src="../../img/sharing_overlay.png" class="image-box big-img" />
 <br />
@@ -51,17 +52,16 @@ grant execute permission, you should manage it in [resource menu](resource_mgmt/
 for collaboration such as modify, schedule, version notebook, plus Full Read Access
 * Full Manage Access - Allows to manage the notebook like publish, share, remove notebook,
 plus Full Collaborate Access
-* Custom Access - Have granular control over notebook by giving selective permission
+* Custom Access - Have granular control over notebook
 
 **Version**(Notebook Share Only)
 
 ZEPL can leverage the version control system as in Apache Zeppelin,
-you can share a specific revision of your notebook with people
+You can share specific revisions of your notebook with others.
 
 **Format**(Notebook Share Only)
 
-You can allow the shared party to access the notebooks only in the specified visual mode
-and ZEPL supports four different formats. (This is known as Look&Feel in Apache Zeppelin.)
+Similar to Apache Zeppelin’s Look&Feel, ZEPL supports several different visual styles:
 
 * Default: Grey background notebook theme
 * Simple: White background notebook theme with smaller paragraph padding
@@ -75,11 +75,11 @@ You can share and [publish the notebook](exploring_notebook.md) in **Spaces** ma
 You can set your notebook to public or private mode in the same dialog used when you share a notebook.
 
 The default value of each notebook is **Unpublished**. It means the notebook is set as private mode.
-So no one would be able to access the notebook, except the ZEPL users that it has been shared with, and public URL won't work in this status.
+No one will be able to access an Unpublished notebook, expect for those ZEPL users who have access to the notebook through sharing or a space.
 
 <img src="../../img/publish_dialog.png" class="image-box big-img"/>
 
-If you want to make your notebook public and allow anyone to access to it, just slide the toggle bar.
-It will generate the public URL for the notebook. Copy to the clipboard and visit the site.
+Toggling publish will generate a public URL for the notebook.
+Anyone who has access to this URL will be able to view the notebook in read-only mode.
 
 <br/>
