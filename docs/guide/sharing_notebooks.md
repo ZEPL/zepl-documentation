@@ -24,7 +24,7 @@ Give your space a short description.
 
 <br/ >
 ## Share Spaces and Notebooks
-After creating a new space, you can share the space with others and/or share a notebook into the space.
+After creating a new space, you can share the space with others.
 Members of a space are able to access all notebooks that belongs to the space.
 Notebooks can also be shared directly to a user or a team.
 
