@@ -90,7 +90,7 @@ $ zic create --definition ./spark2.definition.yaml \
   --password $(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
 ```
 
-The commmand take few minutes depending on your network speed. At the end you will be able to see these kind of messages like if the whole process is successful.
+The command will take a few minutes depending on your network speed. If the process is successful, you will see the following messages:
 
 ```bash
 Successfully built c5c7c63c2bff
