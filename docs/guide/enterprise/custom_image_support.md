@@ -176,14 +176,14 @@ interpreter:
       type: "hadoop"
       version: "2.8.3"
 
-  # currently, supports R `3.4` and `3.5` verisons only
+  # currently, supports R `3.3` `3.4` and 3.5` verisons only
   r:
     version: "3.5"
     # remove `r.cran_mirror` if you don't need it
     cran_mirror: "https://ftp.harukasan.org/CRAN"
     packages:
+    - name: "knitr"    # `knitr` is required for ZEPL's %spark.r
     - name: "ggplot2"
-    - name: "knitr"
     - name: "devtools::install_github('rasmusab/bayesian_first_aid')"
       type: "devtools"
 
@@ -228,7 +228,7 @@ To test whether packages or libraries are installed correctly, you can use these
 
 <br/>
 
-#### **Testing Spark Version**
+#### **Testing Spark and Hadoop Versions**
 
 ```scala
 %spark
@@ -236,7 +236,13 @@ To test whether packages or libraries are installed correctly, you can use these
 println(sc.version)
 ```
 
-#### **Testing R Version**
+```
+%python
+
+!ls -al /usr/zepl | grep hadoop
+```
+
+#### **Testing R Version and Libraries **
 
 ```
 %python
@@ -244,13 +250,23 @@ println(sc.version)
 !R --versioa
 ```
 
-#### **Testing Python Version**
+```
+%spark.r
+
+library(ggplot2)
+```
+
+#### **Testing Python Version and Packages**
 
 ```python
 %python
 
 import sys
 print(sys.version)
+```
+
+```python
+import pandas
 ```
 
 #### **Testing Installed JDBC Jars**
