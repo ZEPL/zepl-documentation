@@ -90,9 +90,14 @@ $ zic create --definition ./spark2.definition.yaml \
   --password $(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
 ```
 
-You will see a message like if the whole process is successful.
+The commmand take few minutes depending on your network speed. At the end you will be able to see these kind of messages like if the whole process is successful.
 
 ```bash
+Successfully built c5c7c63c2bff
+Successfully tagged 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
+
+2018-09-03T16:29:41.968+0900    INFO    Successfully built image 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
+2018-09-03T16:33:55.688+0900    INFO    Successfully registered test-interpreter-image:v1 into https://XXXX.zepl.com/api/...
 ```
 
 <br/>
