@@ -31,6 +31,8 @@ pages:
     - JDBC : guide/interpreter/jdbc.md
     - Config : guide/interpreter/config.md
   - Resources: guide/resource_mgmt.md  
+  - Enterprise:
+    - Custom Image Support: guide/enterprise/custom_image_support.md
 # - Release Notes: release_note.md
 - FAQ: faq.md
 - Support: support.md
