@@ -220,5 +220,49 @@ interpreter:
 
 For required parameters, Please check `zcr help`. (e.g `zcr template --help`)
 
+<br/>
+
+### Verifying installed interpreters
+
+To test whether packages or libraries are installed correctly, you can use these command in notebook paragraphs. (**Make sure you are using the image you want to test**)
+
+<br/>
+
+#### **Testing Spark Version**
+
+```scala
+%spark
+
+println(sc.version)
+```
+
+#### **Testing R Version**
+
+```
+%python
+
+!R --versioa
+```
+
+#### **Testing Python Version**
+
+```python
+%python
+
+import sys
+print(sys.version)
+```
+
+#### **Testing Installed JDBC Jars**
+
+```
+%python
+
+!ls -al /usr/zepl/interpreter/lib | grep mysql
+!ls -al /usr/zepl/interpreter/lib | grep athena
+```
+
+
+
 
 
