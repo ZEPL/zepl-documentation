@@ -34,7 +34,7 @@ Also, you need to AWS resources to push the built images into [AWS ECR](https://
 ```bash
 curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | bash -
 
-# Note that you may need to run the sudo version below, or alternatively chown /usr/local:
+# Note that you may need to run the sudo version below, or alternatively chown /usr/local
 curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | sudo bash -
 ```
 
@@ -72,7 +72,7 @@ With the `zcr create` command, users are able to build / push / register the cus
 
 ```bash
 # make sure that you exported `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as env variables.
-# replace `{PATH` with the your own definition file path
+# replace `{PATH}` with the your own definition file path
 
 $ export TOKEN=$(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
 $ zic create --definition {PATH} --password ${TOKEN}
@@ -139,7 +139,7 @@ interpreter:
     version: "2.3.0"
     dependency:
     packages:
-    # currently, supports hadoop `2.8.3` and `3.5` verisons only
+    # currently, supports hadoop `2.8.3` verisons only
     - name: "hadoop"
       type: "hadoop"
       version: "2.8.3"
