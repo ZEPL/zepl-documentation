@@ -19,11 +19,12 @@ Also you need AWS resources to push the built images into [AWS ECR](https://aws.
     ```
 - The AWS Key should have the [AWS ECR push permission](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ecr_managed_policies.html).
 - [Create AWS ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html) in the same region as the deployed ZEPL belongs
-    ```bash
-    # or you can create using aws cli
-    # https://docs.aws.amazon.com/cli/latest/reference/ecr/create-repository.html
-    aws create-repository --repository-name {NAME} --region {REGION}
-    ```
+
+```bash
+# you can create ECR repository using aws cli too
+# https://docs.aws.amazon.com/cli/latest/reference/ecr/create-repository.html
+aws create-repository --repository-name {NAME} --region {REGION}
+```
 
 <br/>
 
