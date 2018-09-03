@@ -11,14 +11,14 @@ Currently, CLI (zcr) **supports OSX and linux 64 bits.** Please contact us if yo
 | Docker | CE 18.06 +  | [Install Docker Community Edition](https://store.docker.com/search?type=edition&offering=community) |
 | AWS CLI  | 1.15.31 + |  [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) |
 
-Also, you need to AWS resources to push the built images into [AWS ECR](https://aws.amazon.com/ecr/)
+Also you need AWS resources to push the built images into [AWS ECR](https://aws.amazon.com/ecr/)
 
 - [Create AWS key pair](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) and export them into the terminal
     ```bash
     export IAM=1ambda AWS_ACCESS_KEY_ID={VALUE} AWS_SECRET_ACCESS_KEY={VALUE}
     ```
 - The AWS Key should have the [AWS ECR push permission](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ecr_managed_policies.html).
-- [Create AWS ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html) in the same region where deployed ZEPL belongs to
+- [Create AWS ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html) in the same region as the deployed ZEPL belongs
     ```bash
     # or you can create using aws cli
     # https://docs.aws.amazon.com/cli/latest/reference/ecr/create-repository.html
@@ -29,7 +29,7 @@ Also, you need to AWS resources to push the built images into [AWS ECR](https://
 
 ## Installation
 
-`zcr` can be installed / updated via the commands blow.
+`zcr` can be installed / updated via the commands below.
 
 ```bash
 curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | bash -
@@ -84,7 +84,7 @@ For the definition file, please refer [the definition section below](./#definiti
 $ export TOKEN=$(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
 $ zic create --definition {PATH} --password ${TOKEN}
 
-# or can pass ECR auth token directly
+# or you can pass the ECR auth token directly
 
 $ zic create --definition ./spark2.definition.yaml \
   --password $(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
@@ -120,7 +120,7 @@ Definition of custom interpreter is written in YAML format. **These fields must 
 
 Registered images name would be `image.name:image.tag` in UI.
 
-<br/>
+> WARNING: If the `image.repository:image.name:image:tag` already exists, will overwrite the existing image. Please rename `image.tag` if you want to push a new version.
 
 and users can set system package and interpreter definitions for their preference. Here is an example below. Please check comments on the yaml file.
 
