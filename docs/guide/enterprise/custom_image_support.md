@@ -154,6 +154,7 @@ interpreter:
   # currently, supports python `2` (2.7.x) and `3` (3.x) verisons only
   python:
     version: "2"
+    # remove `python.pip_mirror` if you don't need it
     pip_mirror:
       index_url: "http://ftp.daumkakao.com/pypi/simple"
       trusted_host: "ftp.daumkakao.com"
@@ -177,8 +178,9 @@ interpreter:
 
   # currently, supports R `3.4` and `3.5` verisons only
   r:
-    cran_mirror: "https://ftp.harukasan.org/CRAN"
     version: "3.5"
+    # remove `r.cran_mirror` if you don't need it
+    cran_mirror: "https://ftp.harukasan.org/CRAN"
     packages:
     - name: "ggplot2"
     - name: "knitr"
