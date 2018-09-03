@@ -218,7 +218,7 @@ interpreter:
 - `push`: pushes the built docker image into docker repository (ECR)
 - `register` registers the pushed docker image into the ZEPL database
 
-For required parameters, Please check `zcr help`.
+For required parameters, Please check `zcr help`. (e.g `zcr template --help`)
 
 
 
