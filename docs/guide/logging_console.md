@@ -1,26 +1,24 @@
-# Logging Console in ZEPL
+# The Log Console in ZEPL
 
-A Logging Console that user can click from the notebook to show interpreter log and error output.
+ZEPL provides a Log Console for a given notebook that the user can open to view the interpreter logs. The output stream in the Log Console will be specific to the given notebook and its interpreters.
 
  
-## How to use Logging Console
+## How to use the Log Console
 
-ZEPL supports logging console for Python, Spark and JDBC interpreter.
-To begin using the Logging Console, simply the run the paragraph you're working on.
-If you shutdown the notebook, Logging Console is automatically closed.
-After click `console` panel, start to get lastest logs from interpreter.
+ZEPL supports logging console for Python, Spark and JDBC interpreters.
+To begin using the Logging Console, simply run the paragraph you're working on.
+If you shutdown the notebook, Logging Console will be automatically closed.
+The Log Console is located at the bottom of the notebook. To open, click on the Console tab.
 
-<br>
-Checking Highlight `ERROR` log. you can get some cue. Also you are able to see processing log.
-  
+<br>  
 <img src="../../img/logging_console_demo.gif" class="image-box big-img" />     
  
-* Notice : Logging Console is only activated in running notebook. 
+* Note: You will only see log lines in the Log Console if the notebook is running. 
 
 <br>
 
-## About the log in Logging Console 
-The interpreter logs is kind of [Apache Zeppelin Interpreter](https://zeppelin.apache.org/docs/0.8.0/usage/interpreter/overview.html) log.
+## About the log in the Log Console
+The interpreter logs are based on the [Apache Zeppelin Interpreter](https://zeppelin.apache.org/docs/0.8.0/usage/interpreter/overview.html) log.
 
 - Timestamp : [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)
 - Log level : `INFO`, `ERROR`, `WARN`
@@ -29,7 +27,7 @@ The interpreter logs is kind of [Apache Zeppelin Interpreter](https://zeppelin.a
 
 <br>
 
-This is sample Spark Interpreter log in Logging Console.
+This is a sample Spark Interpreter log in the Log Console.
 ```
 ...
 [2018-09-04 15:46:46,483Z] INFO (pool-2-thread-4) | Job 13121f1eca... finished by scheduler interpreter
