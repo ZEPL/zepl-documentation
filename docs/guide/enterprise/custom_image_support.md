@@ -83,11 +83,11 @@ For the definition file, please refer [the definition section below](./#definiti
 # replace `{PATH}` with the your own definition file path
 
 $ export TOKEN=$(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
-$ zic create --definition {PATH} --password ${TOKEN}
+$ zcr create --definition {PATH} --password ${TOKEN}
 
 # or you can pass the ECR auth token directly
 
-$ zic create --definition ./spark2.definition.yaml \
+$ zcr create --definition ./spark2.definition.yaml \
   --password $(aws ecr get-login --no-include-email --region us-west-2 | cut -d" " -f6)
 ```
 
