@@ -33,6 +33,7 @@ pages:
   - Resources: guide/resource_mgmt.md  
   - Enterprise:
     - Custom Image Support: guide/enterprise/custom_image_support.md
+    - Logging Console: guide/enterprise/logging_console.md
 # - Release Notes: release_note.md
 - FAQ: faq.md
 - Support: support.md
