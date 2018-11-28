@@ -30,7 +30,8 @@ pages:
     - Python: guide/interpreter/python.md
     - JDBC : guide/interpreter/jdbc.md
     - Config : guide/interpreter/config.md
-  - Resources: guide/resource_mgmt.md  
+    - Angular: guide/interpreter/angular.md
+  - Resources: guide/resource_mgmt.md
   - Enterprise:
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
