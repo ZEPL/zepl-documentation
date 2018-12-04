@@ -7,7 +7,7 @@ Angular interpreter is the port of Frontend Angular API in **Apache Zeppelin**
 
 Using AngularJS interpreter, you can render [AngularJS 1.7](https://docs.angularjs.org/misc/version-support-status#long-term-support) templates on ZEPL paragraphs and leverage the robust two-way binding system. Similar to **Apache Zeppelin** we expose a simple `AngularJS z object` on the front-end side to expose the same capabilities. This z object is accessible in the Angular isolated scope for each paragraph.
 
-You dont need to create new resources or interpreters to start using angular interpreter. All you need to do is to add the magic keyword `%angular` to the first line of your paragraph.
+You don't need to create new resources or interpreters to start using angular interpreter. All you need to do is to add the magic keyword `%angular` to the first line of your paragraph.
 
 ### API
 
@@ -58,7 +58,7 @@ We support Angular's [ng-directives](https://docs.angularjs.org/api/ng/directive
 
 #### Example
 
-See how we have used `ng-init`, `ng-model` and `ng-repeat` directives and `ng-filter(filter:searchText)` to make a filterable table.
+The following example uses `ng-init`, `ng-model` and `ng-repeat` directives and `ng-filter(filter:searchText)` to make a filterable table.
 
 ```
 %angular
