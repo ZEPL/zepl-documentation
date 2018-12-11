@@ -220,3 +220,5 @@ By default, sync mechanism between your Zeppelin instance and corresponding sync
 export ZEPPELIN_NOTEBOOK_ONE_WAY_SYNC="true"
 ```
 in your `ZEPPELIN_HOME/conf/zeppelin-env.sh`.
+
+Note that this is supported starting from Apache Zeppelin 0.7.0 release.
