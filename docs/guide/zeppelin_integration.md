@@ -123,7 +123,7 @@ export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://ww
 
 You may have noticed that you don't need **ZEPPELINHUB_API_TOKEN** in this scenario, and instead you can login with your ZEPL account, as described in the next section.
 
-In this case your token will be automatically recognized from your `space` information and default one will be loaded. 
+In this case your token will be automatically recognized from your `space` information and default one will be loaded.
 In order to login with your ZEPL credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
 
 
@@ -213,3 +213,12 @@ Then come back to ZEPL and check whether the green light is turned on or not.
 
 <img src="../../img/connected_zeppelin.png" class="image-box small-img"/>
 
+<br/>
+## One way sync option
+By default, sync mechanism between your Zeppelin instance and corresponding sync'ed space is a two-way mechanism. That means on every sync your latest Zeppelin changes are pushed to ZEPL space and latest changes from ZEPL space are pulled back into Zeppelin instance. In case you want your Zeppelin instance to be single source of truth and you don't want your notebooks created in ZEPL to be pulled into Zeppelin instance, you can enable [`ZEPPELIN_NOTEBOOK_ONE_WAY_SYNC`](https://zeppelin.apache.org/docs/0.8.0/setup/operation/configuration.html#zeppelin_notebook_one_way_sync) option by:
+```sh
+export ZEPPELIN_NOTEBOOK_ONE_WAY_SYNC="true"
+```
+in your `ZEPPELIN_HOME/conf/zeppelin-env.sh`.
+
+Note that this is supported starting from Apache Zeppelin 0.7.0 release.
