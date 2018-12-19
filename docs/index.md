@@ -26,6 +26,11 @@
     - [Github](guide/github_integration.md)
     - [Amazon S3](guide/s3_integration.md)
   - [Import a notebook file](guide/import_notebook.md)
+### Export notebooks from ZEPL
+  Export ZEPL notebook into Zeppelin or Jupyter formats:
+
+  - [Export into Apache Zeppelin notebook format](guide/export_notebook/#export-into-apache-zeppelin-notebook-format)
+
 
 ### Share notebooks with your team
   - [Sharing notebooks](guide/sharing_notebooks.md)
@@ -33,9 +38,9 @@
 ### Publish your notebooks
   - [Publish a notebook](guide/sharing_notebooks/#publishing-notebooks-to-web)
   - [Explore public notebooks](guide/exploring_notebooks.md)
-  
-### Managing notebook versions 
+
+### Managing notebook versions
   - [How to manage notebook versions](guide/feature_versioning.md)
- 
+
   </div>
 </div>
