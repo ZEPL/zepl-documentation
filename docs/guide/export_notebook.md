@@ -12,18 +12,14 @@ You can export your notebook into Apache Zeppelin file from ZEPL notebook page b
 
 <br/>
 
-We support export to all Apache Zeppelin versions starting from v. 0.7.0. Please select from dropdown menu the version of Apache Zeppelin that you're using and click on it. Then you will have your notebook file (.json or .zpln) downloaded.
-
-<br/>
-
-After downloading notebook file you can import it into corresponding Apache Zeppelin instance from it’s ‘import’ menu on home page as shown below.
+We support export to all Apache Zeppelin versions starting from v. 0.7.0. Please select from dropdown menu the version of Apache Zeppelin that you're using and click on it. Then you will have your notebook file (.json or .zpln) downloaded. Once downloaded you can import your notebook file into Apache Zeppelin instance from it’s `Import note` menu on home page as shown below:
 
 <br/>
 
 <img src="../../img/export_notebook/02_zeppelin_import_menu.png" class="image-box big-img" />
 
 <br/>
-
+<br/>
 Note that in case you have problem to import notebook into Apache Zeppelin because of file size limitation (by default Zeppelin is configured to limit 1MB on import) you can change `zeppelin.websocket.max.text.message.size` property under `ZEPPELIN_HOME/conf/zeppelin-site.xml` as shown below:
 
 ```xml
