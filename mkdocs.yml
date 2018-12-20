@@ -34,6 +34,7 @@ pages:
     - Angular: guide/interpreter/angular.md
   - Resources: guide/resource_mgmt.md
   - Enterprise:
+    - Login Support: guide/enterprise/login_support.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
 # - Release Notes: release_note.md
