@@ -33,9 +33,9 @@ We support those standard:
 ## [CAS](https://fr.wikipedia.org/wiki/Central_Authentication_Service)
 ZEPL provide an integration with CAS.
 #### Register / Login flow
-- user will be redirect to your SAML IDP
-- user will login on the saml IDP
-- ZEPL auth service will create account / login if the SAML transaction succeed
+- user will be redirect to your CAS login page
+- user will login on the CAS provider
+- ZEPL auth service will create account / login if the CAS transaction succeed
 ## [LDAP](https://fr.wikipedia.org/wiki/Central_Authentication_Service)
 ZEPL provide an integration with LDAP 3.
 #### Register / Login flow
