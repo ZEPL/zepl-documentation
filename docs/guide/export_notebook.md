@@ -1,5 +1,5 @@
 <h1> Exporting ZEPL notebooks </h1>
-Once you've worked on your notebook in ZEPL, you can also export it outside of our service for usage either on your Apache Zeppelin or Jupyter services.
+Once you've worked on your notebook in ZEPL, you might want to export it outside of our service for usage either on your Apache Zeppelin or Jupyter services. Currently only export to Apache Zeppelin notebook format is supported.
 
 <br/>
 ## Export into Apache Zeppelin notebook format
