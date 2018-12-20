@@ -27,7 +27,7 @@
     - [Amazon S3](guide/s3_integration.md)
   - [Import a notebook file](guide/import_notebook.md)
 ### Export notebooks from ZEPL
-  Export ZEPL notebook into Zeppelin or Jupyter formats:
+  Export ZEPL notebook into Zeppelin or Jupyter formats
 
   - [Export into Apache Zeppelin notebook format](guide/export_notebook/#export-into-apache-zeppelin-notebook-format)
 
