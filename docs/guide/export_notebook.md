@@ -22,6 +22,7 @@ We support export to all Apache Zeppelin versions starting from v. 0.7.0. Please
 <br/>
 Note that in case you have problem to import notebook into Apache Zeppelin because of file size limitation (by default Zeppelin is configured to limit 1MB on import) you can change `zeppelin.websocket.max.text.message.size` property under `ZEPPELIN_HOME/conf/zeppelin-site.xml` as shown below:
 
+<br/>
 ```xml
 <property>
   <name>zeppelin.websocket.max.text.message.size</name>
@@ -29,4 +30,6 @@ Note that in case you have problem to import notebook into Apache Zeppelin becau
   <description>Size in characters of the maximum text message to be received by websocket. Defaults to 1024000</description>
 </property>
 ```
+
+<br/>
 Above changes would set max notebook file limit to 50Mb. Alternatively you can set `ZEPPELIN_WEBSOCKET_MAX_TEXT_MESSAGE_SIZE` environment variable under `ZEPPELIN_HOME/conf/zeppelin-env.sh` as well. For more information on configuration please refer to official Apache Zeppelin documentation.
