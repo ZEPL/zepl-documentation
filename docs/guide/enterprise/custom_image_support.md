@@ -76,7 +76,7 @@ Use "zcr [command] --help" for more information about a command.
 `zcr` requires a definition file which defines custom packages for interpreters such as R libraries and Pip packages.
 With the `zcr create` command, users are able to build / push / register the custom interpreter image.
 
-For the definition file, please refer [the definition section below](./#definition-file-spec).
+For the definition file, please refer [the definition section below](./custom_image_support/#definition-file-spec).
 
 ```bash
 # make sure that you exported `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as env variables.
@@ -277,8 +277,3 @@ import pandas
 !ls -al /usr/zepl/interpreter/lib | grep mysql
 !ls -al /usr/zepl/interpreter/lib | grep athena
 ```
-
-
-
-
-
