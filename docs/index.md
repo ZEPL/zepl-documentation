@@ -1,6 +1,7 @@
 <div markdown="1" class="row">
   <div class="col-md-6">
 ### Load your data
+  - [Upload data from local machine](guide/accessing_data)
   - [Load data from S3 using Apache Spark](guide/interpreter/spark/#load-data-from-aws-s3)
 
 ### Interpreters
