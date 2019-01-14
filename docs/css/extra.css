@@ -33,8 +33,8 @@ body {
 }
 
 .note-font {
-  color: #aaa; 
-  font-style: italic; 
+  color: #aaa;
+  font-style: italic;
   font-size: 14px;
 }
 
@@ -148,4 +148,15 @@ body {
 .container code {
     background-color: #F1F4F9;
     color: black;
+}
+
+/* Can be removed once we remove /Users/anthony/Development/zeppelinhub/webapp/src from source*/
+blockquote {
+    font-size: 14px;
+    padding: 5px 15px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
 }
