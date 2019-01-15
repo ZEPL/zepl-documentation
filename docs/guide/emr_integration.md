@@ -2,7 +2,7 @@
 
 [Amazon EMR](https://aws.amazon.com/emr/) is a managed cluster platform that simplifies running big data frameworks, such as Apache Hadoop and Apache Spark, on AWS to process and analyze vast amounts of data.
 
-> Important: This article applies to the [Enterprise plan](https://www.zepl.com/plans-and-pricing/) (with AWS Cloud) only. Please [contact us](mailto:sales@zepl.com) for more information.
+> Important: This article applies to the [enterprise plan](https://www.zepl.com/plans-and-pricing/) (with AWS Cloud) only. Please [contact us](mailto:sales@zepl.com) for more information.
 
 There are two options when connecting ZEPL to AWS EMR clusters.
 > Note: In both cases, the EMR cluster will have to reside on the same VPC as ZEPL.
@@ -38,13 +38,13 @@ To connect a ZEPL notebook to an existing EMR cluster:
 ZEPL also enables you to create a new EMR cluster through the ZEPL interface.
 > Note: It is assumed that in the process of the ZEPL deployment, the ZEPL user IAM role has the credentials to create EMR clusters.
 
-1. As the above, go to the "Resources" page on ZEPL and click on `Clusters` menu
+1. As the above, go to the `Resources` page on ZEPL and click on `Clusters` menu
 
-2. On the `Clusters` page, click on "Create new Cluster"
+2. On the `Clusters` page, click on `Create new Cluster`
 
 3. Select the `Launch new ZEPL managed EMR cluster` and click `Next`
 
-4. Give the cluster a name, give it an idle timeout (timeout where the cluster is shutdown), give it any additional configurations, select the Hardware configuration, and click "Create"
+4. Give the cluster a name, give it an idle timeout (timeout where the cluster is shutdown), give it any additional configurations, select the Hardware configuration, and click `Create`
 <img src="../../img/external_cluster_support/create_new_cluster.png" class="image-box big-img"/>
 
 5. Again, once created, go to any notebook and select the cluster you just created.
