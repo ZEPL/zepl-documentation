@@ -33,7 +33,7 @@ In order to synchronize your Zeppelin instance to your Zepl account you'll need 
 
 Now copy your generated token from your new Zepl *Space*.
 
-<img src="../../img/copy_token.gif" class="image-box small-img"/>
+<img src="../../img/copy_token.gif" class="image-box middle-img"/>
 
 Then edit the `zeppelin-env.sh` or `zeppelin-env.cmd` file to add the environment variables as follows according to the Zeppelin version in use:
 

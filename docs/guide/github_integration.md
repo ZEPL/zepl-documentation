@@ -8,13 +8,13 @@
 
 Click the *New Space* button in the main page to create a new *Space* and fill in the name and description fields. Then check *External Repository* and select *GitHub* from the dropdown menu.
 
-<img src="../../img/select_*GitHub*_space.png" class="image-box big-img" />
+<img src="../../img/select_github_space.png" class="image-box big-img" />
 
 ### Connecting to a *GitHub* Repository
 
 In order for Zepl to connect to your *GitHub* repository you will need a *GitHub* *repo* access scope token as pictured below.
 
-<img src="../../img/*GitHub*_generate_token.png" class="image-box big-img"/>
+<img src="../../img/github_generate_token.png" class="image-box big-img"/>
 
 Once *GitHub* is selected in the dropdown menu the following fields will need to be filled in:
 
@@ -25,14 +25,14 @@ Once *GitHub* is selected in the dropdown menu the following fields will need to
 
 Below is an example of what the dialog window might look like:
 
-<img src="../../img/*GitHub*_space_filled.png" class="image-box big-img"/>
+<img src="../../img/github_space_filled.png" class="image-box big-img"/>
 
 You can now click *Apply* to create your *GitHub* *Space*. Zepl will first test the connection to the *GitHub* repository and if successful will redirect you to the newly created *Space* with all notebooks imported from the repository.
 
-<img src="../../img/*GitHub*_space.png" class="image-box big-img"/>
+<img src="../../img/github_space.png" class="image-box big-img"/>
 
-The *GitHub* space will automatically synchronize with the *GitHub* repository every 10 mins and will add new notebooks, update any modified notebooks, and remove any deleted notebooks. You can also manually re-trigger the synchronization.
+The *GitHub* space will automatically synchronize with the *GitHub* repository every 12 hours and will add new notebooks, update any modified notebooks, and remove any deleted notebooks. You can also manually re-trigger the synchronization.
 
 You can now enjoy the power of Zepl with your notebooks stored in *GitHub*.
 
-If you need help with *GitHub* tokens you can reference the [*GitHub* settings](https://*GitHub*.com/settings/tokens) and [token generation *GitHub* documentation](https://help.*GitHub*.com/articles/creating-a-personal-access-token-for-the-command-line/).
+If you need help with *GitHub* tokens you can reference the [*GitHub* settings](https://github.com/settings/tokens) and [token generation *GitHub* documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
