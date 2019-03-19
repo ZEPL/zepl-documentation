@@ -50,7 +50,7 @@ You don't need to create new resources or interpreters to start using the Angula
   </div>
 </div>
 ```
-<img src="../../../img/intp_angular.gif" class="image-box big-img" />
+<img src="../../../img/intp_angular.gif" class="image-box img-100" />
 
 ### Angular API
 

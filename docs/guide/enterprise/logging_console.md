@@ -6,7 +6,7 @@ Zepl provides a *Log Console* for a given notebook that the user can open to vie
 
 Zepl provides the *Log Console* for Python, Spark and JDBC interpreters. To begin using it simply run the paragraph you're working on. It's located at the bottom of the notebook and can be opened by clicking on the *Console* tab. If you shutdown the notebook the *Log Console* will be closed automatically.
 
-<img src="../../../img/logging_console_demo.gif" class="image-box big-img" />     
+<img src="../../../img/logging_console_demo.gif" class="image-box img-100" />     
  
 > Note: You will only see log output in the *Log Console* if the notebook is running. 
 

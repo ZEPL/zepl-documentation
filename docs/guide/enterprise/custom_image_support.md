@@ -96,7 +96,7 @@ Please follow the steps below to use the registered interpreter image:
 3. Create or update the resource
 4. Select the resource in your notebook settings
 
-<img src="../../../img/custom_image_support/custom-image-resource.png" class="image-box big-img" />
+<img src="../../../img/custom_image_support/custom-image-resource.png" class="image-box img-100" />
 
 ### Definition File Spec
 
