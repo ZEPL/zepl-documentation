@@ -17,7 +17,7 @@ Click *Select File* to upload a new file from your local filesystem.
 
 <img src="../../img/import_upload.png" class="image-box big-img"/>
 
-> Note: The file size limit is 1 MB.
+> Note: The file size limit is 10 MB.
 
 The notebook name will be auto-filled but you can rename it as you like.
 
@@ -35,4 +35,4 @@ Once the upload is completed you will be redirected to the notebook.
 
 For those who are familiar with Jupyter notebooks and prefer a similar notebook format, Zepl includes the *Juno* view. If you import a Jupyter notebook the *Juno* view will be set automatically but you can change it once you open the notebook as demonstrated in the image below.
 
-<img src="../../img/juno_dropdown.png" class="image-box big-img"/>
+<img src="../../img/juno_dropdown.png" class="image-box small-img"/>
