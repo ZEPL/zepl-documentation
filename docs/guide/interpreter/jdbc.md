@@ -1,6 +1,16 @@
 # JDBC Interpreter
 
-Zepl supports a JDBC interpreter with drivers for popular databases. Before connecting to your database it's important to check the following:
+ZEPL supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by ZEPL:
+
+  - Mysql
+  - Oracle
+  - Postgresql
+  - Redshift
+  - Snowflake
+
+For additional database connections, please contact [support@zepl.com](mailto:support@zepl.com).
+
+Before connecting to your database, it's important to check the following:
 
   - the database is currently up and running
   - the database is accessible from the public internet
