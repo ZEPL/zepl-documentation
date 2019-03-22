@@ -3,6 +3,40 @@
 A Resource must be attached to a Zepl Notebook before it can be executed.
 Resources in Zepl determine which interpreters will be available and which type of physical resource (e.g CPU, RAM, etc.) will be allocated to execute the notebook.
 
+ZEPL Resources include some of the most popular data science packages and libraries:
+
+- Spark v2.2, v2.3
+- Tensorflow 1.12
+- R packages
+    - ggplot2
+    - knitr
+    - bayesian_first_aid
+- Python 3.6.8 
+- Python libraries
+    - boto3 1.9.64 
+    - matplotlib 3.0.3
+    - numpy 1.16.2
+    - pandas 0.24.2
+    - pandasql 0.7.3
+    - Pillow 5.4.1
+    - scipy 1.2.1
+    - scikit-learn 0.20.3
+    - bkzep 0.5.0
+    - statsmodels 0.9.0
+    - seaborn 0.9.0
+    - plotly 3.7.0
+    - bokeh 1.0.4
+    - pydot 1.4.1
+    - keras 2.2.4
+    - nltk 3.4
+    - gensim 3.7.1
+    - scrapy 1.6.0
+    - theano 1.0.4
+    - sagemaker 1.18.5
+    - and many others
+
+You can run `pip list` on the python interpreter to see the full list of installed python packages. ZEPL also supports `pip` and `conda` if additional libraries are required.
+
 ## Attaching a Resource to a Notebook
 
 You can select a resource when you create or clone a notebook. 
