@@ -38,6 +38,7 @@ pages:
     - Login Support: guide/enterprise/login_support.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
+    - Sagemaker Integration: guide/enterprise/sagemaker.md
 # - Release Notes: release_note.md
 - FAQ: faq.md
 - Support: support.md
