@@ -47,7 +47,7 @@ To connect to a database in a private network, create an SSH tunnel using the fo
 * Select *JDBC* from the *Interpreter type*
 * Enable SSH tunneling in the *JDBC driver* area
 
-<img src="../../../img/jdbc_tunnel.png" class="image-box big-img" />
+<img src="../../../img/jdbc_tunnel.png" class="image-box img-70" />
 
 #### - Setup the Public Key
 

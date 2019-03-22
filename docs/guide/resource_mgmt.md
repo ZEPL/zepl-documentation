@@ -7,13 +7,13 @@ Resources in Zepl determine which interpreters will be available and which type 
 
 You can select a resource when you create or clone a notebook. 
 
-<img src="../../img/create_new_notebook.png" class="image-box big-img" />
+<img src="../../img/create_new_notebook.png" class="image-box img-100" />
 
 You can also switch a notebook's attached resource after the notebook has been created through the notebook's *Settings* menu in the top right of the window.
 
 >Changing the attached resource will cause any running containers to be shutdown.
 
-<img src="../../img/notebook_settings.png" class="image-box big-img" />
+<img src="../../img/notebook_settings.png" class="image-box img-100" />
 
 ## Resource Management
 
@@ -27,7 +27,7 @@ Zepl provides a *Simple Workload* as the default resource. Additional resources 
 
 To create a new resource click the *New Resource* button. The following form should appear.
 
-<img src="../../img/new_resource.png" width="650px" class="image-box big-img" />
+<img src="../../img/new_resource.png" class="image-box img-100" />
 
 Give the new resource a name and description.
 
@@ -42,7 +42,7 @@ Give the new resource a name and description.
 
 You can edit the resource's settings by clicking on its name or on the *Change Setting* item in the "..." menu to the right of the resource entry in the list on the *Resource settings* page.
 
-<img src="../../img/resource_menu.png" width="180px" class="image-box small-img" />
+<img src="../../img/resource_menu.png" class="image-box img-70" />
 
 > Note: You cannot change the container type or the image type after the resource is created. Create a new resource to do so.
 
@@ -79,12 +79,12 @@ doesn't give edit permission to managers of that space.
 
 Initially only resource admins can configure permissions for resources after which users given edit permission would be able to do this.
 
-<img src="../../img/resource-add-permission-button.png" class="image-box middle-img" />
+<img src="../../img/resource-add-permission-button.png" class="image-box img-70" />
 
 * To add permissions go to a resource's edit page and click the
 `Add permissions` button.
 
-<img src="../../img/resource-permission-popup.png" class="image-box middle-img" />
+<img src="../../img/resource-permission-popup.png" class="image-box img-100" />
 
 * Fill in the name of a user, *Space* or *Team*.
 
@@ -92,7 +92,7 @@ Initially only resource admins can configure permissions for resources after whi
 
 ### Editing or Deleting Resource Permissions
 
-<img src="../../img/resource-permission-context-menu.png" class="image-box middle-img" />
+<img src="../../img/resource-permission-context-menu.png" class="image-box img-70" />
 
 You can use the "..." menu on the right of the permissions entry in the list to edit or delete specific resource permissions.
 
@@ -102,10 +102,10 @@ To give permission to all users of a certain type, such as
 all users or all space collaborators or all team managers, type `all`
 in the search box.
 
-<img src="../../img/resource-permission-all.png"
-  class="image-box middle-img" />
+<img src="../../img/resource-permission-all.png" class="image-box img-100" />
 
 Be aware that permissions operate as follows:
+
 * specific user rules will overwrite all-user rules
 * specific team rules will overwrite all-team rules
 * specific space rules will overwrite all-space rules

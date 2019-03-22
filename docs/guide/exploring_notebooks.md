@@ -4,12 +4,13 @@
 
 > Note: Anyone can view the notebooks, even non-Zepl users.
 
-<center><img src="../../img/explore_notebook_main.png" class="big-img"/></center>
+<img src="../../img/explore_notebook_main.png" class="image-box img-100"/>
 
 # Showcases?
 
 Zepl has a number of showcases available to categorize submitted notebooks.
 
-<img src="../../img/showcases.png" class="image-box big-img"/>
+<img src="../../img/showcases.png" class="image-box img-100"/>
 
-<img src="../../img/showcase_example.png" class="image-box big-img"/>
+<img src="../../img/showcase_example.png" class="image-box img-100"/>
+
