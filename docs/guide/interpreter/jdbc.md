@@ -1,6 +1,6 @@
 # JDBC Interpreter
 
-ZEPL supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by ZEPL:
+Zepl supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by Zepl:
 
   - Mysql
   - Oracle
