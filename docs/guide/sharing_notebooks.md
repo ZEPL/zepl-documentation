@@ -6,29 +6,29 @@ In this section we will explain how you can create a new *Space* and share noteb
 
 A Zepl *Space* is simply a collection of notebooks. Both members and teams in an *Organization* can be invited to a *Space* and can be granted permission to share and collaborate on the notebooks within.
 
-<img src="../../img/shared_main.png" class="image-box big-img"/>
+<img src="../../img/shared_main.png" class="image-box img-100"/>
 
 # Creating a new *Space*
 Click the *New Space* button on the main page to create a new *Space*.
 
-<img src="../../img/create_new_space.png" class="image-box big-img"/>
+<img src="../../img/create_new_space.png" class="image-box img-100"/>
 
 Give your *Space* a name and a short description.
 
-Zepl offers the ability to import notebooks from several external sources when creating a *Space* if desired. To do so check the *External Repositories* checkbox which will display the current options available: [Apache Zeppelin](../zeppelin_integration) notebooks, notebooks stored in [Github](../github_integration) and in [AWS S3](../s3_integration).
+Zepl offers the ability to import notebooks from several external sources when creating a *Space* if desired. To do so check the *External Repositories* checkbox which will display the current options available: [Apache Zeppelin](../guide/zeppelin_integration) notebooks, notebooks stored in [Github](../guide/github_integration) and in [AWS S3](../guide/s3_integration).
 
 > Note that the synchronized notebooks are read-only and in order to run/execute them you'll need to clone them first.
 
 ## Sharing *Spaces*
 After creating a new *Space* you can share it with other members or teams or with the entire *Organization*. Members of a *Space* are able to access all notebooks that belong to the *Space*.
 
-<img src="../../img/sharing_overlay.png" class="image-box big-img" />
+<img src="../../img/sharing_overlay.png" class="image-box img-100" />
 <br />
 
 ## Sharing Notebooks
 Zepl provides fine-grained access control for sharing notebooks with others as shown in the following image.
 
-<img src="../../img/sharing_option.png" class="image-box"/>
+<img src="../../img/sharing_option.png" class="image-box img-70" />
 <br />
 
 **Permissions**
@@ -56,5 +56,5 @@ Zepl supports several different visual styles:
 # Publishing Notebooks to the Web
 You can both share and publish notebooks from the *Spaces* main page using the "..." menu to the right of the notebook name. Publishing a notebook provides a URL for use elsewhere and will automatically render the notebook public. Anyone who has access to this URL will be able to view the notebook in read-only mode. To make the notebook private again simply re-open the *Publish* dialog and toggle the control back to the *UNPUBLISHED* state. Unpublished notebooks are only accessible to Zepl members who have been granted access rights via the sharing mechansim described above.
 
-<img src="../../img/publish_dialog.png" class="image-box big-img"/>
+<img src="../../img/publish_dialog.png" class="image-box img-100"/>
 

@@ -1,6 +1,16 @@
 # JDBC Interpreter
 
-Zepl supports a JDBC interpreter with drivers for popular databases. Before connecting to your database it's important to check the following:
+Zepl supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by Zepl:
+
+  - Mysql
+  - Oracle
+  - Postgresql
+  - Redshift
+  - Snowflake
+
+For additional database connections, please contact [support@zepl.com](mailto:support@zepl.com).
+
+Before connecting to your database, it's important to check the following:
 
   - the database is currently up and running
   - the database is accessible from the public internet
@@ -47,7 +57,7 @@ To connect to a database in a private network, create an SSH tunnel using the fo
 * Select *JDBC* from the *Interpreter type*
 * Enable SSH tunneling in the *JDBC driver* area
 
-<img src="../../../img/jdbc_tunnel.png" class="image-box big-img" />
+<img src="../../../img/jdbc_tunnel.png" class="image-box img-70" />
 
 #### - Setup the Public Key
 

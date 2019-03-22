@@ -3,17 +3,51 @@
 A Resource must be attached to a Zepl Notebook before it can be executed.
 Resources in Zepl determine which interpreters will be available and which type of physical resource (e.g CPU, RAM, etc.) will be allocated to execute the notebook.
 
+Zepl Resources include some of the most popular data science packages and libraries:
+
+- Spark v2.2, v2.3
+- Tensorflow 1.12
+- R packages
+    - ggplot2
+    - knitr
+    - bayesian_first_aid
+- Python 3.6.8 
+- Python libraries
+    - boto3 1.9.64 
+    - matplotlib 3.0.3
+    - numpy 1.16.2
+    - pandas 0.24.2
+    - pandasql 0.7.3
+    - Pillow 5.4.1
+    - scipy 1.2.1
+    - scikit-learn 0.20.3
+    - bkzep 0.5.0
+    - statsmodels 0.9.0
+    - seaborn 0.9.0
+    - plotly 3.7.0
+    - bokeh 1.0.4
+    - pydot 1.4.1
+    - keras 2.2.4
+    - nltk 3.4
+    - gensim 3.7.1
+    - scrapy 1.6.0
+    - theano 1.0.4
+    - sagemaker 1.18.5
+    - and many others
+
+You can run `pip list` on the python interpreter to see the full list of installed python packages. Zepl also supports `pip` and `conda` if additional libraries are required.
+
 ## Attaching a Resource to a Notebook
 
 You can select a resource when you create or clone a notebook. 
 
-<img src="../../img/create_new_notebook.png" class="image-box big-img" />
+<img src="../../img/create_new_notebook.png" class="image-box img-100" />
 
 You can also switch a notebook's attached resource after the notebook has been created through the notebook's *Settings* menu in the top right of the window.
 
 >Changing the attached resource will cause any running containers to be shutdown.
 
-<img src="../../img/notebook_settings.png" class="image-box big-img" />
+<img src="../../img/notebook_settings.png" class="image-box img-100" />
 
 ## Resource Management
 
@@ -27,7 +61,7 @@ Zepl provides a *Simple Workload* as the default resource. Additional resources 
 
 To create a new resource click the *New Resource* button. The following form should appear.
 
-<img src="../../img/new_resource.png" width="650px" class="image-box big-img" />
+<img src="../../img/new_resource.png" class="image-box img-100" />
 
 Give the new resource a name and description.
 
@@ -42,7 +76,7 @@ Give the new resource a name and description.
 
 You can edit the resource's settings by clicking on its name or on the *Change Setting* item in the "..." menu to the right of the resource entry in the list on the *Resource settings* page.
 
-<img src="../../img/resource_menu.png" width="180px" class="image-box small-img" />
+<img src="../../img/resource_menu.png" class="image-box img-70" />
 
 > Note: You cannot change the container type or the image type after the resource is created. Create a new resource to do so.
 
@@ -79,12 +113,12 @@ doesn't give edit permission to managers of that space.
 
 Initially only resource admins can configure permissions for resources after which users given edit permission would be able to do this.
 
-<img src="../../img/resource-add-permission-button.png" class="image-box middle-img" />
+<img src="../../img/resource-add-permission-button.png" class="image-box img-70" />
 
 * To add permissions go to a resource's edit page and click the
 `Add permissions` button.
 
-<img src="../../img/resource-permission-popup.png" class="image-box middle-img" />
+<img src="../../img/resource-permission-popup.png" class="image-box img-100" />
 
 * Fill in the name of a user, *Space* or *Team*.
 
@@ -92,7 +126,7 @@ Initially only resource admins can configure permissions for resources after whi
 
 ### Editing or Deleting Resource Permissions
 
-<img src="../../img/resource-permission-context-menu.png" class="image-box middle-img" />
+<img src="../../img/resource-permission-context-menu.png" class="image-box img-70" />
 
 You can use the "..." menu on the right of the permissions entry in the list to edit or delete specific resource permissions.
 
@@ -102,10 +136,10 @@ To give permission to all users of a certain type, such as
 all users or all space collaborators or all team managers, type `all`
 in the search box.
 
-<img src="../../img/resource-permission-all.png"
-  class="image-box middle-img" />
+<img src="../../img/resource-permission-all.png" class="image-box img-100" />
 
 Be aware that permissions operate as follows:
+
 * specific user rules will overwrite all-user rules
 * specific team rules will overwrite all-team rules
 * specific space rules will overwrite all-space rules

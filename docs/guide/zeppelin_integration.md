@@ -6,15 +6,15 @@ Apache Zeppelin is a popular open-source data science notebook platform which ca
 
 Click the *New Space* button in the main page to create a new *Space* and fill in the name and description fields. Then check *External Repository* and select *Zeppelin* from the dropdown menu.
 
-<img src="../../img/select_zeppelin_space.png" class="image-box big-img"/>
+<img src="../../img/select_zeppelin_space.png" class="image-box img-100"/>
 
 Once the *Space* is created, Zepl will produce a unique token which you can use to connect Zepl to your Apache Zeppelin instance.
 
-<img src="../../img/zeppelin-space-empty.png" class="image-box big-img"/>
+<img src="../../img/zeppelin-space-empty.png" class="image-box img-100"/>
 
 You can edit the new *Space*'s settings by using the *Settings* dropdown menu item in the "..." menu to the right of the *Space*'s block.
 
-<img src="../../img/manage_space.png" class="image-box big-img"/>
+<img src="../../img/manage_space.png" class="image-box img-100"/>
 
 ## Connecting Zepl with Apache Zeppelin
 
@@ -33,7 +33,7 @@ In order to synchronize your Zeppelin instance to your Zepl account you'll need 
 
 Now copy your generated token from your new Zepl *Space*.
 
-<img src="../../img/copy_token.gif" class="image-box small-img"/>
+<img src="../../img/copy_token.gif" class="image-box img-50"/>
 
 Then edit the `zeppelin-env.sh` or `zeppelin-env.cmd` file to add the environment variables as follows according to the Zeppelin version in use:
 
@@ -76,7 +76,7 @@ export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.GitNotebookR
 export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
 ```
 
-In this multi-user scenario you don't need your token as it will be automatically recognized from your new Zeppelin *Space*. In order to login with your ZEPL credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
+In this multi-user scenario you don't need your token as it will be automatically recognized from your new Zeppelin *Space*. In order to login with your Zepl credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
 
 You may also find up-to-date instructions on integrating the latest Apache Zeppelin master branch with Zepl on the [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
 
@@ -117,4 +117,4 @@ $ ./bin/zeppelin-daemon.sh start (or restart)
 
 Then return to Zepl and the indicator shown below should indicate that Zeppelin is properly connected.
 
-<img src="../../img/connected_zeppelin.png" class="image-box small-img"/>
+<img src="../../img/connected_zeppelin.png" class="image-box img-20"/>

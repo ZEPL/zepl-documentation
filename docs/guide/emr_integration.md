@@ -21,15 +21,15 @@ To connect a Zepl notebook to an existing EMR cluster:
 2. On the *Clusters* page, click on *New Cluster*
 3. Select the *Connect to an externally managed EMR cluster* and click *Next*
 
-<img src="../../img/external_cluster_support/select_existing_cluster.png" class="image-box big-img"/>
+<img src="../../img/external_cluster_support/select_existing_cluster.png" class="image-box img-100"/>
 
 4. Give the cluster a name and add the *Master public DNS* of the EMR cluster in the respective fields
 
-<img src="../../img/external_cluster_support/set_public_dns.png" class="image-box big-img"/>
+<img src="../../img/external_cluster_support/set_public_dns.png" class="image-box img-100"/>
 
 5. Once it's connected you can go to any notebook and select the cluster you just created in the *Notebook Settings* window
 
-<img src="../../img/external_cluster_support/attach_note_to_cluster.png" class="image-box big-img"/>
+<img src="../../img/external_cluster_support/attach_note_to_cluster.png" class="image-box img-100"/>
 
 > Note: Currently Zepl only supports EMR Release v5.14.0 (more will be added in the future)
 
@@ -47,7 +47,7 @@ Zepl also enables you to create a new EMR cluster through the Zepl interface.
 
 4. Give the cluster a name, give it an idle terminate value (shuts down the cluster after the time specified), give it any additional configurations, select the *Hardware configuration* from the dropdown and click *Create*
 
-<img src="../../img/external_cluster_support/create_new_cluster.png" class="image-box big-img"/>
+<img src="../../img/external_cluster_support/create_new_cluster.png" class="image-box img-100"/>
 
 5. Again, once created, go to any notebook and select the cluster you just created.
 
@@ -57,6 +57,6 @@ Zepl also enables you to create a new EMR cluster through the Zepl interface.
 
 All clusters can be managed from the *Clusters* console.
 
-<img src="../../img/external_cluster_support/clusters_menu.png" class="image-box big-img"/>
+<img src="../../img/external_cluster_support/clusters_menu.png" class="image-box img-100"/>
 
 From here you can disconnect, shutdown, clone and control access to these clusters from your organization members.

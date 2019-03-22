@@ -6,7 +6,7 @@ Zepl supports exporting its native notebooks to the Apache Zeppelin format for u
 
 To export your notebook use the `Export to Zeppelin` menu item in the "..." menu at the top right of the notebook page as shown below:
 
-<img src="../../img/export_notebook/01_Zepl_export_menu.png" class="image-box big-img" />
+<img src="../../img/export_notebook/01_zepl_export_menu.png" class="image-box img-100" />
 
 Then select the version you'd like to export to and the file will be automatically downloaded to your local filesystem.
 
@@ -16,7 +16,7 @@ Then select the version you'd like to export to and the file will be automatical
 
 Use the `Import note` menu on the home page of your Apache Zeppelin instance as shown below:
 
-<img src="../../img/export_notebook/02_zeppelin_import_menu.png" class="image-box big-img" />
+<img src="../../img/export_notebook/02_zeppelin_import_menu.png" class="image-box img-100" />
 
 ## Apache Zeppelin File Size Limitations
 

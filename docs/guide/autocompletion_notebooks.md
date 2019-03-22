@@ -2,17 +2,17 @@
 
 ## Activating and Using Autocompletion
 
-* `ctrl + .` : autocompletion shortcut
+* autocomplete shortcut: `ctrl + .` or `tab`
 
 Zepl supports autocompletion for Python, Spark, and SQL.
 
-You'll first need to run a paragraph in the notebook you're working on to activate the feature. Then just use the `ctrl + .` hotkey to see possible completions pop up as shown below:
+You'll first need to run a paragraph in the notebook you're working on to activate the feature. Then just use the `ctrl + .` or `tab` hotkey to see possible completions pop up as shown below:
 
-<img src="../../img/autocompletion_demo.gif" class="image-box big-img" />
+<img src="../../img/autocompletion_demo.gif" class="image-box img-100" />
 
 If you forget to run a paragraph in the notebook to activate the feature you'll get a warning like the following:
 
-<img src="../../img/autocompletion_error_message.png" class="image-box big-img" />
+<img src="../../img/autocompletion_error_message.png" class="image-box img-100" />
 
 Notice that the status bar at the top right of the page says *Stopped*. Running a paragraph or the whole notebook will start the container allowing for the use of autocompletion and the status will say *Started*.
 
@@ -42,3 +42,4 @@ Here is the list of interpreters and their specific autocompletion supported fea
 | Symbol  | Autocompletion Supported | Type |
 | --- | --- | --- |
 | `%sql`  | supported | JDBC interpreter with drivers for popular databases |
+

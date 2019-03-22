@@ -9,15 +9,15 @@ To get started click the *Import Notebook* option from either the "kebab" menu i
 
 > Note: Currently only Jupyter 4.x or greater and Zeppelin up to v0.8.x are supported.
 
-<img src="../../img/import_dropdown.png" height="280px" class="image-box big-img"/>
+<img src="../../img/import_dropdown.png" class="image-box img-20"/>
 
 ## Uploading Notebooks
 
 Click *Select File* to upload a new file from your local filesystem.
 
-<img src="../../img/import_upload.png" class="image-box big-img"/>
+<img src="../../img/import_upload.png" class="image-box img-100"/>
 
-> Note: The file size limit is 1 MB.
+> Note: The file size limit is 10 MB.
 
 The notebook name will be auto-filled but you can rename it as you like.
 
@@ -25,14 +25,14 @@ The notebook name will be auto-filled but you can rename it as you like.
 
 Click *Fetch from URL* to upload a new file from a publicly accessible host and enter the URL in the *Link to your notebook* field.
 
-<img src="../../img/import_url.png" class="image-box big-img"/>
+<img src="../../img/import_url.png" class="image-box img-100"/>
 
 Once the upload is completed you will be redirected to the notebook.
 
 ## *Juno* Look and Feel
 
-<img src="../../img/juno_demo.png" class="image-box big-img"/>
+<img src="../../img/juno_demo.png" class="image-box img-100"/>
 
 For those who are familiar with Jupyter notebooks and prefer a similar notebook format, Zepl includes the *Juno* view. If you import a Jupyter notebook the *Juno* view will be set automatically but you can change it once you open the notebook as demonstrated in the image below.
 
-<img src="../../img/juno_dropdown.png" class="image-box big-img"/>
+<img src="../../img/juno_dropdown.png" class="image-box img-50"/>

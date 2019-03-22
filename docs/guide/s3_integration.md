@@ -12,10 +12,10 @@ Click the *New Space* button in the main page to create a new *Space* and fill i
 
 A completed form might look like the following image.
 
-<img src="../../img/create_new_*S3*.png" class="image-box big-img"/>
+<img src="../../img/create_new_s3.png" class="image-box img-100"/>
 
 If the synchronization is successful, the notebooks in your *S3* bucket should be automatically added to your Zepl *S3* Space.
 
-<img src="../../img/manage_*S3*.png" class="image-box big-img"/>
+<img src="../../img/manage_s3.png" class="image-box img-100"/>
 
-The *S3* space will automatically synchronize with the *S3* repository every 10 mins and will add new notebooks, update any modified notebooks, and remove any deleted notebooks. You can also manually re-trigger the synchronization.
+The *S3* space will automatically synchronize with the *S3* repository every 12 hours and will add new notebooks, update any modified notebooks, and remove any deleted notebooks. You can also manually re-trigger the synchronization.

@@ -6,7 +6,7 @@ Now you can use Zepl to connect directly to *Sagemaker* in your VPC by simply se
 
 Simply create a new notebook and select *Sagemaker* in the resource drop down:
 
-<img src="../../../img/sagemaker_resource.png" class="image-box big-img" />
+<img src="../../../img/sagemaker_resource.png" class="image-box img-100" />
 
 You can also switch an existing notebook's resource to *Sagemaker* by clicking the *Settings* link in the top right of the notebook.
 
@@ -59,4 +59,4 @@ As long as you have your AWS credentials setup correctly your model would be dep
 * requests
 * sagemaker
 
-You can also create custom images for your organization using our [Custom Image Support](/guide/enterprise/custom_image_support.html) feature. And as always, if you have any questions please don't hesitate to [contact us]((mailto:support@zepl.com)).
+You can also create custom images for your organization using our [Custom Image Support](../enterprise/custom_image_support) feature. And as always, if you have any questions please don't hesitate to [contact us](mailto:support@zepl.com).

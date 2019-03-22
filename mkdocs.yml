@@ -1,9 +1,9 @@
 
 # Site Information
-site_name: ZEPL Documentation
+site_name: Zepl Documentation
 site_url: http://docs.zepl.com/
-site_description: ZEPL Documentation Site
-site_author: ZEPL
+site_description: Zepl Documentation Site
+site_author: Zepl
 site_favicon: favicon.ico
 
 # repo_url: https://github.com/ZEPL/zepl-documentation
@@ -23,10 +23,8 @@ pages:
     - Export Notebook: guide/export_notebook.md
     - Explore Public Notebooks: guide/exploring_notebooks.md
     - Uploading Data: guide/accessing_data.md
-    - Notebook Versoining: guide/feature_versioning.md
+    - Notebook Versioning: guide/feature_versioning.md
     - Autocompletion: guide/autocompletion_notebooks.md
-    - External Clusters:
-      - Amazon EMR: guide/emr_integration.md
   - Interpreters:
     - Apache Spark: guide/interpreter/spark.md
     - Python: guide/interpreter/python.md
@@ -35,6 +33,7 @@ pages:
     - Angular: guide/interpreter/angular.md
   - Resources: guide/resource_mgmt.md
   - Enterprise:
+    - Amazon EMR Integration: guide/emr_integration.md
     - Login Support: guide/enterprise/login_support.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
