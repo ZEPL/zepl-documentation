@@ -1,148 +1,129 @@
 # FAQ
 
-If you don't see your question in this FAQ, please send us an email at [support@zepl.com](mailto:support@zepl.com).
+If you don't see your question in this FAQ please send us an email at [support@Zepl.com](mailto:support@Zepl.com).
 
-<br />
+### Is Zepl the enterprise version of Apache Zeppelin?
 
-### Is ZEPL the enterprise version of Apache Zeppelin?
-No. Though the people behind ZEPL are also the creators of Apache Zeppelin, ZEPL is a separate platform expanding upon what we started with Apache Zeppelin.
-Zeppelin was created because we wanted something that could easily and quickly plug into various back-ends, and through it, do everything from data sourcing to visualization.
-But Zeppelin was created for the individual in a localized environment. But analytics is not a one person job.
-It's iterative and usually goes through multiple rounds of back and forth between different people.
-ZEPL is built this in mind.
-You can still analyze like a hero in ZEPL as you would in Zeppelin, but ZEPL also provid full enterprise collaborative features such as sharing, fine grained access control, team management, role based access control, discussions, comments, notifications, and many more.
-ZEPL is built for more than just analytics, it's a collaborative analytics platform for the modern age.
+No. Though the people behind Zepl are also the creators of Apache Zeppelin, Zepl is a separate platform expanding upon what we started doing with Apache Zeppelin.
+Zeppelin was created because we wanted something that could quickly and easily plug into various back-ends doing everything from data sourcing to visualization. But it was created for the individual in a localized environment. But analytics is not a one person job. It's iterative and usually goes through multiple rounds of back and forth between different people. Zepl is built this in mind.
 
-<br />
+In addition to the broad spectrum data science facilities and gorgeous charting you have in Zeppelin, Zepl  provides full enterprise collaborative features such as sharing, fine-grained, role-based access control, team management, comments, notifications, and much more. Zepl is built for more than just analytics. It's a collaborative analytics platform for the modern age.
 
-### Does ZEPL work with Jupyter notebooks?
-Yes. You can import or sync Jupyter notebooks (currently supports only v4) stored in S3 or Github into ZEPL.
-Once in ZEPL, in addition to being able to view the notebook from any browser, you can clone the notebook, make edits, and execute the notebook directly from ZEPL.
+### Does Zepl work with Jupyter notebooks?
 
-<br />
+Yes. You can import or sync Jupyter notebooks stored in S3 or Github into Zepl.
+Once in Zepl, in addition to being able to view the notebook from any browser, you can clone the notebook, make edits, and execute the notebook directly within Zepl.
 
-### Can I use ZEPL and Apache Zeppelin together?
-Yes. You can connect multiple Zeppelin instances to ZEPL.
-Simply click on Create Space and select Zeppelin in the dropdown.
-Once connected, all the notebooks in your Zeppelin instance will be sync-ed and available on ZEPL to view.
-At this point, you can clone, edit, and execute the notebooks, as well as share the notebooks once you're done.
+>Note: currently only Jupyter v4.x is supported
 
-<br />
+### Can I use Zepl and Apache Zeppelin together?
 
-### Can I use ZEPL and Jupyter together?
+Yes. You can connect multiple Zeppelin instances to Zepl. Simply click on the *Create Space* button from the main page, toggle on *External Repository* and select Zeppelin from the dropdown menu that appears. All the notebooks in your Zeppelin instance will be sync-ed and available to view in the new Zepl *Space*. At this point you can clone, edit, execute and share the notebooks.
+
+### Can I use Zepl and Jupyter together?
+
 Yes. You can continue to use Jupyter in your local environment and sync and/or import the notebooks as desired.
-You can also export notebooks from ZEPL to be worked on from you local Jupyter or Zeppelin instance.
-
-<br />
+You can also export notebooks from Zepl to be worked on from you local Jupyter or Zeppelin instance.
 
 ### How long do you save the notebooks?
+
 The notebooks are saved until you delete them or delete your account.
 
-<br />
-
 ### Can I save my notebooks in a different repository/storage of my choice?
-All notebooks created on ZEPL are saved on ZEPL. You can export the notebooks to your preferred storage if you like.
 
-<br />
+All notebooks created in Zepl are stored in Zepl. You can export the notebooks to your preferred storage if you like.
 
-### Can I connect ZEPL to more than one Apache Zeppelin instance?
+### Can I connect Zepl to more than one Apache Zeppelin instance?
+
 Yes. You can connect to as many Apache Zeppelin instances as you like.
-You simply need to make sure that each Zeppelin is setup with its unique token which is provided when you create a Zeppelin instance Space in ZEPL.
+You simply need to make sure that each Zeppelin instance is setup with its own unique token which is provided when you create a Zeppelin instance *Space* in Zepl.
 
-<br />
+### How can I use Zepl on Apache Zeppelin running on EMR?
 
-### How can I use ZEPL on Apache Zeppelin running on EMR?
-ZEPL enables close integration with Apache Zeppelin so you can setup Zeppelin in EMR and use ZEPL not only for sync-ing and backing up of your notebooks, but you can leverage ZEPL as the authentication portal for Zeppelin.
-Details of how you can set this up can be found [here](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
+Zepl enables close integration with Apache Zeppelin so you can setup Zeppelin in EMR and use Zepl not only for sync-ing and backing up your notebooks, but you can leverage Zepl as the authentication portal for Zeppelin.
+Details on how you can set this up can be found [here](https://www.Zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
 
-<br />
+TODO: ### Can Zepl run on-premise in a private infrastructure?
 
-### Can ZEPL run on-premise, in a private infrastructure?
-Yes. We offer an Enterprise tier which has an on-premise version.
-Please contact us at [sales@zepl.com](mailto:sales@zepl.com) for more information.
+Yes. We offer an Enterprise tier which has an on-premise version. Please contact us at [sales@Zepl.com](mailto:sales@Zepl.com) for more information.
 
-<br />
+TODO: ### Can Zepl run privately in an Amazon VPC?
 
-### Can ZEPL run privately on an Amazon VPC?
-Yes. The same package for Enterprise on-premise can be use on a private VPC (Amazon's or other cloud).
-Please contact us at [sales@zepl.com](mailto:sales@zepl.com) for more information.
+Yes. The same package for Enterprise on-premise can be used in a private VPC (Amazon's or other cloud solutions). Please contact us at [sales@Zepl.com](mailto:sales@Zepl.com) for more information.
 
-<br />
+Yes. Enterprise deployments currently only run in Amazon VPC's though other cloud solutions will be supported in the near future.
 
-### Can you create multiple organizations in ZEPL?
-Yes. The administrator has access to create one or more organizations under their ZEPL account.
+### Can you create multiple organizations in Zepl?
 
-<br />
+Yes. The administrator has access to create one or more organizations in their Zepl account.
 
-### Can I share my notebooks to people who are not users of ZEPL?
-Yes. You can directly share notebooks with non-registered users by simply putting their email address on the sharing option.
-Another option is to 'publish' your notebook.
-Publishing a notebook in ZEPL creates a public facing URL for the notebook which you can then send to anyone you like.
+### Can I share my notebooks with people who are not users of Zepl?
 
-<br />
+Yes. You can directly share notebooks with non-registered users by simply entering their email address in the notebook sharing window. Another option is to publish your notebook. Publishing a notebook in Zepl creates a public facing URL for the notebook which you can send to anyone you like.
 
-### What levels of security do you have on ZEPL? For the notebooks and users?
-We take security very seriously in ZEPL. Besides all transmissions being over SSL, all PII information is anonymized.
-In addition, all notebooks are encrypted on store with the encryption keys in a separate infrastructure.
+TODO: ### What level of security does Zepl offer, both for notebooks and users?
 
-<br />
+We take security very seriously at Zepl. Besides all transmissions being over SSL, all PII information is anonymized. In addition, all notebooks are encrypted with the encryption keys in a separate infrastructure.
 
-### I have Jupyter and Zeppelin notebooks stored in Github. Can I import them to ZEPL? How?
-Yes. ZEPL supports both Zeppelin and Jupyter notebooks (v4 currently).
-Simply click on create Space, select Github in the external repository option, enter your Github credentials, and watch all your notebooks sync in ZEPL.
+### I have Jupyter and Zeppelin notebooks stored in Github. Can I import them to Zepl?
 
-<br />
+Yes. Zepl supports both Zeppelin and Jupyter (v4.x) notebooks.
 
-### If I set my notebook repository to my private S3 or Github, will my notebooks be saved in ZEPL as well?
-Yes. When you sync your notebooks in S3 and/or Github, a copy of your notebooks is also saved in ZEPL.
-In addition, if you make changes to your notebooks and save them on your private S3/Github repo, you can update these notebooks by simply clicking on "Synchronize".
+Simply click on the *Create Space* button from the main page, toggle on *External Repository* and select GitHub from the dropdown menu that appears. Then enter your GitHub credentials. All the notebooks in your GitHub repo will be sync-ed and available to view in the new Zepl *Space*. At this point you can clone, edit, execute and share the notebooks.
 
-<br />
+### If I set my notebook repository to my private S3 or Github account when creating a new *Space* via an external repository, will my notebooks be saved in Zepl as well?
 
-### Can I read/import data from S3 to analyze in ZEPL?
-Yes. Through python or scala, you can programmatically load data from S3 or other publicly available data source.
-We are also working on a more comprehensive data import feature. Keep a look out for it!
+Yes. When you sync your notebooks from S3 or Github, copies of your notebooks are also saved in Zepl. In addition, if you make changes to your notebooks and save them in your private S3/Github repo, you can update these notebooks manually by clicking the *Synchronize repository* link in the top middle of the page. Otherwise Zepl sync's them behind the scenes every 10 minutes.
 
-<br />
+### Can I read/import data from S3 to analyze in Zepl?
 
-### What are the different roles available in ZEPL? What rights do each have?
-There are two levels of roles available in ZEPL:
+Yes. Through Python and Scala you can programmatically access data from S3 or other publicly available data sources.
 
-1. Within Spaces, you can give members of that space different roles:
+### What are the different roles available in Zepl? What rights do each have?
 
-    i. **Member** - Has only access to notebooks within the Space
+There are two levels of roles available in Zepl:
 
-    ii. **Collaborator** - Above plus, can add/delete notebooks within the Space
+1. Within *Spaces* you can give members of that *Space* different roles:
 
-    iii. **Manager** - Above plus, can add/remove members in the Space
+    i. **Member** - only has access to notebooks within the *Space*
 
-2. If you're using organizations, when you invite team members, you can give each team member the following roles:
+    ii. **Collaborator** - the above plus can add/delete notebooks within the *Space*
 
-    i. **Member** - Only a participant
+    iii. **Manager** - the above plus can add/remove members in the *Space*
 
-    ii. **Manager** - Have ability to add or delete other members. Can also add/delete Spaces within the organization even if not owner.
+2. When inviting team members to *Organizations* you can give each team member one of the following roles:
 
-    iii. **Admin** - All the manager rights as well as ability to add/delete notebooks even if not owner, and add/delete interpreter clusters.
+    i. **Member** - only a participant
 
-<br />
+    ii. **Manager** - has the ability to add/delete other members and *Spaces* within the *Organization* even if not the owner
 
-### What’s the meaning of “Public notebook”? (e.g. publicly accessible for people having the link)
-Public notebooks are notebooks that are 'published' through ZEPL and are accessible publicly through the URL.
-You can make the notebook private again by toggling the "Published" button on the Publish pop-up.
+    iii. **Admin** - all of the manager rights as well as the ability to add/delete both notebooks and interpreter clusters even if not the owner
 
-<br />
+### What does it mean for a notebook to be public (e.g. publicly accessible for people having the link)?
 
-### What are the notebooks in “Explore” showcases and how to manage it?
-Notebooks in the Explore section are notebooks that were aggregated by us and some of our members.
-They include notebooks publicly published by various users--data scientists, professors, engineers, etc--as well as cover a wide range of topics--from How-Tos to research papers.
-Please take the time and [Explore](https://www.zepl.com/explore).
+Public notebooks are notebooks that are published through Zepl and become accessible publicly through the generated URL. You can make the notebook private again by toggling the *Published* control off in the *Publish* dialog.
 
-<br />
+### What are the notebooks in the “Explore” showcases and how does one manage them?
 
-### What versions of Python, Scala, and Spark does ZEPL support?
-Currently ZEPL supports Python 2.7 and 3.5, Spark 2.1.0, Scala 2.11, R 3.3.2.
+Notebooks in the Explore section are notebooks that were aggregated by us and some of our members. They include notebooks publicly published by various users including data scientists, professors, engineers, etc. and cover a wide range of topics from How-Tos to research papers. Please take the time to [Explore](https://www.Zepl.com/explore).
 
-<br />
+### Which versions of Python, Scala and Spark does Zepl support?
+
+Currently Zepl supports:
+- Python v2.7 & v3.5
+- Spark v2.1.0
+- Scala v2.11
+- R v3.3.2
 
 ### How can I load external Python libraries?
-You can load external Python libraries by using the following command: ``%python.conda install libname`` or ``%python !pip install libname``
+
+You can load external Python libraries by using either of the followings commands in a notebook paragraph:
+
+```
+%python.conda install <libname>
+```
+
+```
+%python
+!pip install <libname>
+```
