@@ -105,6 +105,7 @@ in the search box.
 <img src="../../img/resource-permission-all.png" class="image-box img-100" />
 
 Be aware that permissions operate as follows:
+
 * specific user rules will overwrite all-user rules
 * specific team rules will overwrite all-team rules
 * specific space rules will overwrite all-space rules

@@ -15,7 +15,7 @@ Click the *New Space* button on the main page to create a new *Space*.
 
 Give your *Space* a name and a short description.
 
-Zepl offers the ability to import notebooks from several external sources when creating a *Space* if desired. To do so check the *External Repositories* checkbox which will display the current options available: [Apache Zeppelin](../zeppelin_integration) notebooks, notebooks stored in [Github](../github_integration) and in [AWS S3](../s3_integration).
+Zepl offers the ability to import notebooks from several external sources when creating a *Space* if desired. To do so check the *External Repositories* checkbox which will display the current options available: [Apache Zeppelin](../guide/zeppelin_integration) notebooks, notebooks stored in [Github](../guide/github_integration) and in [AWS S3](../guide/s3_integration).
 
 > Note that the synchronized notebooks are read-only and in order to run/execute them you'll need to clone them first.
 

@@ -34,7 +34,8 @@ When a paragraph is executed or code is modified in a paragraph, ZEPL creates no
 To preview the content of a previous version, click its name in the version history list. A preview will be shown for verification with a *Close Preview* button appearing in the top right. Click that button if you'd like to cancel the operation and keep the current contents of the notebook. Otherwise click the *Rollback* button to proceed. The notebook will now roll back and refresh to the version you selected as shown below:
 
 <img src="../../img/feature_versioning/06_before_rollback.png" class="image-box img-100" />
+<br/>
+<br/>
 
 <img src="../../img/feature_versioning/07_rollbacked.png" class="image-box img-100" />
-<br/>
 
