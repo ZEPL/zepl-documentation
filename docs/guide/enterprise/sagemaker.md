@@ -1,18 +1,19 @@
-<h1> Integration with Amazon Sagemaker </h1>
+# Integration with Amazon Sagemaker
 
-Amazon [Sagemaker](!https://aws.amazon.com/sagemaker/) is a fully managed service for handling machine handling workflows. It enables users to build, train, and deploy ML models quickly. But before you can deploy your ML model, it must first be built, tuned, and iterated. Notebook, and specifically, Zepl notebooks are perfectly setup for these tasks.
+Amazon [*Sagemaker*](https://aws.amazon.com/sagemaker/) is a fully managed service for handling machine learning workflows. It enables users to build, train, and deploy ML models quickly. But before you can deploy your ML model, it must first be built, tuned, and iterated. Notebooks, and more specifically Zepl notebooks, are perfectly suited for these tasks.
 
-Now you can use Zepl to directly connect to Sagemaker in your VPC simply by selecting the Sagemaker Resource available in Zepl.
+Now you can use Zepl to connect directly to *Sagemaker* in your VPC by simply selecting the *Sagemaker* resource available in Zepl.
 
-Simply open a new notebook (or an existing notebook), and select Sagemaker in the resource drop down:
+Simply create a new notebook and select *Sagemaker* in the resource drop down:
+
 <img src="../../../img/sagemaker_resource.png" class="image-box big-img" />
 
+You can also switch an existing notebook's resource to *Sagemaker* by clicking the *Settings* link in the top right of the notebook.
 
-That's it. Nothing else to install. From the notebook you can then do the following:
+That's it! Nothing else to install. You can then do the following in the notebook:
 
 ```python
 %python
-# from sagemaker import get_execution_role
 from sagemaker.session import Session
 from sagemaker import KMeans
 import boto3
@@ -27,7 +28,6 @@ REGION_NAME = "[region_of_your_VPC]"
 def get_boto3_session_with_credentials():
     return boto3.Session(aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY,region_name=REGION_NAME)
 
-# role = get_execution_role()
 role = "[your_ARN_ROLE]"
 session = Session(get_boto3_session_with_credentials())
 bucket = session.default_bucket()
@@ -35,9 +35,7 @@ bucket = session.default_bucket()
 # your code goes below
 ```
 
-As long as you have your AWS credentials setup correct, your model would be deployed to the Sagemaker service in your VPC.
-
-In addition, the Zepl Sagemaker resource image is already pre-loaded with the following python libraries:
+As long as you have your AWS credentials setup correctly your model would be deployed to the *Sagemaker* service in your VPC. In addition, the Zepl *Sagemaker* resource image is already pre-loaded with the following Python libraries allowing you and your team to leverage *Sagemaker* for all of your machine learning needs:
 
 * boto3
 * matplotlib
@@ -61,8 +59,4 @@ In addition, the Zepl Sagemaker resource image is already pre-loaded with the fo
 * requests
 * sagemaker
 
-So you and your team should be able to start doing data science out of the box.
-
-You can also create custom images for your organization using our [Custom Image Support](/guide/enterprise/custom_image_support.html) feature.
-
-As always, if you have any questions, please don't hesitate to [contact us]((mailto:support@ZEPL.com)).
+You can also create custom images for your organization using our [Custom Image Support](/guide/enterprise/custom_image_support.html) feature. And as always, if you have any questions please don't hesitate to [contact us]((mailto:support@zepl.com)).
