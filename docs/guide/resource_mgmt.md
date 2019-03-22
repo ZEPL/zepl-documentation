@@ -3,7 +3,7 @@
 A Resource must be attached to a Zepl Notebook before it can be executed.
 Resources in Zepl determine which interpreters will be available and which type of physical resource (e.g CPU, RAM, etc.) will be allocated to execute the notebook.
 
-ZEPL Resources include some of the most popular data science packages and libraries:
+Zepl Resources include some of the most popular data science packages and libraries:
 
 - Spark v2.2, v2.3
 - Tensorflow 1.12
@@ -35,7 +35,7 @@ ZEPL Resources include some of the most popular data science packages and librar
     - sagemaker 1.18.5
     - and many others
 
-You can run `pip list` on the python interpreter to see the full list of installed python packages. ZEPL also supports `pip` and `conda` if additional libraries are required.
+You can run `pip list` on the python interpreter to see the full list of installed python packages. Zepl also supports `pip` and `conda` if additional libraries are required.
 
 ## Attaching a Resource to a Notebook
 

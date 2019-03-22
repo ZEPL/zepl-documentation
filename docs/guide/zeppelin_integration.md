@@ -76,7 +76,7 @@ export ZEPPELIN_NOTEBOOK_STORAGE="org.apache.zeppelin.notebook.repo.GitNotebookR
 export ZEPPELINHUB_API_ADDRESS="ADDRESS_OF_ZEPPELINHUB_SERVICE" (e.g. https://www.zepl.com)
 ```
 
-In this multi-user scenario you don't need your token as it will be automatically recognized from your new Zeppelin *Space*. In order to login with your ZEPL credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
+In this multi-user scenario you don't need your token as it will be automatically recognized from your new Zeppelin *Space*. In order to login with your Zepl credentials, you will need to complete the steps in the [next section](#login-to-apache-zeppelin-07x-with-zepl-credentials).
 
 You may also find up-to-date instructions on integrating the latest Apache Zeppelin master branch with Zepl on the [Apache Zeppelin documentation website](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/storage/storage.html#storage-in-zeppelinhub).
 

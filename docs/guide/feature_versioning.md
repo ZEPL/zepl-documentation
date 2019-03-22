@@ -24,7 +24,7 @@ Existing versions can be renamed by clicking the kebab menu at the upper right o
 
 ## Automatically Created Versions
 
-When a paragraph is executed or code is modified in a paragraph, ZEPL creates notebook versions automatically (at short time intervals). Of course, we can rename the automatically created versions too. 
+When a paragraph is executed or code is modified in a paragraph, Zepl creates notebook versions automatically (at short time intervals). Of course, we can rename the automatically created versions too. 
 
 <img src="../../img/feature_versioning/05_auto_revisions.png" class="image-box img-100" />
 <br/>
