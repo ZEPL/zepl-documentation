@@ -43,13 +43,7 @@ You simply need to make sure that each Zeppelin instance is setup with its own u
 Zepl enables close integration with Apache Zeppelin so you can setup Zeppelin in EMR and use Zepl not only for sync-ing and backing up your notebooks, but you can leverage Zepl as the authentication portal for Zeppelin.
 Details on how you can set this up can be found [here](https://www.Zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
 
-TODO: ### Can Zepl run on-premise in a private infrastructure?
-
-Yes. We offer an Enterprise tier which has an on-premise version. Please contact us at [sales@Zepl.com](mailto:sales@Zepl.com) for more information.
-
-TODO: ### Can Zepl run privately in an Amazon VPC?
-
-Yes. The same package for Enterprise on-premise can be used in a private VPC (Amazon's or other cloud solutions). Please contact us at [sales@Zepl.com](mailto:sales@Zepl.com) for more information.
+### Can Zepl run privately in an Amazon VPC?
 
 Yes. Enterprise deployments currently only run in Amazon VPC's though other cloud solutions will be supported in the near future.
 
@@ -61,15 +55,13 @@ Yes. The administrator has access to create one or more organizations in their Z
 
 Yes. You can directly share notebooks with non-registered users by simply entering their email address in the notebook sharing window. Another option is to publish your notebook. Publishing a notebook in Zepl creates a public facing URL for the notebook which you can send to anyone you like.
 
-TODO: ### What level of security does Zepl offer, both for notebooks and users?
+### What level of security does Zepl offer, both for notebooks and users?
 
-We take security very seriously at Zepl. Besides all transmissions being over SSL, all PII information is anonymized. In addition, all notebooks are encrypted with the encryption keys in a separate infrastructure.
+We take security very seriously at Zepl. Besides all transmissions being over SSL, all notebooks are encrypted with the encryption keys in a separate infrastructure.
 
 ### I have Jupyter and Zeppelin notebooks stored in Github. Can I import them to Zepl?
 
-Yes. Zepl supports both Zeppelin and Jupyter (v4.x) notebooks.
-
-Simply click on the *Create Space* button from the main page, toggle on *External Repository* and select GitHub from the dropdown menu that appears. Then enter your GitHub credentials. All the notebooks in your GitHub repo will be sync-ed and available to view in the new Zepl *Space*. At this point you can clone, edit, execute and share the notebooks.
+Yes. Zepl supports both Zeppelin and Jupyter (v4.x) notebooks. Simply click on the *Create Space* button from the main page, toggle on *External Repository* and select GitHub from the dropdown menu that appears. Then enter your GitHub credentials. All the notebooks in your GitHub repo will be sync-ed and available to view in the new Zepl *Space*. At this point you can clone, edit, execute and share the notebooks.
 
 ### If I set my notebook repository to my private S3 or Github account when creating a new *Space* via an external repository, will my notebooks be saved in Zepl as well?
 
