@@ -1,13 +1,13 @@
-<h1> Angular interpreter </h1>
+# Angular Interpreter
 
-Please note that this feature is in beta and is only available for selected customers.
+>Please note that this feature is in beta and is only available for selected customers.
 
-Angular interpreter is the port of Frontend Angular API in **Apache Zeppelin**
-[Link](https://zeppelin.apache.org/docs/0.8.0/usage/display_system/angular_frontend.html#frontend-angular-api-in-apache-zeppelin).
+The AngularJS interpreter is the port of the [Frontend Angular API](https://zeppelin.apache.org/docs/0.8.0/usage/display_system/angular_frontend.html#frontend-angular-api-in-apache-zeppelin) in *Apache Zeppelin*
+.
 
-Using AngularJS interpreter, you can render [AngularJS 1.7](https://docs.angularjs.org/misc/version-support-status#long-term-support) templates on ZEPL paragraphs and leverage the robust two-way binding system. Similar to **Apache Zeppelin** we expose a simple `AngularJS z object` on the front-end side to expose the same capabilities. This z object is accessible in the Angular isolated scope for each paragraph.
+Using the AngularJS interpreter you can render [AngularJS 1.7](https://docs.angularjs.org/misc/version-support-status#long-term-support) templates on Zepl paragraphs and leverage the robust two-way binding system. Similar to *Apache Zeppelin* we expose a simple `AngularJS z object` on the front-end side to expose the same capabilities. This z object is accessible in the Angular isolated scope for each paragraph.
 
-You don't need to create new resources or interpreters to start using angular interpreter. All you need to do is to add the magic keyword `%angular` to the first line of your paragraph.
+You don't need to create new resources or interpreters to start using the Angular interpreter. All you need to do is add the magic keyword `%angular` to the first line of your paragraph.
 
 ### API
 
@@ -16,11 +16,11 @@ You don't need to create new resources or interpreters to start using angular in
 | Initiate binding    | z.angularBind(var, initialValue, paragraphId) |
 | Update value        | z.angularBind(var, newValue, paragraphId)     |
 | Destroy binding     | z.angularUnbind(var, paragraphId)             |
-| Executing Paragraph | z.runParagraph(paragraphId)                   |
+| Execute Paragraph   | z.runParagraph(paragraphId)                   |
 
 #### Basic example
 
-* In paragraph A(Find each paragraph's id in its context menu):
+* In paragraph A (you can find each paragraph's id in its context menu):
 
 ```
 %angular
@@ -54,7 +54,7 @@ You don't need to create new resources or interpreters to start using angular in
 
 ### Angular API
 
-We support Angular's [ng-directives](https://docs.angularjs.org/api/ng/directive) and [ng-filters](https://docs.angularjs.org/api/ng/filter). You can combine these to build interactive applications in the frontend.
+We support Angular's [ng-directives](https://docs.angularjs.org/api/ng/directive) and [ng-filters](https://docs.angularjs.org/api/ng/filter). You can combine these to build interactive applications on the front-end.
 
 #### Example
 

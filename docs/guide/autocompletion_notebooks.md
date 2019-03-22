@@ -1,46 +1,44 @@
-# Autocompletion in ZEPL
+# Autocompletion in Zepl
 
-## How to use autocompletion in ZEPL
+## Activating and Using Autocompletion
 
 * `ctrl + .` : autocompletion shortcut
 
-ZEPL supports autocompletion for Python, Spark, and SQL. To begin using the autocompletion feature, simply the run the paragraph you're working on. You can run the paragraph after you select the interpreter you want to use.
+Zepl supports autocompletion for Python, Spark, and SQL.
+
+You'll first need to run a paragraph in the notebook you're working on to activate the feature. Then just use the `ctrl + .` hotkey to see possible completions pop up as shown below:
 
 <img src="../../img/autocompletion_demo.gif" class="image-box big-img" />
 
-<br>
-Don't forget that before you use the autocompletion feature, first run the paragraph.
-If you see a warning message, check that the notebook or paragraph has run. You can do this by checking both the paragraph and the container status.
+If you forget to run a paragraph in the notebook to activate the feature you'll get a warning like the following:
+
 <img src="../../img/autocompletion_error_message.png" class="image-box big-img" />
 
-<br>
+Notice that the status bar at the top right of the page says *Stopped*. Running a paragraph or the whole notebook will start the container allowing for the use of autocompletion and the status will say *Started*.
 
-## Supported Interpreter Type
+## Supported Interpreter Types
 
 Here is the list of interpreters and their specific autocompletion supported features.
 
-<br>
 #### Spark Interpreter
-| symbol  | autocompletion supported | Type |
+| Symbol  | Autocompletion Supported | Type |
 | --- | --- | --- |
-| `%spark`  | supported | SparkInterpreter - Provides a Scala environment |
-| `%pyspark` | supported | PySparkInterpreter - Provides a PySpark environment |
-| `%ipyspark`  | supported | IPySparkInterpreter |
-| `%dep`  | supported | DepInterpreter - Load dependency libraries into Spark environment |
-| `%sql`  | X | SparkSqlInterpreter - Provides SparkSQL environment |
-| `%r`  | X | SparkRInterpreter - Provides R environment |
+| `%spark`  | supported | SparkInterpreter: provides a Scala environment |
+| `%pyspark` | supported | PySparkInterpreter: provides a PySpark environment |
+| `%ipyspark`  | supported | IPySparkInterpreter: provides an iPython Spark environment |
+| `%dep`  | supported | DepInterpreter: loads dependency libraries into the Spark environment |
+| `%sql`  | X | SparkSqlInterpreter - provides a SparkSQL environment |
+| `%r`  | X | SparkRInterpreter - provides an R environment |
 
-<br>
 #### Python Interpreter
-| symbol  | autocompletion supported | Type |
+| Symbol  | Autocompletion Supported | Type |
 | --- | --- | --- |
-| `%python`  | supported | PythonInterpreter - Provides a Python environment |
-| `%ipython` | supported | IPythonInterpreter - Provides a iPython environment |
-| `%conda`  | X | PythonCondaInterpreter - Provides a [Conda](https://conda.io/docs/) enviroment |
-| `%sql`  | X | PythonInterpreterPandasSql - Provides [pandasql](https://pypi.python.org/pypi/pandasql) environment |
+| `%python`  | supported | PythonInterpreter: provides a Python environment |
+| `%ipython` | supported | IPythonInterpreter: provides an iPython environment |
+| `%conda`  | X | PythonCondaInterpreter: provides a [Conda](https://conda.io/docs/) environment |
+| `%sql`  | X | PythonInterpreterPandasSql: provides a [pandasql](https://pypi.python.org/pypi/pandasql) environment |
 
-<br>
 #### JDBC Interpreter
-| symbol  | autocompletion supported | Type |
+| Symbol  | Autocompletion Supported | Type |
 | --- | --- | --- |
-| `%sql`  | supported | JDBC interpreter with drivers for popular databases. |
+| `%sql`  | supported | JDBC interpreter with drivers for popular databases |

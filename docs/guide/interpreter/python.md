@@ -1,32 +1,31 @@
-<h1> Python Interpreter </h1>
+# Python Interpreter
 
-[Python](https://www.python.org/) is general-purpose programming language which is getting increasingly popular among data analysts and data scientists due to the strength of its core libraries, data wrangling.
+[Python](https://www.python.org/) is a general purpose programming language which is becoming increasingly popular among data analysts and data scientists due to the strength of its core libraries, simple data structures and growing wealth of packages and modules catering to data science, ML and AI.
 
-ZEPL provides python interpreter with popular python libraries pre-installed:
+Zepl provides a Python interpreter with the following popular  libraries pre-installed:
 
- * [numpy](http://www.numpy.org/): Scientific computing library designed to efficiently manipulate large multi-dimensional arrays
- * [scipy](https://www.scipy.org/): Library that provides large number of operations for scientific and engineering computing
- * [pandas](http://pandas.pydata.org/): Easy-to-use data structuring tool for data analysis
- * [pandasql](https://pypi.python.org/pypi/pandasql): Data manipulating tool using SQL syntax built on top of pandas Dataframe.
- * [matplotlib](http://matplotlib.org/): 2D plotting library
- * [Pillow](https://python-pillow.org/): Python Image Library supporting image manipulation of many different image file format
- * [boto3](http://boto3.readthedocs.io/en/latest/): AWS SDK for python
- * [scikit-learn](http://scikit-learn.org/): Machine Learning tool for data mining ad data analysis
- * [tensorflow](https://www.tensorflow.org/): Machine intelligent library helps developer to design, build, and train deep learning models easily
-
+ * [numpy](http://www.numpy.org/): a scientific computing library designed to efficiently manipulate large multi-dimensional arrays
+ * [scipy](https://www.scipy.org/): a library that provides a large number of operations for scientific and engineering computing
+ * [pandas](http://pandas.pydata.org/): an easy-to-use data structuring tool for data analysis
+ * [pandasql](https://pypi.python.org/pypi/pandasql): a data manipulation tool using SQL syntax built on top of pandas Dataframes
+ * [matplotlib](http://matplotlib.org/): a 2D plotting library
+ * [Pillow](https://python-pillow.org/): Python Image Library supporting image manipulation of many different image file formats
+ * [boto3](http://boto3.readthedocs.io/en/latest/): AWS SDK for Python
+ * [scikit-learn](http://scikit-learn.org/): a Machine Learning toolkit for data mining and analysis
+ * [tensorflow](https://www.tensorflow.org/): a machine intelligent library that helps developer to design, build, and train deep learning models easily
 
 ## Pip
 
 Install additional libraries using `pip`. 
 
-Usages
+Usage
 
 ```
 %python
 !pip install [packages]
 ```
 
-for example
+Example:
 
 ```
 %python
@@ -34,17 +33,15 @@ for example
 import keras
 ```
 
-`pip` command install packages in current environment. When other environment is activated, `pip` command install packages in the particular environment activated. Check next section to create and switch multiple python environments.
+The `pip` command installs packages in the current environment. If another environment is activated, it will install packages in the particular environment activated. Check the next section to create and switch multiple python environments.
 
+## Managing Python Environments
 
+If you'd like to install additional environments you can use the `conda` interpreter bundled with the Python interpreter. [Conda](https://conda.io/docs/) is open an source package and environment management system which enables easy package installation and environment switching.
 
-## Manage Python Environment
+### Usages
 
-If you need different environment other than the default environment or external packages, you can use conda interpreter bundled with python interpreter. [Conda](https://conda.io/docs/) is open source package and environment management system helps easy package installation and environment switch.
-
-Usages
-
-Get conda information
+Get `conda` information
 ```
 %python.conda info
 ```
@@ -59,16 +56,16 @@ Create an environment
 # or if you want to specify python version (e.g 3.6)
 %python.conda create --name [ENV_NAME] python=3.6
 ```
-Activate the environment
+Activate an environment
 ```
 %python.conda activate [ENV_NAME]
 ```
-Deactivate the environment
+Deactivate an environment
 ```
 %python.conda deactivate
 ```
 
-List installed package
+List installed packages
 ```
 %python.conda list
 ```
@@ -76,7 +73,7 @@ Install packages (see previous section to install packages via `pip`)
 ```
 %python.conda install [PACKAGE1 PACKAGE2 ...]
 
-# or if you want to specify env name
+# or if you want to specify an environment name
 %python.conda install -n [ENV_NAME] [PACKAGE1 PACKAGE2 ...]
 ```
 Uninstall packages
@@ -89,9 +86,9 @@ Help
 ```
 
 
-## IPython support
+## IPython Support
 
-You can use [IPython commands](http://ipython.readthedocs.io/en/stable/interactive/tutorial.html) with the default python interpreter in ZEPL.
+You can use [IPython commands](http://ipython.readthedocs.io/en/stable/interactive/tutorial.html) with the default Python interpreter in Zepl as shown below:
 
 ```python
 %python

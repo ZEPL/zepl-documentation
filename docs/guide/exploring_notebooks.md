@@ -1,20 +1,15 @@
-# Explore Public Notebooks
+# Exploring Public Notebooks
 
-[ZEPL Explore](https://www.zepl.com/explore) is a place for sharing ZEPL notebooks. 
-As long as the notebook is set as **Published(a.k.a Public)**, you can get the public URI and anyone(even non-ZEPL users) can see the notebook.
+[Zepl Explore](https://www.Zepl.com/explore) provides a communal space for anyone to share their Zepl notebooks with the world. Show off what you've done with Zepl and see what others have accomplished. You can both add any published notebook using it's publish URL or search for notebooks with keywords in the text field near the top of the page. Contribute and come back often to see what's new!
+
+> Note: Anyone can view the notebooks, even non-Zepl users.
 
 <center><img src="../../img/explore_notebook_main.png" class="big-img"/></center>
 
-<br/>
-# What is the Showcase ?
+# Showcases?
 
-ZEPL has number of showcases available.
+Zepl has a number of showcases available to categorize submitted notebooks.
 
 <img src="../../img/showcases.png" class="image-box big-img"/>
-
-You can label your notebook with one of the showcase tags, so it will appear under particular showcase section inside **Explore** page.
-
-If you select the showcases when you set your notebook to **Published(a.k.a Public)** mode, the notebook will be added under that showcase. 
-Now you can show off awesome notebooks through the ZEPL!
 
 <img src="../../img/showcase_example.png" class="image-box big-img"/>

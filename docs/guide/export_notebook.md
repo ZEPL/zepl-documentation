@@ -1,28 +1,27 @@
-<h1> Exporting ZEPL notebooks </h1>
-Once you've worked on your notebook in ZEPL, you might want to export it outside of our service for usage either on your Apache Zeppelin or Jupyter services. Currently only export to Apache Zeppelin notebook format is supported.
+# Exporting Zepl Notebooks
 
-<br/>
-## Export into Apache Zeppelin notebook format
+Zepl supports exporting its native notebooks to the Apache Zeppelin format for use in your Zeppelin instances or for storage in an external repository.
 
-You can export your notebook into Apache Zeppelin file from ZEPL notebook page by using `Export to Zeppelin` menu as shown below:
+## Export to the Apache Zeppelin Notebook Format
 
-<br/>
+To export your notebook use the `Export to Zeppelin` menu item in the "..." menu at the top right of the notebook page as shown below:
 
-<img src="../../img/export_notebook/01_zepl_export_menu.png" class="image-box big-img" />
+<img src="../../img/export_notebook/01_Zepl_export_menu.png" class="image-box big-img" />
 
-<br/>
+Then select the version you'd like to export to and the file will be automatically downloaded to your local filesystem.
 
-We support export to all Apache Zeppelin versions starting from v. 0.7.0. Please select from dropdown menu the version of Apache Zeppelin that you're using and click on it. Then you will have your notebook file (.json or .zpln) downloaded. Once downloaded you can import your notebook file into Apache Zeppelin instance from it’s `Import note` menu on home page as shown below:
+> Note: We currently support export to versions v0.7.x and v0.8.x in JSON format and v0.9.x in the `.zpln` file format.
 
-<br/>
+## Importing into an Apache Zeppelin Instance
+
+Use the `Import note` menu on the home page of your Apache Zeppelin instance as shown below:
 
 <img src="../../img/export_notebook/02_zeppelin_import_menu.png" class="image-box big-img" />
 
-<br/>
-<br/>
-Note that in case you have problem to import notebook into Apache Zeppelin because of file size limitation (by default Zeppelin is configured to limit 1MB on import) you can change `zeppelin.websocket.max.text.message.size` property under `ZEPPELIN_HOME/conf/zeppelin-site.xml` as shown below:
+## Apache Zeppelin File Size Limitations
 
-<br/>
+If you encounter issues due to your downloaded notebook's file size being too large for your Apache Zeppelin instance (the default is 1MB) you can increase the limit by changing the `zeppelin.websocket.max.text.message.size` property in  `ZEPPELIN_HOME/conf/zeppelin-site.xml`. The example below sets the maximum limit to 50MB:
+
 ```xml
 <property>
   <name>zeppelin.websocket.max.text.message.size</name>
@@ -31,5 +30,6 @@ Note that in case you have problem to import notebook into Apache Zeppelin becau
 </property>
 ```
 
-<br/>
-Above changes would set max notebook file limit to 50Mb. Alternatively you can set `ZEPPELIN_WEBSOCKET_MAX_TEXT_MESSAGE_SIZE` environment variable under `ZEPPELIN_HOME/conf/zeppelin-env.sh` as well. For more information on configuration please refer to official Apache Zeppelin documentation.
+Alternatively you can set the `ZEPPELIN_WEBSOCKET_MAX_TEXT_MESSAGE_SIZE` environment variable in `ZEPPELIN_HOME/conf/zeppelin-env.sh`. 
+
+For more information on configuration please refer to the official [Apache Zeppelin documentation](https://zeppelin.apache.org/).

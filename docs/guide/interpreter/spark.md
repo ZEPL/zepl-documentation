@@ -1,20 +1,18 @@
-<h1> Apache Spark Interpreter </h1>
+# Apache Spark Interpreter
 
-[Apache Spark](https://spark.apache.org) is an open source processing engine built around speed, ease of use, and sophisticated analytics. ZEPL provides several interpreters for Apache Spark.
+[Apache Spark](https://spark.apache.org) is an open source processing engine built around speed, ease of use and sophisticated analytics. Zepl provides several interpreters for Apache Spark as follows:
 
- * `%spark` - Provides a Scala environment
- * `%spark.pyspark` - Provides a Python environment
- * `%spark.sql` - Provides SparkSQL environment
- * `%spark.dep` - Load dependency libraries into Spark environment
- * `%spark.r` - Provides R environment
+ * `%spark` - provides a Scala environment
+ * `%spark.pyspark` - provides a Python environment
+ * `%spark.sql` - provides a SparkSQL environment
+ * `%spark.dep` - loads dependency libraries into a Spark environment
+ * `%spark.r` - provides an R environment
 
-A single Spark context is shared among `%spark`, `%spark.pyspark`, `%spark.sql`, `%spark.r` sessions.
-ZEPL currently runs single node Apache Spark 2.1.0 in the containers of each notebooks.
+A single Spark context is shared among `%spark`, `%spark.pyspark`, `%spark.sql` and `%spark.r` sessions. Zepl currently runs Apache Spark v2.3.0 on a single node (non-distributed) per notebook container.
 
+## Loading Data from AWS S3
 
-## Load data from AWS S3
-
-To create dataset from AWS S3, it is recommended to use `s3a`. First, you need to configure access key and secret key.
+To create a dataset from AWS S3 it is recommended to use the `s3a` connector. First, you need to configure your access and secret keys as follows:
 
 ```scala
 %spark
@@ -22,14 +20,14 @@ sc.hadoopConfiguration.set("fs.s3a.access.key", "[YOUR_ACCESS_KEY]")
 sc.hadoopConfiguration.set("fs.s3a.secret.key", "[YOUR_SECRET_KEY]")
 ```
 
-And then your Spark context will able to create dataset from S3
+Then your Spark context will be able to create a dataset from S3 like so:
 
 ```scala
 %spark
 val data = spark.read.text("s3a://apache-zeppelin/tutorial/bank/bank.csv")
 ```
 
-Alternatively, you can load data using `s3n`. In this case, access key and secret key can be configured in following way.
+Alternatively you can load data using the `s3n` connector. In this case your access and secret keys can be configured in the following way:
 
 ```scala
 %spark
@@ -37,24 +35,24 @@ sc.hadoopConfiguration.set("fs.s3n.awsAccessKeyId", "[YOUR_ACCESS_KEY]")
 sc.hadoopConfiguration.set("fs.s3n.awsSecretAccessKey", "[YOUR_SECRET_KEY]")
 ```
 
-And then your Spark context will able to access data from S3
+And your data accessed as follows:
 
 ```scala
 %spark
 val data = sc.textFile("s3n://....")
 ```
 
-Check [data loading example](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vY2RjMzQ1NTljOTkzNDNhMTk4NGE0ZWUzNjU1NjgxZWQvbm90ZS5qc29u) notebook.
+You can reference the [data loading example notebook](https://www.Zepl.com/viewer/notebooks/bm90ZTovL21vb24vY2RjMzQ1NTljOTkzNDNhMTk4NGE0ZWUzNjU1NjgxZWQvbm90ZS5qc29u) to try it yourself.
 
-## Load dependencies
+## Loading Dependencies
 
-When your code requires external library, `%spark.dep` helps load additional libraries from maven repository. `%spark.dep` interpreter leverages Scala environment. You can write scala expressions to call dependency load APIs.
+When your code requires external libraries `%spark.dep` helps load them from a maven repository. The `%spark.dep` interpreter leverages the Scala environment. You can write scala expressions to call dependency load APIs.
 
-Note that `%spark.dep` should be the first interpreter run in the notebook before `%spark`, `%spark.pyspark`, `%spark.sql`. Otherwise, `%spark.dep` will print error message and you need to shutdown and start the container for the notebook again.
+Note that `%spark.dep` should be the first interpreter run in the notebook before `%spark`, `%spark.pyspark` or `%spark.sql`. Otherwise, `%spark.dep` will print error messages and you'll need to shutdown and restart the container for the notebook again.
 
-Check [Dependency loading example](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u) notebook.
+Check the [Spark dependency loading example notebook](https://www.Zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u) for details.
 
-Usages
+### Usages
 
 ```scala
 %spark.dep

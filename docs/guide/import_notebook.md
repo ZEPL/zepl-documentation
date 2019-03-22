@@ -1,43 +1,38 @@
-<h1> Importing Jupyter notebooks into ZEPL and JUNO </h1>
+# Importing Notebooks into Zepl
 
-ZEPL is a service where your Apache Zeppelin and Jupyter Notebooks can be brought together to the same platform for sharing and collaboration. You can import your Apache Zeppelin and Jupyter notebooks into ZEPL. There are two methods to import a notebook:
+Zepl allows you to leverage the functionality of an enterprise platform for versioning, collaborating with and sharing both your Zeppelin and Jupyter notebooks by importing them into your *Spaces*. This can be done in 2 ways:
 
-* Upload notebooks directly to ZEPL
-* Fetch from a publically hosted location
+* uploading notebooks directly to Zepl
+* fetching notebooks from a publicly hosted location
 
-<span class="note-font">**NOTE:** As of now only Jupyter version >= 4 is supported.</span>
+To get started click the *Import Notebook* option from either the "kebab" menu in the *Spaces* main page or from the menu bar inside of a *Space*.
 
-
-## Upload Notebooks
-
-Select the **Import** option from either each (default type) of Space menu or a title bar inside of the space.
+> Note: Currently only Jupyter 4.x or greater and Zeppelin up to v0.8.x are supported.
 
 <img src="../../img/import_dropdown.png" height="280px" class="image-box big-img"/>
 
-Click **Select File** to upload a new file.
+## Uploading Notebooks
+
+Click *Select File* to upload a new file from your local filesystem.
 
 <img src="../../img/import_upload.png" class="image-box big-img"/>
 
-<span class="note-font">**NOTE:** File size limit- 1 Mb.</span>
+> Note: The file size limit is 1 MB.
 
-The notebook name will be autofilled, or you can choose to give it a unique title.
+The notebook name will be auto-filled but you can rename it as you like.
 
-### Import from Url
+## Importing from a URL
 
-Host the notebook to a publicly available location.
-Enter the URL in the input.
+Click *Fetch from URL* to upload a new file from a publicly accessible host and enter the URL in the *Link to your notebook* field.
 
 <img src="../../img/import_url.png" class="image-box big-img"/>
 
-Once the upload is completed, you will be redirected to the notebook.
+Once the upload is completed you will be redirected to the notebook.
 
-
-### JUNO Look and Feel
-
-Juno is a NASA space probe orbiting the planet Jupiter.
+## *Juno* Look and Feel
 
 <img src="../../img/juno_demo.png" class="image-box big-img"/>
 
-For those who are familiar with Jupyter notebooks and prefer a similar notebook view, ZEPL includes the JUNO look-and-feel view. If you import a Jupyter notebook, JUNO look-and-feel will be set automatically, however you can modify the view once you open the notebook.
+For those who are familiar with Jupyter notebooks and prefer a similar notebook format, Zepl includes the *Juno* view. If you import a Jupyter notebook the *Juno* view will be set automatically but you can change it once you open the notebook as demonstrated in the image below.
 
 <img src="../../img/juno_dropdown.png" class="image-box big-img"/>

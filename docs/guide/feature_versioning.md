@@ -1,69 +1,39 @@
-# Feature: Notebook Versioning 
+# Notebook Versioning
 
-Notebook versions can be created manually or automatically when some important changes are made. For instance, a paragraph is executed or code is modified.
+Notebook versions are created automatically when paragraphs are executed, code is modified or results change. Versions can also be named for easier identification and to act as a tagging system. Naming a version can also be used to create saved versions manually. And, of course, it's possible to rollback the notebook to any of the previous versions. 
 
-Also it's possible to rollback the notebook into one of the previous versions. 
+## Creating a Version of a Notebook Manually 
 
-With the notebook versioning feature, Users are able to manage notebooks' history easily. In this documentation, We will see how we can use the notebook versioning features step by step.   
-
-## 1. Create a version of a notebook manually 
-
-To create a version of a notebook, Click the **Name current version** menu on the right side. After then insert the name you want to create.
-
-<br/>
+To create a manual version of a notebook, click the *Name current version* item in the "..." dropdown menu on the top right side of the notebook page. Then enter the name you want in the *Name this version* dialog window that pops up and click *Submit*.
 
 <img src="../../img/feature_versioning/01_revision_menu.png" class="image-box big-img" />
 
-<br/>
-
 <img src="../../img/feature_versioning/02_create_manual_revision.png" class="image-box big-img" />
 
-<br/> <br/>
+## Examining the Version History 
 
-## 2. Check version history menu 
-
-You can check created versions by opening the **Version history** sidebar.
-
-<br/>
+You can have a look at the list of saved versions by clicking the *Version history* item in the "..." dropdown menu on the top right side of the notebook page as shown below:
 
 <img src="../../img/feature_versioning/03_version_history.png" class="image-box big-img" />
 
-<br/>
-
 <img src="../../img/feature_versioning/04_manual_revision_check.png" class="image-box big-img" />
 
-<br/> <br/>
+## Renaming Existing Versions
 
-## 3. Rename created versions
-
-Also, we can change the name of the versions. Click the **Rename** menu. 
-
-<br/>
+Existing versions can be renamed by clicking the kebab menu at the upper right of each version entry area and selecting *Rename* as shown here:
 
 <img src="../../img/feature_versioning/05_rename_menu.png" class="image-box big-img" />
 
-<br/> <br/>
-
-## 4. Versions automatically created
+## Automatically Created Versions
 
 When a paragraph is executed or code is modified in a paragraph, ZEPL creates notebook versions automatically (at short time intervals). Of course, we can rename the automatically created versions too. 
 
-<br/>
-
 <img src="../../img/feature_versioning/06_auto_revisions.png" class="image-box big-img" />
 
-<br/> <br/>
+## Rollbacking Back
 
-## 5. Rollback
-
-To view the content of previous versions, click the name of a version. Then you will be able to see the old version's content. 
-
-If you want to rollback into one of the versions, Click the **Rollback** button.
-
-<br/>
+To preview the content of a previous version, click its name in the version history list. A preview will be shown for verification with a *Close Preview* button appearing in the top right. Click that button if you'd like to cancel the operation and keep the current contents of the notebook. Otherwise click the *Rollback* button to proceed. The notebook will now roll back and refresh to the version you selected as shown below:
 
 <img src="../../img/feature_versioning/07_before_rollback.png" class="image-box big-img" />
-
-<br/>
 
 <img src="../../img/feature_versioning/08_rollbacked.png" class="image-box big-img" />

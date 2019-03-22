@@ -1,38 +1,21 @@
-# Integration with S3
+# Integrating with *S3*
 
-In this section, we will explain how you can create an [Amazon Web Service](https://aws.amazon.com/) S3 Space in Zepl and seamlessly synchronize your notebooks from your own [**S3 Bucket**](https://aws.amazon.com/s3/).
+*S3* is a popular online data storage service offered by AWS and used by many data scientists to store their notebooks whether they be Zeppelin or Jupyter. Zepl supports integration of both notebook types via *Spaces* as described below. Note that the files in *S3* must be in *JSON* (Apache Zeppelin) or *ipynb* (Jupyter) format.
 
-Note that files should be saved in **Apache Zeppelin(*.json)** or
-**Ipython(*.ipynb)** format.
+>Note: *S3* synchronization is unidirectional from *S3* to Zepl so edits in Zepl do not get updated in *S3*. Also the notebooks from *S3* are read-only in Zepl and need to be cloned to modify.
 
-## Create an AWS S3 Repository Space
-Click **"New Space"** button in the main page to create a new Space and check "External Repository".
-Then select the **S3** from the dropdown menu.
+In this section, we will explain how you can create an [Amazon Web Service](https://aws.amazon.com/) *S3* *Space* in Zepl and seamlessly synchronize your notebooks from your own [*S3* bucket](https://aws.amazon.com/S3/).
 
-### Connecting to a S3 Repository
-> In order for ZEPL to connect to your S3 repository, you will need to know your **Access key**, **Private key**, **Bucket** and **Region** for your S3 Bucket.
-> If you are unaware of how to find and retrieve this information, you can refer the [AWS documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
+## Creating an AWS *S3* Repository Space
 
-### Create S3 space in ZEPL
-To create a new S3 space, select **Space** in the top of dropdown menu. A space dialog should appear.
+Click the *New Space* button in the main page to create a new *Space* and fill in the name and description fields. Then check *External Repository* and select *S3* from the dropdown menu. In order for Zepl to connect to your *S3* repository, you will need to enter your *Access key* *Private key*, *Bucket* and *Region*. If you are unaware of how to find and retrieve this information, you can refer to the [AWS documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
 
-Select **S3** in dropdown menu and then enter a name for your space and a short description.
-Fill in the following fields with your AWS access keys and your S3 bucket name and region.
+A completed form might look like the following image.
 
-- AWS Access Key
+<img src="../../img/create_new_*S3*.png" class="image-box big-img"/>
 
-- AWS Private Key
+If the synchronization is successful, the notebooks in your *S3* bucket should be automatically added to your Zepl *S3* Space.
 
-- S3 Bucket name
+<img src="../../img/manage_*S3*.png" class="image-box big-img"/>
 
-- S3 Region
-
-A completed form should look like the following image.
-
-<img src="../../img/create_new_s3.png" class="image-box big-img"/>
-
-If the synchronization is successful, the notebooks in your S3 bucket should be automatically added to your Zepl S3 Space.
-
-<img src="../../img/manage_s3.png" class="image-box big-img"/>
-
-The S3 space will automatically poll the AWS S3 Bucket every 10 mins for changes, update any modified notebooks, and remove any deleted notebooks. You can also manually retrigger the synchronization.
+The *S3* space will automatically synchronize with the *S3* repository every 10 mins and will add new notebooks, update any modified notebooks, and remove any deleted notebooks. You can also manually re-trigger the synchronization.

@@ -1,33 +1,25 @@
-# The Log Console in ZEPL
+# The Log Console in Zepl
 
-ZEPL provides a Log Console for a given notebook that the user can open to view the interpreter logs. The output stream in the Log Console will be specific to the given notebook and its interpreters.
+Zepl provides a *Log Console* for a given notebook that the user can open to view the interpreter logs. The output stream in the *Log Console* will be specific to the given notebook and its interpreters.
 
- 
-## How to use the Log Console
+## How to Use the Log Console
 
-ZEPL supports logging console for Python, Spark and JDBC interpreters.
-To begin using the Log Console, simply run the paragraph you're working on.
-If you shutdown the notebook, Log Console will be automatically closed.
-The Log Console is located at the bottom of the notebook. To open, click on the Console tab.
+Zepl provides the *Log Console* for Python, Spark and JDBC interpreters. To begin using it simply run the paragraph you're working on. It's located at the bottom of the notebook and can be opened by clicking on the *Console* tab. If you shutdown the notebook the *Log Console* will be closed automatically.
 
-<br>  
 <img src="../../../img/logging_console_demo.gif" class="image-box big-img" />     
  
-* Note: You will only see log lines in the Log Console if the notebook is running. 
+> Note: You will only see log output in the *Log Console* if the notebook is running. 
 
-<br>
+## About Log Console Contents
 
-## About the log in the Log Console
-The interpreter logs are based on the [Apache Zeppelin Interpreter](https://zeppelin.apache.org/docs/0.8.0/usage/interpreter/overview.html) log.
+The interpreter logs are based on the [Apache Zeppelin Interpreter](https://zeppelin.apache.org/docs/0.8.0/usage/interpreter/overview.html) log with the following output:
 
-- Timestamp : [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)
-- Log level : `INFO`, `ERROR`, `WARN`
-- Thread : the name of the thread that generated the logging event.
-- message : the application supplied message associated with the logging event.
+- timestamp: [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)
+- log level: `INFO`, `ERROR`, `WARN`
+- thread: the name of the thread that generated the logging event
+- message: the application supplied message associated with the logging event
 
-<br>
-
-This is a sample Spark Interpreter log in the Log Console.
+The following is some sample Spark Interpreter log output in the *Log Console*:
 ```
 ...
 [2018-09-04 15:46:46,483Z] INFO (pool-2-thread-4) | Job 13121f1eca... finished by scheduler interpreter
