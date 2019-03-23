@@ -95,13 +95,14 @@ There are two levels of roles available in Zepl:
 
 Public notebooks are notebooks that are published through Zepl and become accessible publicly through the generated URL. You can make the notebook private again by toggling the *Published* control off in the *Publish* dialog.
 
-### What are the notebooks in the “Explore” showcases and how does one manage them?
+### What are the notebooks in the *Explore* showcases and how does one manage them?
 
-Notebooks in the Explore section are notebooks that were aggregated by us and some of our members. They include notebooks publicly published by various users including data scientists, professors, engineers, etc. and cover a wide range of topics from How-Tos to research papers. Please take the time to [Explore](https://www.zepl.com/explore).
+Notebooks in the *Explore* section are notebooks that were aggregated by us and some of our members. They include notebooks publicly published by various users including data scientists, professors, engineers, etc. and cover a wide range of topics from How-Tos to research papers. Please take the time to [Explore](https://www.zepl.com/explore).
 
 ### Which versions of Python, Scala and Spark does Zepl support?
 
 Currently Zepl supports:
+
 - Python v2.7 & v3.5
 - Spark v2.1.0
 - Scala v2.11
