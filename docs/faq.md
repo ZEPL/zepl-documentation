@@ -25,7 +25,7 @@ Yes. You can connect multiple Zeppelin instances to Zepl. Simply click on the *C
 Yes. You can continue to use Jupyter in your local environment and sync and/or import the notebooks as desired.
 You can also export notebooks from Zepl to be worked on from you local Jupyter or Zeppelin instance.
 
-### How long do you save the notebooks?
+### How long are notebooks saved for in Zepl?
 
 The notebooks are saved until you delete them or delete your account.
 
@@ -38,7 +38,7 @@ All notebooks created in Zepl are stored in Zepl. You can export the notebooks t
 Yes. You can connect to as many Apache Zeppelin instances as you like.
 You simply need to make sure that each Zeppelin instance is setup with its own unique token which is provided when you create a Zeppelin instance *Space* in Zepl.
 
-### How can I use Zepl on Apache Zeppelin running on EMR?
+### How can I use Zepl with Apache Zeppelin running on EMR?
 
 Zepl enables close integration with Apache Zeppelin so you can setup Zeppelin in EMR and use Zepl not only for sync-ing and backing up your notebooks, but you can leverage Zepl as the authentication portal for Zeppelin.
 Details on how you can set this up can be found [here](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
@@ -55,7 +55,7 @@ Yes. The administrator has access to create one or more organizations in their Z
 
 Yes. You can directly share notebooks with non-registered users by simply entering their email address in the notebook sharing window. Another option is to publish your notebook. Publishing a notebook in Zepl creates a public facing URL for the notebook which you can send to anyone you like.
 
-### What level of security does Zepl offer, both for notebooks and users?
+### What level of security does Zepl offer both for notebooks and users?
 
 We take security very seriously at Zepl. Besides all transmissions being over SSL, all notebooks are encrypted with the encryption keys in a separate infrastructure.
 
@@ -71,7 +71,7 @@ Yes. When you sync your notebooks from S3 or Github, copies of your notebooks ar
 
 Yes. Through Python and Scala you can programmatically access data from S3 or other publicly available data sources.
 
-### What are the different roles available in Zepl? What rights do each have?
+### What are the different roles available in Zepl? What rights does each have?
 
 There are two levels of roles available in Zepl:
 
