@@ -1,6 +1,6 @@
 # FAQ
 
-If you don't see your question in this FAQ please send us an email at [support@Zepl.com](mailto:support@Zepl.com).
+If you don't see your question in this FAQ please send us an email at [support@zepl.com](mailto:support@zepl.com).
 
 ### Is Zepl the enterprise version of Apache Zeppelin?
 
@@ -41,7 +41,7 @@ You simply need to make sure that each Zeppelin instance is setup with its own u
 ### How can I use Zepl on Apache Zeppelin running on EMR?
 
 Zepl enables close integration with Apache Zeppelin so you can setup Zeppelin in EMR and use Zepl not only for sync-ing and backing up your notebooks, but you can leverage Zepl as the authentication portal for Zeppelin.
-Details on how you can set this up can be found [here](https://www.Zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
+Details on how you can set this up can be found [here](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vN2EzZjE3N2ZmN2RhNDM1OTkzOGFlYTNhNjlkMmNhNzMvbm90ZS5qc29u).
 
 ### Can Zepl run privately in an Amazon VPC?
 
@@ -97,7 +97,7 @@ Public notebooks are notebooks that are published through Zepl and become access
 
 ### What are the notebooks in the “Explore” showcases and how does one manage them?
 
-Notebooks in the Explore section are notebooks that were aggregated by us and some of our members. They include notebooks publicly published by various users including data scientists, professors, engineers, etc. and cover a wide range of topics from How-Tos to research papers. Please take the time to [Explore](https://www.Zepl.com/explore).
+Notebooks in the Explore section are notebooks that were aggregated by us and some of our members. They include notebooks publicly published by various users including data scientists, professors, engineers, etc. and cover a wide range of topics from How-Tos to research papers. Please take the time to [Explore](https://www.zepl.com/explore).
 
 ### Which versions of Python, Scala and Spark does Zepl support?
 
