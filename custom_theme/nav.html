@@ -3,7 +3,7 @@
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
-            {% if include_nav or include_next_prev or repo_url %}
+            {% if nav|length>1 or (page.next_page or page.previous_page) or config.repo_url %}
             <!-- Expander button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -14,17 +14,17 @@
             {% endif %}
 
             <!-- Main title -->
-            <a class="navbar-brand" href="{{ homepage_url }}">{{ site_name }}</a>
+            <a class="navbar-brand" href="{{ nav.homepage.url }}">{{ config.site_name }}</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
-            {% if include_nav %}
+            {% if nav|length>1 %}
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
                 {% for nav_item in nav %}
                     <li {% if nav_item.active %}class="active"{% endif %}>
-                        <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                        <a href="{{base_url}}/{{ nav_item.url }}">{{ nav_item.title }}</a>
                     </li>
                 {% endfor %}
                 </ul>

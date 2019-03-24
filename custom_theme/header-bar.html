@@ -8,16 +8,13 @@
     <div>
       <ul class="nav navbar-nav">
         <li>
-          <a href="{{base_url}}/" class="{% if site_url == page.canonical_url %}current{% endif %}">User Guide</a>
+          <a href="{{config.site_url|url}}" class="{% if config.site_url == page.canonical_url %}current{% endif %}">User Guide</a>
         </li>
         <li>
-          <a href="{{base_url}}/faq/" class="{% if '/faq' in page.canonical_url %}current{% endif %}">FAQ</a>
+          <a href="{{config.site_url|url}}faq/" class="{% if '/faq' in page.canonical_url %}current{% endif %}">FAQ</a>
         </li>
-        <!--li>
-          <a href="{{base_url}}/release_note/" class="{% if '/release_note' in page.canonical_url %}current{% endif %}">Releases</a>
-        </li-->
         <li>
-          <a href="{{base_url}}/support/" class="{% if '/support' in page.canonical_url %}current{% endif %}">Support</a>
+          <a href="{{config.site_url|url}}support/" class="{% if '/support' in page.canonical_url %}current{% endif %}">Support</a>
         </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -37,13 +34,13 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a href="{{base_url}}/" class="{% if site_url == page.canonical_url %}current{% endif %}">User Guide</a>
+          <a href="{{config.site_url|url}}" class="{% if config.site_url == page.canonical_url %}current{% endif %}">User Guide</a>
         </li>
         <li>
-          <a href="{{base_url}}/faq/" class="{% if '/faq' in page.canonical_url %}current{% endif %}">FAQ</a>
+          <a href="{{config.site_url|url}}faq/" class="{% if '/faq' in page.canonical_url %}current{% endif %}">FAQ</a>
         </li>
         <li>
-          <a href="{{base_url}}/support/" class="{% if '/support' in page.canonical_url %}current{% endif %}">Support</a>
+          <a href="{{config.site_url}}support/" class="{% if '/support' in page.canonical_url %}current{% endif %}">Support</a>
         </li>
       </ul>
     </div><!--/.nav-collapse -->

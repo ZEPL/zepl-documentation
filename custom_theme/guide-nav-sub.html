@@ -1,8 +1,7 @@
 {% if guide_item.title != 'Guide' %}
     {% if guide_item.children %}
-        <li class="toctree-l1 {% if guide_item.active%}current{%endif%}">
-            <a class="{% if guide_item.active%}current{%endif%}" href="{{ guide_item.url }}">{{ guide_item.title }}</a>
-            
+        <li class="toctree-l1 {% if guide_item.active %}current{% endif %}">
+            {{guide_item.title}}
             <ul class="bs-sidenav sub-nav">
                 {% for guide_item in guide_item.children %}
                     {% include "guide-nav-sub.html" %}
@@ -10,11 +9,11 @@
             </ul>
         </li>
     {% else %}
-        <li class="toctree-l1 {% if guide_item.active%}current{%endif%}">
-            <a class="{% if guide_item.active%}current{%endif%}" href="{{ guide_item.url }}">{{ guide_item.title }}</a>
-            {% if guide_item == current_page %}
+        <li class="toctree-l1 {% if guide_item.active %}current{% endif %}">
+            <a class="{% if guide_item.active %}current{% endif %}" href="{{ guide_item.url|url }}">{{ guide_item.title }}</a>
+            {% if guide_item == page %}
                 <ul>
-                {% for toc_item in toc %}
+                {% for toc_item in page.toc %}
                     <li class="toctree-l3"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
                     {% for toc_item in toc_item.children %}
                         <li><a class="toctree-l4" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>

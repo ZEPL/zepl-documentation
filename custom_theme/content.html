@@ -1,4 +1,4 @@
-{% if page.canonical_url == site_url %}
+{% if page.canonical_url == config.site_url %}
   {% include "index.html" %}
 {% endif %}
-{{ content }}
+{{ page.content }}
