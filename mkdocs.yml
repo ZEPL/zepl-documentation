@@ -4,15 +4,13 @@ site_name: Zepl Documentation
 site_url: http://docs.zepl.com/
 site_description: Zepl Documentation Site
 site_author: Zepl
-site_favicon: favicon.ico
 
 # repo_url: https://github.com/ZEPL/zepl-documentation
 
 # Included pages list
-pages:
+nav:
 - Welcome: index.md
-# - Key Concepts: overview.md
-- User Guide:
+- User Guide: 
   - Notebooks:
     - Sharing Notebooks: guide/sharing_notebooks.md
     - External Notebooks:
@@ -38,14 +36,13 @@ pages:
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
     - Sagemaker Integration: guide/enterprise/sagemaker.md
-# - Release Notes: release_note.md
 - FAQ: faq.md
 - Support: support.md
 
 # Theme & Javascript & CSS
-theme_dir: 'custom_theme'
-extra_javascript:
-  - js/extra.js
+theme:
+  name: readthedocs 
+  custom_dir: custom_theme
 extra_css:
   - css/extra.css
 
@@ -57,3 +54,6 @@ markdown_extensions:
     - toc:
         anchorlink: True
     - markdown.extensions.extra
+
+plugins: 
+    - search

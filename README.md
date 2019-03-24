@@ -5,16 +5,12 @@ ZEPL Documentation is made by [Mkdocs](http://www.mkdocs.org/). So you need to [
 
 ```
 $ python --version
-Python 2.6.x
-$ pip --version
-pip 1.5.X
+Python 3.6.x
 ```
 
 Install the mkdocs package using pip:
-(Since 0.17.0, mkdocs dropped python 2.6 support, 0.16.3 supports both for 2.6.x, 2.7.x)
-
 ```
-$ pip install -I mkdocs==0.16.3
+$ pip install -I mkdocs==1.0.4
 ```
 
 ## 2. Clone this repository

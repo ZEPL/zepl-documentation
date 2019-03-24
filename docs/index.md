@@ -25,7 +25,8 @@
   <div class="col-md-6">
 
 ### Importing Existing Notebooks
-  Import Jupyter or Zeppelin notebooks
+Import Jupyter or Zeppelin notebooks
+
   - External notebooks:
     - [Apache Zeppelin](guide/zeppelin_integration.md)
     - [Github](guide/github_integration.md)
