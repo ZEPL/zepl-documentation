@@ -1,7 +1,7 @@
 # ZEPL Documentation
 
 ## 1. Install Mkdocs
-ZEPL Documentation is made by [Mkdocs](http://www.mkdocs.org/). So you need to [install mkdocs](http://www.mkdocs.org/#installation). In order to install MkDocs, you'll need [Python](https://www.python.org/) installed on your system, as well as the Python package manager, [pip](https://pip.pypa.io/en/stable/). You can check if you have these already installed like so:  MkDocs supports Python 2.6, 2.7, 3.3 and 3.4.
+ZEPL Documentation is made by [Mkdocs](http://www.mkdocs.org/). So you need to [install mkdocs](http://www.mkdocs.org/#installation). In order to install MkDocs, you'll need [Python](https://www.python.org/) installed on your system, as well as the Python package manager, [pip](https://pip.pypa.io/en/stable/). You can check if you have these already installed like so: latest version of MkDocs supports Python 3.
 
 ```
 $ python --version
