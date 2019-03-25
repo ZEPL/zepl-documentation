@@ -25,7 +25,7 @@ Yes. You can connect multiple Zeppelin instances to Zepl. Simply click on the *C
 Yes. You can continue to use Jupyter in your local environment and sync and/or import the notebooks as desired.
 You can also export notebooks from Zepl to be worked on from you local Jupyter or Zeppelin instance.
 
-### How long are notebooks saved for in Zepl?
+### How long are notebooks saved in Zepl?
 
 The notebooks are saved until you delete them or delete your account.
 
