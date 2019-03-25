@@ -10,7 +10,7 @@ site_author: Zepl
 # Included pages list
 nav:
 - Welcome: index.md
-- User Guide: 
+- User Guide:
   - Notebooks:
     - Sharing Notebooks: guide/sharing_notebooks.md
     - External Notebooks:
@@ -31,7 +31,7 @@ nav:
     - Angular: guide/interpreter/angular.md
   - Resources: guide/resource_mgmt.md
   - Enterprise:
-    - Amazon EMR Integration: guide/emr_integration.md
+    - Amazon EMR Integration: guide/enterprise/emr_integration.md
     - Login Support: guide/enterprise/login_support.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
@@ -41,7 +41,7 @@ nav:
 
 # Theme & Javascript & CSS
 theme:
-  name: readthedocs 
+  name: readthedocs
   custom_dir: custom_theme
 extra_css:
   - css/extra.css
@@ -55,5 +55,5 @@ markdown_extensions:
         anchorlink: True
     - markdown.extensions.extra
 
-plugins: 
+plugins:
     - search
