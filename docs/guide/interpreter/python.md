@@ -10,13 +10,22 @@ Zepl provides a Python interpreter with the following popular  libraries pre-ins
  * [pandasql](https://pypi.python.org/pypi/pandasql): a data manipulation tool using SQL syntax built on top of pandas Dataframes
  * [matplotlib](http://matplotlib.org/): a 2D plotting library
  * [Pillow](https://python-pillow.org/): Python Image Library supporting image manipulation of many different image file formats
- * [boto3](http://boto3.readthedocs.io/en/latest/): AWS SDK for Python
- * [scikit-learn](http://scikit-learn.org/): a Machine Learning toolkit for data mining and analysis
+ * [plotly](https://plot.ly/): interactive, D3 and WebGL charts
+ * [bokeh](https://bokeh.pydata.org/): an interactive visualization library that targets modern web browsers for presentation
+ * [seaborn](https://seaborn.pydata.org/): a Python data visualization library based on matplotlib, providing a high-level interface for drawing attractive and informative statistical graphics
+ * [boto3](http://boto3.readthedocs.io/): AWS SDK for Python
+ * [scikit-learn](http://scikit-learn.org/): a machine learning toolkit for data mining and analysis
  * [tensorflow](https://www.tensorflow.org/): a machine intelligent library that helps developer to design, build, and train deep learning models easily
+ * [keras](https://keras.io): a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano
+ * [theano](http://deeplearning.net/software/theano/): a library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+ * [sagemaker](https://aws.amazon.com/sagemaker): a fully managed machine learning service which allows data scientists and developers to quickly and easily build and train machine learning models, and then directly deploy them into a production-ready hosted environment
+ * [statsmodels](https://www.statsmodels.org/): a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration
+ * [nltk](https://www.nltk.org/): a platform for building Python programs to work with human language data
+ * [scrapy](https://scrapy.org/): a collaborative framework for extracting the data you need from websites
 
 ## Pip
 
-Install additional libraries using `pip`. 
+Install additional libraries using `pip`.
 
 Usage
 

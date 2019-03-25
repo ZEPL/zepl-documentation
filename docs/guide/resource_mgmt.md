@@ -5,41 +5,19 @@ Resources in Zepl determine which interpreters will be available and which type 
 
 Zepl Resources include some of the most popular data science packages and libraries:
 
-- Spark v2.2, v2.3
-- Tensorflow 1.12
+- Spark 2.2, 2.3
 - R packages
     - ggplot2
     - knitr
     - bayesian_first_aid
-- Python 3.6.8 
-- Python libraries
-    - boto3 1.9.64 
-    - matplotlib 3.0.3
-    - numpy 1.16.2
-    - pandas 0.24.2
-    - pandasql 0.7.3
-    - Pillow 5.4.1
-    - scipy 1.2.1
-    - scikit-learn 0.20.3
-    - bkzep 0.5.0
-    - statsmodels 0.9.0
-    - seaborn 0.9.0
-    - plotly 3.7.0
-    - bokeh 1.0.4
-    - pydot 1.4.1
-    - keras 2.2.4
-    - nltk 3.4
-    - gensim 3.7.1
-    - scrapy 1.6.0
-    - theano 1.0.4
-    - sagemaker 1.18.5
-    - and many others
+- Python 2.7, 3.6
+    - [pre installed python libraries](/guide/interpreter/python/#python-interpreter)
 
-You can run `pip list` on the python interpreter to see the full list of installed python packages. Zepl also supports `pip` and `conda` if additional libraries are required.
+    You can run `pip list` on the python interpreter to see the full list of installed python packages. Zepl also supports `pip` and `conda` if additional libraries are required.
 
 ## Attaching a Resource to a Notebook
 
-You can select a resource when you create or clone a notebook. 
+You can select a resource when you create or clone a notebook.
 
 <img src="../../img/create_new_notebook.png" class="image-box img-100" />
 
@@ -106,7 +84,7 @@ Please note that these permissions do not depend on each other or have
 precedence over each other. You will have to be explicit on permissions.
 A user who doesn't have attach permission can still have edit permission.
 Also giving permission to a specific user group doesn't give permission
-to a higher user group. For example, giving edit permission to users of a *Space* 
+to a higher user group. For example, giving edit permission to users of a *Space*
 doesn't give edit permission to managers of that space.
 
 ### Creating a Resource Permission
