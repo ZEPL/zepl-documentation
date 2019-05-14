@@ -20,7 +20,7 @@
   - [Whitelist IP addresses](guide/interpreter/jdbc/#whitelist-ip-addresses)
 
 ### Working with External Clusters
-  - [Amazon EMR](guide/emr_integration)
+  - [Amazon EMR](guide/enterprise/emr_integration)
   </div>
   <div class="col-md-6">
 
