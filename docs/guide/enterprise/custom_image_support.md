@@ -64,7 +64,7 @@ Use "zcr [command] --help" for more information about a command.
 
 `zcr` requires a definition file which defines custom packages for interpreters such as R libraries and Pip packages. With the `zcr create` command users are able to build/push/register custom interpreter images.
 
-For an explanation of the definition file, please refer to the [definition section below](./custom_image_support/#definition-file-spec).
+For an explanation of the definition file, please refer to the [definition section below](../custom_image_support/#definition-file-spec).
 
 ```bash
 # make sure that you exported `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as env variables

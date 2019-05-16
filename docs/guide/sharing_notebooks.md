@@ -15,7 +15,7 @@ Click the *New Space* button on the main page to create a new *Space*.
 
 Give your *Space* a name and a short description.
 
-Zepl offers the ability to import notebooks from several external sources when creating a *Space* if desired. To do so check the *External Repositories* checkbox which will display the current options available: [Apache Zeppelin](../guide/zeppelin_integration) notebooks, notebooks stored in [Github](../guide/github_integration) and in [AWS S3](../guide/s3_integration).
+Zepl offers the ability to import notebooks from several external sources when creating a *Space* if desired. To do so check the *External Repositories* checkbox which will display the current options available: [Apache Zeppelin](../zeppelin_integration) notebooks, notebooks stored in [Github](../github_integration) and in [AWS S3](../s3_integration).
 
 > Note that the synchronized notebooks are read-only and in order to run/execute them you'll need to clone them first.
 
@@ -38,7 +38,7 @@ There are three preset permission policies to choose from:
 * Full Collaborate Access: *Full Read Access* plus the ability to edit, schedule, version and run the notebook
 * Full Manage Access: *Full Collaboration Access* plus the ability to publish, share, move and delete the notebook
   
-You can choose from one of these or grant your own custom permissions by making the appropriate selections in the dialog window. Note that in addition to the *Run notebook* permission option, a member must have the *Allow Start, Stop, Execute Resource* permission granted in the [*Resource* permissions](resource_mgmt/#permissions-for-resources) area for the notebook's assigned resource in order to run the notebook. A quick link to the *Resource* permissions settings page appears next to the *Run* option for convenience.
+You can choose from one of these or grant your own custom permissions by making the appropriate selections in the dialog window. Note that in addition to the *Run notebook* permission option, a member must have the *Allow Start, Stop, Execute Resource* permission granted in the [*Resource* permissions](../resource_mgmt/#permissions-for-resources) area for the notebook's assigned resource in order to run the notebook. A quick link to the *Resource* permissions settings page appears next to the *Run* option for convenience.
 
 **Version**
 
