@@ -54,6 +54,7 @@ markdown_extensions:
     - toc:
         anchorlink: True
     - markdown.extensions.extra
+    - meta
 
 plugins:
     - search
