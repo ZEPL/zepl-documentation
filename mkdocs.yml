@@ -20,7 +20,7 @@ nav:
     - Import Notebook: guide/import_notebook.md
     - Export Notebook: guide/export_notebook.md
     - Explore Public Notebooks: guide/exploring_notebooks.md
-    - Uploading Data: guide/accessing_data.md
+    # - Uploading Data: guide/accessing_data.md
     - Notebook Versioning: guide/feature_versioning.md
     - Autocompletion: guide/autocompletion_notebooks.md
   - Interpreters:
