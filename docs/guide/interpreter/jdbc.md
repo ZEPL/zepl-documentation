@@ -6,7 +6,6 @@ Zepl supports a JDBC interpreter with drivers for popular databases. Drivers for
   - Oracle
   - Postgresql
   - Redshift
-  - Snowflake
 
 For additional database connections, please contact [support@zepl.com](mailto:support@zepl.com).
 
