@@ -29,6 +29,8 @@ nav:
     - JDBC : guide/interpreter/jdbc.md
     - Config : guide/interpreter/config.md
     - Angular: guide/interpreter/angular.md
+  - Data Sources:
+    - Snowflake: guide/datasource/snowflake.md
   - Resources: guide/resource_mgmt.md
   - Enterprise:
     - Amazon EMR Integration: guide/enterprise/emr_integration.md

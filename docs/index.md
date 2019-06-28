@@ -10,7 +10,10 @@
   - [Python](guide/interpreter/python) - Python2, Python3
   - [JDBC](guide/interpreter/jdbc) - MySql, Postgresql, Oracle
   - [Config](guide/interpreter/config) - inline configuration
-  
+
+### Data Sources
+  - [Snowflake](guide/datasource/snowflake)
+
 ### Loading Additional Libraries
   - [Load dependency libraries from a maven repository into Apache Spark](guide/interpreter/spark/#load-dependencies)
   - [Install Python packages using Pip](guide/interpreter/python/#pip)
