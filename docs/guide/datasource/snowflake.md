@@ -18,7 +18,7 @@ The Zepl-Snowflake integration provides a unified, cohesive and highly scalable 
 4. Enter your Snowflake account user and password credentials and click the _Create_ button. The Snowflake source will be auto-attached to the notebook so that you can use the data source within the notebook. You can detach the data source if you are not going to use it in the notebook. By having the attach/detach mechanism, the notebook execution container doesn't need to keep unnecessary connections to data sources. The data source created here is available to all members in the organization and can be used in other notebooks. Each user must provide their own credentials to use the data source in their own notebooks.
 <img src="../../../img/datasource/snowflake_create_popup_3.png" class="image-box img-70" />
 
-1. To verify that the Snowflake configuration is valid, click the _Test all connections_ link. A green checkmark icon will be shown if it succeeds. Otherwise a warning icon will be shown with a message describing the cause of failure. <br />
+5. To verify that the Snowflake configuration is valid, click the _Test all connections_ link. A green checkmark icon will be shown if it succeeds. Otherwise a warning icon will be shown with a message describing the cause of failure. <br />
 <img src="../../../img/datasource/snowflake_test_connection_success.gif" class="image-box img-35" style="margin-right: 20px;" />
 <img src="../../../img/datasource/snowflake_test_connection_fail.gif" class="image-box img-35" />
 
