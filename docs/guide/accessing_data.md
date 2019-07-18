@@ -1,4 +1,6 @@
-<!--# Uploading and Downloading Data
+<!-- title: Python for Data Analysis | Spark Data Analysis | Zepl
+description: This topic describes how to upload data into Zepl and analyze it using Spark, Python for data analysis, or other Zepl interpreters. Visit us to learn more.
+# Uploading and Downloading Data
 
 This section describes how to upload data from your own filesystem into Zepl and analyze it using Spark, Python and other interpreters within Zepl. You can also download and delete the uploaded data.
 
@@ -90,4 +92,4 @@ You cannot edit data directly within Zepl but you can overwrite the data file by
 
 To delete data, click the red "x" button next to the data file in the *Files* tab on the notebook page.
 
-> Warning: Deleted data cannot be recovered.-->
+> Warning: Deleted data cannot be recovered. -->
