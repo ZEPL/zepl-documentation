@@ -1,3 +1,5 @@
+title: Python Autocomplete | SQL Autocomplete | Zepl
+description:Zepl supports Spark, SQL, and Python autocompletion. Read this article to learn about using this feature and to view a list of supported interpreter types. 
 # Autocompletion in Zepl
 
 ## Activating and Using Autocompletion
@@ -42,4 +44,3 @@ Here is the list of interpreters and their specific autocompletion supported fea
 | Symbol  | Autocompletion Supported | Type |
 | --- | --- | --- |
 | `%sql`  | supported | JDBC interpreter with drivers for popular databases |
-
