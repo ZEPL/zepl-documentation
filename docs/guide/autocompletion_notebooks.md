@@ -1,10 +1,12 @@
+title: Python Autocomplete | SQL Autocomplete | Zepl
+description:Zepl supports Spark, SQL, and Python autocompletion. Read this article to learn about using this feature and to view a list of supported interpreter types. 
 # Autocompletion in Zepl
 
 ## Activating and Using Autocompletion
 
 * autocomplete shortcut: `ctrl + .` or `tab`
 
-Zepl supports autocompletion for Python, Spark, and SQL.
+Zepl supports spark, SQL, and Python autocompletion.
 
 You'll first need to run a paragraph in the notebook you're working on to activate the feature. Then just use the `ctrl + .` or `tab` hotkey to see possible completions pop up as shown below:
 
@@ -42,4 +44,3 @@ Here is the list of interpreters and their specific autocompletion supported fea
 | Symbol  | Autocompletion Supported | Type |
 | --- | --- | --- |
 | `%sql`  | supported | JDBC interpreter with drivers for popular databases |
-
