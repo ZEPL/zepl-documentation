@@ -8,13 +8,16 @@
     {% if page.meta %}
       {% if page.meta.title %}
     <meta name="title" content="{{ page.meta.title }}">
+    <title>{{ page.meta.title}}</title>
       {% endif %}
       {% if page.meta.description %}
     <meta name="description" content="{{ page.meta.description }}">
       {% endif %}
     {% else %}
     <meta name="description" content="{{ config.site_description }}">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
     {% endif %}
+    
     {% if config.site_author %}
         <meta name="author" content="{{ config.site_author }}">
     {% endif %}
@@ -22,8 +25,6 @@
         <link rel="canonical" href="{{ page.canonical_url }}">
     {% endif %}
     <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
-
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
