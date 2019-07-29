@@ -1,3 +1,5 @@
+title: Apache Zeppelin Tutorial | Exporting Zepl Notebooks
+description: In this Apache Zeppelin tutorial we explore exporting native notebooks to the Zeppelin format for use in your Zeppelin instance. Visit us to learn more. 
 # Exporting Zepl Notebooks
 
 Zepl supports exporting its native notebooks to the Apache Zeppelin format for use in your Zeppelin instances or for storage in an external repository.
