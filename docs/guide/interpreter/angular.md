@@ -1,3 +1,5 @@
+title: Angular Interpreter | Zepl Documentation
+description: Using the AngularJS interpreter you can render AngularJS 1.7 templates on Zepl paragraphs and leverage the robust two-way binding system. Learn how at Zepl.
 # Angular Interpreter
 
 >Please note that this feature is in beta and is only available for selected customers.
