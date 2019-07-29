@@ -1,3 +1,4 @@
+title: Sharing Data Notebooks | ZEPL Documentation
 # Spaces and Notebooks Sharing
 
 In this section we will explain how you can create a new *Space* and share notebooks with other members and teams.
@@ -25,7 +26,7 @@ After creating a new *Space* you can share it with other members or teams or wit
 <img src="../../img/sharing_overlay.png" class="image-box img-100" />
 <br />
 
-## Sharing Notebooks
+## Sharing Data Notebooks
 Zepl provides fine-grained access control for sharing notebooks with others as shown in the following image.
 
 <img src="../../img/sharing_option.png" class="image-box img-70" />
