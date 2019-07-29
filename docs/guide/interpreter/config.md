@@ -1,3 +1,5 @@
+title: Notebook Configuration | Zepl Documentation
+
 # Inline Interpreter Configuration
 
 `%[Interpreter name].config` is a special interpreter that allows for interpreter properties and environment variables to be configured in each notebook. This features brings additional flexibility enabling users to do, among other things:

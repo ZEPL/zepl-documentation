@@ -1,3 +1,5 @@
+title: Amazon Sagemaker Integration | Zepl Documentation
+description: Amazon Sagemaker is a fully managed service for handling machine learning workflows. Learn  more about how to integrate Amazon Sagemaker with Zepl.
 # Integration with Amazon Sagemaker
 
 Amazon [*Sagemaker*](https://aws.amazon.com/sagemaker/) is a fully managed service for handling machine learning workflows. It enables users to build, train, and deploy ML models quickly. But before you can deploy your ML model, it must first be built, tuned, and iterated. Notebooks, and more specifically Zepl notebooks, are perfectly suited for these tasks.

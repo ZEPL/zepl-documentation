@@ -1,4 +1,6 @@
-# Integrating with *GitHub*
+title: Github Integration | ZEPL Documentation
+
+# *GitHub* Integration
 
 *GitHub* is a popular online repository data scientists use to store their notebooks whether they be Zeppelin or Jupyter. Zepl supports integration of both notebook types from *GitHub* via *Spaces* as described below. Note that the files in *GitHub* must be in *JSON* (Apache Zeppelin) or *ipynb* (Jupyter) format.
 

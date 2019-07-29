@@ -1,3 +1,5 @@
+title: JDBC Database Interpreter | Zepl Documentation
+
 # JDBC Interpreter
 
 Zepl supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by Zepl:
@@ -27,7 +29,7 @@ First you'll need to create an interpreter to provide the database connection in
 
 Use the *Test connection* button to test the connection.
 
-### Using Your JDBC Interpreter
+### Using Your JDBC Database Interpreter
 
 Once you have created the JDBC interpreter, you can use it in your notebook by providing the `%[Interpreter name]` directive. For example, if you have created your JDBC interpreter with name "psql", you can use `%psql` in the notebook as follows:
 

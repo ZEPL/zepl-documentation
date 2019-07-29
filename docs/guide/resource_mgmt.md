@@ -1,3 +1,4 @@
+title: Data Science Libraries and Resources | Zepl Documentation
 # Resources in Zepl
 
 A Resource must be attached to a Zepl Notebook before it can be executed.

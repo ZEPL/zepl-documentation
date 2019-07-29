@@ -1,3 +1,5 @@
+title: EMR Integration | Zepl Documentation
+description: Amazon EMR is a managed cluster platform that simplifies running big data frameworks. Visit Zepl to learn more about Amazon EMR integration.
 # Integration with Amazon EMR
 
 [Amazon EMR](https://aws.amazon.com/emr/) is a managed cluster platform that simplifies running big data frameworks such as Apache Hadoop and Apache Spark on AWS to process and analyze vast amounts of data.

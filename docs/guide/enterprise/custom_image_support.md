@@ -1,3 +1,5 @@
+title: CLI Tools | Custom Image Support | Zepl Documentation
+description: Zepl offers a CLI tool called zcr to build custom interpreter images to be used with notebooks in your enterprise deployment. Learn more at Zepl.
 # Custom Image Support
 
 Zepl provides a CLI tool called `zcr` to build custom interpreter images that you can use with notebooks in your enterprise deployment.

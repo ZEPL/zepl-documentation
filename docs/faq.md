@@ -1,3 +1,5 @@
+title: Data Science and Analytics | Zepl FAQ
+description: See our FAQ page for answers to your data science and analytics questions. If you don't see your question in this FAQ please email us at support@zepl.com.
 # FAQ
 
 If you don't see your question in this FAQ please send us an email at [support@zepl.com](mailto:support@zepl.com).
