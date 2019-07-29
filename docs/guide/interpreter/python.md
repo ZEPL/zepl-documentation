@@ -1,8 +1,10 @@
+title: Online Python Interpreter | Zepl Documentation 
+
 # Python Interpreter
 
 [Python](https://www.python.org/) is a general purpose programming language which is becoming increasingly popular among data analysts and data scientists due to the strength of its core libraries, simple data structures and growing wealth of packages and modules catering to data science, ML and AI.
 
-Zepl provides a Python interpreter with the following popular  libraries pre-installed:
+Zepl provides an online Python interpreter with the following popular libraries pre-installed:
 
  * [numpy](http://www.numpy.org/): a scientific computing library designed to efficiently manipulate large multi-dimensional arrays
  * [scipy](https://www.scipy.org/): a library that provides a large number of operations for scientific and engineering computing
