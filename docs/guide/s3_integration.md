@@ -1,4 +1,5 @@
-# Integrating with *S3*
+title: S3 Integration | ZEPL Documentation
+# *S3* Integration
 
 *S3* is a popular online data storage service offered by AWS and used by many data scientists to store their notebooks whether they be Zeppelin or Jupyter. Zepl supports integration of both notebook types via *Spaces* as described below. Note that the files in *S3* must be in *JSON* (Apache Zeppelin) or *ipynb* (Jupyter) format.
 
