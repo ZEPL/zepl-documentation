@@ -1,4 +1,5 @@
 title: Notebook Configuration | Zepl Documentation
+description: The inline interpreter configuration is a flexible tool that offers users fine-grained control of interpreter notebook configuration. Visit us to learn more. 
 
 # Inline Interpreter Configuration
 
