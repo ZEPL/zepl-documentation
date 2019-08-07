@@ -1,4 +1,5 @@
 title: Spark Interpreter | Zepl and Apache Spark
+description: Apache Spark is an open source processing engine built around speed, ease of use and sophisticated analytics. Learn about Zepl's Apache Spark interpreters. 
 # Apache Spark Interpreter
 
 [Apache Spark](https://spark.apache.org) is an open source processing engine built around speed, ease of use and sophisticated analytics. Zepl provides several interpreters for Apache Spark as follows:
