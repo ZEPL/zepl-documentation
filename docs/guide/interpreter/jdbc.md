@@ -1,4 +1,5 @@
 title: JDBC Database Interpreter | Zepl Documentation
+description: Zepl supports a JDBC interpreter with drivers for popular databases, including Mysql, Oracle, and Redshift. Learn more about our JDBC database interpreter. 
 
 # JDBC Interpreter
 
