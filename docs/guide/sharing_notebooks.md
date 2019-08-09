@@ -1,4 +1,5 @@
 title: Sharing Data Notebooks | ZEPL Documentation
+description: A Zepl Space is a collection of notebooks. Discover how to create a new Space to share data notebooks with other members and teams. Visit Zepl today. 
 # Spaces and Notebooks Sharing
 
 In this section we will explain how you can create a new *Space* and share notebooks with other members and teams.

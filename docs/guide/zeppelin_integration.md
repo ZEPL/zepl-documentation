@@ -1,4 +1,5 @@
 title: Zeppelin Integration | ZEPL Documentation
+description: Apache Zeppelin is a popular open-source data science notebook platform which can leverage Spark for big data analysis. Learn more about our Zeppelin integration.
 # Apache Zeppelin Notebook Integration
 
 Apache Zeppelin is a popular open-source data science notebook platform which can leverage Spark for big data analysis and produce beautiful charts and graphs for displaying insights. Zepl, being of the same lineage for SaaS and Enterprise users, naturally integrates with Zeppelin notebooks. This is done via Zepl *Spaces*.

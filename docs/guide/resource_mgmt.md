@@ -1,4 +1,5 @@
 title: Data Science Libraries and Resources | Zepl Documentation
+description: Zepl Resources include some of the most popular data science libraries and packages. Visit us to learn more about attaching a Resource to a Zepl Notebook.
 # Resources in Zepl
 
 A Resource must be attached to a Zepl Notebook before it can be executed.

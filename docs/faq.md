@@ -6,10 +6,10 @@ If you don't see your question in this FAQ please send us an email at [support@z
 
 ### Is Zepl the enterprise version of Apache Zeppelin?
 
-No. Though the people behind Zepl are also the creators of Apache Zeppelin, Zepl is a separate platform expanding upon what we started doing with Apache Zeppelin.
+No. Though the people behind Zepl are also the creators of Apache Zeppelin, Zepl is a separate <a href="https://www.zepl.com/">data science analytics platform</a> expanding upon what we started doing with Apache Zeppelin.
 Zeppelin was created because we wanted something that could quickly and easily plug into various back-ends doing everything from data sourcing to visualization. But it was created for the individual in a localized environment. But analytics is not a one person job. It's iterative and usually goes through multiple rounds of back and forth between different people. Zepl is built this in mind.
 
-In addition to the broad spectrum data science facilities and gorgeous charting you have in Zeppelin, Zepl  provides full enterprise collaborative features such as sharing, fine-grained, role-based access control, team management, comments, notifications, and much more. Zepl is built for more than just analytics. It's a collaborative analytics platform for the modern age.
+In addition to the broad spectrum data science facilities and gorgeous charting you have in Zeppelin, Zepl  provides full <a href="https://www.zepl.com/plans-and-pricing/">enterprise collaboration</a> features such as sharing, fine-grained, role-based access control, team management, comments, notifications, and much more. Zepl is built for more than just analytics. It's a collaborative analytics platform for the modern age.
 
 ### Does Zepl work with Jupyter notebooks?
 
