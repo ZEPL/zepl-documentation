@@ -28,7 +28,7 @@ nav:
     - JDBC : guide/interpreter/jdbc.md
     - Config : guide/interpreter/config.md
     - Angular: guide/interpreter/angular.md
-  - Data Load:
+  - Accessing Data:
     - Data Sources: guide/datasource/datasource.md
     - Data Source Integrations: guide/datasource/datasource_integration.md
     - Uploading Data: guide/accessing_data.md

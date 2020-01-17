@@ -11,8 +11,9 @@
   - [JDBC](guide/interpreter/jdbc) - MySql, Postgresql, Oracle
   - [Config](guide/interpreter/config) - inline configuration
 
-### Data Sources
-  - [Snowflake](guide/datasource/snowflake)
+### Data Connection
+  - [Data Sources](guide/datasource/datasource)
+  - [Data Source Integration](guide/datasource/datasource_integration)
 
 ### Loading Additional Libraries
   - [Load dependency libraries from a maven repository into Apache Spark](guide/interpreter/spark/#load-dependencies)
