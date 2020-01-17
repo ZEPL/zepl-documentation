@@ -28,8 +28,9 @@ nav:
     - JDBC : guide/interpreter/jdbc.md
     - Config : guide/interpreter/config.md
     - Angular: guide/interpreter/angular.md
-  - Data Sources:
-    - Snowflake: guide/datasource/snowflake.md
+  - Accessing Data:
+    - Data Sources: guide/datasource/datasource.md
+    - Data Source Integrations: guide/datasource/datasource_integration.md
     - Uploading Data: guide/accessing_data.md
   - Resources: guide/resource_mgmt.md
   - Enterprise:
