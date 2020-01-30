@@ -34,6 +34,7 @@ nav:
     - Uploading Data: guide/accessing_data.md
   - Resources: guide/resource_mgmt.md
   - Enterprise:
+    - Snowflake Partner Connect: guide/enterprise/snowflake_partner_connect.md
     - Amazon EMR Integration: guide/enterprise/emr_integration.md
     - Login Support: guide/enterprise/login_support.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
