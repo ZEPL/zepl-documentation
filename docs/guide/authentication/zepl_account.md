@@ -8,11 +8,11 @@ To start the registration process and create your own organization and user acco
 
 To join a colleagues organization, they must send you first an invitation from the members section in settings. You will receive an email inviting you to join their organization - click join and go through the account creation process to do so.
 
-You can also sign up for Zepl through Snowflake partner connect. This allows you to connect Snowflake and Zepl with just a few clicks from your existing Snowflake account. See more instructions on how to do that [here](https://docs.zepl.com/guide/enterprise/snowflake_partner_connect/).
+You can also sign up for Zepl through Snowflake partner connect. This allows you to connect Snowflake and Zepl with just a few clicks from your existing Snowflake account. See more instructions on how to do that [here](../../partnerships/snowflake_partner_connect/).
 
 ## Login Page
 
-Zepl SaaS has a [common login page for you to log into the product](https://www.zepl.com/login). However, you should know that every Zepl organization has a unique login page URL which you can bookmark. Otherwise, Zepl uses browser cookies to keep track of what organizations you have logged into in the past to quickly redirect you to your organization’s login page. There, you simply enter your username and credentials to log in, using the [authentication provider](https://docs.zepl.com/guide/authentication/authentication_providers/) determined by your organization administrator.
+Zepl SaaS has a [common login page for you to log into the product](https://www.zepl.com/login). However, you should know that every Zepl organization has a unique login page URL which you can bookmark. Otherwise, Zepl uses browser cookies to keep track of what organizations you have logged into in the past to quickly redirect you to your organization’s login page. There, you simply enter your username and credentials to log in, using the [authentication provider](../../authentication/authentication_providers/) determined by your organization administrator.
 
 Most users are only part of this one organization and will only see one account when they get to the shared login page. Users that are part of more than one organization will see all the organizations they have logged into with their current browser.
 
@@ -23,7 +23,7 @@ Most users are only part of this one organization and will only see one account 
 
 If you arrive on the login page and don’t see any organizations to log in to, you may need to find the login page for your organization. The most likely reason for this is that your cookies have recently been deleted, so Zepl doesn’t know what login page to redirect you to.
 
-[You can find your organizations by providing your email at on the Find My Organizations page.](https://www.zepl.com/login/find-your-organization)
+[You can find your organizations by providing your email at on the _Find My Organizations_ page.](https://www.zepl.com/login/find-your-organization)
 
 <img src="../../../img/authentication/find_my_org.png" class="image-box img-100"/>
 
