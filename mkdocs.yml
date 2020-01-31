@@ -10,7 +10,6 @@ site_author: Zepl
 # Included pages list
 nav:
 - Welcome: index.md
-
 - User Guide:
   - Notebooks:
     - Sharing Notebooks: guide/sharing_notebooks.md
