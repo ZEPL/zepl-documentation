@@ -10,6 +10,7 @@ site_author: Zepl
 # Included pages list
 nav:
 - Welcome: index.md
+
 - User Guide:
   - Notebooks:
     - Sharing Notebooks: guide/sharing_notebooks.md
@@ -35,9 +36,11 @@ nav:
   - Resources: guide/resource_mgmt.md
   - Partner:
     - Snowflake Partner Connect: guide/partner/snowflake_partner_connect.md
+  - Authentication:
+    - Zepl Account: guide/authentication/zepl_account.md
+    - Authentication Providers: guide/authentication/authentication_providers.md
   - Enterprise:
     - Amazon EMR Integration: guide/enterprise/emr_integration.md
-    - Authentication: guide/enterprise/authentication.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
     - Sagemaker Integration: guide/enterprise/sagemaker.md
