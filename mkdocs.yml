@@ -35,7 +35,7 @@ nav:
   - Resources: guide/resource_mgmt.md
   - Enterprise:
     - Amazon EMR Integration: guide/enterprise/emr_integration.md
-    - Login Support: guide/enterprise/login_support.md
+    - Authentication: guide/enterprise/authentication.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
     - Sagemaker Integration: guide/enterprise/sagemaker.md
