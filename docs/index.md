@@ -11,7 +11,7 @@
   - [JDBC](guide/interpreter/jdbc) - MySql, Postgresql, Oracle
   - [Config](guide/interpreter/config) - inline configuration
 
-### Data Connection
+### Accessing Data
   - [Data Sources](guide/datasource/datasource)
   - [Data Source Integration](guide/datasource/datasource_integration)
 

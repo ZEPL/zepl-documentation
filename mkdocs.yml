@@ -33,9 +33,13 @@ nav:
     - Data Source Integrations: guide/datasource/datasource_integration.md
     - Uploading Data: guide/accessing_data.md
   - Resources: guide/resource_mgmt.md
+  - Partnerships:
+    - Snowflake Partner Connect: guide/partnerships/snowflake_partner_connect.md
+  - Authentication:
+    - Zepl Account: guide/authentication/zepl_account.md
+#    - Authentication Providers: guide/authentication/authentication_providers.md
   - Enterprise:
     - Amazon EMR Integration: guide/enterprise/emr_integration.md
-    - Login Support: guide/enterprise/login_support.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
     - Log Console: guide/enterprise/logging_console.md
     - Sagemaker Integration: guide/enterprise/sagemaker.md
