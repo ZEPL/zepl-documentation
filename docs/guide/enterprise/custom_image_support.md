@@ -88,7 +88,7 @@ Successfully built c5c7c63c2bff
 Successfully tagged 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
 
 2018-09-03T16:29:41.968+0900    INFO    Successfully built image 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
-2018-09-03T16:33:55.688+0900    INFO    Successfully registered test-interpreter-image:v1 into https://XXXX.Zepl.com/api/...
+2018-09-03T16:33:55.688+0900    INFO    Successfully registered test-interpreter-image:v1 into https://XXXX.zepl.com/api/...
 ```
 
 Please follow the steps below to use the registered interpreter image:
