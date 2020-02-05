@@ -33,10 +33,10 @@ aws create-repository --repository-name {NAME} --region {REGION}
 `zcr` can be installed/updated via the commands below:
 
 ```bash
-curl https://s3-us-west-2.amazonaws.com/io.Zepl.asset.public/zcr/dist/install.sh | bash -
+curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | bash -
 
 # note that you may need to run the sudo version below, or alternatively chown /usr/local
-curl https://s3-us-west-2.amazonaws.com/io.Zepl.asset.public/zcr/dist/install.sh | sudo bash -
+curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | sudo bash -
 ```
 
 `zcr` will be installed in `/usr/local/bin` by default and you should now be able to run it in the terminal as follows:
