@@ -42,7 +42,7 @@ This is the directory structure of this repository.
 
 ```
 
-* `/mkdocs.yml` : All of the configuration properties will be defined in this file.
+* `/mkdocs.yml` : All of the configuration properties will be defined in this file. Navigation menu is defined in this file.
 * `/docs` : Under this directory, css file, image files for docs and all of the `.md` files are located in this directory.
 * `/docs/CNAME` : Using this file, you can define the domain name: [http://docs.zepl.com](http://docs.zepl.com).
 * `/docs/css/extra.css`, `/docs/js/extra.js` : You can define extra CSS and javascript function in these directory.
