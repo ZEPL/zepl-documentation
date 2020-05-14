@@ -1,19 +1,29 @@
-# Configure an authentication provider in Zepl
+# Configure Zepl Single Sign-On <a name="auth-config"></a>
+
+Zepl understands that your data, and the data science that is used to mine insights from it, is extremely valuable and sensitive. To ensure that only trusted parties can access Zepl resources, you can configure Zepl to use the identity provider platform of your choice. Doing so is a two step configuration: extending access from your identity provider to Zepl, and configuring Zepl Single Sign-on to use that authentication provider.
+
+Today, we support the following protocols for logging in to Zepl:
+
 [Username / Password](#user-pass)
 
 [Google](#google)
+
+[CAS](#cas)
 
 [OpenID Connect](#openid-connect)
   * [Okta](#openid-connect-okta)
   * [Azure AD](#openid-connect-azure-ad)
 > The OpenID Connect protocol is supported by most SSO providers. If you don't see the name of your provider on this page, please check your provider's documentation.
 
-[CAS](#cas)
+> Don't see your provider? Don't worry - we are constantly adding more. Contact us and let us know how we can help you.
+
+Please note that today, Zepl does not support importing groups & roles from these identity providers. To use SSO with your Zepl account, your SSO email must match the email of your Zepl acccount. If you use these identity providers to access your data, you will need to go through an additional step in Zepl to connect to your data with your provider - this documentation section strictly covers configuring Zepl to use your identity provider of choice to log in to the product. 
+
 </br>
 </br>
 
 # Username / Password <a name="user-pass"></a>
-This is the default authentication method for Zepl and will be enabled upon sign up. This gives each user the ability to create a Zepl user name and password for authentication.
+When you first sign up for Zepl, you created a username and password - this is the default authentication method for Zepl organizations. When you have set Username / Password authentication for your organization, team members can reset their passwords with the "Forgot your password". Many users find this to be sufficent for their security needs, especially if they are a small team.
 
 <img src="../../img/authentication/zepl_username_password.png" class="image-box img-100"/>
 
@@ -28,12 +38,12 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 2. Select Application Type 
     * Internal: Only users with a Google Account in your organization can grant access to the scopes requested by this app
     * External: Your app will be available to any user with Google Account
-3. Create
+3. Click "Create"
 4. Application Name: Zepl
 5. Application logo (right click image to save as): <img src="../../img/authentication/zepl_logo.png" class="image-box img-100"/>
 6. Authorized domains: Your Company Domain 
     * Example: `zepl.com`
-7. Save
+7. Click "Save"
 
 #### Setup OAuth 2.0 Client ID and Secret:
 1. Select Credentials > Create Project
@@ -42,7 +52,7 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 4. Name: Zepl
 5. Authorized JavaScript origins: Nothing required
 6. Authorized redirect URIs: `https://www.zepl.com/api/v2/authenticator.identity.zepl/callback/googleprovider`
-7. Create
+7. Click "Create"
 8. Copy the `Client ID` and `Client Secret` to use in the next section
 
 <img src="../../img/authentication/google/google_oauth_consent.png" class="image-box img-100"/>
@@ -57,9 +67,13 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 
 <img src="../../img/authentication/google/google_zepl_config.png" class="image-box img-100"/>
 
+# CAS <a name="cas"></a>
+
+> Note: This documentation is coming soon to a Zepl docs page near you!
+
 
 # OpenID Connect <a name="openid-connect"></a>
-Configure authentication through SSO provider with OpenID Connect. Please reference our configuration steps below for several of the top authentication providers. Throughout this configuration, keep track of the 3 key fileds required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`.
+Most popular SSO providers support authentication with OpenID Connect. Throughout this SSO side configuration, you will need need to provide your SSO provider a redirect URL: `https://www.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`. As you do so, keep track of the 3 key fields required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`. We provide OpenID configuration steps below for several of the top authentication providers, but please note these steps may change and look different in your environment.
 
 <img src="../../img/authentication/openid_connect/zepl_config_openid_connect.png" class="image-box img-100"/>
 
@@ -137,6 +151,4 @@ Creating a Client Secret:
 
 <img src="../../img/authentication/openid_connect/azure_ad/azure_zepl_config_openid_connect.png" class="image-box img-100"/>
 
-# CAS <a name="cas"></a>
 
-> Note: This documentation is coming soon to a Zepl docs page near you!
