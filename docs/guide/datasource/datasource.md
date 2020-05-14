@@ -76,7 +76,7 @@ z.show(df)
 conn <- z.getDatasource("Zepl_DS")
 
 # use dbGetQuery() from DPLYR library to run query
-apps <- dbGetQuery(conn, "select * from trip_master limit 200")
+apps <- dbGetQuery(conn$con, "select * from trip_master limit 200")
 
 # z.show() works for the results returned from dbGetQuery()
 z.show(apps)
