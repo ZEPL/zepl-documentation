@@ -38,12 +38,12 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 2. Select Application Type 
     * Internal: Only users with a Google Account in your organization can grant access to the scopes requested by this app
     * External: Your app will be available to any user with Google Account
-3. Create
+3. Click "Create"
 4. Application Name: Zepl
 5. Application logo (right click image to save as): <img src="../../img/authentication/zepl_logo.png" class="image-box img-100"/>
 6. Authorized domains: Your Company Domain 
     * Example: `zepl.com`
-7. Save
+7. Click "Save"
 
 #### Setup OAuth 2.0 Client ID and Secret:
 1. Select Credentials > Create Project
@@ -52,7 +52,7 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 4. Name: Zepl
 5. Authorized JavaScript origins: Nothing required
 6. Authorized redirect URIs: `https://www.zepl.com/api/v2/authenticator.identity.zepl/callback/googleprovider`
-7. Create
+7. Click "Create"
 8. Copy the `Client ID` and `Client Secret` to use in the next section
 
 <img src="../../img/authentication/google/google_oauth_consent.png" class="image-box img-100"/>
