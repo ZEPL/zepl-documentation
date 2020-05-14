@@ -37,7 +37,7 @@ nav:
     - Snowflake Partner Connect: guide/partnerships/snowflake_partner_connect.md
   - Authentication:
     - Zepl Account: guide/authentication/zepl_account.md
-#    - Authentication Providers: guide/authentication/authentication_providers.md
+    - Single Sign On: guide/authentication/authentication_providers.md
   - Enterprise:
     - Amazon EMR Integration: guide/enterprise/emr_integration.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
