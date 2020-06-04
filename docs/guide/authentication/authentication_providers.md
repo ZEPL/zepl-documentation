@@ -67,7 +67,7 @@ Throughout this configuration, keep track of the 3 key fields required in Zepl: 
 <img src="../../img/authentication/openid_connect/zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Okta <a name="openid-connect-okta"></a>
-> Note: The email address for a specific users' Zepl account, MUST match the `email` value in that user's Okta account.
+> Note: The email address for a specific user's Zepl account, MUST match the `email` value in that user's Okta account.
 
 ### In Okta's Admin Portal:
 1. Create an Application: Select the Applications menu > Add Application > Create Application
