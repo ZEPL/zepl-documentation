@@ -6,6 +6,7 @@
 [OpenID Connect](#openid-connect)
   * [Okta](#openid-connect-okta)
   * [Azure AD](#openid-connect-azure-ad)
+  * [Auth0](#openid-connect-auth0)
 > The OpenID Connect protocol is supported by most SSO providers. If you don't see the name of your provider on this page, please check your provider's documentation.
 
 [CAS](#cas)
@@ -13,12 +14,12 @@
 </br>
 
 # Username / Password <a name="user-pass"></a>
-This is the default authentication method for Zepl and will be enabled upon sign up. This gives each user the ability to create a Zepl user name and password for authentication.
+This is the default authentication method for Zepl and will be enabled upon sign up. This gives each user the ability to create a Zepl username and password for authentication.
 
 <img src="../../img/authentication/zepl_username_password.png" class="image-box img-100"/>
 
 # Google <a name="google"></a>
-Enable your users to authenticate with their existing Google accounts. Ther are only two fields required for this configuration in Zepl: `Client ID` and `Client Secret`.
+Enable your users to authenticate with their existing Google accounts. There are only two fields required for this configuration in Zepl: `Client ID` and `Client Secret`.
 
 <img src="../../img/authentication/google/zepl_config_google.png" class="image-box img-100"/>
 
@@ -41,17 +42,17 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 3. Application type: Web application
 4. Name: Zepl
 5. Authorized JavaScript origins: Nothing required
-6. Authorized redirect URIs: `https://www.zepl.com/api/v2/authenticator.identity.zepl/callback/googleprovider`
+6. Authorized redirect URIs: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/googleprovider`
 7. Create
 8. Copy the `Client ID` and `Client Secret` to use in the next section
 
 <img src="../../img/authentication/google/google_oauth_consent.png" class="image-box img-100"/>
 
 ### In Zepl's Authentication Settings:
-1. Select Settings > Authentication > OpenID
-2. Client ID: Copy from the okta application you created in the previous section. 
+1. Select Settings > Authentication > Google
+2. Client ID: Paste the value copied from the previous section
     * Example: `1007962201111-p95t6jaaq720idooa8hq6dpm8qqgwe3s.apps.googleusercontent.com`
-3. Client Secret: Copy from the okta application you created in the previous section. 
+3. Client Secret: Paste the value copied from the previous section
     * Example: `GcP61ILeWLk6pveVh8ohQe3t`
 
 
@@ -59,17 +60,19 @@ Enable your users to authenticate with their existing Google accounts. Ther are 
 
 
 # OpenID Connect <a name="openid-connect"></a>
-Configure authentication through SSO provider with OpenID Connect. Please reference our configuration steps below for several of the top authentication providers. Throughout this configuration, keep track of the 3 key fileds required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`.
+Many of the major SSO providers support authentication through OpenID Connect. In this documentation we will walk through how to use the Generic OpenID Connect authentication method to connect to Okta and Microsoft AD. Zepl is also investing in vendor specific methods to support more granular controls. Following the steps below will work to configure SSO through Okta or Microsoft AD.
+
+Throughout this configuration, keep track of the 3 key fields required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`.
 
 <img src="../../img/authentication/openid_connect/zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Okta <a name="openid-connect-okta"></a>
-> Note: The email address for a users's Zepl account, MUST match the `email` value in that same user's Okta account.
+> Note: The email address for a specific users' Zepl account, MUST match the `email` value in that user's Okta account.
 
 ### In Okta's Admin Portal:
 1. Create an Application: Select the Applications menu > Add Application > Create Application
 2. Check the OpenID Connect radio button and select create
-3. Enter this value for the login redirect URL: `https://www.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
+3. Enter this value for the login redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
 4. Navigate to the general settings for the new application that you created
 5. Select `Authorization Code` for Authorized grant types. The final application configuration should look as follows:
 
@@ -91,9 +94,9 @@ Configure authentication through SSO provider with OpenID Connect. Please refere
 
   >Note: This should NOT contain '-admin' or a trailing slash character (/) at the end of the url. Be sure to include, `https://`.
 
-3. Client ID: Copy from the okta application you created in the previous section. 
+3. Client ID: Paste from the okta application you created in the previous section. 
     * Example: `4o199js5phG2Cv3204p6`
-4. Client Secret: Copy from the okta application you created in the previous section. 
+4. Client Secret: Paste from the okta application you created in the previous section. 
     * Example: `0S-djdCveAac3aGz0CtNBOOwndoHL3I1MWbVv7el`
 5. Select Save & Activate
 6. Now, logout, log back in, and you should be redirected to Okta
@@ -103,7 +106,7 @@ Configure authentication through SSO provider with OpenID Connect. Please refere
 ## Azure AD <a name="openid-connect-azure-ad"></a>
 ### [Azure's Admin Portal](https://portal.azure.com/):
 1. Select Azure Active Directory > App Registrations > New Registration
-2. Enter this value for the redirect URL: `https://www.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
+2. Enter this value for the redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
 
 <img src="../../img/authentication/openid_connect/azure_ad/azure_ad_app_register.png" class="image-box img-100"/>
 
@@ -124,7 +127,7 @@ Creating a Client Secret:
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > OpenID
-2. OpenID URL: `https://login.microsoftonline.com/{Your Directory (tenant) ID}/v2.0`. Replace "{Your Okta Account Name}" with the Directory (tenant) ID  from above.
+2. OpenID URL: `https://login.microsoftonline.com/{Your Directory (tenant) ID}/v2.0`. Replace "{Your Directory (tenant) ID}" with the Directory (tenant) ID  from above.
 
   > Note: This should NOT contain a slash character (/) at the end of the url. Be sure to include, `https://`
   
