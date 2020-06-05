@@ -6,12 +6,22 @@ ZEPL Documentation is made by [Mkdocs](http://www.mkdocs.org/). So you need to [
 ```
 $ python --version
 Python 3.6.x
+
 ```
 
 Install the mkdocs package using pip:
 ```
 $ pip install -I mkdocs==1.0.4
 ```
+
+Or, use virtualenv:
+
+virtualenv --python=/usr/local/bin/python3 ~/.virtualenvs/mkdocs
+source ~/.virtualenvs/mkdocs/bin/activate
+pip install -r requirements.txt
+mkdocs build --clean
+mkdocs gh-deploy clean
+deactivate
 
 ## 2. Clone this repository
 Just clone this repository.
