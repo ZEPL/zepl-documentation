@@ -44,7 +44,7 @@ And your data accessed as follows:
 val data = sc.textFile("s3n://....")
 ```
 
-You can reference the [data loading example notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vY2RjMzQ1NTljOTkzNDNhMTk4NGE0ZWUzNjU1NjgxZWQvbm90ZS5qc29u) to try it yourself.
+You can reference the [data loading example notebook](https://app.zepl.com/viewer/notebooks/bm90ZTovL21vb24vY2RjMzQ1NTljOTkzNDNhMTk4NGE0ZWUzNjU1NjgxZWQvbm90ZS5qc29u) to try it yourself.
 
 ## Loading Dependencies
 
@@ -52,7 +52,7 @@ When your code requires external libraries `%spark.dep` helps load them from a m
 
 Note that `%spark.dep` should be the first interpreter run in the notebook before `%spark`, `%spark.pyspark` or `%spark.sql`. Otherwise, `%spark.dep` will print error messages and you'll need to shutdown and restart the container for the notebook again.
 
-Check the [Spark dependency loading example notebook](https://www.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u) for details.
+Check the [Spark dependency loading example notebook](https://app.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u) for details.
 
 ### Usages
 
