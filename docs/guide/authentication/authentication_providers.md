@@ -141,6 +141,43 @@ Creating a Client Secret:
 
 <img src="../../img/azure_zepl_config_openid_connect.png" class="image-box img-100"/>
 
+## Auth0 <a name="openid-connect-auth0"></a>
+### [Auth0 Admin Portal](https://manage.auth0.com/):
+1. Select Applications > Create Application
+2. Name: "Zepl"
+3. Type: "Regular Web Application
+4. Select Create
+
+<img src="../../img/auth0_create_app.png" class="image-box img-100"/>
+
+**In the Application screen, navigate to the "Settings" tab:**
+1. Please copy the `Domain`, `Client ID`, and `Client Secret` or keep for reference in the next section
+
+<img src="../../img/auth0_basic_info.png" class="image-box img-100"/>
+
+2. Set Application Logo: `https://zepl-logo.s3-us-west-1.amazonaws.com/logo_254_256.png`
+3. Set the Application Login URI: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/auth0provider`
+4. Set the Allowed Callback URLs: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/auth0provider`
+5. Select "Save Changes" at the bottom of the screen
+
+<img src="../../img/auth0_application_properties.png" class="image-box img-100"/>
+
+### In Zepl's Authentication Settings:
+1. Select Settings > Authentication > Auth0
+2. Auth0 URL: `https://{Auth0 Application Domain}/`. 
+    * Paste the `Domain` value from the Application you created in the previous section.
+
+  >Note: This MUST contain a trailing slash character (/) at the end of the url. Be sure to include, `https://`.
+
+3. Client ID: Paste from the application you created in the previous section. 
+    * Example: `d6KWU7RMqQi6LfTlnm6ZywIQSCOrFZCQ`
+4. Client Secret: Paste from the application you created in the previous section. 
+    * Example: `axfS4VpeH3ydkjERD9k6JvZTAZm_Bz23pI58JmRP0UrRdPDr351ESsjkBUIs321sE`
+5. Select Save & Activate
+6. Now, logout, log back in, and you should be redirected to Auth0
+
+<img src="../../img/auth0_zepl_config.png" class="image-box img-100"/>
+
 # CAS <a name="cas"></a>
 
 > Note: This documentation is coming soon to a Zepl docs page near you!
