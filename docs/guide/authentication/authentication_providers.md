@@ -24,7 +24,7 @@ Today, we support the following protocols for logging in to Zepl:
 When you first sign up for Zepl, you created a username and password - this is the default authentication method for Zepl organizations. When you have set Username / Password authentication for your organization, team members can reset their passwords with the "Forgot your password". Many users find this to be sufficient for their security needs, especially if they are a small team.
 
 
-<img src="../../img/zepl_username_password.png" class="image-box img-100"/>
+<img src="/img/zepl_username_password.png" class="image-box img-100"/>
 
 # Google <a name="google"></a>
 Enable your users to authenticate with their existing Google accounts. There are only two fields required for this configuration in Zepl: `Client ID` and `Client Secret`.
