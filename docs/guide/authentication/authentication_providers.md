@@ -3,6 +3,7 @@
 Zepl understands that your data, and the data science that is used to mine insights from it, is extremely valuable and sensitive. To ensure that only trusted parties can access Zepl resources, you can configure Zepl to use the identity provider platform of your choice. Doing so is a two step configuration: extending access from your identity provider to Zepl, and configuring Zepl Single Sign-on to use that authentication provider.
 
 Today, we support the following protocols for logging in to Zepl:
+
 [Username / Password](#user-pass)
 
 [Google](#google)
@@ -10,6 +11,7 @@ Today, we support the following protocols for logging in to Zepl:
 [CAS](#cas)
 
 [OpenID Connect](#openid-connect)
+
 * [Okta](#openid-connect-okta)
 * [Azure AD](#openid-connect-azure-ad)
 * [Auth0](#openid-connect-auth0)
@@ -29,7 +31,7 @@ When you first sign up for Zepl, you created a username and password - this is t
 # Google <a name="google"></a>
 Enable your users to authenticate with their existing Google accounts. There are only two fields required for this configuration in Zepl: `Client ID` and `Client Secret`.
 
-<img src="../../img/zepl_config_google.png" class="image-box img-100"/>
+<img src="/img/zepl_config_google.png" class="image-box img-100"/>
 
 ### [Google's Developer Portal](https://console.developers.google.com/)
 #### Setup OAuth Consent:
@@ -39,7 +41,7 @@ Enable your users to authenticate with their existing Google accounts. There are
     * External: Your app will be available to any user with Google Account
 3. Click "Create"
 4. Application Name: Zepl
-5. Application logo (right click image to save as): <img src="../../img/zepl_logo.png" class="image-box img-100"/>
+5. Application logo (right click image to save as): <img src="/img/zepl_logo.png" class="image-box img-100"/>
 6. Authorized domains: Your Company Domain 
     * Example: `zepl.com`
 7. Click "Save"
@@ -54,7 +56,7 @@ Enable your users to authenticate with their existing Google accounts. There are
 7. Click "Create"
 8. Copy the `Client ID` and `Client Secret` to use in the next section
 
-<img src="../../img/google_oauth_consent.png" class="image-box img-100"/>
+<img src="/img/google_oauth_consent.png" class="image-box img-100"/>
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > Google
@@ -64,13 +66,13 @@ Enable your users to authenticate with their existing Google accounts. There are
     * Example: `GcP61ILeWLk6pveVh8ohQe3t`
 
 
-<img src="../../img/google_zepl_config.png" class="image-box img-100"/>
+<img src="/img/google_zepl_config.png" class="image-box img-100"/>
 
 
 # OpenID Connect <a name="openid-connect"></a>
 Most popular SSO providers support authentication with OpenID Connect. Throughout this SSO side configuration, you will need need to provide your SSO provider a redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`. As you do so, keep track of the 3 key fields required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`. We provide OpenID configuration steps below for several of the top authentication providers, but please note these steps may change and look different in your environment.
 
-<img src="../../img/zepl_config_openid_connect.png" class="image-box img-100"/>
+<img src="/img/zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Okta <a name="openid-connect-okta"></a>
 > Note: The email address for a specific user's Zepl account, MUST match the `email` value in that user's Okta account.
@@ -84,14 +86,14 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 
   > Note: The "Initiate login URI" can be blank.
 
-<img src="../../img/okta_application_settings.png" class="image-box img-100"/>
+<img src="/img/okta_application_settings.png" class="image-box img-100"/>
 
 6. Add an Application Logo
-    * Right click image to save locally, then select : <img src="../../img/zepl_logo.png" class="image-box img-100"/>
+    * Right click image to save locally, then select : <img src="/img/zepl_logo.png" class="image-box img-100"/>
     * On the Okta Application screen, select the logo box (with a blank gear icon) > Browse and upload the Zepl logo that you just downloaded.
 7. Scroll to the bottom to find the `Client ID` and `Client secret`. Please copy these or keep for reference in the next section
 
-<img src="../../img/okta_client_credentials.png" class="image-box img-100"/>
+<img src="/img/okta_client_credentials.png" class="image-box img-100"/>
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > OpenID
@@ -106,20 +108,20 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 5. Select Save & Activate
 6. Now, logout, log back in, and you should be redirected to Okta
 
-<img src="../../img/okta_zepl_config_openid_connect.png" class="image-box img-100"/>
+<img src="/img/okta_zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Azure AD <a name="openid-connect-azure-ad"></a>
 ### [Azure's Admin Portal](https://portal.azure.com/):
 1. Select Azure Active Directory > App Registrations > New Registration
 2. Enter this value for the redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/azureadprovider`
 
-<img src="../../img/azure_ad_app_register.png" class="image-box img-100"/>
+<img src="/img/azure_ad_app_register.png" class="image-box img-100"/>
 
 3. Register > Select your new app
 4. Copy Application (client) ID below
 5. Copy Directory (tenant) ID below
 
-<img src="../../img/azure_ad_key.png" class="image-box img-100"/>
+<img src="/img/azure_ad_key.png" class="image-box img-100"/>
 
 Creating a Client Secret:
 1. Select Azure Active Directory > App Registrations > Select the app you just created
@@ -128,7 +130,7 @@ Creating a Client Secret:
 
 > Note: Once you navigate away from this page you can no longer copy this value.
 
-<img src="../../img/azure_ad_secret.png" class="image-box img-100"/>
+<img src="/img/azure_ad_secret.png" class="image-box img-100"/>
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > OpenID
@@ -143,7 +145,7 @@ Creating a Client Secret:
 5. Select Save & Activate
 6. Now, logout, log back in, and you should be redirected to the Azure authentication page
 
-<img src="../../img/azure_zepl_config_openid_connect.png" class="image-box img-100"/>
+<img src="/img/azure_zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Auth0 <a name="openid-connect-auth0"></a>
 ### [Auth0 Admin Portal](https://manage.auth0.com/):
@@ -152,19 +154,19 @@ Creating a Client Secret:
 3. Type: "Regular Web Application
 4. Select Create
 
-<img src="../../img/auth0_create_app.png" class="image-box img-100"/>
+<img src="/img/auth0_create_app.png" class="image-box img-100"/>
 
 **In the Application screen, navigate to the "Settings" tab:**
 1. Please copy the `Domain`, `Client ID`, and `Client Secret` or keep for reference in the next section
 
-<img src="../../img/auth0_basic_info.png" class="image-box img-100"/>
+<img src="/img/auth0_basic_info.png" class="image-box img-100"/>
 
 2. Set Application Logo: `https://zepl-logo.s3-us-west-1.amazonaws.com/logo_254_256.png`
 3. Set the Application Login URI: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/auth0provider`
 4. Set the Allowed Callback URLs: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/auth0provider`
 5. Select "Save Changes" at the bottom of the screen
 
-<img src="../../img/auth0_application_properties.png" class="image-box img-100"/>
+<img src="/img/auth0_application_properties.png" class="image-box img-100"/>
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > Auth0
@@ -180,7 +182,7 @@ Creating a Client Secret:
 5. Select Save & Activate
 6. Now, logout, log back in, and you should be redirected to Auth0
 
-<img src="../../img/auth0_zepl_config.png" class="image-box img-100"/>
+<img src="/img/auth0_zepl_config.png" class="image-box img-100"/>
 
 # CAS <a name="cas"></a>
 
