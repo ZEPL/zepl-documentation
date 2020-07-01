@@ -1,9 +1,8 @@
-# Configure Zepl Single Sign-On <a name="auth-config"></a>
+# Configure an authentication provider in Zepl
 
 Zepl understands that your data, and the data science that is used to mine insights from it, is extremely valuable and sensitive. To ensure that only trusted parties can access Zepl resources, you can configure Zepl to use the identity provider platform of your choice. Doing so is a two step configuration: extending access from your identity provider to Zepl, and configuring Zepl Single Sign-on to use that authentication provider.
 
 Today, we support the following protocols for logging in to Zepl:
-
 [Username / Password](#user-pass)
 
 [Google](#google)
@@ -30,7 +29,7 @@ When you first sign up for Zepl, you created a username and password - this is t
 # Google <a name="google"></a>
 Enable your users to authenticate with their existing Google accounts. There are only two fields required for this configuration in Zepl: `Client ID` and `Client Secret`.
 
-<img src="../../img/authentication/google/zepl_config_google.png" class="image-box img-100"/>
+<img src="../../img/zepl_config_google.png" class="image-box img-100"/>
 
 ### [Google's Developer Portal](https://console.developers.google.com/)
 #### Setup OAuth Consent:
@@ -41,7 +40,6 @@ Enable your users to authenticate with their existing Google accounts. There are
 3. Click "Create"
 4. Application Name: Zepl
 5. Application logo (right click image to save as): <img src="../../img/zepl_logo.png" class="image-box img-100"/>
-
 6. Authorized domains: Your Company Domain 
     * Example: `zepl.com`
 7. Click "Save"
@@ -86,7 +84,6 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 
   > Note: The "Initiate login URI" can be blank.
 
-
 <img src="../../img/okta_application_settings.png" class="image-box img-100"/>
 
 6. Add an Application Logo
@@ -123,7 +120,6 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 5. Copy Directory (tenant) ID below
 
 <img src="../../img/azure_ad_key.png" class="image-box img-100"/>
-
 
 Creating a Client Secret:
 1. Select Azure Active Directory > App Registrations > Select the app you just created

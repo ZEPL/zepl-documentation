@@ -37,7 +37,7 @@ CREATE SECURITY INTEGRATION ZEPL_SSO_INTEGRATION
   ENABLED = TRUE
   OAUTH_CLIENT = CUSTOM
   OAUTH_CLIENT_TYPE = 'CONFIDENTIAL'
-  OAUTH_REDIRECT_URI = 'https://www.zepl.com/callbacks/snowflake-datasource-sso'
+  OAUTH_REDIRECT_URI = 'https://app.zepl.com/callbacks/snowflake-datasource-sso'
   OAUTH_ISSUE_REFRESH_TOKENS = TRUE
   OAUTH_REFRESH_TOKEN_VALIDITY = 7776000
 ```
@@ -46,7 +46,7 @@ For more information on customizing the configurations for an OAuth integration,
 Please note that OAuth integration should be specified as following:
 
 * OAUTH_CLIENT_TYPE must be set to `CONFIDENTIAL`. It allows the client (Zepl) to store a secret.
-* OAUTH_REDIRECT_URI must be set to `https://www.zepl.com/callbacks/snowflake-datasource-sso`. After a user is authenticated, the web browser is redirected to this URI.
+* OAUTH_REDIRECT_URI must be set to `https://app.zepl.com/callbacks/snowflake-datasource-sso`. After a user is authenticated, the web browser is redirected to this URI.
 * OAUTH_ISSUE_REFRESH_TOKENS must be set to `TRUE`. It allows the client (Zepl) to exchange a refresh token for an access token when the current access token has expired.
 * OAUTH_REFRESH_TOKEN_VALIDITY specifies how long an authentication should be valid (in seconds). The value is default to `7776000` (90 days). After the specified period passed after the authentication, you should re-authenticate in the detail page of the data source to continue the use of the data source.
 
