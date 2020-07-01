@@ -63,7 +63,7 @@ Enable your users to authenticate with their existing Google accounts. There are
 # OpenID Connect <a name="openid-connect"></a>
 Many of the major SSO providers support authentication through OpenID Connect. In this documentation we will walk through how to use the Generic OpenID Connect authentication method to connect to Okta and Microsoft AD. Zepl is also investing in vendor specific methods to support more granular controls. Following the steps below will work to configure SSO through Okta or Microsoft AD.
 
-Throughout this configuration, keep track of the 3 key fields required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`.
+Throughout this configuration, keep track of the 3 key fields required in Zepl: `OpenID URL`, `Client ID`, and `Client Secret`. For any generic OpenID Connect configurations (not Okta, AzureAD, or Auth0), set this as the `Redirect URL` in the authentication provider: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
 
 <img src="../../img/zepl_config_openid_connect.png" class="image-box img-100"/>
 
@@ -73,13 +73,13 @@ Throughout this configuration, keep track of the 3 key fields required in Zepl: 
 ### In Okta's Admin Portal:
 1. Create an Application: Select the Applications menu > Add Application > Create Application
 2. Check the OpenID Connect radio button and select create
-3. Enter this value for the login redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
+3. Enter this value for the login redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/oktaprovider`
 4. Navigate to the general settings for the new application that you created
 5. Select `Authorization Code` for Authorized grant types. The final application configuration should look as follows:
 
   > Note: The "Initiate login URI" can be blank.
 
-  
+
 <img src="../../img/okta_application_settings.png" class="image-box img-100"/>
 
 6. Add an Application Logo
@@ -107,7 +107,7 @@ Throughout this configuration, keep track of the 3 key fields required in Zepl: 
 ## Azure AD <a name="openid-connect-azure-ad"></a>
 ### [Azure's Admin Portal](https://portal.azure.com/):
 1. Select Azure Active Directory > App Registrations > New Registration
-2. Enter this value for the redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/openidprovider`
+2. Enter this value for the redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/azureadprovider`
 
 <img src="../../img/azure_ad_app_register.png" class="image-box img-100"/>
 
@@ -117,7 +117,9 @@ Throughout this configuration, keep track of the 3 key fields required in Zepl: 
 
 <img src="../../img/azure_ad_key.png" class="image-box img-100"/>
 
+
 Creating a Client Secret:
+
 1. Select Azure Active Directory > App Registrations > Select the app you just created
 2. Select Certificates & secrets > + New client secret
 3. Copy the secret value below
