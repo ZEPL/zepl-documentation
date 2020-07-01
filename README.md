@@ -21,7 +21,7 @@ virtualenv --python=/usr/local/bin/python3 ~/.virtualenvs/mkdocs
 source ~/.virtualenvs/mkdocs/bin/activate
 pip install -r requirements.txt
 mkdocs build --clean
-mkdocs gh-deploy clean
+mkdocs gh-deploy
 deactivate
 ```
 
