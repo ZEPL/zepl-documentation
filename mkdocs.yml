@@ -37,10 +37,12 @@ nav:
     - Snowflake Partner Connect: guide/partnerships/snowflake_partner_connect.md
   - Authentication:
     - Zepl Account: guide/authentication/zepl_account.md
-#    - Authentication Providers: guide/authentication/authentication_providers.md
+    - Authentication Providers: guide/authentication/authentication_providers.md
   - Enterprise:
     - Amazon EMR Integration: guide/enterprise/emr_integration.md
     - Custom Image Support: guide/enterprise/custom_image_support.md
+    - SaaS Image Builder: guide/enterprise/custom_image_saas.md
+    - VPC zcr Utility: guide/enterprise/custom_image_zcr.md
     - Log Console: guide/enterprise/logging_console.md
     - Sagemaker Integration: guide/enterprise/sagemaker.md
 - FAQ: faq.md
