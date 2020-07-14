@@ -189,7 +189,7 @@ Creating a Client Secret:
 <img src="/img/auth0_zepl_config.png" class="image-box img-100"/>
 
 # SAML <a name="saml"></a>
-Most popular SSO providers support authentication with SAML. Throughout this configuration, you will need need to provide your SSO provider a redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/samlprovider`. As you do so, keep track of the 2 key fields required in Zepl: `SAML Meta Data URL` and `Email Attribute Mapping`. We provide OpenID configuration steps below for several of the top authentication providers, but please note these steps may change and look different in your environment.
+Most popular SSO providers support authentication with SAML. Throughout this configuration, you will need need to provide your SSO provider a redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/samlprovider`. As you do so, keep track of the 2 key fields required in Zepl: `SAML Meta Data URL` and `Email Attribute Mapping`. We provide SAML configuration steps below for several of the top authentication providers, but please note these steps may change and look different in your environment.
 
 ## Okta <a name="saml-okta"></a>
 > Note: The email address for a specific user's Zepl account, MUST match the `email` value in that user's Okta account.
