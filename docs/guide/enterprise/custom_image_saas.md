@@ -18,7 +18,7 @@ Each Custom Image should have a unique, descriptive name that makes it easy to f
 
 After naming your image, you are ready to start configuring your Custom Image with interpreters, libraries, packages, and system dependencies. The syntax for doing this is documented below.
 
-To build your custom image, click the “Create” button at the bottom. Depending on the number of libraries in your image, building the image can take anywhere from 5 to 30 minutes. Sometimes builds can fail if the wrong syntax is used, or there is a library version mismatch issue. If that occurs, you can download a log in the image actions which describes where the build failed.  If the image builds successfully, congrats! You can now attach it to notebooks. If you’d like the image you created to be the standard for your entire organization, you can set it as the default image in the image actions. You can also edit or delete an image under these image actions. 
+To build your custom image, click the “Create” button at the bottom. Building the image will take a few minutes, and takes longer when more libraries are installed to the image. Sometimes builds can fail if the wrong syntax is used, or there is a library version mismatch issue. If that occurs, you can download a log in the image actions which describes where the build failed.  If the image builds successfully, congrats! You can now attach it to notebooks. If you’d like the image you created to be the standard for your entire organization, you can set it as the default image in the image actions. You can also edit or delete an image under these image actions. 
 
 # Adding Python Interpreter & Libraries
 
