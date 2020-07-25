@@ -39,7 +39,7 @@ Enable your users to authenticate with their existing Google accounts. There are
 
 <img src="/img/zepl_config_google.png" class="image-box img-100"/>
 
-### [Google's Developer Portal](https://console.developers.google.com/)
+### [Google's Developer Portal](https://console.developers.google.com/){:target="_blank"}
 #### Setup OAuth Consent:
 1. Select OAuth consent screen 
 2. Select Application Type 
@@ -83,22 +83,25 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 ## Okta <a name="openid-connect-okta"></a>
 > Note: The email address for a specific user's Zepl account, MUST match the `email` value in that user's Okta account.
 
+>Zepl does not currently support importing groups & roles from identity providers. 
+
+
 ### In Okta's Admin Portal:
-1. Create an Application: Select the Applications menu > Add Application > Create Application
-2. Check the OpenID Connect radio button and select create
-3. Enter this value for the login redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/oktaprovider`
-4. Navigate to the general settings for the new application that you created
-5. Select `Authorization Code` for Authorized grant types. The final application configuration should look as follows (The "Initiate login URI" can be blank): 
+1. Login to the Okta Integration Network:  [https://www.okta.com/integrations/](https://www.okta.com/integrations/){:target="_blank"}
+2. Search for 'Zepl OpenID Connect' and then select it.
+    <img src="/img/okta_oidc_setup.png" class="image-box img-100"/>
 
-    <img src="/img/okta_application_settings.png" class="image-box img-100"/>
+3. Click 'Add'
+<img src="/img/okta_oidc_add.png" class="image-box img-100"/>
 
+4. Select 'Done'
+<img src="/img/okta_oidc_done.png" class="image-box img-100"/>
 
-6. Add an Application Logo
-    * Right click image to save locally, then select : <img src="/img/zepl_logo.png" class="image-box img-100"/>
-    * On the Okta Application screen, select the logo box (with a blank gear icon) > Browse and upload the Zepl logo that you just downloaded.
-7. Scroll to the bottom to find the `Client ID` and `Client secret`. Please copy these or keep for reference in the next section
+5. Choose 'Sign On'
+<img src="/img/okta_oidc_signon.png" class="image-box img-100"/>
 
-<img src="/img/okta_client_credentials.png" class="image-box img-100"/>
+6. Find the `Client ID` and `Client Secret`. Please copy these or keep for reference in the next section.
+
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > OpenID
@@ -116,7 +119,7 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 <img src="/img/okta_zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Azure AD <a name="openid-connect-azure-ad"></a>
-### [Azure's Admin Portal](https://portal.azure.com/):
+### [Azure's Admin Portal](https://portal.azure.com/){:target="_blank"}:
 1. Select Azure Active Directory > App Registrations > New Registration
 2. Enter this value for the redirect URL: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/azureadprovider`
 <img src="/img/azure_ad_app_register.png" class="image-box img-100"/>
@@ -151,7 +154,7 @@ Creating a Client Secret:
 <img src="/img/azure_zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Auth0 <a name="openid-connect-auth0"></a>
-### [Auth0 Admin Portal](https://manage.auth0.com/):
+### [Auth0 Admin Portal](https://manage.auth0.com/){:target="_blank"}:
 1. Select Applications > Create Application
 2. Name: "Zepl"
 3. Type: "Regular Web Application
@@ -237,7 +240,7 @@ Most popular SSO providers support authentication with SAML. Throughout this con
 <img src="/img/zepl_okta_saml_config.png" class="image-box img-100"/>
 
 ## Auth0 <a name="saml-auth0"></a>
-### [Auth0 Admin Portal](https://manage.auth0.com/):
+### [Auth0 Admin Portal](https://manage.auth0.com/){:target="_blank"}:
 1. Select Applications > Create Application > Regular Web Application
 2. Set Settings > Allowed Callback URLs to: `https://app.zepl.com/api/v2/authenticator.identity.zepl/callback/samlprovider`
 
