@@ -149,7 +149,7 @@ In the notebook, we’ve designed a toolbar on the right hand side which helps y
 
 <img src=“/img/CI_NB_SIDEBAR.png” class=“image-box img-100”/>
 
-You can change this selection at any time for a given notebook by editing the notebook settings - to do so, your container must be shut down.
+You can change this selection at any time for a given notebook by editing the notebook settings. To do so, your container must be shut down.
 
 <img src=“/img/CI_NB_SETTINGS.png” class=“image-box img-100”/>
 
