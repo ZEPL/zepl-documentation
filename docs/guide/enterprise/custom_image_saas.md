@@ -31,8 +31,12 @@ To add libraries to your custom image, you can use the following supported to in
     Libraryname
     libraryname==version
 
-In addition to any libraries that you include in your custom image list, Zepl installs multiple Python libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running a pip list command in the notebook. As of July 2020, the list of libraries we install for Python in a custom image are the following:
+In addition to any libraries that you include in your custom image list, Zepl installs multiple Python libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running a pip list command in the notebook. The following is the syntax for doing so:
 
+    %python
+    !pip list
+
+As of July 2020, the list of libraries we install for Python in a custom image are the following:
 
     grpcio==1.24.3 
     ipykernel==5.1.3 
