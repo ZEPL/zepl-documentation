@@ -3,14 +3,14 @@ This article will cover all of the data types that are returned by Zepl’s secu
 
 Zepl has created a simple, secure, and standard method for all users to access their data. Zepl’s data sources allow each user to securely store their user credentials through our encrypted keychain. 
 
-Each programming language supports different access methods to each of these data sources. We will walk through what objects are return upon connecting to each data source. This will give you the best insight to take advantage of our features and troubleshoot anytime errors may arise.
+Each programming language supports different access methods to each of these data sources. We will walk through what objects are returned upon connecting to each data source. This will give you the best insight to take advantage of our features and troubleshoot any errors that may arise.
 
 * [Snowflake](#snowflake)
-* [S3](#s3)
+* [Amazon S3](#s3)
 * [Google BigQuery](#google-bigquery)
 * [MySQL](#mysql)
-* [PosgreSQL](#posgresql)
-* [Cassandra](#cassandra)
+* [PostgreSQL](#postgresql)
+* [Apache Cassandra](#cassandra)
 * [SAP HANA](#sap-hana)
 * [Alibaba MaxCompute](#alibaba-maxcompute)
 
@@ -45,23 +45,23 @@ Each programming language supports different access methods to each of these dat
 
 >Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
 
-### Write data to S3
+### Write data to Snowflake
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24){:target="_blank"}
 
-# S3
+# Amazon S3
 ### Configure
 * Bucket Name (required)
 
 <!--<img src="../../../img/datasource/s3_create_popup.png" class="image-box img-100" />-->
 
-### Read data from S3
+### Read data from Amazon S3
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
 
 | Language | Code | Object Returned | Library |
 |---------|------|-----------------|---------|
 |Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket){:target="_blank"} | Boto3 - v1.10.9
 
-### Write data to S3
+### Write data to Amazon S3
 [Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413){:target="_blank"}
 
 # Google BigQuery
@@ -99,7 +99,7 @@ Each programming language supports different access methods to each of these dat
 ### Write data to MySQL
 >Example coming soon!
 
-# PosgreSQL
+# PostgreSQL
 ### Configure
 * Host (required)
 * Port (required)
@@ -107,7 +107,7 @@ Each programming language supports different access methods to each of these dat
 
 <!--<img src="../../../img/datasource/postgresql_create_popup.png" class="image-box img-100" />-->
 
-### Read data from PosgreSQL
+### Read data from PostgreSQL
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
 
 | Language | Code | Object Returned | Library |
@@ -115,10 +115,10 @@ Each programming language supports different access methods to each of these dat
 | Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html){:target="_blank"} | psycopg2-binary - v2.8.4 |
 | SQL | `%datasource.<data source name>`| | |
 
-### Write data to PosgreSQL
+### Write data to PostgreSQL
 >Example coming soon!
 
-# Cassandra
+# Apache Cassandra
 ### Configure
 * Host (required)
 * Port (required)
@@ -126,14 +126,14 @@ Each programming language supports different access methods to each of these dat
 
 <!--<img src="../../../img/datasource/cassandra_create_popup.png" class="image-box img-100" />-->
 
-### Read data from Cassandra
+### Read data from Apache Cassandra
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
 | Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session){:target="_blank"}| cassandra-driver - v3.20.0 |
 
-### Write data to PosgreSQL
+### Write data to Apache Cassandra
 >Example coming soon!
 
 # SAP HANA
@@ -163,7 +163,7 @@ Each programming language supports different access methods to each of these dat
 
 <!--<img src="../../../img/datasource/maxcompute_create_popup.png" class="image-box img-100" />-->
 
-### Read data from MaxCompute
+### Read data from Alibaba MaxCompute
 >Example coming soon!
 
 | Language | Code | Object Returned | Library |
@@ -171,4 +171,5 @@ Each programming language supports different access methods to each of these dat
 | Python | `odps = z.getDatasource("<data source name>")` | [ODPS Object](https://pyodps.readthedocs.io/en/latest/index.html)| pyodps - v0.8.4 |
 | Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html) | odps-jdbc-3.1.0.jar |
 
-
+### Read data to Alibaba MaxCompute
+>Example coming soon!
