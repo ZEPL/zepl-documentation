@@ -84,10 +84,11 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 
 
 #### Contents
-Supported Features
-Requirements
-Configuration Steps
-Notes
+* Supported Features
+* Requirements
+* Notes
+* Configuration Steps
+
 
 #### Supported Features 
 Zepl OIDC supports:
