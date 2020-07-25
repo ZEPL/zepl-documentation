@@ -31,6 +31,7 @@ nav:
   - Accessing Data:
     - Data Sources: guide/datasource/datasource.md
     - Data Source Integrations: guide/datasource/datasource_integration.md
+    - Using Zepl Data Sources: guide/datasource/datasource_objects.md
     - Uploading Data: guide/accessing_data.md
   - Resources: guide/resource_mgmt.md
   - Partnerships:
