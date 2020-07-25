@@ -2,29 +2,29 @@
 
 Creating a reproducible environment for data science is a common challenge when working as a team. It is common practice to put several install commands at the beginning of a notebook or script to help ensure that others will be able to recreate your analysis. Unfortunately, this installation step can take a long time when many different libraries and packages are required. 
 
-This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an “image”, which is a prebuilt environment with all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.
+This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an "image", which is a prebuilt environment with all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.
 
 Contact beta@zepl.com to sign up and learn more!
 
 # Creating a New Custom Image
 
-Custom Images can easily be found under Resources. To start creating a new custom image, simply click “Create new”. If you have another Custom Image which you’d like to modify as a template for your new image, you can also “Clone” that template under the actions for that Custom Image.
+Custom Images can easily be found under Resources. To start creating a new custom image, simply click "Create new". If you have another Custom Image which you’d like to modify as a template for your new image, you can also "Clone" that template under the actions for that Custom Image.
 
-<img src=“/img/CI_CREATE_NEW.png” class=“image-box img-100”/>
+<img src="/img/CI_CREATE_NEW.png" class="image-box img-100"/>
 
 Each Custom Image should have a unique, descriptive name that makes it easy to find later. As a first step of creating a Custom Image, give your image a name and a description of what you plan to use it for. 
 
-<img src=“/img/CI_CREATE_NEW_MODAL.png” class=“image-box img-100”/>
+<img src="/img/CI_CREATE_NEW_MODAL.png" class="image-box img-100"/>
 
 After naming your image, you are ready to start configuring your Custom Image with interpreters, libraries, packages, and system dependencies. The syntax for doing this is documented below.
 
-To build your custom image, click the “Create” button at the bottom. Building the image will take a few minutes, and takes longer when more libraries are installed to the image. Sometimes builds can fail if the wrong syntax is used, or there is a library version mismatch issue. If that occurs, you can download a log in the image actions which describes where the build failed.  If the image builds successfully, congrats! You can now attach it to notebooks. If you’d like the image you created to be the standard for your entire organization, you can set it as the default image in the image actions. You can also edit or delete an image under these image actions. 
+To build your custom image, click the "Create" button at the bottom. Building the image will take a few minutes, and takes longer when more libraries are installed to the image. Sometimes builds can fail if the wrong syntax is used, or there is a library version mismatch issue. If that occurs, you can download a log in the image actions which describes where the build failed.  If the image builds successfully, congrats! You can now attach it to notebooks. If you’d like the image you created to be the standard for your entire organization, you can set it as the default image in the image actions. You can also edit or delete an image under these image actions. 
 
 # Adding Python Interpreter & Libraries
 
-To add a Python interpreter to a Custom Image, simply click “+ Python” in the image creation screen. Zepl supports Python 3.8 as the default Python interpreter and can be referenced by the %python alias,
+To add a Python interpreter to a Custom Image, simply click "+ Python" in the image creation screen. Zepl supports Python 3.8 as the default Python interpreter and can be referenced by the %python alias,
 
-<img src=“/img/CI_CREATE_NEW_PYTHON.png” class=“image-box img-100”/>
+<img src="/img/CI_CREATE_NEW_PYTHON.png" class="image-box img-100"/>
 
 To add libraries to your custom image, you can use the following supported to install libraries using pip:
 
@@ -56,11 +56,11 @@ As of July 2020, the list of libraries we install for Python in a custom image a
 
 # Adding R Interpreter & Libraries
 
-To add an R interpreter to a Custom Image, simply click “+ R” in the interpreter creation screen. Zepl supports R 3.6 as the default R interpreter for custom image and can be referenced with the %r alias. 
+To add an R interpreter to a Custom Image, simply click "+ R" in the interpreter creation screen. Zepl supports R 3.6 as the default R interpreter for custom image and can be referenced with the %r alias. 
 
-<img src=“/img/CI_CREATE_NEW_R.png” class=“image-box img-100”/>
+<img src="/img/CI_CREATE_NEW_R.png" class="image-box img-100"/>
 
-To add libraries from a CRAN server to your custom image, you simply list out the libraries you hope to install on seperate lines. This installs packages similarly to using install.package(“LibraryName”) in the notebook
+To add libraries from a CRAN server to your custom image, you simply list out the libraries you hope to install on seperate lines. This installs packages similarly to using install.package("LibraryName") in the notebook
 
     Libraryname1
     Libraryname2
@@ -85,14 +85,14 @@ In addition to any libraries that you include in your custom image list, R comes
 
 # Adding Spark Interpreter & Libraries
 
-To add a Spark interpreter to a Custom Image, simply click “+ Spark” in the interpreter creation screen. Zepl supports Spark 2.3.2 as the default Spark interpreter for custom images, which can be refrenced with the %spark alias.
+To add a Spark interpreter to a Custom Image, simply click "+ Spark" in the interpreter creation screen. Zepl supports Spark 2.3.2 as the default Spark interpreter for custom images, which can be refrenced with the %spark alias.
 
-<img src=“/img/CI_CREATE_NEW_SPARK.png” class=“image-box img-100”/>
+<img src="/img/CI_CREATE_NEW_SPARK.png" class="image-box img-100"/>
 
 To add libraries to Spark, you can do so by adding maven dependencies on separate lines. Please note that we only support compile and exclude_group commands in the syntax today. 
 
-    compile “commons-io:commons-io:2.6”
-    compile(“org.apache.hadoop:hadoop-aws:2.8.3”) { exclude group ‘javax.servlet’, module: ‘servlet-api’}
+    compile "commons-io:commons-io:2.6"
+    compile("org.apache.hadoop:hadoop-aws:2.8.3") { exclude group ‘javax.servlet’, module: ‘servlet-api’}
 
 
 In addition to any libraries that you include in your custom image list, Spark comes with many libraries already installed, and Zepl installs multiple Spark libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running the following code in the notebook:
@@ -124,13 +124,13 @@ You can set an environment variable with very simple syntax:
 
 You can install packages from github directories with maven syntax. 
 
-<img src=“/img/CI_CREATE_NEW_SYSTEM_DEPENDENCIES.png” class=“image-box img-100”/>
+<img src="/img/CI_CREATE_NEW_SYSTEM_DEPENDENCIES.png" class="image-box img-100"/>
 
 # Custom Image Management
 
 Custom Images can easily be managed and analyzed from the Custom Images management console. For any existing image that you have created, you can see what it is called, who created the image, if the image successfully created, when it was created, and what notebooks are associated with the image. 
 
-<img src=“/img/CI_MANAGEMENT.png” class=“image-box img-100”/>
+<img src="/img/CI_MANAGEMENT.png" class="image-box img-100"/>
 
 For any Custom Image that you are curious in learning more about, you can click on the row to learn more about how that custom image was constructed. Under the actions menu for custom images, you can perform the following operations: 
 
@@ -143,15 +143,15 @@ For any Custom Image that you are curious in learning more about, you can click 
 
 When you are creating a new notebook, you must select the Custom Image you want to use to execute code from that notebook.
 
-<img src=“/img/CI_NB_CREATE.png” class=“image-box img-100”/>
+<img src="/img/CI_NB_CREATE.png" class="image-box img-100"/>
 
 In the notebook, we’ve designed a toolbar on the right hand side which helps you see what interpreters and libraries are available for you to use in your custom image. 
 
-<img src=“/img/CI_NB_SIDEBAR.png” class=“image-box img-100”/>
+<img src="/img/CI_NB_SIDEBAR.png" class="image-box img-100"/>
 
 You can change this selection at any time for a given notebook by editing the notebook settings. To do so, your container must be shut down.
 
-<img src=“/img/CI_NB_SETTINGS.png” class=“image-box img-100”/>
+<img src="/img/CI_NB_SETTINGS.png" class="image-box img-100"/>
 
 
 
