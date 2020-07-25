@@ -82,13 +82,11 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 
 ## Okta <a name="openid-connect-okta"></a>
 
-
 #### Contents
 * Supported Features
 * Requirements
 * Notes
 * Configuration Steps
-
 
 #### Supported Features 
 Zepl OIDC supports:
