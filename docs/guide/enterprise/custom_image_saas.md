@@ -22,7 +22,7 @@ To build your custom image, click the “Create” button at the bottom. Buildin
 
 # Adding Python Interpreter & Libraries
 
-To add a Python interpreter to a Custom Image, simply click “+ Python” in the image creation screen. Zepl supports Python 3.8 as the default Python interpreter for custom images. Today, you cannot edit the %alias of an interpreter nor can you add more than one version of a Python interpreter to a Custom Image. 
+To add a Python interpreter to a Custom Image, simply click “+ Python” in the image creation screen. Zepl supports Python 3.8 as the default Python interpreter and can be referenced by the %python alias,
 
 <img src=“/img/CI_CREATE_NEW_PYTHON.png” class=“image-box img-100”/>
 
@@ -56,7 +56,7 @@ As of July 2020, the list of libraries we install for Python in a custom image a
 
 # Adding R Interpreter & Libraries
 
-To add an R interpreter to a Custom Image, simply click “+ R” in the interpreter creation screen. Zepl supports R 3.6 as the default R interpreter for custom images. Today, you cannot edit the %alias of an interpreter nor can you add more than one version of an R interpreter to a Custom Image. 
+To add an R interpreter to a Custom Image, simply click “+ R” in the interpreter creation screen. Zepl supports R 3.6 as the default R interpreter for custom image and can be referenced with the %r alias. 
 
 <img src=“/img/CI_CREATE_NEW_R.png” class=“image-box img-100”/>
 
@@ -85,7 +85,7 @@ In addition to any libraries that you include in your custom image list, R comes
 
 # Adding Spark Interpreter & Libraries
 
-To add a Spark interpreter to a Custom Image, simply click “+ Spark” in the interpreter creation screen. Zepl supports Spark 2.3.2 as the default Spark interpreter for custom images. Today, you cannot edit the %alias of an interpreter nor can you add more than one version of a Spark interpreter to a Custom Image. 
+To add a Spark interpreter to a Custom Image, simply click “+ Spark” in the interpreter creation screen. Zepl supports Spark 2.3.2 as the default Spark interpreter for custom images, which can be refrenced with the %spark alias.
 
 <img src=“/img/CI_CREATE_NEW_SPARK.png” class=“image-box img-100”/>
 
