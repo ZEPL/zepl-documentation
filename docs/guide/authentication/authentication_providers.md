@@ -81,10 +81,26 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 <img src="/img/zepl_config_openid_connect.png" class="image-box img-100"/>
 
 ## Okta <a name="openid-connect-okta"></a>
-> Note: The email address for a specific user's Zepl account, MUST match the `email` value in that user's Okta account.
 
->Zepl does not currently support importing groups & roles from identity providers. 
 
+#### Contents
+Supported Features
+Requirements
+Configuration Steps
+Notes
+
+#### Supported Features 
+Zepl OIDC supports:
+Service Provider (SDP)-Initiated Authentication (SSO) Flow
+
+#### Requirements 
+Note: The email address for a specific user's Zepl account, MUST match the email value in that user's Okta account.
+
+#### Notes
+Zepl does not currently support importing groups & roles from identity providers. 
+
+#### Known Issues/Troubleshooting
+N/A
 
 ### In Okta's Admin Portal:
 1. Login to the Okta Integration Network:  [https://www.okta.com/integrations/](https://www.okta.com/integrations/){:target="_blank"}
