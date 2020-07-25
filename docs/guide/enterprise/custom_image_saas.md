@@ -2,7 +2,7 @@
 
 Creating a reproducible environment for data science is a common challenge when working as a team. It is common practice to put several install commands at the beginning of a notebook or script to help ensure that others will be able to recreate your analysis. Unfortunately, this installation step can take a long time when many different libraries and packages are required. 
 
-This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an “image”, which is a prebuilt environment with the all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.
+This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an “image”, which is a prebuilt environment with all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.
 
 Contact beta@zepl.com to sign up and learn more!
 
