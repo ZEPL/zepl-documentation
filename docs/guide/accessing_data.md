@@ -2,7 +2,7 @@ title: Python for Data Analysis | Spark Data Analysis | Zepl
 description: This topic describes how to upload data into Zepl and analyze it using Spark, Python for data analysis, or other Zepl interpreters. Visit us to learn more.
 # Uploading and Downloading Data
 
-This section describes how to upload data from your own filesystem into Zepl and analyze it using Spark, Python and other interpreters within Zepl. You can also download and delete the uploaded data.
+This section describes how to upload data from your own filesystem into Zepl and analyze it using Spark, Python, Scala, R and other interpreters within Zepl. You can also download and delete the uploaded data.
 
 ## Uploading Data
 
