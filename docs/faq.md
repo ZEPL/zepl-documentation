@@ -16,7 +16,7 @@ In addition to the broad spectrum data science facilities and gorgeous charting 
 Yes. You can import or sync Jupyter notebooks stored in S3 or Github into Zepl.
 Once in Zepl, in addition to being able to view the notebook from any browser, you can clone the notebook, make edits, and execute the notebook directly within Zepl.
 
->Note: currently only Jupyter v4.x is supported
+>Note: Currently only Jupyter v4.x is supported
 
 ### Can I use Zepl and Apache Zeppelin together?
 
