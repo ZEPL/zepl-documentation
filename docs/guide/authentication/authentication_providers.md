@@ -90,7 +90,7 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 
 #### Supported Features 
 Zepl OIDC supports:
-Service Provider (SDP)-Initiated Authentication (SSO) Flow
+Service Provider (SP)-Initiated Authentication and Identity Provider (IdP)-Initiated Authentication (SSO) flows
 
 #### Requirements 
 Note: The email address for a specific user's Zepl account, MUST match the email value in that user's Okta account.
