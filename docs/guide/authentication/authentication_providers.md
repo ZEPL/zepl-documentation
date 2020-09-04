@@ -103,7 +103,7 @@ Most popular SSO providers support authentication with OpenID Connect. Throughou
 6. Find the `Client ID` and `Client Secret`. Please copy these or keep for reference in the next section.
 
 7. Enter the ‘Organization ID’ for your Zepl app instance.  This 9 character field can be found by looking at the Zepl app URL (https://app.zepl.com/{Organization ID}).  Then Save.
-<img src="/img/okta_oidc_done.png" class="image-box img-100"/>
+<img src="/img/OrgID.png" class="image-box img-100"/>
 
 ### In Zepl's Authentication Settings:
 1. Select Settings > Authentication > OpenID
