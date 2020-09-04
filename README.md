@@ -72,6 +72,8 @@ If you want to add a new file, just locate the new `.md` file under `/docs` and 
 
 ## 4. Build and deploy your change
 
+**IMPORTANT**: Read the section "Automatic deployment" first.
+
 MkDocs comes with a built-in webserver that lets you preview your documentation as you work on it. Start the webserver by making sure you are in the same directory as the `mkdocs.yml` config file, and then running the mkdocs serve command:
 
 ```
@@ -92,7 +94,11 @@ After then, let's deploy it to ZEPL Documentation site.
 $ mkdocs gh-deploy --clean
 ```
 
-Check the final result at [http://docs.zepl.com/](http://docs.zepl.com/) 
+Check the final result at [https://docs.zepl.com/](http://docs.zepl.com/) 
+
+## Automatic deployment
+
+When merging code into `master`, it is automatically deployed to https://docs.zepl.com. The recommended way is to go through a pull request.
 
 # GA Tracking
 
