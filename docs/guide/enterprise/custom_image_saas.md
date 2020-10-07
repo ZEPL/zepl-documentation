@@ -4,13 +4,13 @@ Creating a reproducible environment for data science is a common challenge when 
 
 This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an "image", which is a prebuilt environment with all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.
 
-Contact beta@zepl.com to sign up and learn more!
+Contact support@zepl.com to get access and learn more!
 
 # Creating a New Custom Image
 
 Custom Images can easily be found under Resources. To start creating a new custom image, simply click "Create new". If you have another Custom Image which you’d like to modify as a template for your new image, you can also "Clone" that template under the actions for that Custom Image.
 
-<img src="/img/CI_CREATE_NEW.png" class="image-box img-100"/>
+<img src="/img/CI_CREATE_NEW2.png" class="image-box img-100"/>
 
 Each Custom Image should have a unique, descriptive name that makes it easy to find later. As a first step of creating a Custom Image, give your image a name and a description of what you plan to use it for. 
 
