@@ -17,6 +17,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install wheel
+        pip install markdown
         pip install -r requirements.txt
         mkdocs --version
         python --version
