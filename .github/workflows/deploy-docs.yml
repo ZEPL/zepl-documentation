@@ -18,6 +18,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install wheel
         pip install -r requirements.txt
+        mkdocs --version
+        python --version
     - name: Build and publish
       run: |
         git fetch
