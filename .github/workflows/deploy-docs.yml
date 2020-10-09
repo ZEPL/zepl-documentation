@@ -26,4 +26,4 @@ jobs:
       run: |
         git fetch
         mkdocs build --clean
-        mkdocs gh-deploy --clean
+        mkdocs gh-deploy
