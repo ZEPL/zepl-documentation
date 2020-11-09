@@ -37,10 +37,10 @@ Whenever you invite a user to join your organization, you can also assign polici
 
 Zepl comes with several out-of-the-box policies that you can use to grant permissions to organization members. These policies can be changed to customize your needs.
 
-<img src="/Default Policies.png" class="image-box img-100"/>
+<img src="img/Default Policies.png" class="image-box img-100"/>
 
 # Default Permissions
 
 The following permissions are available for you to include in a policy:
 
-<img src="/Default Permissions.png" class="image-box img-100"/>
+<img src="img/Default Permissions.png" class="image-box img-100"/>
