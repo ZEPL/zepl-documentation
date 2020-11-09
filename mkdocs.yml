@@ -11,6 +11,8 @@ site_author: Zepl
 nav:
 - Welcome: index.md
 - User Guide:
+  - Access Controls:
+    - Organization Permissions: guide/accesscontrols/organization_permissions.md
   - Notebooks:
     - Sharing Notebooks: guide/sharing_notebooks.md
     - External Notebooks:
