@@ -1,161 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>http://docs.zepl.com/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/accesscontrols/organization_permissions/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/sharing_notebooks/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/zeppelin_integration/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/github_integration/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/s3_integration/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/import_notebook/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/export_notebook/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/exploring_notebooks/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/feature_versioning/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/autocompletion_notebooks/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/interpreter/spark/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/interpreter/python/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/interpreter/jdbc/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/interpreter/config/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/interpreter/angular/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/datasource/datasource/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/datasource/datasource_integration/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/datasource/datasource_objects/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/accessing_data/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/resource_mgmt/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/partnerships/snowflake_partner_connect/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/authentication/zepl_account/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/authentication/authentication_providers/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/enterprise/emr_integration/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/enterprise/custom_image_support/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/enterprise/custom_image_saas/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/enterprise/custom_image_zcr/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/enterprise/logging_console/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/guide/enterprise/sagemaker/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/faq/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>http://docs.zepl.com/support/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
