@@ -45,9 +45,14 @@ SELECT * from my_table
 
 Zepl connects to your database using the IP addresses below so you'll need to whitelist them in your firewall:
 
+- 34.214.146.198   
 - 35.164.138.115
+- 35.164.59.56     (NEW)
+- 35.166.141.251   (NEW)
+- 44.236.139.173   (NEW)
 - 52.24.205.101
-- 34.214.146.198
+- 52.27.170.152    (NEW)
+
 
 ### SSH Tunneling for Private Networks
 
