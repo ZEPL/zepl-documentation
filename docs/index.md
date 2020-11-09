@@ -1,9 +1,5 @@
-<div markdown="1" class="row">
-  <div class="col-md-6">
-
 ### Load your data
   - [Load data from S3 using Apache Spark](guide/interpreter/spark/#load-data-from-aws-s3)
-<!-- - [Upload data from your local machine](guide/accessing_data) -->
 
 ### Interpreters
   - [Apache Spark](guide/interpreter/spark) - scala, pyspark, sparksql
@@ -25,8 +21,6 @@
 
 ### Working with External Clusters
   - [Amazon EMR](guide/enterprise/emr_integration)
-  </div>
-  <div class="col-md-6">
 
 ### Importing Existing Notebooks
 Import Jupyter or Zeppelin notebooks
@@ -49,6 +43,3 @@ Import Jupyter or Zeppelin notebooks
 
 ### Managing Notebook Versions
   - [How to manage notebook versions](guide/feature_versioning.md)
-
-  </div>
-</div>
