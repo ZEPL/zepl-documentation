@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+    <meta name="title" content="JDBC Database Interpreter | Zepl Documentation">
+    <title>JDBC Database Interpreter | Zepl Documentation</title>
+      
+      
+    <meta name="description" content="Zepl supports a JDBC interpreter with drivers for popular databases, including Mysql, Oracle, and Redshift. Learn more about our JDBC database interpreter.">
+      
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/interpreter/jdbc/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">JDBC</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#jdbc-interpreter">JDBC Interpreter</a></li>
+                    
+                        <li><a class="toctree-l4" href="#creating-a-new-jdbc-interpreter">Creating a New JDBC Interpreter</a></li>
+                    
+                        <li><a class="toctree-l4" href="#secure-database-connections">Secure Database Connections</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="jdbc-interpreter"><a class="toclink" href="#jdbc-interpreter">JDBC Interpreter</a></h1>
+<p>Zepl supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by Zepl:</p>
+<ul>
+<li>Mysql</li>
+<li>Oracle</li>
+<li>Postgresql</li>
+<li>Redshift</li>
+</ul>
+<p>For additional database connections, please contact <a href="mailto:support@zepl.com">support@zepl.com</a>.</p>
+<p>Before connecting to your database, it's important to check the following:</p>
+<ul>
+<li>the database is currently up and running</li>
+<li>the database is accessible from the public internet</li>
+<li>you have the proper credentials to access the database</li>
+</ul>
+<h2 id="creating-a-new-jdbc-interpreter"><a class="toclink" href="#creating-a-new-jdbc-interpreter">Creating a New JDBC Interpreter</a></h2>
+<p>First you'll need to create an interpreter to provide the database connection information as follows:</p>
+<ol>
+<li>Click the <em>Create interpreter</em> button from the Interpreter settings page</li>
+<li>Select <em>jdbc</em> from the <em>Interpreter type</em> group</li>
+<li>Provide a name for your interpreter (note that this name will be used in the notebook to call this JDBC interpreter)</li>
+<li>Provide the JDBC connection URL, username and password</li>
+<li>Select a JDBC driver from the dropdown menu</li>
+</ol>
+<p>Use the <em>Test connection</em> button to test the connection.</p>
+<h3 id="using-your-jdbc-database-interpreter"><a class="toclink" href="#using-your-jdbc-database-interpreter">Using Your JDBC Database Interpreter</a></h3>
+<p>Once you have created the JDBC interpreter, you can use it in your notebook by providing the <code>%[Interpreter name]</code> directive. For example, if you have created your JDBC interpreter with name "psql", you can use <code>%psql</code> in the notebook as follows:</p>
+<pre><code>%psql
+SELECT * from my_table
+</code></pre>
+<h2 id="secure-database-connections"><a class="toclink" href="#secure-database-connections">Secure Database Connections</a></h2>
+<h3 id="whitelist-ip-addresses"><a class="toclink" href="#whitelist-ip-addresses">Whitelist IP Addresses</a></h3>
+<p>Zepl connects to your database using the IP addresses below so you'll need to whitelist them in your firewall:</p>
+<ul>
+<li>34.214.146.198   </li>
+<li>35.164.138.115</li>
+<li>35.164.59.56     (NEW)</li>
+<li>35.166.141.251   (NEW)</li>
+<li>44.236.139.173   (NEW)</li>
+<li>52.24.205.101</li>
+<li>52.27.170.152    (NEW)</li>
+</ul>
+<h3 id="ssh-tunneling-for-private-networks"><a class="toclink" href="#ssh-tunneling-for-private-networks">SSH Tunneling for Private Networks</a></h3>
+<p>To connect to a database in a private network, create an SSH tunnel using the following steps:</p>
+<h4 id="-create-a-new-jdbc-interpreter"><a class="toclink" href="#-create-a-new-jdbc-interpreter">- Create a New JDBC Interpreter</a></h4>
+<ul>
+<li>Go to the <em>Interpreters</em> page and click <em>Create interpreter</em></li>
+<li>Select <em>JDBC</em> from the <em>Interpreter type</em></li>
+<li>Enable SSH tunneling in the <em>JDBC driver</em> area</li>
+</ul>
+<p><img src="../../../img/jdbc_tunnel.png" class="image-box img-70" /></p>
+<h4 id="-setup-the-public-key"><a class="toclink" href="#-setup-the-public-key">- Setup the Public Key</a></h4>
+<ol>
+<li>
+<p>Download our public key using the <em>Download</em> button and whitelist the IP addresses listed above through your firewall.</p>
+</li>
+<li>
+<p>Create a user account for Zepl</p>
+</li>
+</ol>
+<p><code>sh
+  ubuntu@user:~$ sudo useradd zepl</code></p>
+<ol>
+<li>
+<p>Since Zepl authenticates via public key, there's no need to set a password. Authorize the key by opening up <code>default.ssh.public_key</code> (the downloaded file)
+and pasting its contents into a new line in <code>/home/zepl/.ssh/authorized_keys</code>.
+Make sure the <code>authorized_keys</code> file has <code>600</code> permission.</p>
+</li>
+<li>
+<p>In most cases the SSH Port will be 22 by default. Check the <em>Port</em> variable in
+<code>/etc/ssh/sshd_config</code> to see which port is used for SSH.</p>
+</li>
+</ol>
+<p><code>sh
+  ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
+  Port 22</code></p>
+<p>Now you can use your newly created JDBC interpreter with your notebooks
+to query and process data.</p></div>
+                <div class="visible-xs">
+<h1 id="jdbc-interpreter"><a class="toclink" href="#jdbc-interpreter">JDBC Interpreter</a></h1>
+<p>Zepl supports a JDBC interpreter with drivers for popular databases. Drivers for the following databases are currently supported by Zepl:</p>
+<ul>
+<li>Mysql</li>
+<li>Oracle</li>
+<li>Postgresql</li>
+<li>Redshift</li>
+</ul>
+<p>For additional database connections, please contact <a href="mailto:support@zepl.com">support@zepl.com</a>.</p>
+<p>Before connecting to your database, it's important to check the following:</p>
+<ul>
+<li>the database is currently up and running</li>
+<li>the database is accessible from the public internet</li>
+<li>you have the proper credentials to access the database</li>
+</ul>
+<h2 id="creating-a-new-jdbc-interpreter"><a class="toclink" href="#creating-a-new-jdbc-interpreter">Creating a New JDBC Interpreter</a></h2>
+<p>First you'll need to create an interpreter to provide the database connection information as follows:</p>
+<ol>
+<li>Click the <em>Create interpreter</em> button from the Interpreter settings page</li>
+<li>Select <em>jdbc</em> from the <em>Interpreter type</em> group</li>
+<li>Provide a name for your interpreter (note that this name will be used in the notebook to call this JDBC interpreter)</li>
+<li>Provide the JDBC connection URL, username and password</li>
+<li>Select a JDBC driver from the dropdown menu</li>
+</ol>
+<p>Use the <em>Test connection</em> button to test the connection.</p>
+<h3 id="using-your-jdbc-database-interpreter"><a class="toclink" href="#using-your-jdbc-database-interpreter">Using Your JDBC Database Interpreter</a></h3>
+<p>Once you have created the JDBC interpreter, you can use it in your notebook by providing the <code>%[Interpreter name]</code> directive. For example, if you have created your JDBC interpreter with name "psql", you can use <code>%psql</code> in the notebook as follows:</p>
+<pre><code>%psql
+SELECT * from my_table
+</code></pre>
+<h2 id="secure-database-connections"><a class="toclink" href="#secure-database-connections">Secure Database Connections</a></h2>
+<h3 id="whitelist-ip-addresses"><a class="toclink" href="#whitelist-ip-addresses">Whitelist IP Addresses</a></h3>
+<p>Zepl connects to your database using the IP addresses below so you'll need to whitelist them in your firewall:</p>
+<ul>
+<li>34.214.146.198   </li>
+<li>35.164.138.115</li>
+<li>35.164.59.56     (NEW)</li>
+<li>35.166.141.251   (NEW)</li>
+<li>44.236.139.173   (NEW)</li>
+<li>52.24.205.101</li>
+<li>52.27.170.152    (NEW)</li>
+</ul>
+<h3 id="ssh-tunneling-for-private-networks"><a class="toclink" href="#ssh-tunneling-for-private-networks">SSH Tunneling for Private Networks</a></h3>
+<p>To connect to a database in a private network, create an SSH tunnel using the following steps:</p>
+<h4 id="-create-a-new-jdbc-interpreter"><a class="toclink" href="#-create-a-new-jdbc-interpreter">- Create a New JDBC Interpreter</a></h4>
+<ul>
+<li>Go to the <em>Interpreters</em> page and click <em>Create interpreter</em></li>
+<li>Select <em>JDBC</em> from the <em>Interpreter type</em></li>
+<li>Enable SSH tunneling in the <em>JDBC driver</em> area</li>
+</ul>
+<p><img src="../../../img/jdbc_tunnel.png" class="image-box img-70" /></p>
+<h4 id="-setup-the-public-key"><a class="toclink" href="#-setup-the-public-key">- Setup the Public Key</a></h4>
+<ol>
+<li>
+<p>Download our public key using the <em>Download</em> button and whitelist the IP addresses listed above through your firewall.</p>
+</li>
+<li>
+<p>Create a user account for Zepl</p>
+</li>
+</ol>
+<p><code>sh
+  ubuntu@user:~$ sudo useradd zepl</code></p>
+<ol>
+<li>
+<p>Since Zepl authenticates via public key, there's no need to set a password. Authorize the key by opening up <code>default.ssh.public_key</code> (the downloaded file)
+and pasting its contents into a new line in <code>/home/zepl/.ssh/authorized_keys</code>.
+Make sure the <code>authorized_keys</code> file has <code>600</code> permission.</p>
+</li>
+<li>
+<p>In most cases the SSH Port will be 22 by default. Check the <em>Port</em> variable in
+<code>/etc/ssh/sshd_config</code> to see which port is used for SSH.</p>
+</li>
+</ol>
+<p><code>sh
+  ubuntu@user:~$ cat /etc/ssh/sshd_config | grep Port
+  Port 22</code></p>
+<p>Now you can use your newly created JDBC interpreter with your notebooks
+to query and process data.</p></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

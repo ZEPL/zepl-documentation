@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Zepl Documentation Site">
+    <title>SaaS Image Builder - Zepl Documentation</title>
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/enterprise/custom_image_saas/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">SaaS Image Builder</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#custom-images">Custom Images</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#creating-a-new-custom-image">Creating a New Custom Image</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#adding-python-interpreter-libraries">Adding Python Interpreter &amp; Libraries</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#adding-r-interpreter-libraries">Adding R Interpreter &amp; Libraries</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#adding-spark-interpreter-libraries">Adding Spark Interpreter &amp; Libraries</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#adding-system-dependencies">Adding System Dependencies</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#custom-image-management">Custom Image Management</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#using-a-custom-image-in-a-notebook">Using a Custom Image In A Notebook</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="custom-images"><a class="toclink" href="#custom-images">Custom Images</a></h1>
+<p>Creating a reproducible environment for data science is a common challenge when working as a team. It is common practice to put several install commands at the beginning of a notebook or script to help ensure that others will be able to recreate your analysis. Unfortunately, this installation step can take a long time when many different libraries and packages are required. </p>
+<p>This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an "image", which is a prebuilt environment with all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.</p>
+<p>Contact support@zepl.com to get access and learn more!</p>
+<h1 id="creating-a-new-custom-image"><a class="toclink" href="#creating-a-new-custom-image">Creating a New Custom Image</a></h1>
+<p>Custom Images can easily be found under Resources. To start creating a new custom image, simply click "Create new". If you have another Custom Image which you’d like to modify as a template for your new image, you can also "Clone" that template under the actions for that Custom Image.</p>
+<p><img src="/img/CI_CREATE_NEW2.png" class="image-box img-100"/></p>
+<p>Each Custom Image should have a unique, descriptive name that makes it easy to find later. As a first step of creating a Custom Image, give your image a name and a description of what you plan to use it for. </p>
+<p><img src="/img/CI_CREATE_NEW_MODAL.png" class="image-box img-100"/></p>
+<p>After naming your image, you are ready to start configuring your Custom Image with interpreters, libraries, packages, and system dependencies. The syntax for doing this is documented below.</p>
+<p>To build your custom image, click the "Create" button at the bottom. Building the image will take a few minutes, and takes longer when more libraries are installed to the image. Sometimes builds can fail if the wrong syntax is used, or there is a library version mismatch issue. If that occurs, you can download a log in the image actions which describes where the build failed.  If the image builds successfully, congrats! You can now attach it to notebooks. If you’d like the image you created to be the standard for your entire organization, you can set it as the default image in the image actions. You can also edit or delete an image under these image actions. </p>
+<h1 id="adding-python-interpreter-libraries"><a class="toclink" href="#adding-python-interpreter-libraries">Adding Python Interpreter &amp; Libraries</a></h1>
+<p>To add a Python interpreter to a Custom Image, simply click "+ Python" in the image creation screen. Zepl supports Python 3.8 as the default Python interpreter and can be referenced by the %python alias,</p>
+<p><img src="/img/CI_CREATE_NEW_PYTHON.png" class="image-box img-100"/></p>
+<p>To add libraries to your custom image, you can use the following supported to install libraries using pip:</p>
+<pre><code>Libraryname
+libraryname==version
+</code></pre>
+<p>In addition to any libraries that you include in your custom image list, Zepl installs multiple Python libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running a pip list command in the notebook. The following is the syntax for doing so:</p>
+<pre><code>%python
+!pip list
+</code></pre>
+<p>As of July 2020, the list of libraries we install for Python in a custom image are the following:</p>
+<pre><code>grpcio==1.24.3 
+ipykernel==5.1.3 
+ipython==7.13.0 
+jupyter-client==5.3.4 
+protobuf==3.10.0 
+py4j==0.10.8.1
+boto3==1.10.9 
+cassandra-driver==3.22.0 
+google-cloud-bigquery==1.21.0 
+mysql-connector-python==8.0.18 
+snowflake-connector-python==2.2.7 
+hdbcli==2.4.167 
+psycopg2-binary==2.8.4 
+pyodps==0.8.4
+</code></pre>
+<h1 id="adding-r-interpreter-libraries"><a class="toclink" href="#adding-r-interpreter-libraries">Adding R Interpreter &amp; Libraries</a></h1>
+<p>To add an R interpreter to a Custom Image, simply click "+ R" in the interpreter creation screen. Zepl supports R 3.6 as the default R interpreter for custom image and can be referenced with the %r alias. </p>
+<p><img src="/img/CI_CREATE_NEW_R.png" class="image-box img-100"/></p>
+<p>To add libraries from a CRAN server to your custom image, you simply list out the libraries you hope to install on seperate lines. This installs packages similarly to using install.package("LibraryName") in the notebook</p>
+<pre><code>Libraryname1
+Libraryname2
+</code></pre>
+<p>In addition, you can install libraries using the devtools. The following syntaxes are supported:</p>
+<pre><code>devtools::install_github() from github
+devtools::install_bitbucket() from bitbucket
+devtools::install_url() from an arbitrary url
+devtools::install_version() installs a specified version from cran
+</code></pre>
+<p>In addition to any libraries that you include in your custom image list, R comes with many libraries already installed, and Zepl installs multiple R libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running a installed.packages() command. As of July 2020, the list of libraries we install for R in a custom image are the following:</p>
+<pre><code>devtools 
+DatabaseConnector 
+dplyr 
+knitr 
+rJava 
+RJDBC 
+snowflakedb/dplyr-snowflakedb
+</code></pre>
+<h1 id="adding-spark-interpreter-libraries"><a class="toclink" href="#adding-spark-interpreter-libraries">Adding Spark Interpreter &amp; Libraries</a></h1>
+<p>To add a Spark interpreter to a Custom Image, simply click "+ Spark" in the interpreter creation screen. Zepl supports Spark 2.3.2 as the default Spark interpreter for custom images, which can be refrenced with the %spark alias.</p>
+<p><img src="/img/CI_CREATE_NEW_SPARK.png" class="image-box img-100"/></p>
+<p>To add libraries to Spark, you can do so by adding maven dependencies on separate lines. Please note that we only support compile and exclude_group commands in the syntax today. </p>
+<pre><code>compile "commons-io:commons-io:2.6"
+compile("org.apache.hadoop:hadoop-aws:2.8.3") { exclude group ‘javax.servlet’, module: ‘servlet-api’}
+</code></pre>
+<p>In addition to any libraries that you include in your custom image list, Spark comes with many libraries already installed, and Zepl installs multiple Spark libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running the following code in the notebook:</p>
+<pre><code>%pyspark
+!ls /usr/zepl/interpreter/lib/
+</code></pre>
+<p>As of July 2020, the list of libraries we install for Spark in a custom image are the following:</p>
+<pre><code>interpreterDatasource "mysql:mysql-connector-java:8.0.18"
+interpreterDatasource "org.postgresql:postgresql:42.2.8"
+interpreterDatasource "net.snowflake:snowflake-jdbc:3.12.5"
+interpreterDatasource "com.sap.cloud.db.jdbc:ngdbc:2.4.63"
+interpreterDatasource "com.aliyun.odps:odps-jdbc:3.1.0"
+interpreterDatasource "com.google.cloud.spark:spark-bigquery-with-dependencies_2.11:0.15.1-beta"
+interpreterDatasource "com.aliyun.odps:odps-jdbc:3.1.0"
+interpreterDatasource("com.datastax.spark:spark-cassandra-connector_2.11:2.0.11")
+interpreterDatasource("net.snowflake:spark-snowflake_2.11:2.7.1-spark_2.2")
+interpreterDatasource("org.apache.spark:spark-hive_2.11:2.2.1")
+</code></pre>
+<h1 id="adding-system-dependencies"><a class="toclink" href="#adding-system-dependencies">Adding System Dependencies</a></h1>
+<p>You can add environmental variables and packages to your image with this feature. This can be helpful because certain libraries sometimes require underlying infrastructure to be installed to or environment variables set in the image for certain libraries to work properly. </p>
+<p>You can set an environment variable with very simple syntax: </p>
+<pre><code>VAR1=123
+VAR2=456
+</code></pre>
+<p>You can install packages from github directories with maven syntax. </p>
+<p><img src="/img/CI_CREATE_NEW_SYSTEM_DEPENDENCIES.png" class="image-box img-100"/></p>
+<h1 id="custom-image-management"><a class="toclink" href="#custom-image-management">Custom Image Management</a></h1>
+<p>Custom Images can easily be managed and analyzed from the Custom Images management console. For any existing image that you have created, you can see what it is called, who created the image, if the image successfully created, when it was created, and what notebooks are associated with the image. </p>
+<p><img src="/img/CI_MANAGEMENT.png" class="image-box img-100"/></p>
+<p>For any Custom Image that you are curious in learning more about, you can click on the row to learn more about how that custom image was constructed. Under the actions menu for custom images, you can perform the following operations: </p>
+<p><strong>Clone:</strong> This lets you use an existing image as a template to modify while creating a new image
+<strong>Edit:</strong> This lets the creator of an image modify the configuration of the image
+<strong>Delete:</strong> This lets the creator of an image delete the image
+<strong>Set as Default:</strong> This sets an image as the default image for all users in an organization</p>
+<h1 id="using-a-custom-image-in-a-notebook"><a class="toclink" href="#using-a-custom-image-in-a-notebook">Using a Custom Image In A Notebook</a></h1>
+<p>When you are creating a new notebook, you must select the Custom Image you want to use to execute code from that notebook.</p>
+<p><img src="/img/CI_NB_CREATE.png" class="image-box img-100"/></p>
+<p>In the notebook, we’ve designed a toolbar on the right hand side which helps you see what interpreters and libraries are available for you to use in your custom image. </p>
+<p><img src="/img/CI_NB_SIDEBAR.png" class="image-box img-100"/></p>
+<p>You can change this selection at any time for a given notebook by editing the notebook settings. To do so, your container must be shut down.</p>
+<p><img src="/img/CI_NB_SETTINGS.png" class="image-box img-100"/></p></div>
+                <div class="visible-xs">
+<h1 id="custom-images"><a class="toclink" href="#custom-images">Custom Images</a></h1>
+<p>Creating a reproducible environment for data science is a common challenge when working as a team. It is common practice to put several install commands at the beginning of a notebook or script to help ensure that others will be able to recreate your analysis. Unfortunately, this installation step can take a long time when many different libraries and packages are required. </p>
+<p>This is where Zepl Custom Images can help you and your team save significant time. Every time you run a notebook, you are spinning up a container which contains an "image", which is a prebuilt environment with all the libraries and settings your team needs for reproducible data science. Custom Images lets you create images that contain as many or as few libraries as your team needs.</p>
+<p>Contact support@zepl.com to get access and learn more!</p>
+<h1 id="creating-a-new-custom-image"><a class="toclink" href="#creating-a-new-custom-image">Creating a New Custom Image</a></h1>
+<p>Custom Images can easily be found under Resources. To start creating a new custom image, simply click "Create new". If you have another Custom Image which you’d like to modify as a template for your new image, you can also "Clone" that template under the actions for that Custom Image.</p>
+<p><img src="/img/CI_CREATE_NEW2.png" class="image-box img-100"/></p>
+<p>Each Custom Image should have a unique, descriptive name that makes it easy to find later. As a first step of creating a Custom Image, give your image a name and a description of what you plan to use it for. </p>
+<p><img src="/img/CI_CREATE_NEW_MODAL.png" class="image-box img-100"/></p>
+<p>After naming your image, you are ready to start configuring your Custom Image with interpreters, libraries, packages, and system dependencies. The syntax for doing this is documented below.</p>
+<p>To build your custom image, click the "Create" button at the bottom. Building the image will take a few minutes, and takes longer when more libraries are installed to the image. Sometimes builds can fail if the wrong syntax is used, or there is a library version mismatch issue. If that occurs, you can download a log in the image actions which describes where the build failed.  If the image builds successfully, congrats! You can now attach it to notebooks. If you’d like the image you created to be the standard for your entire organization, you can set it as the default image in the image actions. You can also edit or delete an image under these image actions. </p>
+<h1 id="adding-python-interpreter-libraries"><a class="toclink" href="#adding-python-interpreter-libraries">Adding Python Interpreter &amp; Libraries</a></h1>
+<p>To add a Python interpreter to a Custom Image, simply click "+ Python" in the image creation screen. Zepl supports Python 3.8 as the default Python interpreter and can be referenced by the %python alias,</p>
+<p><img src="/img/CI_CREATE_NEW_PYTHON.png" class="image-box img-100"/></p>
+<p>To add libraries to your custom image, you can use the following supported to install libraries using pip:</p>
+<pre><code>Libraryname
+libraryname==version
+</code></pre>
+<p>In addition to any libraries that you include in your custom image list, Zepl installs multiple Python libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running a pip list command in the notebook. The following is the syntax for doing so:</p>
+<pre><code>%python
+!pip list
+</code></pre>
+<p>As of July 2020, the list of libraries we install for Python in a custom image are the following:</p>
+<pre><code>grpcio==1.24.3 
+ipykernel==5.1.3 
+ipython==7.13.0 
+jupyter-client==5.3.4 
+protobuf==3.10.0 
+py4j==0.10.8.1
+boto3==1.10.9 
+cassandra-driver==3.22.0 
+google-cloud-bigquery==1.21.0 
+mysql-connector-python==8.0.18 
+snowflake-connector-python==2.2.7 
+hdbcli==2.4.167 
+psycopg2-binary==2.8.4 
+pyodps==0.8.4
+</code></pre>
+<h1 id="adding-r-interpreter-libraries"><a class="toclink" href="#adding-r-interpreter-libraries">Adding R Interpreter &amp; Libraries</a></h1>
+<p>To add an R interpreter to a Custom Image, simply click "+ R" in the interpreter creation screen. Zepl supports R 3.6 as the default R interpreter for custom image and can be referenced with the %r alias. </p>
+<p><img src="/img/CI_CREATE_NEW_R.png" class="image-box img-100"/></p>
+<p>To add libraries from a CRAN server to your custom image, you simply list out the libraries you hope to install on seperate lines. This installs packages similarly to using install.package("LibraryName") in the notebook</p>
+<pre><code>Libraryname1
+Libraryname2
+</code></pre>
+<p>In addition, you can install libraries using the devtools. The following syntaxes are supported:</p>
+<pre><code>devtools::install_github() from github
+devtools::install_bitbucket() from bitbucket
+devtools::install_url() from an arbitrary url
+devtools::install_version() installs a specified version from cran
+</code></pre>
+<p>In addition to any libraries that you include in your custom image list, R comes with many libraries already installed, and Zepl installs multiple R libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running a installed.packages() command. As of July 2020, the list of libraries we install for R in a custom image are the following:</p>
+<pre><code>devtools 
+DatabaseConnector 
+dplyr 
+knitr 
+rJava 
+RJDBC 
+snowflakedb/dplyr-snowflakedb
+</code></pre>
+<h1 id="adding-spark-interpreter-libraries"><a class="toclink" href="#adding-spark-interpreter-libraries">Adding Spark Interpreter &amp; Libraries</a></h1>
+<p>To add a Spark interpreter to a Custom Image, simply click "+ Spark" in the interpreter creation screen. Zepl supports Spark 2.3.2 as the default Spark interpreter for custom images, which can be refrenced with the %spark alias.</p>
+<p><img src="/img/CI_CREATE_NEW_SPARK.png" class="image-box img-100"/></p>
+<p>To add libraries to Spark, you can do so by adding maven dependencies on separate lines. Please note that we only support compile and exclude_group commands in the syntax today. </p>
+<pre><code>compile "commons-io:commons-io:2.6"
+compile("org.apache.hadoop:hadoop-aws:2.8.3") { exclude group ‘javax.servlet’, module: ‘servlet-api’}
+</code></pre>
+<p>In addition to any libraries that you include in your custom image list, Spark comes with many libraries already installed, and Zepl installs multiple Spark libraries to the image necessary for Zepl to function well. If you try to install a different version of these libraries, it is possible you may run into a compatibility issue. You can always see what versions of libraries you have installed in your image by running the following code in the notebook:</p>
+<pre><code>%pyspark
+!ls /usr/zepl/interpreter/lib/
+</code></pre>
+<p>As of July 2020, the list of libraries we install for Spark in a custom image are the following:</p>
+<pre><code>interpreterDatasource "mysql:mysql-connector-java:8.0.18"
+interpreterDatasource "org.postgresql:postgresql:42.2.8"
+interpreterDatasource "net.snowflake:snowflake-jdbc:3.12.5"
+interpreterDatasource "com.sap.cloud.db.jdbc:ngdbc:2.4.63"
+interpreterDatasource "com.aliyun.odps:odps-jdbc:3.1.0"
+interpreterDatasource "com.google.cloud.spark:spark-bigquery-with-dependencies_2.11:0.15.1-beta"
+interpreterDatasource "com.aliyun.odps:odps-jdbc:3.1.0"
+interpreterDatasource("com.datastax.spark:spark-cassandra-connector_2.11:2.0.11")
+interpreterDatasource("net.snowflake:spark-snowflake_2.11:2.7.1-spark_2.2")
+interpreterDatasource("org.apache.spark:spark-hive_2.11:2.2.1")
+</code></pre>
+<h1 id="adding-system-dependencies"><a class="toclink" href="#adding-system-dependencies">Adding System Dependencies</a></h1>
+<p>You can add environmental variables and packages to your image with this feature. This can be helpful because certain libraries sometimes require underlying infrastructure to be installed to or environment variables set in the image for certain libraries to work properly. </p>
+<p>You can set an environment variable with very simple syntax: </p>
+<pre><code>VAR1=123
+VAR2=456
+</code></pre>
+<p>You can install packages from github directories with maven syntax. </p>
+<p><img src="/img/CI_CREATE_NEW_SYSTEM_DEPENDENCIES.png" class="image-box img-100"/></p>
+<h1 id="custom-image-management"><a class="toclink" href="#custom-image-management">Custom Image Management</a></h1>
+<p>Custom Images can easily be managed and analyzed from the Custom Images management console. For any existing image that you have created, you can see what it is called, who created the image, if the image successfully created, when it was created, and what notebooks are associated with the image. </p>
+<p><img src="/img/CI_MANAGEMENT.png" class="image-box img-100"/></p>
+<p>For any Custom Image that you are curious in learning more about, you can click on the row to learn more about how that custom image was constructed. Under the actions menu for custom images, you can perform the following operations: </p>
+<p><strong>Clone:</strong> This lets you use an existing image as a template to modify while creating a new image
+<strong>Edit:</strong> This lets the creator of an image modify the configuration of the image
+<strong>Delete:</strong> This lets the creator of an image delete the image
+<strong>Set as Default:</strong> This sets an image as the default image for all users in an organization</p>
+<h1 id="using-a-custom-image-in-a-notebook"><a class="toclink" href="#using-a-custom-image-in-a-notebook">Using a Custom Image In A Notebook</a></h1>
+<p>When you are creating a new notebook, you must select the Custom Image you want to use to execute code from that notebook.</p>
+<p><img src="/img/CI_NB_CREATE.png" class="image-box img-100"/></p>
+<p>In the notebook, we’ve designed a toolbar on the right hand side which helps you see what interpreters and libraries are available for you to use in your custom image. </p>
+<p><img src="/img/CI_NB_SIDEBAR.png" class="image-box img-100"/></p>
+<p>You can change this selection at any time for a given notebook by editing the notebook settings. To do so, your container must be shut down.</p>
+<p><img src="/img/CI_NB_SETTINGS.png" class="image-box img-100"/></p></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

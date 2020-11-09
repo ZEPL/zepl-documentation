@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Zepl Documentation Site">
+    <title>Data Source Integrations - Zepl Documentation</title>
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/datasource/datasource_integration/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Data Source Integrations</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#data-source-integrations">Data Source Integrations</a></li>
+                    
+                        <li><a class="toctree-l4" href="#snowflake">Snowflake</a></li>
+                    
+                        <li><a class="toctree-l4" href="#amazon-s3">Amazon S3</a></li>
+                    
+                        <li><a class="toctree-l4" href="#mysql">MySQL</a></li>
+                    
+                        <li><a class="toctree-l4" href="#postgresql">PostgreSQL</a></li>
+                    
+                        <li><a class="toctree-l4" href="#cassandra">Cassandra</a></li>
+                    
+                        <li><a class="toctree-l4" href="#sap-hana">SAP Hana</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="data-source-integrations"><a class="toclink" href="#data-source-integrations">Data Source Integrations</a></h1>
+<p>Zepl currently integrates with Snowflake, S3, MySQL, PostgreSQL, Cassandra, and SAP HANA - we are constantly adding more, so let us know if something you were hoping to use is not yet available!
+All Data Source integrations follow the same flow for configuring - you name your Data Source and add a helpful description, you add JDBC connection string information, and you add a set of user-specific personal credentials to allow you to securely establish a connection. Mandatory fields vary slightly for each Data Source integration.</p>
+<h3 id="snowflake"><a class="toclink" href="#snowflake">Snowflake</a></h3>
+<h4 id="username-password"><a class="toclink" href="#username-password">Username &amp; Password</a></h4>
+<p>If your Snowflake instance is configured to log in with a Snowflake username and password, use this Data Source configuration option.</p>
+<p>Warehouse, Database, and Schema are an optional field to allow a Data Source to be defined a single time for many use cases, but if they are not provided, they must be declared in the SQL statements you send to snowflake.</p>
+<p>Role is also an optional field, and can be provided by users to refine their access to objects in Snowflake as defined by the Snowflake account permissions set by your administrator.</p>
+<p><img src="../../../img/datasource/snowflake_create_popup_1.png" class="image-box img-100" /></p>
+<h4 id="sso-authentication"><a class="toclink" href="#sso-authentication">SSO Authentication</a></h4>
+<p>If your Snowflake instance is configured to log in with an external authentication provider, use this Data Source configuration option. Your Snowflake administrator will need to go through <a href="./#configure-sso-authentication">a few steps to extend authentication from Snowflake to Zepl</a> before you will be able to establish a connection. You can follow the steps here.</p>
+<p>Warehouse, Database, and Schema are an optional field to allow a Data Source to be defined a single time for many use cases, but if they are not provided, they must be declared in the SQL statements you send to snowflake.</p>
+<p>Once the Snowflake account admin has properly integrated your snowflake instance with your snowflake security, you should be able to use whatever SSO provider your organization has elected to use to connect to your Snowflake instance.</p>
+<p>Role is also an optional credential field, and can be provided by users to refine their access to objects in Snowflake as defined by the Snowflake account permissions set by your administrator.  Schema is an optional field but is required for R.</p>
+<p><img src="../../../img/datasource/snowflake_create_popup_2.png" class="image-box img-100" /></p>
+<h4 id="configure-sso-authentication"><a class="toclink" href="#configure-sso-authentication">Configure SSO Authentication</a></h4>
+<p><strong>Step 1. Create an OAuth integration</strong></p>
+<p>To create an OAuth integration, execute the following <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-security-integration.html">CREATE SECURITY INTEGRATION</a> command in Snowflake with an account that has sufficient privilege.</p>
+<blockquote>
+<p>Only account administrators (users with the ACCOUNTADMIN role) or a role with the global CREATE INTEGRATION privilege can execute this SQL command</p>
+</blockquote>
+<pre><code class="language-sql">CREATE SECURITY INTEGRATION ZEPL_SSO_INTEGRATION
+  TYPE = OAUTH
+  ENABLED = TRUE
+  OAUTH_CLIENT = CUSTOM
+  OAUTH_CLIENT_TYPE = 'CONFIDENTIAL'
+  OAUTH_REDIRECT_URI = 'https://app.zepl.com/callbacks/snowflake-datasource-sso'
+  OAUTH_ISSUE_REFRESH_TOKENS = TRUE
+  OAUTH_REFRESH_TOKEN_VALIDITY = 7776000
+</code></pre>
+<p>For more information on customizing the configurations for an OAuth integration, please see <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-security-integration.html#id2">OAuth Custom Client Parameters​</a>.</p>
+<p>Please note that OAuth integration should be specified as following:</p>
+<ul>
+<li>OAUTH_CLIENT_TYPE must be set to <code>CONFIDENTIAL</code>. It allows the client (Zepl) to store a secret.</li>
+<li>OAUTH_REDIRECT_URI must be set to <code>https://app.zepl.com/callbacks/snowflake-datasource-sso</code>. After a user is authenticated, the web browser is redirected to this URI.</li>
+<li>OAUTH_ISSUE_REFRESH_TOKENS must be set to <code>TRUE</code>. It allows the client (Zepl) to exchange a refresh token for an access token when the current access token has expired.</li>
+<li>OAUTH_REFRESH_TOKEN_VALIDITY specifies how long an authentication should be valid (in seconds). The value is default to <code>7776000</code> (90 days). After the specified period passed after the authentication, you should re-authenticate in the detail page of the data source to continue the use of the data source.</li>
+</ul>
+<p><strong>Step 2. Create a Snowflake data source</strong></p>
+<p>After integrating OAuth, you can create a Snowflake data source without sharing or storing your login credentials on Zepl.</p>
+<blockquote>
+<p>You can also authenticate through an external, SAML 2.0-compliant identity provider (IdP) by enabling federated authentication.</p>
+<p>To configure your Snowflake account to use federated authentication, see <a href="https://docs.snowflake.net/manuals/user-guide/admin-security-fed-auth-configure-snowflake.html">Configuring Snowflake to Use Federated Authentication</a>.</p>
+</blockquote>
+<ol>
+<li>
+<p>Execute the <a href="https://docs.snowflake.net/manuals/sql-reference/functions/system_show_oauth_client_secrets.html">Snowflake function</a> <code>SELECT SYSTEM$SHOW_OAUTH_CLIENT_SECRETS('ZEPL_SSO_INTEGRATION')</code> in Snowflake to retrieve the client ID and secret for the integration you’ve created in the previous step and note the client ID and secret for the later step.
+Note that the integration name is case-sensitive and must be uppercase and enclosed in single quotes.</p>
+</li>
+<li>
+<p>In the Zepl application, go to the <em>Data Sources</em> page and choose <em>Snowflake</em> in the <em>Add Data Sources</em> section.</p>
+</li>
+<li>
+<p>Enter the unique name for the data source in <em>Name</em> field and account name provided by Snowflake in <em>Account</em> field.</p>
+</li>
+<li>
+<p>In <em>My Credentials</em> section, choose SSO.</p>
+</li>
+<li>
+<p>Click the Connect to Snowflake button. It will open the pop-up with the following title: <em>Log in to Snowflake to continue to ZEPL_SSO_INTEGRATION.</em>
+If it does not open the pop-up, please make sure that your browser is not blocking the pop-up. It will show the error message if the provided account name is invalid or does not match with the client ID.</p>
+</li>
+<li>
+<p>In the pop-up, enter your Snowflake credentials and choose the <em>Log In</em> button. You can also sign in via the IdP if federated authentication is enabled in the provided Snowflake account.
+The pop-up will be closed and you will see the message that you are successfully authenticated.</p>
+</li>
+<li>
+<p>Click the Save button. If the provided client secret is invalid or does not match with the client ID, you will see the error message and the data source will not be saved.</p>
+</li>
+</ol>
+<p><strong>Limitation</strong></p>
+<ul>
+<li>
+<p>Expiration of the authentication: The integration uses the refresh token to authenticate with Snowflake. The refresh tokens generated by Snowflake have a limited lifetime up to 90 days due to security reasons. The expiration of the refresh token can be configured by specifying the OAUTH_REFRESH_TOKEN_VALIDITY parameter. Every (up to) 90 days, the user who created the Snowflake data source with SSO should go to the detail page of the Snowflake data source and re-authenticate with a Snowflake account by clicking the <em>Connect to Snowflake</em> button to continue the use of the data source.</p>
+<blockquote>
+<p>The OAuth integration (client ID and secret) does not have an expiration and a user does not have to re-create the OAuth integration.</p>
+</blockquote>
+</li>
+<li>
+<p>JDBC interpreter is not supported.</p>
+</li>
+<li>Test connection is not supported.</li>
+</ul>
+<h3 id="amazon-s3"><a class="toclink" href="#amazon-s3">Amazon S3</a></h3>
+<p><img src="../../../img/datasource/s3_create_popup.png" class="image-box img-100" /></p>
+<h3 id="mysql"><a class="toclink" href="#mysql">MySQL</a></h3>
+<p><img src="../../../img/datasource/mysql_create_popup.png" class="image-box img-100" /></p>
+<h3 id="postgresql"><a class="toclink" href="#postgresql">PostgreSQL</a></h3>
+<p><img src="../../../img/datasource/postgresql_create_popup.png" class="image-box img-100" /></p>
+<h3 id="cassandra"><a class="toclink" href="#cassandra">Cassandra</a></h3>
+<p><img src="../../../img/datasource/cassandra_create_popup.png" class="image-box img-100" /></p>
+<h3 id="sap-hana"><a class="toclink" href="#sap-hana">SAP Hana</a></h3>
+<p><img src="../../../img/datasource/hana_create_popup.png" class="image-box img-100" /></p></div>
+                <div class="visible-xs">
+<h1 id="data-source-integrations"><a class="toclink" href="#data-source-integrations">Data Source Integrations</a></h1>
+<p>Zepl currently integrates with Snowflake, S3, MySQL, PostgreSQL, Cassandra, and SAP HANA - we are constantly adding more, so let us know if something you were hoping to use is not yet available!
+All Data Source integrations follow the same flow for configuring - you name your Data Source and add a helpful description, you add JDBC connection string information, and you add a set of user-specific personal credentials to allow you to securely establish a connection. Mandatory fields vary slightly for each Data Source integration.</p>
+<h3 id="snowflake"><a class="toclink" href="#snowflake">Snowflake</a></h3>
+<h4 id="username-password"><a class="toclink" href="#username-password">Username &amp; Password</a></h4>
+<p>If your Snowflake instance is configured to log in with a Snowflake username and password, use this Data Source configuration option.</p>
+<p>Warehouse, Database, and Schema are an optional field to allow a Data Source to be defined a single time for many use cases, but if they are not provided, they must be declared in the SQL statements you send to snowflake.</p>
+<p>Role is also an optional field, and can be provided by users to refine their access to objects in Snowflake as defined by the Snowflake account permissions set by your administrator.</p>
+<p><img src="../../../img/datasource/snowflake_create_popup_1.png" class="image-box img-100" /></p>
+<h4 id="sso-authentication"><a class="toclink" href="#sso-authentication">SSO Authentication</a></h4>
+<p>If your Snowflake instance is configured to log in with an external authentication provider, use this Data Source configuration option. Your Snowflake administrator will need to go through <a href="./#configure-sso-authentication">a few steps to extend authentication from Snowflake to Zepl</a> before you will be able to establish a connection. You can follow the steps here.</p>
+<p>Warehouse, Database, and Schema are an optional field to allow a Data Source to be defined a single time for many use cases, but if they are not provided, they must be declared in the SQL statements you send to snowflake.</p>
+<p>Once the Snowflake account admin has properly integrated your snowflake instance with your snowflake security, you should be able to use whatever SSO provider your organization has elected to use to connect to your Snowflake instance.</p>
+<p>Role is also an optional credential field, and can be provided by users to refine their access to objects in Snowflake as defined by the Snowflake account permissions set by your administrator.  Schema is an optional field but is required for R.</p>
+<p><img src="../../../img/datasource/snowflake_create_popup_2.png" class="image-box img-100" /></p>
+<h4 id="configure-sso-authentication"><a class="toclink" href="#configure-sso-authentication">Configure SSO Authentication</a></h4>
+<p><strong>Step 1. Create an OAuth integration</strong></p>
+<p>To create an OAuth integration, execute the following <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-security-integration.html">CREATE SECURITY INTEGRATION</a> command in Snowflake with an account that has sufficient privilege.</p>
+<blockquote>
+<p>Only account administrators (users with the ACCOUNTADMIN role) or a role with the global CREATE INTEGRATION privilege can execute this SQL command</p>
+</blockquote>
+<pre><code class="language-sql">CREATE SECURITY INTEGRATION ZEPL_SSO_INTEGRATION
+  TYPE = OAUTH
+  ENABLED = TRUE
+  OAUTH_CLIENT = CUSTOM
+  OAUTH_CLIENT_TYPE = 'CONFIDENTIAL'
+  OAUTH_REDIRECT_URI = 'https://app.zepl.com/callbacks/snowflake-datasource-sso'
+  OAUTH_ISSUE_REFRESH_TOKENS = TRUE
+  OAUTH_REFRESH_TOKEN_VALIDITY = 7776000
+</code></pre>
+<p>For more information on customizing the configurations for an OAuth integration, please see <a href="https://docs.snowflake.net/manuals/sql-reference/sql/create-security-integration.html#id2">OAuth Custom Client Parameters​</a>.</p>
+<p>Please note that OAuth integration should be specified as following:</p>
+<ul>
+<li>OAUTH_CLIENT_TYPE must be set to <code>CONFIDENTIAL</code>. It allows the client (Zepl) to store a secret.</li>
+<li>OAUTH_REDIRECT_URI must be set to <code>https://app.zepl.com/callbacks/snowflake-datasource-sso</code>. After a user is authenticated, the web browser is redirected to this URI.</li>
+<li>OAUTH_ISSUE_REFRESH_TOKENS must be set to <code>TRUE</code>. It allows the client (Zepl) to exchange a refresh token for an access token when the current access token has expired.</li>
+<li>OAUTH_REFRESH_TOKEN_VALIDITY specifies how long an authentication should be valid (in seconds). The value is default to <code>7776000</code> (90 days). After the specified period passed after the authentication, you should re-authenticate in the detail page of the data source to continue the use of the data source.</li>
+</ul>
+<p><strong>Step 2. Create a Snowflake data source</strong></p>
+<p>After integrating OAuth, you can create a Snowflake data source without sharing or storing your login credentials on Zepl.</p>
+<blockquote>
+<p>You can also authenticate through an external, SAML 2.0-compliant identity provider (IdP) by enabling federated authentication.</p>
+<p>To configure your Snowflake account to use federated authentication, see <a href="https://docs.snowflake.net/manuals/user-guide/admin-security-fed-auth-configure-snowflake.html">Configuring Snowflake to Use Federated Authentication</a>.</p>
+</blockquote>
+<ol>
+<li>
+<p>Execute the <a href="https://docs.snowflake.net/manuals/sql-reference/functions/system_show_oauth_client_secrets.html">Snowflake function</a> <code>SELECT SYSTEM$SHOW_OAUTH_CLIENT_SECRETS('ZEPL_SSO_INTEGRATION')</code> in Snowflake to retrieve the client ID and secret for the integration you’ve created in the previous step and note the client ID and secret for the later step.
+Note that the integration name is case-sensitive and must be uppercase and enclosed in single quotes.</p>
+</li>
+<li>
+<p>In the Zepl application, go to the <em>Data Sources</em> page and choose <em>Snowflake</em> in the <em>Add Data Sources</em> section.</p>
+</li>
+<li>
+<p>Enter the unique name for the data source in <em>Name</em> field and account name provided by Snowflake in <em>Account</em> field.</p>
+</li>
+<li>
+<p>In <em>My Credentials</em> section, choose SSO.</p>
+</li>
+<li>
+<p>Click the Connect to Snowflake button. It will open the pop-up with the following title: <em>Log in to Snowflake to continue to ZEPL_SSO_INTEGRATION.</em>
+If it does not open the pop-up, please make sure that your browser is not blocking the pop-up. It will show the error message if the provided account name is invalid or does not match with the client ID.</p>
+</li>
+<li>
+<p>In the pop-up, enter your Snowflake credentials and choose the <em>Log In</em> button. You can also sign in via the IdP if federated authentication is enabled in the provided Snowflake account.
+The pop-up will be closed and you will see the message that you are successfully authenticated.</p>
+</li>
+<li>
+<p>Click the Save button. If the provided client secret is invalid or does not match with the client ID, you will see the error message and the data source will not be saved.</p>
+</li>
+</ol>
+<p><strong>Limitation</strong></p>
+<ul>
+<li>
+<p>Expiration of the authentication: The integration uses the refresh token to authenticate with Snowflake. The refresh tokens generated by Snowflake have a limited lifetime up to 90 days due to security reasons. The expiration of the refresh token can be configured by specifying the OAUTH_REFRESH_TOKEN_VALIDITY parameter. Every (up to) 90 days, the user who created the Snowflake data source with SSO should go to the detail page of the Snowflake data source and re-authenticate with a Snowflake account by clicking the <em>Connect to Snowflake</em> button to continue the use of the data source.</p>
+<blockquote>
+<p>The OAuth integration (client ID and secret) does not have an expiration and a user does not have to re-create the OAuth integration.</p>
+</blockquote>
+</li>
+<li>
+<p>JDBC interpreter is not supported.</p>
+</li>
+<li>Test connection is not supported.</li>
+</ul>
+<h3 id="amazon-s3"><a class="toclink" href="#amazon-s3">Amazon S3</a></h3>
+<p><img src="../../../img/datasource/s3_create_popup.png" class="image-box img-100" /></p>
+<h3 id="mysql"><a class="toclink" href="#mysql">MySQL</a></h3>
+<p><img src="../../../img/datasource/mysql_create_popup.png" class="image-box img-100" /></p>
+<h3 id="postgresql"><a class="toclink" href="#postgresql">PostgreSQL</a></h3>
+<p><img src="../../../img/datasource/postgresql_create_popup.png" class="image-box img-100" /></p>
+<h3 id="cassandra"><a class="toclink" href="#cassandra">Cassandra</a></h3>
+<p><img src="../../../img/datasource/cassandra_create_popup.png" class="image-box img-100" /></p>
+<h3 id="sap-hana"><a class="toclink" href="#sap-hana">SAP Hana</a></h3>
+<p><img src="../../../img/datasource/hana_create_popup.png" class="image-box img-100" /></p></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

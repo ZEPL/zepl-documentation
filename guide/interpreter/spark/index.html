@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+    <meta name="title" content="Spark Interpreter | Zepl and Apache Spark">
+    <title>Spark Interpreter | Zepl and Apache Spark</title>
+      
+      
+    <meta name="description" content="Apache Spark is an open source processing engine built around speed, ease of use and sophisticated analytics. Learn about Zepl's Apache Spark interpreters.">
+      
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/interpreter/spark/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Apache Spark</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#apache-spark-interpreter">Apache Spark Interpreter</a></li>
+                    
+                        <li><a class="toctree-l4" href="#loading-data-from-aws-s3">Loading Data from AWS S3</a></li>
+                    
+                        <li><a class="toctree-l4" href="#loading-dependencies">Loading Dependencies</a></li>
+                    
+                        <li><a class="toctree-l4" href="#sparkr">SparkR</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="apache-spark-interpreter"><a class="toclink" href="#apache-spark-interpreter">Apache Spark Interpreter</a></h1>
+<p><a href="https://spark.apache.org">Apache Spark</a> is an open source processing engine built around speed, ease of use and sophisticated analytics. Zepl provides several interpreters for Apache Spark as follows:</p>
+<ul>
+<li><code>%spark</code> - provides a Scala environment</li>
+<li><code>%spark.pyspark</code> - provides a Python environment</li>
+<li><code>%spark.sql</code> - provides a SparkSQL environment</li>
+<li><code>%spark.dep</code> - loads dependency libraries into a Spark environment</li>
+<li><code>%spark.r</code> - provides an R environment</li>
+</ul>
+<p>A single Spark context is shared among <code>%spark</code>, <code>%spark.pyspark</code>, <code>%spark.sql</code> and <code>%spark.r</code> sessions. Zepl currently runs Apache Spark v2.3.0 on a single node (non-distributed) per notebook container.</p>
+<h2 id="loading-data-from-aws-s3"><a class="toclink" href="#loading-data-from-aws-s3">Loading Data from AWS S3</a></h2>
+<p>To create a dataset from AWS S3 it is recommended to use the <code>s3a</code> connector. First, you need to configure your access and secret keys as follows:</p>
+<pre><code class="language-scala">%spark
+sc.hadoopConfiguration.set(&quot;fs.s3a.access.key&quot;, &quot;[YOUR_ACCESS_KEY]&quot;)
+sc.hadoopConfiguration.set(&quot;fs.s3a.secret.key&quot;, &quot;[YOUR_SECRET_KEY]&quot;)
+</code></pre>
+<p>Then your Spark context will be able to create a dataset from S3 like so:</p>
+<pre><code class="language-scala">%spark
+val data = spark.read.text(&quot;s3a://apache-zeppelin/tutorial/bank/bank.csv&quot;)
+</code></pre>
+<p>Alternatively you can load data using the <code>s3n</code> connector. In this case your access and secret keys can be configured in the following way:</p>
+<pre><code class="language-scala">%spark
+sc.hadoopConfiguration.set(&quot;fs.s3n.awsAccessKeyId&quot;, &quot;[YOUR_ACCESS_KEY]&quot;)
+sc.hadoopConfiguration.set(&quot;fs.s3n.awsSecretAccessKey&quot;, &quot;[YOUR_SECRET_KEY]&quot;)
+</code></pre>
+<p>And your data accessed as follows:</p>
+<pre><code class="language-scala">%spark
+val data = sc.textFile(&quot;s3n://....&quot;)
+</code></pre>
+<p>You can reference the <a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL21vb24vY2RjMzQ1NTljOTkzNDNhMTk4NGE0ZWUzNjU1NjgxZWQvbm90ZS5qc29u">data loading example notebook</a> to try it yourself.</p>
+<h2 id="loading-dependencies"><a class="toclink" href="#loading-dependencies">Loading Dependencies</a></h2>
+<p>When your code requires external libraries <code>%spark.dep</code> helps load them from a maven repository. The <code>%spark.dep</code> interpreter leverages the Scala environment. You can write scala expressions to call dependency load APIs.</p>
+<p>Note that <code>%spark.dep</code> should be the first interpreter run in the notebook before <code>%spark</code>, <code>%spark.pyspark</code> or <code>%spark.sql</code>. Otherwise, <code>%spark.dep</code> will print error messages and you'll need to shutdown and restart the container for the notebook again.</p>
+<p>Check the <a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u">Spark dependency loading example notebook</a> for details.</p>
+<h3 id="usages"><a class="toclink" href="#usages">Usages</a></h3>
+<pre><code class="language-scala">%spark.dep
+z.reset() // clean up previously added artifact and repository
+
+// add maven repository
+z.addRepo(&quot;RepoName&quot;).url(&quot;RepoURL&quot;)
+
+// add maven snapshot repository
+z.addRepo(&quot;RepoName&quot;).url(&quot;RepoURL&quot;).snapshot()
+
+// add credentials for private maven repository
+z.addRepo(&quot;RepoName&quot;).url(&quot;RepoURL&quot;).username(&quot;username&quot;).password(&quot;password&quot;)
+
+// add artifact from filesystem
+z.load(&quot;/path/to.jar&quot;)
+
+// add artifact from maven repository, with no dependency
+z.load(&quot;groupId:artifactId:version&quot;).excludeAll()
+
+// add artifact recursively
+z.load(&quot;groupId:artifactId:version&quot;)
+
+// add artifact recursively except comma separated GroupID:ArtifactId list
+z.load(&quot;groupId:artifactId:version&quot;).exclude(&quot;groupId:artifactId,groupId:artifactId, ...&quot;)
+
+// exclude with pattern
+z.load(&quot;groupId:artifactId:version&quot;).exclude(*)
+z.load(&quot;groupId:artifactId:version&quot;).exclude(&quot;groupId:artifactId:*&quot;)
+z.load(&quot;groupId:artifactId:version&quot;).exclude(&quot;groupId:*&quot;)
+
+// local() skips adding artifact to spark clusters (skipping sc.addJar())
+z.load(&quot;groupId:artifactId:version&quot;).local()
+</code></pre>
+<h2 id="sparkr"><a class="toclink" href="#sparkr">SparkR</a></h2>
+<p>Installed libraries - <code>ggplot2</code>, <code>googleVis</code>, <code>knitr</code>, <code>data.table</code>, <code>devtools</code></p>
+<pre><code class="language-r">%spark.r
+library(googleVis)
+bubble &lt;- gvisBubbleChart(Fruits, idvar=&quot;Fruit&quot;,
+                          xvar=&quot;Sales&quot;, yvar=&quot;Expenses&quot;,
+                          colorvar=&quot;Year&quot;, sizevar=&quot;Profit&quot;,
+                          options=list(
+                            hAxis='{minValue:75, maxValue:125}'))
+print(bubble, tag = 'chart')
+</code></pre>
+<pre><code class="language-r">%spark.r
+plot(iris, col = heat.colors(3))
+</code></pre>
+<pre><code class="language-r">%spark.r
+library(ggplot2)
+pres_rating &lt;- data.frame(
+  rating = as.numeric(presidents),
+  year = as.numeric(floor(time(presidents))),
+  quarter = as.numeric(cycle(presidents))
+)
+p &lt;- ggplot(pres_rating, aes(x=year, y=quarter, fill=rating))
+</code></pre></div>
+                <div class="visible-xs">
+<h1 id="apache-spark-interpreter"><a class="toclink" href="#apache-spark-interpreter">Apache Spark Interpreter</a></h1>
+<p><a href="https://spark.apache.org">Apache Spark</a> is an open source processing engine built around speed, ease of use and sophisticated analytics. Zepl provides several interpreters for Apache Spark as follows:</p>
+<ul>
+<li><code>%spark</code> - provides a Scala environment</li>
+<li><code>%spark.pyspark</code> - provides a Python environment</li>
+<li><code>%spark.sql</code> - provides a SparkSQL environment</li>
+<li><code>%spark.dep</code> - loads dependency libraries into a Spark environment</li>
+<li><code>%spark.r</code> - provides an R environment</li>
+</ul>
+<p>A single Spark context is shared among <code>%spark</code>, <code>%spark.pyspark</code>, <code>%spark.sql</code> and <code>%spark.r</code> sessions. Zepl currently runs Apache Spark v2.3.0 on a single node (non-distributed) per notebook container.</p>
+<h2 id="loading-data-from-aws-s3"><a class="toclink" href="#loading-data-from-aws-s3">Loading Data from AWS S3</a></h2>
+<p>To create a dataset from AWS S3 it is recommended to use the <code>s3a</code> connector. First, you need to configure your access and secret keys as follows:</p>
+<pre><code class="language-scala">%spark
+sc.hadoopConfiguration.set(&quot;fs.s3a.access.key&quot;, &quot;[YOUR_ACCESS_KEY]&quot;)
+sc.hadoopConfiguration.set(&quot;fs.s3a.secret.key&quot;, &quot;[YOUR_SECRET_KEY]&quot;)
+</code></pre>
+<p>Then your Spark context will be able to create a dataset from S3 like so:</p>
+<pre><code class="language-scala">%spark
+val data = spark.read.text(&quot;s3a://apache-zeppelin/tutorial/bank/bank.csv&quot;)
+</code></pre>
+<p>Alternatively you can load data using the <code>s3n</code> connector. In this case your access and secret keys can be configured in the following way:</p>
+<pre><code class="language-scala">%spark
+sc.hadoopConfiguration.set(&quot;fs.s3n.awsAccessKeyId&quot;, &quot;[YOUR_ACCESS_KEY]&quot;)
+sc.hadoopConfiguration.set(&quot;fs.s3n.awsSecretAccessKey&quot;, &quot;[YOUR_SECRET_KEY]&quot;)
+</code></pre>
+<p>And your data accessed as follows:</p>
+<pre><code class="language-scala">%spark
+val data = sc.textFile(&quot;s3n://....&quot;)
+</code></pre>
+<p>You can reference the <a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL21vb24vY2RjMzQ1NTljOTkzNDNhMTk4NGE0ZWUzNjU1NjgxZWQvbm90ZS5qc29u">data loading example notebook</a> to try it yourself.</p>
+<h2 id="loading-dependencies"><a class="toclink" href="#loading-dependencies">Loading Dependencies</a></h2>
+<p>When your code requires external libraries <code>%spark.dep</code> helps load them from a maven repository. The <code>%spark.dep</code> interpreter leverages the Scala environment. You can write scala expressions to call dependency load APIs.</p>
+<p>Note that <code>%spark.dep</code> should be the first interpreter run in the notebook before <code>%spark</code>, <code>%spark.pyspark</code> or <code>%spark.sql</code>. Otherwise, <code>%spark.dep</code> will print error messages and you'll need to shutdown and restart the container for the notebook again.</p>
+<p>Check the <a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL21vb24vZjBmYWIwNGMzZTcxNDMwN2FjYzIxM2JkYmU3ZWIyZWEvbm90ZS5qc29u">Spark dependency loading example notebook</a> for details.</p>
+<h3 id="usages"><a class="toclink" href="#usages">Usages</a></h3>
+<pre><code class="language-scala">%spark.dep
+z.reset() // clean up previously added artifact and repository
+
+// add maven repository
+z.addRepo(&quot;RepoName&quot;).url(&quot;RepoURL&quot;)
+
+// add maven snapshot repository
+z.addRepo(&quot;RepoName&quot;).url(&quot;RepoURL&quot;).snapshot()
+
+// add credentials for private maven repository
+z.addRepo(&quot;RepoName&quot;).url(&quot;RepoURL&quot;).username(&quot;username&quot;).password(&quot;password&quot;)
+
+// add artifact from filesystem
+z.load(&quot;/path/to.jar&quot;)
+
+// add artifact from maven repository, with no dependency
+z.load(&quot;groupId:artifactId:version&quot;).excludeAll()
+
+// add artifact recursively
+z.load(&quot;groupId:artifactId:version&quot;)
+
+// add artifact recursively except comma separated GroupID:ArtifactId list
+z.load(&quot;groupId:artifactId:version&quot;).exclude(&quot;groupId:artifactId,groupId:artifactId, ...&quot;)
+
+// exclude with pattern
+z.load(&quot;groupId:artifactId:version&quot;).exclude(*)
+z.load(&quot;groupId:artifactId:version&quot;).exclude(&quot;groupId:artifactId:*&quot;)
+z.load(&quot;groupId:artifactId:version&quot;).exclude(&quot;groupId:*&quot;)
+
+// local() skips adding artifact to spark clusters (skipping sc.addJar())
+z.load(&quot;groupId:artifactId:version&quot;).local()
+</code></pre>
+<h2 id="sparkr"><a class="toclink" href="#sparkr">SparkR</a></h2>
+<p>Installed libraries - <code>ggplot2</code>, <code>googleVis</code>, <code>knitr</code>, <code>data.table</code>, <code>devtools</code></p>
+<pre><code class="language-r">%spark.r
+library(googleVis)
+bubble &lt;- gvisBubbleChart(Fruits, idvar=&quot;Fruit&quot;,
+                          xvar=&quot;Sales&quot;, yvar=&quot;Expenses&quot;,
+                          colorvar=&quot;Year&quot;, sizevar=&quot;Profit&quot;,
+                          options=list(
+                            hAxis='{minValue:75, maxValue:125}'))
+print(bubble, tag = 'chart')
+</code></pre>
+<pre><code class="language-r">%spark.r
+plot(iris, col = heat.colors(3))
+</code></pre>
+<pre><code class="language-r">%spark.r
+library(ggplot2)
+pres_rating &lt;- data.frame(
+  rating = as.numeric(presidents),
+  year = as.numeric(floor(time(presidents))),
+  quarter = as.numeric(cycle(presidents))
+)
+p &lt;- ggplot(pres_rating, aes(x=year, y=quarter, fill=rating))
+</code></pre></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

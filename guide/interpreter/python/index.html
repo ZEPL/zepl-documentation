@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+    <meta name="title" content="Online Python Interpreter | Zepl Documentation">
+    <title>Online Python Interpreter | Zepl Documentation</title>
+      
+      
+    <meta name="description" content="Zepl provides an online Python interpreter for several popular libraries including numby, scipy, and sagemaker. Learn more about managing Python environments.">
+      
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/interpreter/python/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Python</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#python-interpreter">Python Interpreter</a></li>
+                    
+                        <li><a class="toctree-l4" href="#pip">Pip</a></li>
+                    
+                        <li><a class="toctree-l4" href="#managing-python-environments">Managing Python Environments</a></li>
+                    
+                        <li><a class="toctree-l4" href="#ipython-support">IPython Support</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="python-interpreter"><a class="toclink" href="#python-interpreter">Python Interpreter</a></h1>
+<p><a href="https://www.python.org/">Python</a> is a general purpose programming language which is becoming increasingly popular among data analysts and data scientists due to the strength of its core libraries, simple data structures and growing wealth of packages and modules catering to data science, ML and AI.</p>
+<p>Zepl provides an online Python interpreter with the following popular libraries pre-installed:</p>
+<ul>
+<li><a href="http://www.numpy.org/">numpy</a>: a scientific computing library designed to efficiently manipulate large multi-dimensional arrays</li>
+<li><a href="https://www.scipy.org/">scipy</a>: a library that provides a large number of operations for scientific and engineering computing</li>
+<li><a href="http://pandas.pydata.org/">pandas</a>: an easy-to-use data structuring tool for data analysis</li>
+<li><a href="https://pypi.python.org/pypi/pandasql">pandasql</a>: a data manipulation tool using SQL syntax built on top of pandas Dataframes</li>
+<li><a href="http://matplotlib.org/">matplotlib</a>: a 2D plotting library</li>
+<li><a href="https://python-pillow.org/">Pillow</a>: Python Image Library supporting image manipulation of many different image file formats</li>
+<li><a href="https://plot.ly/">plotly</a>: interactive, D3 and WebGL charts</li>
+<li><a href="https://bokeh.pydata.org/">bokeh</a>: an interactive visualization library that targets modern web browsers for presentation</li>
+<li><a href="https://seaborn.pydata.org/">seaborn</a>: a Python data visualization library based on matplotlib, providing a high-level interface for drawing attractive and informative statistical graphics</li>
+<li><a href="http://boto3.readthedocs.io/">boto3</a>: AWS SDK for Python</li>
+<li><a href="http://scikit-learn.org/">scikit-learn</a>: a machine learning toolkit for data mining and analysis</li>
+<li><a href="https://www.tensorflow.org/">tensorflow</a>: a machine intelligent library that helps developer to design, build, and train deep learning models easily</li>
+<li><a href="https://keras.io">keras</a>: a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano</li>
+<li><a href="http://deeplearning.net/software/theano/">theano</a>: a library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.</li>
+<li><a href="https://aws.amazon.com/sagemaker">sagemaker</a>: a fully managed machine learning service which allows data scientists and developers to quickly and easily build and train machine learning models, and then directly deploy them into a production-ready hosted environment</li>
+<li><a href="https://www.statsmodels.org/">statsmodels</a>: a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration</li>
+<li><a href="https://www.nltk.org/">nltk</a>: a platform for building Python programs to work with human language data</li>
+<li><a href="https://scrapy.org/">scrapy</a>: a collaborative framework for extracting the data you need from websites</li>
+</ul>
+<h2 id="pip"><a class="toclink" href="#pip">Pip</a></h2>
+<p>Install additional libraries using <code>pip</code>.</p>
+<p>Usage</p>
+<pre><code>%python
+!pip install [packages]
+</code></pre>
+<p>Example:</p>
+<pre><code>%python
+!pip install -q keras
+import keras
+</code></pre>
+<p>The <code>pip</code> command installs packages in the current environment. If another environment is activated, it will install packages in the particular environment activated. Check the next section to create and switch multiple python environments.</p>
+<h2 id="managing-python-environments"><a class="toclink" href="#managing-python-environments">Managing Python Environments</a></h2>
+<p>If you'd like to install additional environments you can use the <code>conda</code> interpreter bundled with the Python interpreter. <a href="https://conda.io/docs/">Conda</a> is open an source package and environment management system which enables easy package installation and environment switching.</p>
+<h3 id="usages"><a class="toclink" href="#usages">Usages</a></h3>
+<p>Get <code>conda</code> information</p>
+<pre><code>%python.conda info
+</code></pre>
+<p>List your environments</p>
+<pre><code>%python.conda env list
+</code></pre>
+<p>Create an environment</p>
+<pre><code>%python.conda create --name [ENV_NAME]
+
+# or if you want to specify python version (e.g 3.6)
+%python.conda create --name [ENV_NAME] python=3.6
+</code></pre>
+<p>Activate an environment</p>
+<pre><code>%python.conda activate [ENV_NAME]
+</code></pre>
+<p>Deactivate an environment</p>
+<pre><code>%python.conda deactivate
+</code></pre>
+<p>List installed packages</p>
+<pre><code>%python.conda list
+</code></pre>
+<p>Install packages (see previous section to install packages via <code>pip</code>)</p>
+<pre><code>%python.conda install [PACKAGE1 PACKAGE2 ...]
+
+# or if you want to specify an environment name
+%python.conda install -n [ENV_NAME] [PACKAGE1 PACKAGE2 ...]
+</code></pre>
+<p>Uninstall packages</p>
+<pre><code>%python.conda uninstall [PACKAGE1 PACKAGE2 ...]
+</code></pre>
+<p>Help</p>
+<pre><code>%python.conda help
+</code></pre>
+<h2 id="ipython-support"><a class="toclink" href="#ipython-support">IPython Support</a></h2>
+<p>You can use <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html">IPython commands</a> with the default Python interpreter in Zepl as shown below:</p>
+<pre><code class="language-python">%python
+
+# !ls Run a shell command.
+# Install additional packages
+!pip install keras
+
+# object? Details about the object
+help?
+
+# Time execution of a Python statement or expression
+%timeit range(1000)
+</code></pre></div>
+                <div class="visible-xs">
+<h1 id="python-interpreter"><a class="toclink" href="#python-interpreter">Python Interpreter</a></h1>
+<p><a href="https://www.python.org/">Python</a> is a general purpose programming language which is becoming increasingly popular among data analysts and data scientists due to the strength of its core libraries, simple data structures and growing wealth of packages and modules catering to data science, ML and AI.</p>
+<p>Zepl provides an online Python interpreter with the following popular libraries pre-installed:</p>
+<ul>
+<li><a href="http://www.numpy.org/">numpy</a>: a scientific computing library designed to efficiently manipulate large multi-dimensional arrays</li>
+<li><a href="https://www.scipy.org/">scipy</a>: a library that provides a large number of operations for scientific and engineering computing</li>
+<li><a href="http://pandas.pydata.org/">pandas</a>: an easy-to-use data structuring tool for data analysis</li>
+<li><a href="https://pypi.python.org/pypi/pandasql">pandasql</a>: a data manipulation tool using SQL syntax built on top of pandas Dataframes</li>
+<li><a href="http://matplotlib.org/">matplotlib</a>: a 2D plotting library</li>
+<li><a href="https://python-pillow.org/">Pillow</a>: Python Image Library supporting image manipulation of many different image file formats</li>
+<li><a href="https://plot.ly/">plotly</a>: interactive, D3 and WebGL charts</li>
+<li><a href="https://bokeh.pydata.org/">bokeh</a>: an interactive visualization library that targets modern web browsers for presentation</li>
+<li><a href="https://seaborn.pydata.org/">seaborn</a>: a Python data visualization library based on matplotlib, providing a high-level interface for drawing attractive and informative statistical graphics</li>
+<li><a href="http://boto3.readthedocs.io/">boto3</a>: AWS SDK for Python</li>
+<li><a href="http://scikit-learn.org/">scikit-learn</a>: a machine learning toolkit for data mining and analysis</li>
+<li><a href="https://www.tensorflow.org/">tensorflow</a>: a machine intelligent library that helps developer to design, build, and train deep learning models easily</li>
+<li><a href="https://keras.io">keras</a>: a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano</li>
+<li><a href="http://deeplearning.net/software/theano/">theano</a>: a library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.</li>
+<li><a href="https://aws.amazon.com/sagemaker">sagemaker</a>: a fully managed machine learning service which allows data scientists and developers to quickly and easily build and train machine learning models, and then directly deploy them into a production-ready hosted environment</li>
+<li><a href="https://www.statsmodels.org/">statsmodels</a>: a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration</li>
+<li><a href="https://www.nltk.org/">nltk</a>: a platform for building Python programs to work with human language data</li>
+<li><a href="https://scrapy.org/">scrapy</a>: a collaborative framework for extracting the data you need from websites</li>
+</ul>
+<h2 id="pip"><a class="toclink" href="#pip">Pip</a></h2>
+<p>Install additional libraries using <code>pip</code>.</p>
+<p>Usage</p>
+<pre><code>%python
+!pip install [packages]
+</code></pre>
+<p>Example:</p>
+<pre><code>%python
+!pip install -q keras
+import keras
+</code></pre>
+<p>The <code>pip</code> command installs packages in the current environment. If another environment is activated, it will install packages in the particular environment activated. Check the next section to create and switch multiple python environments.</p>
+<h2 id="managing-python-environments"><a class="toclink" href="#managing-python-environments">Managing Python Environments</a></h2>
+<p>If you'd like to install additional environments you can use the <code>conda</code> interpreter bundled with the Python interpreter. <a href="https://conda.io/docs/">Conda</a> is open an source package and environment management system which enables easy package installation and environment switching.</p>
+<h3 id="usages"><a class="toclink" href="#usages">Usages</a></h3>
+<p>Get <code>conda</code> information</p>
+<pre><code>%python.conda info
+</code></pre>
+<p>List your environments</p>
+<pre><code>%python.conda env list
+</code></pre>
+<p>Create an environment</p>
+<pre><code>%python.conda create --name [ENV_NAME]
+
+# or if you want to specify python version (e.g 3.6)
+%python.conda create --name [ENV_NAME] python=3.6
+</code></pre>
+<p>Activate an environment</p>
+<pre><code>%python.conda activate [ENV_NAME]
+</code></pre>
+<p>Deactivate an environment</p>
+<pre><code>%python.conda deactivate
+</code></pre>
+<p>List installed packages</p>
+<pre><code>%python.conda list
+</code></pre>
+<p>Install packages (see previous section to install packages via <code>pip</code>)</p>
+<pre><code>%python.conda install [PACKAGE1 PACKAGE2 ...]
+
+# or if you want to specify an environment name
+%python.conda install -n [ENV_NAME] [PACKAGE1 PACKAGE2 ...]
+</code></pre>
+<p>Uninstall packages</p>
+<pre><code>%python.conda uninstall [PACKAGE1 PACKAGE2 ...]
+</code></pre>
+<p>Help</p>
+<pre><code>%python.conda help
+</code></pre>
+<h2 id="ipython-support"><a class="toclink" href="#ipython-support">IPython Support</a></h2>
+<p>You can use <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html">IPython commands</a> with the default Python interpreter in Zepl as shown below:</p>
+<pre><code class="language-python">%python
+
+# !ls Run a shell command.
+# Install additional packages
+!pip install keras
+
+# object? Details about the object
+help?
+
+# Time execution of a Python statement or expression
+%timeit range(1000)
+</code></pre></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Zepl Documentation Site">
+    <title>VPC zcr Utility - Zepl Documentation</title>
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/enterprise/custom_image_zcr/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">VPC zcr Utility</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#requirements">Requirements</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#installation">Installation</a></li>
+                    
+                        <li><a class="toctree-l4" href="#registration">Registration</a></li>
+                    
+                        <li><a class="toctree-l4" href="#definition-file-spec">Definition File Spec</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#trouble-shooting">Trouble Shooting</a></li>
+                    
+                        <li><a class="toctree-l4" href="#verifying-installed-interpreters">Verifying Installed Interpreters</a></li>
+                    
+                        <li><a class="toctree-l4" href="#testing-spark-and-hadoop-versions">Testing Spark and Hadoop Versions</a></li>
+                    
+                        <li><a class="toctree-l4" href="#testing-r-version-and-libraries">Testing R Version and Libraries</a></li>
+                    
+                        <li><a class="toctree-l4" href="#testing-python-version-and-packages">Testing Python Version and Packages</a></li>
+                    
+                        <li><a class="toctree-l4" href="#testing-installed-jdbc-jars">Testing Installed JDBC Jars</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h3 id="requirements"><a class="toclink" href="#requirements">Requirements</a></h3>
+<p>Currently the <code>zcr</code> supports macOS and 64-bit Linux. Please contact us if you need support for additional operating systems.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker</td>
+<td>CE 18.06 +</td>
+<td><a href="https://store.docker.com/search?type=edition&amp;offering=community">Install Docker Community Edition</a></td>
+</tr>
+<tr>
+<td>AWS CLI</td>
+<td>1.15.31 +</td>
+<td><a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html">Install AWS CLI</a></td>
+</tr>
+</tbody>
+</table>
+<p>You'll also need AWS resources to push the built images to <a href="https://aws.amazon.com/ecr/">AWS ECR</a>:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey">create the AWS key pair</a> and export it to the terminal
+    <code>bash
+    export IAM=1ambda AWS_ACCESS_KEY_ID={VALUE} AWS_SECRET_ACCESS_KEY={VALUE}</code></li>
+<li>the AWS keys should have <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/ecr_managed_policies.html">AWS ECR push permissions</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html">create the AWS ECR</a> in the same region as the Zepl deployment</li>
+</ul>
+<pre><code class="language-bash"># you can create an ECR repository using the AWS cli as well
+# https://docs.aws.amazon.com/cli/latest/reference/ecr/create-repository.html
+aws create-repository --repository-name {NAME} --region {REGION}
+</code></pre>
+<h3 id="installation"><a class="toclink" href="#installation">Installation</a></h3>
+<p><code>zcr</code> can be installed/updated via the commands below:</p>
+<pre><code class="language-bash">curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | bash -
+
+# note that you may need to run the sudo version below, or alternatively chown /usr/local
+curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | sudo bash -
+</code></pre>
+<p><code>zcr</code> will be installed in <code>/usr/local/bin</code> by default and you should now be able to run it in the terminal as follows:</p>
+<pre><code class="language-bash">$zcr help
+
+  zcr [command]
+
+Available Commands:
+  build       Build Zepl interpreter docker image from the files generated by `template` command
+  create      Create Zepl interpreter docker image based on the given definition file (.yaml)
+  help        Help about any command
+  push        Push Zepl interpreter docker image from the files generated by `build` command
+  register    Register the built Zepl interpreter docker image into the service database
+  template    Template Zepl interpreter Dockerfile based on the given definition file (.yaml)
+  version     Print the version information
+
+Flags:
+  -d, --dry-run   (optional) If specified, will not push and print JSON output.
+  -h, --help      help for zcr
+
+Use &quot;zcr [command] --help&quot; for more information about a command.
+</code></pre>
+<h4 id="registration"><a class="toclink" href="#registration">Registration</a></h4>
+<p><code>zcr</code> requires a definition file which defines custom packages for interpreters such as R libraries and Pip packages. With the <code>zcr create</code> command users are able to build/push/register custom interpreter images.</p>
+<p>For an explanation of the definition file, please refer to the <a href="../custom_image_support/#definition-file-spec">definition section below</a>.</p>
+<pre><code class="language-bash"># make sure that you exported `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as env variables
+# replace `{PATH}` with the file path to your definition file
+
+$ export TOKEN=$(aws ecr get-login --no-include-email --region us-west-2 | cut -d&quot; &quot; -f6)
+$ zcr create --definition {PATH} --password ${TOKEN}
+
+# or you can pass the ECR auth token directly
+
+$ zcr create --definition ./spark2.definition.yaml \
+  --password $(aws ecr get-login --no-include-email --region us-west-2 | cut -d&quot; &quot; -f6)
+</code></pre>
+<p>The command will take a few minutes to run depending on your network speed. If the process is successful you will see the following messages:</p>
+<pre><code class="language-bash">Successfully built c5c7c63c2bff
+Successfully tagged 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
+
+2018-09-03T16:29:41.968+0900    INFO    Successfully built image 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
+2018-09-03T16:33:55.688+0900    INFO    Successfully registered test-interpreter-image:v1 into https://XXXX.zepl.com/api/...
+</code></pre>
+<p>Please follow the steps below to use the registered interpreter image:</p>
+<ol>
+<li>Create a new resource image (or select an existing one) from the <em>Image Type</em> area at the bottom of the resource definition page</li>
+<li>Select the registered image type (the name will be <code>image.name:image.tag</code>)</li>
+<li>Create or update the resource</li>
+<li>Select the resource in your notebook settings</li>
+</ol>
+<p><img src="../../../img/custom_image_support/custom-image-resource.png" class="image-box img-100" /></p>
+<h4 id="definition-file-spec"><a class="toclink" href="#definition-file-spec">Definition File Spec</a></h4>
+<p>Custom interpreter definition files are written in YAML format. The following fields must be set for each user:</p>
+<ul>
+<li><code>meta.service_domain</code>: service domain including protocol (e.g. <code>https://...</code>)</li>
+<li><code>image.repository</code>: docker image repository (e.g. <code>0000000000.dkr.ecr.us-west-2.amazonaws.com</code>)</li>
+<li><code>image.name</code>: docker image name which should match the ECR repository name (e.g. <code>custom-image</code>)</li>
+<li><code>image.tag</code>: docker image tag (e.g. <code>v1</code>)</li>
+<li><code>image.description</code>: description for docker image tag which will be displayed in the Zepl UI</li>
+</ul>
+<p>Registered image names appear as <code>image.name:image.tag</code> in the UI.</p>
+<blockquote>
+<p>WARNING: If the <code>image.repository:image.name:image:tag</code> image already exists it will be overwritten when pushing a new version. If you'd like this to appear as a separate image please modify the <code>image.tag</code> component of the concatenated image name.</p>
+</blockquote>
+<p>Below is an example definition file with 
+system package and interpreter definition field sections settable by the user. Please refer to the comments for help:</p>
+<pre><code class="language-yaml">meta:
+  service_domain: &quot;https://{DOMAIN}&quot;   # Service Domain
+
+image:
+  type: &quot;docker&quot;
+  repository: &quot;&quot;                       # Image Repository e.g `0000000000.dkr.ecr.us-west-2.amazonaws.com`
+  name: &quot;custom-image&quot;       # Image Name (= ECR repository name)
+  tag: &quot;v1&quot;                            # Image Tag
+  description: &quot;Test Zepl Interpreter&quot; # Image Description
+
+system:
+  type: &quot;debian&quot;
+  packages:
+  - name: &quot;git&quot;
+    install: &quot;apt-get install -y git&quot;
+    verify: &quot;git version&quot;
+  - name: &quot;unzip&quot;
+
+interpreter:
+
+  # currently only supports Python versions 2.7.x and 3.x
+  python:
+    version: &quot;2&quot;
+    # remove `python.pip_mirror` if you don't need it
+    pip_mirror:
+      index_url: &quot;http://ftp.daumkakao.com/pypi/simple&quot;
+      trusted_host: &quot;ftp.daumkakao.com&quot;
+    packages:
+    - name: &quot;matplotlib&quot;
+      version: &quot;2.2.2&quot;
+    - name: &quot;numpy&quot;
+      version: &quot;1.14.3&quot;
+    - name: &quot;pandas&quot;
+      version: &quot;0.22.0&quot;
+
+  # currently only supports spark versions `2.1.2`, `2.2.1` and `2.3.0`
+  spark:
+    version: &quot;2.3.0&quot;
+    dependency:
+    packages:
+    # currently only supports hadoop version `2.8.3`
+    - name: &quot;hadoop&quot;
+      type: &quot;hadoop&quot;
+      version: &quot;2.8.3&quot;
+
+  # currently only supports R verisons `3.3`, `3.4` and `3.5`
+  r:
+    version: &quot;3.5&quot;
+    # remove `r.cran_mirror` if you don't need it
+    cran_mirror: &quot;https://ftp.harukasan.org/CRAN&quot;
+    packages:
+    - name: &quot;knitr&quot;    # `knitr` is required for Zepl's %spark.r
+    - name: &quot;ggplot2&quot;
+    - name: &quot;devtools::install_github('rasmusab/bayesian_first_aid')&quot;
+      type: &quot;devtools&quot;
+
+  jdbc:
+    repository:
+      # define additional/private maven repositories (`mavenLocal` and `mavenCentral` are used by default)
+      maven:
+      - url: &quot;http://redshift-maven-repository.s3-website-us-east-1.amazonaws.com/release&quot;
+
+    packages:
+    # download athena JDBC jar from URL directly
+    - name: &quot;athena&quot;
+      version: &quot;com.amazonaws.athena.jdbc:AthenaJDBC41:2.0.5&quot;
+      type: &quot;maven:url&quot;
+      url: &quot;https://s3.amazonaws.com/athena-downloads/drivers/JDBC/SimbaAthenaJDBC_2.0.5/AthenaJDBC41_2.0.5.jar&quot;
+
+    # download mysql JDBC jar from maven repositories
+    - name: &quot;mysql&quot;
+      version: &quot;mysql:mysql-connector-java:5.1.46&quot;
+    - name: &quot;postgresql&quot;
+      version: &quot;org.postgresql:postgresql:42.2.2&quot;
+    - name: &quot;redshift&quot;
+      version: &quot;com.amazon.redshift:redshift-jdbc41:1.2.15.1025&quot;
+</code></pre>
+<h3 id="trouble-shooting"><a class="toclink" href="#trouble-shooting">Trouble Shooting</a></h3>
+<p><code>zcr</code>'s <em>create</em> command is a combination of the following commands, each of which can execute separately:</p>
+<ul>
+<li><code>template</code>: generates templates based on the given definition file</li>
+<li><code>build</code>: builds docker images from the Dockerfile generated by the <code>template</code> command</li>
+<li><code>push</code>: pushes the built docker image into the docker repository (ECR)</li>
+<li><code>register</code>: registers the pushed docker image into the Zepl database</li>
+</ul>
+<p>For required parameters please run <code>zcr help</code> (e.g <code>zcr template --help</code>).</p>
+<h4 id="verifying-installed-interpreters"><a class="toclink" href="#verifying-installed-interpreters">Verifying Installed Interpreters</a></h4>
+<p>To test whether libraries/packages are installed correctly in your custom image, you can use the following commands in notebook paragraphs for the respective interpreters.</p>
+<blockquote>
+<p>Note: make sure the custom image is attached to the notebook.</p>
+</blockquote>
+<h4 id="testing-spark-and-hadoop-versions"><a class="toclink" href="#testing-spark-and-hadoop-versions">Testing Spark and Hadoop Versions</a></h4>
+<pre><code class="language-scala">%spark
+
+println(sc.version)
+</code></pre>
+<pre><code>%python
+
+!ls -al /usr/ZEPL | grep hadoop
+</code></pre>
+<h4 id="testing-r-version-and-libraries"><a class="toclink" href="#testing-r-version-and-libraries">Testing R Version and Libraries</a></h4>
+<pre><code>%python
+
+!R --version
+</code></pre>
+<pre><code>%spark.r
+
+library(ggplot2)
+</code></pre>
+<h4 id="testing-python-version-and-packages"><a class="toclink" href="#testing-python-version-and-packages">Testing Python Version and Packages</a></h4>
+<pre><code class="language-python">%python
+
+import sys
+print(sys.version)
+</code></pre>
+<pre><code class="language-python">import pandas
+</code></pre>
+<h4 id="testing-installed-jdbc-jars"><a class="toclink" href="#testing-installed-jdbc-jars">Testing Installed JDBC Jars</a></h4>
+<pre><code>%python
+
+!ls -al /usr/ZEPL/interpreter/lib | grep mysql
+!ls -al /usr/ZEPL/interpreter/lib | grep athena
+</code></pre></div>
+                <div class="visible-xs">
+<h3 id="requirements"><a class="toclink" href="#requirements">Requirements</a></h3>
+<p>Currently the <code>zcr</code> supports macOS and 64-bit Linux. Please contact us if you need support for additional operating systems.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker</td>
+<td>CE 18.06 +</td>
+<td><a href="https://store.docker.com/search?type=edition&amp;offering=community">Install Docker Community Edition</a></td>
+</tr>
+<tr>
+<td>AWS CLI</td>
+<td>1.15.31 +</td>
+<td><a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html">Install AWS CLI</a></td>
+</tr>
+</tbody>
+</table>
+<p>You'll also need AWS resources to push the built images to <a href="https://aws.amazon.com/ecr/">AWS ECR</a>:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey">create the AWS key pair</a> and export it to the terminal
+    <code>bash
+    export IAM=1ambda AWS_ACCESS_KEY_ID={VALUE} AWS_SECRET_ACCESS_KEY={VALUE}</code></li>
+<li>the AWS keys should have <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/ecr_managed_policies.html">AWS ECR push permissions</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html">create the AWS ECR</a> in the same region as the Zepl deployment</li>
+</ul>
+<pre><code class="language-bash"># you can create an ECR repository using the AWS cli as well
+# https://docs.aws.amazon.com/cli/latest/reference/ecr/create-repository.html
+aws create-repository --repository-name {NAME} --region {REGION}
+</code></pre>
+<h3 id="installation"><a class="toclink" href="#installation">Installation</a></h3>
+<p><code>zcr</code> can be installed/updated via the commands below:</p>
+<pre><code class="language-bash">curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | bash -
+
+# note that you may need to run the sudo version below, or alternatively chown /usr/local
+curl https://s3-us-west-2.amazonaws.com/io.zepl.asset.public/zcr/dist/install.sh | sudo bash -
+</code></pre>
+<p><code>zcr</code> will be installed in <code>/usr/local/bin</code> by default and you should now be able to run it in the terminal as follows:</p>
+<pre><code class="language-bash">$zcr help
+
+  zcr [command]
+
+Available Commands:
+  build       Build Zepl interpreter docker image from the files generated by `template` command
+  create      Create Zepl interpreter docker image based on the given definition file (.yaml)
+  help        Help about any command
+  push        Push Zepl interpreter docker image from the files generated by `build` command
+  register    Register the built Zepl interpreter docker image into the service database
+  template    Template Zepl interpreter Dockerfile based on the given definition file (.yaml)
+  version     Print the version information
+
+Flags:
+  -d, --dry-run   (optional) If specified, will not push and print JSON output.
+  -h, --help      help for zcr
+
+Use &quot;zcr [command] --help&quot; for more information about a command.
+</code></pre>
+<h4 id="registration"><a class="toclink" href="#registration">Registration</a></h4>
+<p><code>zcr</code> requires a definition file which defines custom packages for interpreters such as R libraries and Pip packages. With the <code>zcr create</code> command users are able to build/push/register custom interpreter images.</p>
+<p>For an explanation of the definition file, please refer to the <a href="../custom_image_support/#definition-file-spec">definition section below</a>.</p>
+<pre><code class="language-bash"># make sure that you exported `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as env variables
+# replace `{PATH}` with the file path to your definition file
+
+$ export TOKEN=$(aws ecr get-login --no-include-email --region us-west-2 | cut -d&quot; &quot; -f6)
+$ zcr create --definition {PATH} --password ${TOKEN}
+
+# or you can pass the ECR auth token directly
+
+$ zcr create --definition ./spark2.definition.yaml \
+  --password $(aws ecr get-login --no-include-email --region us-west-2 | cut -d&quot; &quot; -f6)
+</code></pre>
+<p>The command will take a few minutes to run depending on your network speed. If the process is successful you will see the following messages:</p>
+<pre><code class="language-bash">Successfully built c5c7c63c2bff
+Successfully tagged 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
+
+2018-09-03T16:29:41.968+0900    INFO    Successfully built image 8XXXXXXXX.dkr.ecr.us-west-2.amazonaws.com/test-interpreter-image:v1
+2018-09-03T16:33:55.688+0900    INFO    Successfully registered test-interpreter-image:v1 into https://XXXX.zepl.com/api/...
+</code></pre>
+<p>Please follow the steps below to use the registered interpreter image:</p>
+<ol>
+<li>Create a new resource image (or select an existing one) from the <em>Image Type</em> area at the bottom of the resource definition page</li>
+<li>Select the registered image type (the name will be <code>image.name:image.tag</code>)</li>
+<li>Create or update the resource</li>
+<li>Select the resource in your notebook settings</li>
+</ol>
+<p><img src="../../../img/custom_image_support/custom-image-resource.png" class="image-box img-100" /></p>
+<h4 id="definition-file-spec"><a class="toclink" href="#definition-file-spec">Definition File Spec</a></h4>
+<p>Custom interpreter definition files are written in YAML format. The following fields must be set for each user:</p>
+<ul>
+<li><code>meta.service_domain</code>: service domain including protocol (e.g. <code>https://...</code>)</li>
+<li><code>image.repository</code>: docker image repository (e.g. <code>0000000000.dkr.ecr.us-west-2.amazonaws.com</code>)</li>
+<li><code>image.name</code>: docker image name which should match the ECR repository name (e.g. <code>custom-image</code>)</li>
+<li><code>image.tag</code>: docker image tag (e.g. <code>v1</code>)</li>
+<li><code>image.description</code>: description for docker image tag which will be displayed in the Zepl UI</li>
+</ul>
+<p>Registered image names appear as <code>image.name:image.tag</code> in the UI.</p>
+<blockquote>
+<p>WARNING: If the <code>image.repository:image.name:image:tag</code> image already exists it will be overwritten when pushing a new version. If you'd like this to appear as a separate image please modify the <code>image.tag</code> component of the concatenated image name.</p>
+</blockquote>
+<p>Below is an example definition file with 
+system package and interpreter definition field sections settable by the user. Please refer to the comments for help:</p>
+<pre><code class="language-yaml">meta:
+  service_domain: &quot;https://{DOMAIN}&quot;   # Service Domain
+
+image:
+  type: &quot;docker&quot;
+  repository: &quot;&quot;                       # Image Repository e.g `0000000000.dkr.ecr.us-west-2.amazonaws.com`
+  name: &quot;custom-image&quot;       # Image Name (= ECR repository name)
+  tag: &quot;v1&quot;                            # Image Tag
+  description: &quot;Test Zepl Interpreter&quot; # Image Description
+
+system:
+  type: &quot;debian&quot;
+  packages:
+  - name: &quot;git&quot;
+    install: &quot;apt-get install -y git&quot;
+    verify: &quot;git version&quot;
+  - name: &quot;unzip&quot;
+
+interpreter:
+
+  # currently only supports Python versions 2.7.x and 3.x
+  python:
+    version: &quot;2&quot;
+    # remove `python.pip_mirror` if you don't need it
+    pip_mirror:
+      index_url: &quot;http://ftp.daumkakao.com/pypi/simple&quot;
+      trusted_host: &quot;ftp.daumkakao.com&quot;
+    packages:
+    - name: &quot;matplotlib&quot;
+      version: &quot;2.2.2&quot;
+    - name: &quot;numpy&quot;
+      version: &quot;1.14.3&quot;
+    - name: &quot;pandas&quot;
+      version: &quot;0.22.0&quot;
+
+  # currently only supports spark versions `2.1.2`, `2.2.1` and `2.3.0`
+  spark:
+    version: &quot;2.3.0&quot;
+    dependency:
+    packages:
+    # currently only supports hadoop version `2.8.3`
+    - name: &quot;hadoop&quot;
+      type: &quot;hadoop&quot;
+      version: &quot;2.8.3&quot;
+
+  # currently only supports R verisons `3.3`, `3.4` and `3.5`
+  r:
+    version: &quot;3.5&quot;
+    # remove `r.cran_mirror` if you don't need it
+    cran_mirror: &quot;https://ftp.harukasan.org/CRAN&quot;
+    packages:
+    - name: &quot;knitr&quot;    # `knitr` is required for Zepl's %spark.r
+    - name: &quot;ggplot2&quot;
+    - name: &quot;devtools::install_github('rasmusab/bayesian_first_aid')&quot;
+      type: &quot;devtools&quot;
+
+  jdbc:
+    repository:
+      # define additional/private maven repositories (`mavenLocal` and `mavenCentral` are used by default)
+      maven:
+      - url: &quot;http://redshift-maven-repository.s3-website-us-east-1.amazonaws.com/release&quot;
+
+    packages:
+    # download athena JDBC jar from URL directly
+    - name: &quot;athena&quot;
+      version: &quot;com.amazonaws.athena.jdbc:AthenaJDBC41:2.0.5&quot;
+      type: &quot;maven:url&quot;
+      url: &quot;https://s3.amazonaws.com/athena-downloads/drivers/JDBC/SimbaAthenaJDBC_2.0.5/AthenaJDBC41_2.0.5.jar&quot;
+
+    # download mysql JDBC jar from maven repositories
+    - name: &quot;mysql&quot;
+      version: &quot;mysql:mysql-connector-java:5.1.46&quot;
+    - name: &quot;postgresql&quot;
+      version: &quot;org.postgresql:postgresql:42.2.2&quot;
+    - name: &quot;redshift&quot;
+      version: &quot;com.amazon.redshift:redshift-jdbc41:1.2.15.1025&quot;
+</code></pre>
+<h3 id="trouble-shooting"><a class="toclink" href="#trouble-shooting">Trouble Shooting</a></h3>
+<p><code>zcr</code>'s <em>create</em> command is a combination of the following commands, each of which can execute separately:</p>
+<ul>
+<li><code>template</code>: generates templates based on the given definition file</li>
+<li><code>build</code>: builds docker images from the Dockerfile generated by the <code>template</code> command</li>
+<li><code>push</code>: pushes the built docker image into the docker repository (ECR)</li>
+<li><code>register</code>: registers the pushed docker image into the Zepl database</li>
+</ul>
+<p>For required parameters please run <code>zcr help</code> (e.g <code>zcr template --help</code>).</p>
+<h4 id="verifying-installed-interpreters"><a class="toclink" href="#verifying-installed-interpreters">Verifying Installed Interpreters</a></h4>
+<p>To test whether libraries/packages are installed correctly in your custom image, you can use the following commands in notebook paragraphs for the respective interpreters.</p>
+<blockquote>
+<p>Note: make sure the custom image is attached to the notebook.</p>
+</blockquote>
+<h4 id="testing-spark-and-hadoop-versions"><a class="toclink" href="#testing-spark-and-hadoop-versions">Testing Spark and Hadoop Versions</a></h4>
+<pre><code class="language-scala">%spark
+
+println(sc.version)
+</code></pre>
+<pre><code>%python
+
+!ls -al /usr/ZEPL | grep hadoop
+</code></pre>
+<h4 id="testing-r-version-and-libraries"><a class="toclink" href="#testing-r-version-and-libraries">Testing R Version and Libraries</a></h4>
+<pre><code>%python
+
+!R --version
+</code></pre>
+<pre><code>%spark.r
+
+library(ggplot2)
+</code></pre>
+<h4 id="testing-python-version-and-packages"><a class="toclink" href="#testing-python-version-and-packages">Testing Python Version and Packages</a></h4>
+<pre><code class="language-python">%python
+
+import sys
+print(sys.version)
+</code></pre>
+<pre><code class="language-python">import pandas
+</code></pre>
+<h4 id="testing-installed-jdbc-jars"><a class="toclink" href="#testing-installed-jdbc-jars">Testing Installed JDBC Jars</a></h4>
+<pre><code>%python
+
+!ls -al /usr/ZEPL/interpreter/lib | grep mysql
+!ls -al /usr/ZEPL/interpreter/lib | grep athena
+</code></pre></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

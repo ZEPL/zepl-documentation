@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Zepl Documentation Site">
+    <title>Organization Permissions - Zepl Documentation</title>
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/accesscontrols/organization_permissions/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 current">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Organization Permissions</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#organization-permissions">Organization Permissions</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#permission-model">Permission Model</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#view-security-policies">View Security Policies</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#edit-policy-permissions">Edit Policy Permissions</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#create-new-policy">Create New Policy</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#assigning-policies-to-users">Assigning Policies to Users</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#default-policies">Default Policies</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#default-permissions">Default Permissions</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="organization-permissions"><a class="toclink" href="#organization-permissions">Organization Permissions</a></h1>
+<h1 id="permission-model"><a class="toclink" href="#permission-model">Permission Model</a></h1>
+<p>Permissions in Zepl are organized by centrally managed Security Policies. These policies can be highly customized with granular and specific permissions around actions in the product. After understanding the product level permissions available to you in the policies, you can assign team members to use those policies and gain access to those permissions. </p>
+<p>Each team member can be assigned multiple Security Policies, and their permissions to perform actions in Zepl are the sum of all the permissions granted to them by the Security Policies. Zepl provides several convenient Security Policies for you to use out of the box, and it's easy for you to build policies customized for the particular needs of your enterprise.</p>
+<h1 id="view-security-policies"><a class="toclink" href="#view-security-policies">View Security Policies</a></h1>
+<p>Security Policies are located under Settings. Not everyone can view and edit security policies for an organization - you need the appropriate permission to do so. This permission is granted by default to "Organization Owners" and "Security Administrators".</p>
+<p><img src="/img/ViewSecurityPolicies.gif" class="image-box img-100"/></p>
+<h1 id="edit-policy-permissions"><a class="toclink" href="#edit-policy-permissions">Edit Policy Permissions</a></h1>
+<p>When looking at the list of security policies, click on any security policy to see what permissions are assigned to that policy. To edit what permissions are associated with a policy, you simply need to click on the check mark next to a policy. To make your edits permanent changes to the policy, simply click Save.</p>
+<p><img src="/img/EditPolicyPermissions.gif" class="image-box img-100"/></p>
+<h1 id="create-new-policy"><a class="toclink" href="#create-new-policy">Create New Policy</a></h1>
+<p>Creating a new policy is very similar to viewing and editing an existing one. Click "New Policy" above the list of current security policies to start the process. Give the policy a name, select the permissions you want associated with the policy, and click "Save" to finish creating the policy.</p>
+<p><img src="/img/CreateNewPolicy.gif" class="image-box img-100"/></p>
+<h1 id="assigning-policies-to-users"><a class="toclink" href="#assigning-policies-to-users">Assigning Policies to Users</a></h1>
+<p>To assign users to policies, navigate to the Members page under Settings. You can assign policies to an individual team member by clicking on their name to access their profile page. Select any policies you would like to assign to the user on the members profile page and click save.</p>
+<p>Assigning policies to users requires a permission of "Assign and unassign security policies". This permission is granted by default to "Organization Owners" and "Security Administrators".</p>
+<p>Whenever you invite a user to join your organization, you can also assign policies to this user at the same time if you have the permission to assign users to policies.</p>
+<h1 id="default-policies"><a class="toclink" href="#default-policies">Default Policies</a></h1>
+<p>Zepl comes with several out-of-the-box policies that you can use to grant permissions to organization members. These policies can be changed to customize your needs.</p>
+<p><img src="/Default Policies.png" class="image-box img-100"/></p>
+<h1 id="default-permissions"><a class="toclink" href="#default-permissions">Default Permissions</a></h1>
+<p>The following permissions are available for you to include in a policy:</p>
+<p><img src="/Default Permissions.png" class="image-box img-100"/></p></div>
+                <div class="visible-xs">
+<h1 id="organization-permissions"><a class="toclink" href="#organization-permissions">Organization Permissions</a></h1>
+<h1 id="permission-model"><a class="toclink" href="#permission-model">Permission Model</a></h1>
+<p>Permissions in Zepl are organized by centrally managed Security Policies. These policies can be highly customized with granular and specific permissions around actions in the product. After understanding the product level permissions available to you in the policies, you can assign team members to use those policies and gain access to those permissions. </p>
+<p>Each team member can be assigned multiple Security Policies, and their permissions to perform actions in Zepl are the sum of all the permissions granted to them by the Security Policies. Zepl provides several convenient Security Policies for you to use out of the box, and it's easy for you to build policies customized for the particular needs of your enterprise.</p>
+<h1 id="view-security-policies"><a class="toclink" href="#view-security-policies">View Security Policies</a></h1>
+<p>Security Policies are located under Settings. Not everyone can view and edit security policies for an organization - you need the appropriate permission to do so. This permission is granted by default to "Organization Owners" and "Security Administrators".</p>
+<p><img src="/img/ViewSecurityPolicies.gif" class="image-box img-100"/></p>
+<h1 id="edit-policy-permissions"><a class="toclink" href="#edit-policy-permissions">Edit Policy Permissions</a></h1>
+<p>When looking at the list of security policies, click on any security policy to see what permissions are assigned to that policy. To edit what permissions are associated with a policy, you simply need to click on the check mark next to a policy. To make your edits permanent changes to the policy, simply click Save.</p>
+<p><img src="/img/EditPolicyPermissions.gif" class="image-box img-100"/></p>
+<h1 id="create-new-policy"><a class="toclink" href="#create-new-policy">Create New Policy</a></h1>
+<p>Creating a new policy is very similar to viewing and editing an existing one. Click "New Policy" above the list of current security policies to start the process. Give the policy a name, select the permissions you want associated with the policy, and click "Save" to finish creating the policy.</p>
+<p><img src="/img/CreateNewPolicy.gif" class="image-box img-100"/></p>
+<h1 id="assigning-policies-to-users"><a class="toclink" href="#assigning-policies-to-users">Assigning Policies to Users</a></h1>
+<p>To assign users to policies, navigate to the Members page under Settings. You can assign policies to an individual team member by clicking on their name to access their profile page. Select any policies you would like to assign to the user on the members profile page and click save.</p>
+<p>Assigning policies to users requires a permission of "Assign and unassign security policies". This permission is granted by default to "Organization Owners" and "Security Administrators".</p>
+<p>Whenever you invite a user to join your organization, you can also assign policies to this user at the same time if you have the permission to assign users to policies.</p>
+<h1 id="default-policies"><a class="toclink" href="#default-policies">Default Policies</a></h1>
+<p>Zepl comes with several out-of-the-box policies that you can use to grant permissions to organization members. These policies can be changed to customize your needs.</p>
+<p><img src="/Default Policies.png" class="image-box img-100"/></p>
+<h1 id="default-permissions"><a class="toclink" href="#default-permissions">Default Permissions</a></h1>
+<p>The following permissions are available for you to include in a policy:</p>
+<p><img src="/Default Permissions.png" class="image-box img-100"/></p></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

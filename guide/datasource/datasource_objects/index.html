@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Zepl Documentation Site">
+    <title>Using Zepl Data Sources - Zepl Documentation</title>
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/datasource/datasource_objects/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Using Zepl Data Sources</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#data-source-objects-and-libraries">Data Source Objects and Libraries</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="data-source-objects-and-libraries"><a class="toclink" href="#data-source-objects-and-libraries">Data Source Objects and Libraries</a></h1>
+<p>This article will cover all of the data types that are returned by Zepl’s secure data source objects. In order to build a standard method for accessing any data source, Zepl has built data source connectors to support one or all of the four programming languages used by data scientists; Python, R, Scala, and SQL.</p>
+<p>Zepl has created a simple, secure, and standard method for all users to access their data. Zepl’s data sources allow each user to securely store their user credentials through our encrypted keychain. </p>
+<p>Each programming language supports different access methods to each of these data sources. We will walk through what objects are returned upon connecting to each data source. This will give you the best insight to take advantage of our features and troubleshoot any errors that may arise.</p>
+<ul>
+<li><a href="#snowflake">Snowflake</a></li>
+<li><a href="#s3">Amazon S3</a></li>
+<li><a href="#google-bigquery">Google BigQuery</a></li>
+<li><a href="#mysql">MySQL</a></li>
+<li><a href="#postgresql">PostgreSQL</a></li>
+<li><a href="#cassandra">Apache Cassandra</a></li>
+<li><a href="#sap-hana">SAP HANA</a></li>
+<li><a href="#alibaba-maxcompute">Alibaba MaxCompute</a></li>
+</ul>
+<hr>
+
+# Snowflake
+
+### Configure
+* Account (required)
+* Warehouse (optional - can be specified at the beginning of the session)
+* Database (optional - can be specified in each query)
+* Schema (optional - can be specified in each query)
+
+>Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:
+<br>
+>
+>`cur = z.getDatasource("<data source name>")` <br>
+>`cur.execute("USE WAREHOUSE <warehouse>")`
+
+<!--<img src="../../../img/datasource/snowflake_create_popup_1.png" class="image-box img-100" />-->
+
+### Read from Snowflake
+
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python   |`cur = z.getDatasource("<data source name>")` <br> <br>`conn = z.getDatasource("<data source name>_con")`  | <a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-cursor">Snowflake Cursor Object</a><br><br><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-connection">Snowflake Connection Object</a> | Snowflake-connector-python - v2.0.3 |
+| R / SparkR | `conn <- z.getDatasource("<data source name>")` | [DBIConnection object:](https://www.rdocumentation.org/packages/DBI/versions/0.5-1/topics/DBIConnection-class){:target="_blank"} Zepl function uses the `dbConnect()` function from the DPLYR library |  |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"} |
+| SQL | `%datasource.<data source name>` | JDBC connection to Snowflake | |
+
+>Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
+
+### Write data to Snowflake
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24){:target="_blank"}
+
+# Amazon S3
+### Configure
+* Bucket Name (required)
+
+<!--<img src="../../../img/datasource/s3_create_popup.png" class="image-box img-100" />-->
+
+### Read data from Amazon S3
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|---------|------|-----------------|---------|
+|Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket){:target="_blank"} | Boto3 - v1.10.9
+
+### Write data to Amazon S3
+[Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413){:target="_blank"}
+
+# Google BigQuery
+### Configure
+* Google Cloud Project ID (required)
+
+<!--<img src="../../../img/datasource/bigquery_create_popup.png" class="image-box img-100" />-->
+
+### Read data from BigQuery
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `client = z.getDatasource("<data source name>")` | [BigQuery Client Object](https://googleapis.dev/python/bigquery/latest/reference.html#client){:target="_blank"}| google-cloud-bigquery - v1.21.0 |
+
+### Write data to BigQuery
+>Example coming soon!
+
+# MySQL
+### Configure
+* Host (required)
+* Port (required)
+* Database (optional)
+
+<!--<img src="../../../img/datasource/mysql_create_popup.png" class="image-box img-100" />-->
+
+### Read data from MySQL
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `conn = z.getDatasource("<data source name>")` | [mysql.connector.connect](https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html){:target="_blank"}|mysql-connector-python - v8.0.18 |
+| SQL | `%datasource.<data source name>`| | |
+
+### Write data to MySQL
+>Example coming soon!
+
+# PostgreSQL
+### Configure
+* Host (required)
+* Port (required)
+* Database (optional)
+
+<!--<img src="../../../img/datasource/postgresql_create_popup.png" class="image-box img-100" />-->
+
+### Read data from PostgreSQL
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html){:target="_blank"} | psycopg2-binary - v2.8.4 |
+| SQL | `%datasource.<data source name>`| | |
+
+### Write data to PostgreSQL
+>Example coming soon!
+
+# Apache Cassandra
+### Configure
+* Host (required)
+* Port (required)
+* Keyspace (optional)
+
+<!--<img src="../../../img/datasource/cassandra_create_popup.png" class="image-box img-100" />-->
+
+### Read data from Apache Cassandra
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session){:target="_blank"}| cassandra-driver - v3.20.0 |
+
+### Write data to Apache Cassandra
+>Example coming soon!
+
+# SAP HANA
+### Configure
+* Host (required)
+* Port (required)
+* Database (optional)
+
+<!--<img src="../../../img/datasource/hana_create_popup.png" class="image-box img-100" />-->
+
+### Read data from SAP HANA
+>Example coming soon!
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `conn = z.getDatasource("<data source name>")` | [dbapi.connect](https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html){:target="_blank"} | hdbcli - v2.4.167 |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"}|
+
+### Write data to SAP HANA
+>Example coming soon!
+
+# Alibaba MaxCompute
+### Configure
+* Endpoint (required)
+* Region (required)
+* Project (required)
+
+<!--<img src="../../../img/datasource/maxcompute_create_popup.png" class="image-box img-100" />-->
+
+### Read data from Alibaba MaxCompute
+>Example coming soon!
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `odps = z.getDatasource("<data source name>")` | [ODPS Object](https://pyodps.readthedocs.io/en/latest/index.html)| pyodps - v0.8.4 |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html) | odps-jdbc-3.1.0.jar |
+
+### Read data to Alibaba MaxCompute
+>Example coming soon!</div>
+                <div class="visible-xs">
+<h1 id="data-source-objects-and-libraries"><a class="toclink" href="#data-source-objects-and-libraries">Data Source Objects and Libraries</a></h1>
+<p>This article will cover all of the data types that are returned by Zepl’s secure data source objects. In order to build a standard method for accessing any data source, Zepl has built data source connectors to support one or all of the four programming languages used by data scientists; Python, R, Scala, and SQL.</p>
+<p>Zepl has created a simple, secure, and standard method for all users to access their data. Zepl’s data sources allow each user to securely store their user credentials through our encrypted keychain. </p>
+<p>Each programming language supports different access methods to each of these data sources. We will walk through what objects are returned upon connecting to each data source. This will give you the best insight to take advantage of our features and troubleshoot any errors that may arise.</p>
+<ul>
+<li><a href="#snowflake">Snowflake</a></li>
+<li><a href="#s3">Amazon S3</a></li>
+<li><a href="#google-bigquery">Google BigQuery</a></li>
+<li><a href="#mysql">MySQL</a></li>
+<li><a href="#postgresql">PostgreSQL</a></li>
+<li><a href="#cassandra">Apache Cassandra</a></li>
+<li><a href="#sap-hana">SAP HANA</a></li>
+<li><a href="#alibaba-maxcompute">Alibaba MaxCompute</a></li>
+</ul>
+<hr>
+
+# Snowflake
+
+### Configure
+* Account (required)
+* Warehouse (optional - can be specified at the beginning of the session)
+* Database (optional - can be specified in each query)
+* Schema (optional - can be specified in each query)
+
+>Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:
+<br>
+>
+>`cur = z.getDatasource("<data source name>")` <br>
+>`cur.execute("USE WAREHOUSE <warehouse>")`
+
+<!--<img src="../../../img/datasource/snowflake_create_popup_1.png" class="image-box img-100" />-->
+
+### Read from Snowflake
+
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python   |`cur = z.getDatasource("<data source name>")` <br> <br>`conn = z.getDatasource("<data source name>_con")`  | <a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-cursor">Snowflake Cursor Object</a><br><br><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-connection">Snowflake Connection Object</a> | Snowflake-connector-python - v2.0.3 |
+| R / SparkR | `conn <- z.getDatasource("<data source name>")` | [DBIConnection object:](https://www.rdocumentation.org/packages/DBI/versions/0.5-1/topics/DBIConnection-class){:target="_blank"} Zepl function uses the `dbConnect()` function from the DPLYR library |  |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"} |
+| SQL | `%datasource.<data source name>` | JDBC connection to Snowflake | |
+
+>Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
+
+### Write data to Snowflake
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24){:target="_blank"}
+
+# Amazon S3
+### Configure
+* Bucket Name (required)
+
+<!--<img src="../../../img/datasource/s3_create_popup.png" class="image-box img-100" />-->
+
+### Read data from Amazon S3
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|---------|------|-----------------|---------|
+|Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket){:target="_blank"} | Boto3 - v1.10.9
+
+### Write data to Amazon S3
+[Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413){:target="_blank"}
+
+# Google BigQuery
+### Configure
+* Google Cloud Project ID (required)
+
+<!--<img src="../../../img/datasource/bigquery_create_popup.png" class="image-box img-100" />-->
+
+### Read data from BigQuery
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `client = z.getDatasource("<data source name>")` | [BigQuery Client Object](https://googleapis.dev/python/bigquery/latest/reference.html#client){:target="_blank"}| google-cloud-bigquery - v1.21.0 |
+
+### Write data to BigQuery
+>Example coming soon!
+
+# MySQL
+### Configure
+* Host (required)
+* Port (required)
+* Database (optional)
+
+<!--<img src="../../../img/datasource/mysql_create_popup.png" class="image-box img-100" />-->
+
+### Read data from MySQL
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `conn = z.getDatasource("<data source name>")` | [mysql.connector.connect](https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html){:target="_blank"}|mysql-connector-python - v8.0.18 |
+| SQL | `%datasource.<data source name>`| | |
+
+### Write data to MySQL
+>Example coming soon!
+
+# PostgreSQL
+### Configure
+* Host (required)
+* Port (required)
+* Database (optional)
+
+<!--<img src="../../../img/datasource/postgresql_create_popup.png" class="image-box img-100" />-->
+
+### Read data from PostgreSQL
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html){:target="_blank"} | psycopg2-binary - v2.8.4 |
+| SQL | `%datasource.<data source name>`| | |
+
+### Write data to PostgreSQL
+>Example coming soon!
+
+# Apache Cassandra
+### Configure
+* Host (required)
+* Port (required)
+* Keyspace (optional)
+
+<!--<img src="../../../img/datasource/cassandra_create_popup.png" class="image-box img-100" />-->
+
+### Read data from Apache Cassandra
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session){:target="_blank"}| cassandra-driver - v3.20.0 |
+
+### Write data to Apache Cassandra
+>Example coming soon!
+
+# SAP HANA
+### Configure
+* Host (required)
+* Port (required)
+* Database (optional)
+
+<!--<img src="../../../img/datasource/hana_create_popup.png" class="image-box img-100" />-->
+
+### Read data from SAP HANA
+>Example coming soon!
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `conn = z.getDatasource("<data source name>")` | [dbapi.connect](https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html){:target="_blank"} | hdbcli - v2.4.167 |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"}|
+
+### Write data to SAP HANA
+>Example coming soon!
+
+# Alibaba MaxCompute
+### Configure
+* Endpoint (required)
+* Region (required)
+* Project (required)
+
+<!--<img src="../../../img/datasource/maxcompute_create_popup.png" class="image-box img-100" />-->
+
+### Read data from Alibaba MaxCompute
+>Example coming soon!
+
+| Language | Code | Object Returned | Library |
+|----------|------|-----------------|---------|
+| Python | `odps = z.getDatasource("<data source name>")` | [ODPS Object](https://pyodps.readthedocs.io/en/latest/index.html)| pyodps - v0.8.4 |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html) | odps-jdbc-3.1.0.jar |
+
+### Read data to Alibaba MaxCompute
+>Example coming soon!</div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Zepl Documentation Site">
+    <title>Data Sources - Zepl Documentation</title>
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/datasource/datasource/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Data Sources</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#data-sources">Data Sources</a></li>
+                    
+                        <li><a class="toctree-l4" href="#establishing-a-data-source-connection">Establishing a Data Source Connection</a></li>
+                    
+                        <li><a class="toctree-l4" href="#adding-credentials-to-an-existing-data-source">Adding Credentials to An Existing Data Source</a></li>
+                    
+                        <li><a class="toctree-l4" href="#managing-data-sources">Managing Data Sources</a></li>
+                    
+                        <li><a class="toctree-l4" href="#exploring-data-from-a-data-source">Exploring Data from a Data Source</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="data-sources"><a class="toclink" href="#data-sources">Data Sources</a></h1>
+<p>Zepl Data Sources enable you to securely connect to the database of your choice with your personal credentials. It allows users a secure way to save JDBC connection configurations and to use those configurations in the notebook. Each user is able to add their own credentials to a datasource, making it easy to maintain a library of secure data connections that everyone on the team can use.</p>
+<h3 id="establishing-a-data-source-connection"><a class="toclink" href="#establishing-a-data-source-connection">Establishing a Data Source Connection</a></h3>
+<ol>
+<li>
+<p>Click the <em>Data Source</em> icon in the upper right side to open the data source panel and click the <em>Add New</em> button.
+<img src="../../../img/datasource/snowflake_note.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Select a Data Source type. Zepl currently integrates with Snowflake, S3, MySQL, PostgreSQL, Cassandra, and SAP HANA - we are constantly adding more, so let us know if something you were hoping to use is not yet available!
+<img src="../../../img/datasource/select_data_source.png" class="image-box img-70" /></p>
+</li>
+<li>
+<p>Provide a name and a description for your datasource. The name should be unique within your organization since the name will be used as a data source identifier when you reference it in notebooks.
+<img src="../../../img/datasource/data_source_create_popup_1.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Provide connection string information for your datasource so that Zepl can establish a JDBC connection to your Data Source. This connection string information is shared with everyone in your organization. The fields that are required vary for each Data Source integration. <br />
+<img src="../../../img/datasource/data_source_create_popup_2.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Add your personal user credentials to the Data Source. Every user hoping to run a notebook which uses that Data Source must add their own set of user credentials to the Data Source in order to be able to use it - credentials are private for each user and not shared across the organization. The required user credential fields will vary for each integration but are typically username and password. <br />
+<img src="../../../img/datasource/data_source_create_popup_3.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Click “Test Connection” to validate that you can properly connect to the data source. Then, click “Add” to save your Data Source. <br />
+<img src="../../../img/datasource/data_source_create_popup_4.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>You have successfully created a Data Source! The datasource will attach to the notebook it was created in. To use the Data Source in any other notebook, simply add the Data Source to the notebook by clicking the “+” arrow next to its name. <br />
+<img src="../../../img/datasource/attach_data_source_to_notebook.png" class="image-box img-100" /></p>
+</li>
+</ol>
+<h3 id="adding-credentials-to-an-existing-data-source"><a class="toclink" href="#adding-credentials-to-an-existing-data-source">Adding Credentials to An Existing Data Source</a></h3>
+<p>Data Sources connections are shared with all members of an organization. However, each user must go through a one-step configuration to securely add their own credentials (or a shared set of credentials)  to the data source. After adding a Data Source to the Notebook, click <em>Test all connections</em> to see if your connection is fully configured. Any data source that has not been properly configured will cause an error and you can add your credentials to it by clicking edit.
+<img src="../../../img/datasource/set_data_source_credential.png" class="image-box img-100" /></p>
+<h3 id="managing-data-sources"><a class="toclink" href="#managing-data-sources">Managing Data Sources</a></h3>
+<p>You can manage an Organization's data sources on the <em>Data Sources</em> page in the resources section of the website. Everyone in the organization has access to this page and can add, update or delete data sources.
+To use data sources created by other members simply enter your own data source account credentials. The <em>My credentials</em> column in the list indicates whether you have set your credentials or not and neighboring columns indicate how many members have set their own credentials and how many notebooks the data source is attached to.
+<img src="../../../img/datasource/data_source_manage.png" class="image-box img-100" /></p>
+<h3 id="exploring-data-from-a-data-source"><a class="toclink" href="#exploring-data-from-a-data-source">Exploring Data from a Data Source</a></h3>
+<p>Once you create the Data Source you can explore and interact with it in the notebook via Python, Spark, SQL, or R. The first step is adding the Data Source to a notebook. The Data Source name is then used in a code snippet to establish the connection. Below we use the <code>Zepl_DS</code> Data Source as an example.</p>
+<h4 id="python-example"><a class="toclink" href="#python-example">Python Example</a></h4>
+<pre><code class="language-python">%python
+import pandas as pd
+# establish connection to Snowflake
+conn = z.getDatasource('Zepl_DS')
+
+# execute query
+res = conn.execute('SELECT * FROM ITEM LIMIT 1000')
+
+# convert datasource into pandas dataframe
+df = pd.DataFrame(res)
+df.columns = [col[0] for col in conn.description]
+
+# print dataframe as table
+z.show(df)
+</code></pre>
+<h4 id="spark-example"><a class="toclink" href="#spark-example">Spark Example</a></h4>
+<pre><code class="language-scala">%spark
+// establish connection to Snowflake and read query result as spark dataframe
+val df = z.getDatasource(&quot;Zepl_DS&quot;)
+  .asInstanceOf[org.apache.spark.sql.DataFrameReader]
+  .option(&quot;query&quot;, &quot;SELECT * FROM ITEM LIMIT 100&quot;)
+  .load()
+
+// print dataframe as table
+z.show(df)
+</code></pre>
+<h4 id="r-example"><a class="toclink" href="#r-example">R example</a></h4>
+<pre><code class="language-r">%r
+# conn is an DBIConnection object returned by dbConnect() from DPLYR library
+conn &lt;- z.getDatasource(&quot;Zepl_DS&quot;)
+
+# use dbGetQuery() from DPLYR library to run query
+apps &lt;- dbGetQuery(conn$con, &quot;select * from trip_master limit 200&quot;)
+
+# z.show() works for the results returned from dbGetQuery()
+z.show(apps)
+</code></pre>
+<h4 id="sql-example"><a class="toclink" href="#sql-example">SQL Example</a></h4>
+<pre><code class="language-sql">%datasource.Zepl_DS
+SELECT * FROM ITEM LIMIT 1000
+</code></pre></div>
+                <div class="visible-xs">
+<h1 id="data-sources"><a class="toclink" href="#data-sources">Data Sources</a></h1>
+<p>Zepl Data Sources enable you to securely connect to the database of your choice with your personal credentials. It allows users a secure way to save JDBC connection configurations and to use those configurations in the notebook. Each user is able to add their own credentials to a datasource, making it easy to maintain a library of secure data connections that everyone on the team can use.</p>
+<h3 id="establishing-a-data-source-connection"><a class="toclink" href="#establishing-a-data-source-connection">Establishing a Data Source Connection</a></h3>
+<ol>
+<li>
+<p>Click the <em>Data Source</em> icon in the upper right side to open the data source panel and click the <em>Add New</em> button.
+<img src="../../../img/datasource/snowflake_note.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Select a Data Source type. Zepl currently integrates with Snowflake, S3, MySQL, PostgreSQL, Cassandra, and SAP HANA - we are constantly adding more, so let us know if something you were hoping to use is not yet available!
+<img src="../../../img/datasource/select_data_source.png" class="image-box img-70" /></p>
+</li>
+<li>
+<p>Provide a name and a description for your datasource. The name should be unique within your organization since the name will be used as a data source identifier when you reference it in notebooks.
+<img src="../../../img/datasource/data_source_create_popup_1.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Provide connection string information for your datasource so that Zepl can establish a JDBC connection to your Data Source. This connection string information is shared with everyone in your organization. The fields that are required vary for each Data Source integration. <br />
+<img src="../../../img/datasource/data_source_create_popup_2.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Add your personal user credentials to the Data Source. Every user hoping to run a notebook which uses that Data Source must add their own set of user credentials to the Data Source in order to be able to use it - credentials are private for each user and not shared across the organization. The required user credential fields will vary for each integration but are typically username and password. <br />
+<img src="../../../img/datasource/data_source_create_popup_3.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>Click “Test Connection” to validate that you can properly connect to the data source. Then, click “Add” to save your Data Source. <br />
+<img src="../../../img/datasource/data_source_create_popup_4.png" class="image-box img-100" /></p>
+</li>
+<li>
+<p>You have successfully created a Data Source! The datasource will attach to the notebook it was created in. To use the Data Source in any other notebook, simply add the Data Source to the notebook by clicking the “+” arrow next to its name. <br />
+<img src="../../../img/datasource/attach_data_source_to_notebook.png" class="image-box img-100" /></p>
+</li>
+</ol>
+<h3 id="adding-credentials-to-an-existing-data-source"><a class="toclink" href="#adding-credentials-to-an-existing-data-source">Adding Credentials to An Existing Data Source</a></h3>
+<p>Data Sources connections are shared with all members of an organization. However, each user must go through a one-step configuration to securely add their own credentials (or a shared set of credentials)  to the data source. After adding a Data Source to the Notebook, click <em>Test all connections</em> to see if your connection is fully configured. Any data source that has not been properly configured will cause an error and you can add your credentials to it by clicking edit.
+<img src="../../../img/datasource/set_data_source_credential.png" class="image-box img-100" /></p>
+<h3 id="managing-data-sources"><a class="toclink" href="#managing-data-sources">Managing Data Sources</a></h3>
+<p>You can manage an Organization's data sources on the <em>Data Sources</em> page in the resources section of the website. Everyone in the organization has access to this page and can add, update or delete data sources.
+To use data sources created by other members simply enter your own data source account credentials. The <em>My credentials</em> column in the list indicates whether you have set your credentials or not and neighboring columns indicate how many members have set their own credentials and how many notebooks the data source is attached to.
+<img src="../../../img/datasource/data_source_manage.png" class="image-box img-100" /></p>
+<h3 id="exploring-data-from-a-data-source"><a class="toclink" href="#exploring-data-from-a-data-source">Exploring Data from a Data Source</a></h3>
+<p>Once you create the Data Source you can explore and interact with it in the notebook via Python, Spark, SQL, or R. The first step is adding the Data Source to a notebook. The Data Source name is then used in a code snippet to establish the connection. Below we use the <code>Zepl_DS</code> Data Source as an example.</p>
+<h4 id="python-example"><a class="toclink" href="#python-example">Python Example</a></h4>
+<pre><code class="language-python">%python
+import pandas as pd
+# establish connection to Snowflake
+conn = z.getDatasource('Zepl_DS')
+
+# execute query
+res = conn.execute('SELECT * FROM ITEM LIMIT 1000')
+
+# convert datasource into pandas dataframe
+df = pd.DataFrame(res)
+df.columns = [col[0] for col in conn.description]
+
+# print dataframe as table
+z.show(df)
+</code></pre>
+<h4 id="spark-example"><a class="toclink" href="#spark-example">Spark Example</a></h4>
+<pre><code class="language-scala">%spark
+// establish connection to Snowflake and read query result as spark dataframe
+val df = z.getDatasource(&quot;Zepl_DS&quot;)
+  .asInstanceOf[org.apache.spark.sql.DataFrameReader]
+  .option(&quot;query&quot;, &quot;SELECT * FROM ITEM LIMIT 100&quot;)
+  .load()
+
+// print dataframe as table
+z.show(df)
+</code></pre>
+<h4 id="r-example"><a class="toclink" href="#r-example">R example</a></h4>
+<pre><code class="language-r">%r
+# conn is an DBIConnection object returned by dbConnect() from DPLYR library
+conn &lt;- z.getDatasource(&quot;Zepl_DS&quot;)
+
+# use dbGetQuery() from DPLYR library to run query
+apps &lt;- dbGetQuery(conn$con, &quot;select * from trip_master limit 200&quot;)
+
+# z.show() works for the results returned from dbGetQuery()
+z.show(apps)
+</code></pre>
+<h4 id="sql-example"><a class="toclink" href="#sql-example">SQL Example</a></h4>
+<pre><code class="language-sql">%datasource.Zepl_DS
+SELECT * FROM ITEM LIMIT 1000
+</code></pre></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

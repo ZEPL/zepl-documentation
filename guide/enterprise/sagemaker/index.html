@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+    <meta name="title" content="Amazon Sagemaker Integration | Zepl Documentation">
+    <title>Amazon Sagemaker Integration | Zepl Documentation</title>
+      
+      
+    <meta name="description" content="Amazon Sagemaker is a fully managed service for handling machine learning workflows. Learn  more about how to integrate Amazon Sagemaker with Zepl.">
+      
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/enterprise/sagemaker/">
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Sagemaker Integration</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#integration-with-amazon-sagemaker">Integration with Amazon Sagemaker</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="integration-with-amazon-sagemaker"><a class="toclink" href="#integration-with-amazon-sagemaker">Integration with Amazon Sagemaker</a></h1>
+<p>Amazon <a href="https://aws.amazon.com/sagemaker/"><em>Sagemaker</em></a> is a fully managed service for handling machine learning workflows. It enables users to build, train, and deploy ML models quickly. But before you can deploy your ML model, it must first be built, tuned, and iterated. Notebooks, and more specifically Zepl notebooks, are perfectly suited for these tasks.</p>
+<p>Now you can use Zepl to connect directly to <em>Sagemaker</em> in your VPC by simply selecting the <em>Sagemaker</em> resource available in Zepl.</p>
+<p>Simply create a new notebook and select <em>Sagemaker</em> in the resource drop down:</p>
+<p><img src="../../../img/sagemaker_resource.png" class="image-box img-100" /></p>
+<p>You can also switch an existing notebook's resource to <em>Sagemaker</em> by clicking the <em>Settings</em> link in the top right of the notebook.</p>
+<p>That's it! Nothing else to install. You can then do the following in the notebook:</p>
+<pre><code class="language-python">%python
+from sagemaker.session import Session
+from sagemaker import KMeans
+import boto3
+
+import pickle, gzip, numpy, urllib.request
+import matplotlib.pyplot as plt
+
+AWS_ACCESS_KEY_ID=&quot;[your_AWS_KEY_ID]&quot;
+AWS_SECRET_ACCESS_KEY=&quot;[your_AWS_SECRET_KEY]&quot;
+REGION_NAME = &quot;[region_of_your_VPC]&quot;
+
+def get_boto3_session_with_credentials():
+    return boto3.Session(aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY,region_name=REGION_NAME)
+
+role = &quot;[your_ARN_ROLE]&quot;
+session = Session(get_boto3_session_with_credentials())
+bucket = session.default_bucket()
+
+# your code goes below
+</code></pre>
+<p>As long as you have your AWS credentials setup correctly your model would be deployed to the <em>Sagemaker</em> service in your VPC. In addition, the Zepl <em>Sagemaker</em> resource image is already pre-loaded with the following Python libraries allowing you and your team to leverage <em>Sagemaker</em> for all of your machine learning needs:</p>
+<ul>
+<li>boto3</li>
+<li>matplotlib</li>
+<li>numpy</li>
+<li>pandas</li>
+<li>pandasql</li>
+<li>Pillow</li>
+<li>scipy</li>
+<li>scikit-learn</li>
+<li>tensorflow</li>
+<li>bkzep</li>
+<li>statsmodels</li>
+<li>seaborn</li>
+<li>plotly</li>
+<li>bokeh</li>
+<li>pydot</li>
+<li>keras</li>
+<li>nltk</li>
+<li>gensim</li>
+<li>scrapy</li>
+<li>requests</li>
+<li>sagemaker</li>
+</ul>
+<p>You can also create custom images for your organization using our <a href="../custom_image_support">Custom Image Support</a> feature. And as always, if you have any questions please don't hesitate to <a href="mailto:support@zepl.com">contact us</a>.</p></div>
+                <div class="visible-xs">
+<h1 id="integration-with-amazon-sagemaker"><a class="toclink" href="#integration-with-amazon-sagemaker">Integration with Amazon Sagemaker</a></h1>
+<p>Amazon <a href="https://aws.amazon.com/sagemaker/"><em>Sagemaker</em></a> is a fully managed service for handling machine learning workflows. It enables users to build, train, and deploy ML models quickly. But before you can deploy your ML model, it must first be built, tuned, and iterated. Notebooks, and more specifically Zepl notebooks, are perfectly suited for these tasks.</p>
+<p>Now you can use Zepl to connect directly to <em>Sagemaker</em> in your VPC by simply selecting the <em>Sagemaker</em> resource available in Zepl.</p>
+<p>Simply create a new notebook and select <em>Sagemaker</em> in the resource drop down:</p>
+<p><img src="../../../img/sagemaker_resource.png" class="image-box img-100" /></p>
+<p>You can also switch an existing notebook's resource to <em>Sagemaker</em> by clicking the <em>Settings</em> link in the top right of the notebook.</p>
+<p>That's it! Nothing else to install. You can then do the following in the notebook:</p>
+<pre><code class="language-python">%python
+from sagemaker.session import Session
+from sagemaker import KMeans
+import boto3
+
+import pickle, gzip, numpy, urllib.request
+import matplotlib.pyplot as plt
+
+AWS_ACCESS_KEY_ID=&quot;[your_AWS_KEY_ID]&quot;
+AWS_SECRET_ACCESS_KEY=&quot;[your_AWS_SECRET_KEY]&quot;
+REGION_NAME = &quot;[region_of_your_VPC]&quot;
+
+def get_boto3_session_with_credentials():
+    return boto3.Session(aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY,region_name=REGION_NAME)
+
+role = &quot;[your_ARN_ROLE]&quot;
+session = Session(get_boto3_session_with_credentials())
+bucket = session.default_bucket()
+
+# your code goes below
+</code></pre>
+<p>As long as you have your AWS credentials setup correctly your model would be deployed to the <em>Sagemaker</em> service in your VPC. In addition, the Zepl <em>Sagemaker</em> resource image is already pre-loaded with the following Python libraries allowing you and your team to leverage <em>Sagemaker</em> for all of your machine learning needs:</p>
+<ul>
+<li>boto3</li>
+<li>matplotlib</li>
+<li>numpy</li>
+<li>pandas</li>
+<li>pandasql</li>
+<li>Pillow</li>
+<li>scipy</li>
+<li>scikit-learn</li>
+<li>tensorflow</li>
+<li>bkzep</li>
+<li>statsmodels</li>
+<li>seaborn</li>
+<li>plotly</li>
+<li>bokeh</li>
+<li>pydot</li>
+<li>keras</li>
+<li>nltk</li>
+<li>gensim</li>
+<li>scrapy</li>
+<li>requests</li>
+<li>sagemaker</li>
+</ul>
+<p>You can also create custom images for your organization using our <a href="../custom_image_support">Custom Image Support</a> feature. And as always, if you have any questions please don't hesitate to <a href="mailto:support@zepl.com">contact us</a>.</p></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

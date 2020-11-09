@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+    <meta name="title" content="Apache Zeppelin Tutorial | Exporting Zepl Notebooks">
+    <title>Apache Zeppelin Tutorial | Exporting Zepl Notebooks</title>
+      
+      
+    <meta name="description" content="In this Apache Zeppelin tutorial we explore exporting native notebooks to the Zeppelin format for use in your Zeppelin instance. Visit us to learn more.">
+      
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/export_notebook/">
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Export Notebook</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#exporting-zepl-notebooks">Exporting Zepl Notebooks</a></li>
+                    
+                        <li><a class="toctree-l4" href="#export-to-the-apache-zeppelin-notebook-format">Export to the Apache Zeppelin Notebook Format</a></li>
+                    
+                        <li><a class="toctree-l4" href="#importing-into-an-apache-zeppelin-instance">Importing into an Apache Zeppelin Instance</a></li>
+                    
+                        <li><a class="toctree-l4" href="#apache-zeppelin-file-size-limitations">Apache Zeppelin File Size Limitations</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../resource_mgmt/">Resources</a>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="exporting-zepl-notebooks"><a class="toclink" href="#exporting-zepl-notebooks">Exporting Zepl Notebooks</a></h1>
+<p>Zepl supports exporting its native notebooks to the Apache Zeppelin format for use in your Zeppelin instances or for storage in an external repository.</p>
+<h2 id="export-to-the-apache-zeppelin-notebook-format"><a class="toclink" href="#export-to-the-apache-zeppelin-notebook-format">Export to the Apache Zeppelin Notebook Format</a></h2>
+<p>To export your notebook use the <code>Export to Zeppelin</code> menu item in the "..." menu at the top right of the notebook page as shown below:</p>
+<p><img src="../../img/export_notebook/01_zepl_export_menu.png" class="image-box img-100" /></p>
+<p>Then select the version you'd like to export to and the file will be automatically downloaded to your local filesystem.</p>
+<blockquote>
+<p>Note: We currently support export to versions v0.7.x and v0.8.x in JSON format and v0.9.x in the <code>.zpln</code> file format.</p>
+</blockquote>
+<h2 id="importing-into-an-apache-zeppelin-instance"><a class="toclink" href="#importing-into-an-apache-zeppelin-instance">Importing into an Apache Zeppelin Instance</a></h2>
+<p>Use the <code>Import note</code> menu on the home page of your Apache Zeppelin instance as shown below:</p>
+<p><img src="../../img/export_notebook/02_zeppelin_import_menu.png" class="image-box img-100" /></p>
+<h2 id="apache-zeppelin-file-size-limitations"><a class="toclink" href="#apache-zeppelin-file-size-limitations">Apache Zeppelin File Size Limitations</a></h2>
+<p>If you encounter issues due to your downloaded notebook's file size being too large for your Apache Zeppelin instance (the default is 1MB) you can increase the limit by changing the <code>zeppelin.websocket.max.text.message.size</code> property in  <code>ZEPPELIN_HOME/conf/zeppelin-site.xml</code>. The example below sets the maximum limit to 50MB:</p>
+<pre><code class="language-xml">&lt;property&gt;
+  &lt;name&gt;zeppelin.websocket.max.text.message.size&lt;/name&gt;
+  &lt;value&gt;52428800&lt;/value&gt;
+  &lt;description&gt;Size in characters of the maximum text message to be received by websocket. Defaults to 1024000&lt;/description&gt;
+&lt;/property&gt;
+</code></pre>
+<p>Alternatively you can set the <code>ZEPPELIN_WEBSOCKET_MAX_TEXT_MESSAGE_SIZE</code> environment variable in <code>ZEPPELIN_HOME/conf/zeppelin-env.sh</code>. </p>
+<p>For more information on configuration please refer to the official <a href="https://zeppelin.apache.org/">Apache Zeppelin documentation</a>.</p></div>
+                <div class="visible-xs">
+<h1 id="exporting-zepl-notebooks"><a class="toclink" href="#exporting-zepl-notebooks">Exporting Zepl Notebooks</a></h1>
+<p>Zepl supports exporting its native notebooks to the Apache Zeppelin format for use in your Zeppelin instances or for storage in an external repository.</p>
+<h2 id="export-to-the-apache-zeppelin-notebook-format"><a class="toclink" href="#export-to-the-apache-zeppelin-notebook-format">Export to the Apache Zeppelin Notebook Format</a></h2>
+<p>To export your notebook use the <code>Export to Zeppelin</code> menu item in the "..." menu at the top right of the notebook page as shown below:</p>
+<p><img src="../../img/export_notebook/01_zepl_export_menu.png" class="image-box img-100" /></p>
+<p>Then select the version you'd like to export to and the file will be automatically downloaded to your local filesystem.</p>
+<blockquote>
+<p>Note: We currently support export to versions v0.7.x and v0.8.x in JSON format and v0.9.x in the <code>.zpln</code> file format.</p>
+</blockquote>
+<h2 id="importing-into-an-apache-zeppelin-instance"><a class="toclink" href="#importing-into-an-apache-zeppelin-instance">Importing into an Apache Zeppelin Instance</a></h2>
+<p>Use the <code>Import note</code> menu on the home page of your Apache Zeppelin instance as shown below:</p>
+<p><img src="../../img/export_notebook/02_zeppelin_import_menu.png" class="image-box img-100" /></p>
+<h2 id="apache-zeppelin-file-size-limitations"><a class="toclink" href="#apache-zeppelin-file-size-limitations">Apache Zeppelin File Size Limitations</a></h2>
+<p>If you encounter issues due to your downloaded notebook's file size being too large for your Apache Zeppelin instance (the default is 1MB) you can increase the limit by changing the <code>zeppelin.websocket.max.text.message.size</code> property in  <code>ZEPPELIN_HOME/conf/zeppelin-site.xml</code>. The example below sets the maximum limit to 50MB:</p>
+<pre><code class="language-xml">&lt;property&gt;
+  &lt;name&gt;zeppelin.websocket.max.text.message.size&lt;/name&gt;
+  &lt;value&gt;52428800&lt;/value&gt;
+  &lt;description&gt;Size in characters of the maximum text message to be received by websocket. Defaults to 1024000&lt;/description&gt;
+&lt;/property&gt;
+</code></pre>
+<p>Alternatively you can set the <code>ZEPPELIN_WEBSOCKET_MAX_TEXT_MESSAGE_SIZE</code> environment variable in <code>ZEPPELIN_HOME/conf/zeppelin-env.sh</code>. </p>
+<p>For more information on configuration please refer to the official <a href="https://zeppelin.apache.org/">Apache Zeppelin documentation</a>.</p></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+    <meta name="title" content="Data Science Libraries and Resources | Zepl Documentation">
+    <title>Data Science Libraries and Resources | Zepl Documentation</title>
+      
+      
+    <meta name="description" content="Zepl Resources include some of the most popular data science libraries and packages. Visit us to learn more about attaching a Resource to a Zepl Notebook.">
+      
+    
+    
+    
+        <meta name="author" content="Zepl">
+    
+    
+        <link rel="canonical" href="http://docs.zepl.com/guide/resource_mgmt/">
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="http://docs.zepl.com/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/style.css">
+    <link rel="stylesheet" href="http://docs.zepl.com/css/highlight.css">
+
+
+    <link href="../../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-38575365-18', 'docs.zepl.com');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+  <div class="landing-navbar-container hidden-xs">
+    <div class="navbar-header">
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-logo.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="container visible-xs">
+    <div class="navbar-header">
+      <div class="landing-navbar__mobile-menu-button" data-toggle="collapse" data-target=".navbar-collapse">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <title>icons/menu</title>
+            <path d="M0 15h20v-1H0v1zm0-4h20v-1H0v1zm0-5v1h20V6H0z" fill="#47354C" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+      <a class="navbar-brand landing-navbar__zepl-logo" href="https://www.zepl.com">
+        <img alt="Zepl logo" src="/img/zepl-icon.png" class="landing-navbar__zepl-logo-img">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="http://docs.zepl.com/" class="">User Guide</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/faq/" class="">FAQ</a>
+        </li>
+        <li>
+          <a href="http://docs.zepl.com/support/" class="">Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+    <div class="container">
+        
+            <div class="toc-menu hidden-xs"><div class="bs-sidebar">
+    <form id="mkdocs-search-query" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form>
+    
+        
+    
+        
+            
+                
+    
+        <li class="toctree-l1 ">
+            Access Controls
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../accesscontrols/organization_permissions/">Organization Permissions</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../sharing_notebooks/">Sharing Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            External Notebooks
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../zeppelin_integration/">Apache Zeppelin</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../github_integration/">Github</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../s3_integration/">Amazon S3</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../import_notebook/">Import Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../export_notebook/">Export Notebook</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../exploring_notebooks/">Explore Public Notebooks</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../feature_versioning/">Notebook Versioning</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../autocompletion_notebooks/">Autocompletion</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Interpreters
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/spark/">Apache Spark</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/python/">Python</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/jdbc/">JDBC</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/config/">Config</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../interpreter/angular/">Angular</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Accessing Data
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/datasource/">Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/datasource_integration/">Data Source Integrations</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../datasource/datasource_objects/">Using Zepl Data Sources</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../accessing_data/">Uploading Data</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 current">
+            <a class="current" href="./">Resources</a>
+            
+                <ul>
+                
+                    <li class="toctree-l3"><a href="#resources-in-zepl">Resources in Zepl</a></li>
+                    
+                        <li><a class="toctree-l4" href="#attaching-a-resource-to-a-notebook">Attaching a Resource to a Notebook</a></li>
+                    
+                        <li><a class="toctree-l4" href="#resource-management">Resource Management</a></li>
+                    
+                        <li><a class="toctree-l4" href="#resource-permissions">Resource Permissions</a></li>
+                    
+                
+                </ul>
+            
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Partnerships
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../partnerships/snowflake_partner_connect/">Snowflake Partner Connect</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Authentication
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../authentication/zepl_account/">Zepl Account</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../authentication/authentication_providers/">Authentication Providers</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+                
+    
+        <li class="toctree-l1 ">
+            Enterprise
+            <ul class="bs-sidenav sub-nav">
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/emr_integration/">Amazon EMR Integration</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/custom_image_support/">Custom Image Support</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/custom_image_saas/">SaaS Image Builder</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/custom_image_zcr/">VPC zcr Utility</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/logging_console/">Log Console</a>
+            
+        </li>
+    
+
+
+                
+                    
+    
+        <li class="toctree-l1 ">
+            <a class="" href="../enterprise/sagemaker/">Sagemaker Integration</a>
+            
+        </li>
+    
+
+
+                   
+            </ul>
+        </li>
+    
+
+
+            
+        
+    
+        
+    
+        
+    
+</div></div>
+            <div class="visible-xs"><form id="mkdocs-search-query" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+</form></div>
+        
+        
+            
+                <!-- Hack to get side menu only to appear if it's a content menu-->
+                <div class="guide-content hidden-xs">
+<h1 id="resources-in-zepl"><a class="toclink" href="#resources-in-zepl">Resources in Zepl</a></h1>
+<p>A Resource must be attached to a Zepl Notebook before it can be executed.
+Resources in Zepl determine which interpreters will be available and which type of physical resource (e.g CPU, RAM, etc.) will be allocated to execute the notebook.</p>
+<p>Zepl Resources include some of the most popular data science packages and libraries:</p>
+<ul>
+<li>Spark 2.2, 2.3</li>
+<li>R packages<ul>
+<li>ggplot2</li>
+<li>knitr</li>
+<li>bayesian_first_aid</li>
+</ul>
+</li>
+<li>
+<p>Python 2.7, 3.6</p>
+<ul>
+<li><a href="/guide/interpreter/python/#python-interpreter">pre installed python libraries</a></li>
+</ul>
+<p>You can run <code>pip list</code> on the python interpreter to see the full list of installed python packages. Zepl also supports <code>pip</code> and <code>conda</code> if additional libraries are required.</p>
+</li>
+</ul>
+<h2 id="attaching-a-resource-to-a-notebook"><a class="toclink" href="#attaching-a-resource-to-a-notebook">Attaching a Resource to a Notebook</a></h2>
+<p>You can select a resource when you create or clone a notebook.</p>
+<p><img src="../../img/create_new_notebook.png" class="image-box img-100" /></p>
+<p>You can also switch a notebook's attached resource after the notebook has been created through the notebook's <em>Settings</em> menu in the top right of the window.</p>
+<blockquote>
+<p>Changing the attached resource will cause any running containers to be shutdown.</p>
+</blockquote>
+<p><img src="../../img/notebook_settings.png" class="image-box img-100" /></p>
+<h2 id="resource-management"><a class="toclink" href="#resource-management">Resource Management</a></h2>
+<blockquote>
+<p>Note: only an organization's admin can create and manage a resource  </p>
+</blockquote>
+<p>Click <em>Resources</em> from the top right area of the main page.</p>
+<h3 id="creating-updating-resources"><a class="toclink" href="#creating-updating-resources">Creating &amp; Updating Resources</a></h3>
+<p>Zepl provides a <em>Simple Workload</em> as the default resource. Additional resources can be created to customize the capabilities and capacity of attached notebooks.</p>
+<p>To create a new resource click the <em>New Resource</em> button. The following form should appear.</p>
+<p><img src="../../img/new_resource.png" class="image-box img-100" /></p>
+<p>Give the new resource a name and description.</p>
+<h3 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h3>
+<ul>
+<li><em>Resource type</em>: select the container size for the running notebook (each resource type consumes hour units at different rates)</li>
+<li><em>Idle shutdown time</em>: the resource for a notebook will shutdown automatically if the container is idle for the set amount of time</li>
+<li><em>Max concurrent running notebooks</em>: the maximum number of notebooks which can be attached to this resource at the same time</li>
+<li><em>Processing time limit</em>: a limit to the total time that this resource can run across all notebooks - it's useful in preventing over-consumption of resources and capping the associated fees (<em>this is currently ignored</em>)</li>
+<li><em>Set as default resource</em>: sets resource to be selected by default when you create (clone) a notebook</li>
+<li><em>Image type</em>: defines which interpreters and tools are provided in the container in which the notebook will run</li>
+</ul>
+<p>You can edit the resource's settings by clicking on its name or on the <em>Change Setting</em> item in the "..." menu to the right of the resource entry in the list on the <em>Resource settings</em> page.</p>
+<p><img src="../../img/resource_menu.png" class="image-box img-70" /></p>
+<blockquote>
+<p>Note: You cannot change the container type or the image type after the resource is created. Create a new resource to do so.</p>
+</blockquote>
+<h3 id="deleting-resources"><a class="toclink" href="#deleting-resources">Deleting Resources</a></h3>
+<p>After a resource is deleted, all containers for that resource will be shutdown and any notebooks that have the deleted resource attached will be set to the default resource. If you're trying to delete the default resource, the next available resource in the resource list will be set as the next default resource.</p>
+<h2 id="resource-permissions"><a class="toclink" href="#resource-permissions">Resource Permissions</a></h2>
+<p>Users share resources within an organization. You can make use of resource permissions to control the usage of these resources by members of the organization.
+After the introduction of resource permissions users can attach resources
+to notebooks and run them.</p>
+<blockquote>
+<p>Note: <a href="/guide/sharing_notebooks/#more-about-sharing-options">View only and Edit permissions</a> set while sharing
+notebooks can only be used to restrict editing of notebooks and not
+restrict their execution.</p>
+</blockquote>
+<p>There are three different permissions presets which can be applied to users
+or <a href="/faq/#what-are-the-different-roles-available-in-Zepl-what-rights-do-each-have">user groups</a> such as team groups (members/managers) or <em>Space</em> user groups
+ (members/collaborators/managers)</p>
+<ul>
+<li><em>Allow Attach, Detach Resource on a notebook</em></li>
+<li><em>Allow Start, Stop, Execute Resource</em></li>
+<li><em>Allow Modify Resource Setting</em></li>
+</ul>
+<p>Please note that these permissions do not depend on each other or have
+precedence over each other. You will have to be explicit on permissions.
+A user who doesn't have attach permission can still have edit permission.
+Also giving permission to a specific user group doesn't give permission
+to a higher user group. For example, giving edit permission to users of a <em>Space</em>
+doesn't give edit permission to managers of that space.</p>
+<h3 id="creating-a-resource-permission"><a class="toclink" href="#creating-a-resource-permission">Creating a Resource Permission</a></h3>
+<p>Initially only resource admins can configure permissions for resources after which users given edit permission would be able to do this.</p>
+<p><img src="../../img/resource-add-permission-button.png" class="image-box img-70" /></p>
+<ul>
+<li>To add permissions go to a resource's edit page and click the
+<code>Add permissions</code> button.</li>
+</ul>
+<p><img src="../../img/resource-permission-popup.png" class="image-box img-100" /></p>
+<ul>
+<li>
+<p>Fill in the name of a user, <em>Space</em> or <em>Team</em>.</p>
+</li>
+<li>
+<p>Check the desired permissions and click <code>Submit</code>.</p>
+</li>
+</ul>
+<h3 id="editing-or-deleting-resource-permissions"><a class="toclink" href="#editing-or-deleting-resource-permissions">Editing or Deleting Resource Permissions</a></h3>
+<p><img src="../../img/resource-permission-context-menu.png" class="image-box img-70" /></p>
+<p>You can use the "..." menu on the right of the permissions entry in the list to edit or delete specific resource permissions.</p>
+<h4 id="creating-generic-permissions"><a class="toclink" href="#creating-generic-permissions">Creating Generic Permissions</a></h4>
+<p>To give permission to all users of a certain type, such as
+all users or all space collaborators or all team managers, type <code>all</code>
+in the search box.</p>
+<p><img src="../../img/resource-permission-all.png" class="image-box img-100" /></p>
+<p>Be aware that permissions operate as follows:</p>
+<ul>
+<li>specific user rules will overwrite all-user rules</li>
+<li>specific team rules will overwrite all-team rules</li>
+<li>specific space rules will overwrite all-space rules</li>
+</ul></div>
+                <div class="visible-xs">
+<h1 id="resources-in-zepl"><a class="toclink" href="#resources-in-zepl">Resources in Zepl</a></h1>
+<p>A Resource must be attached to a Zepl Notebook before it can be executed.
+Resources in Zepl determine which interpreters will be available and which type of physical resource (e.g CPU, RAM, etc.) will be allocated to execute the notebook.</p>
+<p>Zepl Resources include some of the most popular data science packages and libraries:</p>
+<ul>
+<li>Spark 2.2, 2.3</li>
+<li>R packages<ul>
+<li>ggplot2</li>
+<li>knitr</li>
+<li>bayesian_first_aid</li>
+</ul>
+</li>
+<li>
+<p>Python 2.7, 3.6</p>
+<ul>
+<li><a href="/guide/interpreter/python/#python-interpreter">pre installed python libraries</a></li>
+</ul>
+<p>You can run <code>pip list</code> on the python interpreter to see the full list of installed python packages. Zepl also supports <code>pip</code> and <code>conda</code> if additional libraries are required.</p>
+</li>
+</ul>
+<h2 id="attaching-a-resource-to-a-notebook"><a class="toclink" href="#attaching-a-resource-to-a-notebook">Attaching a Resource to a Notebook</a></h2>
+<p>You can select a resource when you create or clone a notebook.</p>
+<p><img src="../../img/create_new_notebook.png" class="image-box img-100" /></p>
+<p>You can also switch a notebook's attached resource after the notebook has been created through the notebook's <em>Settings</em> menu in the top right of the window.</p>
+<blockquote>
+<p>Changing the attached resource will cause any running containers to be shutdown.</p>
+</blockquote>
+<p><img src="../../img/notebook_settings.png" class="image-box img-100" /></p>
+<h2 id="resource-management"><a class="toclink" href="#resource-management">Resource Management</a></h2>
+<blockquote>
+<p>Note: only an organization's admin can create and manage a resource  </p>
+</blockquote>
+<p>Click <em>Resources</em> from the top right area of the main page.</p>
+<h3 id="creating-updating-resources"><a class="toclink" href="#creating-updating-resources">Creating &amp; Updating Resources</a></h3>
+<p>Zepl provides a <em>Simple Workload</em> as the default resource. Additional resources can be created to customize the capabilities and capacity of attached notebooks.</p>
+<p>To create a new resource click the <em>New Resource</em> button. The following form should appear.</p>
+<p><img src="../../img/new_resource.png" class="image-box img-100" /></p>
+<p>Give the new resource a name and description.</p>
+<h3 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h3>
+<ul>
+<li><em>Resource type</em>: select the container size for the running notebook (each resource type consumes hour units at different rates)</li>
+<li><em>Idle shutdown time</em>: the resource for a notebook will shutdown automatically if the container is idle for the set amount of time</li>
+<li><em>Max concurrent running notebooks</em>: the maximum number of notebooks which can be attached to this resource at the same time</li>
+<li><em>Processing time limit</em>: a limit to the total time that this resource can run across all notebooks - it's useful in preventing over-consumption of resources and capping the associated fees (<em>this is currently ignored</em>)</li>
+<li><em>Set as default resource</em>: sets resource to be selected by default when you create (clone) a notebook</li>
+<li><em>Image type</em>: defines which interpreters and tools are provided in the container in which the notebook will run</li>
+</ul>
+<p>You can edit the resource's settings by clicking on its name or on the <em>Change Setting</em> item in the "..." menu to the right of the resource entry in the list on the <em>Resource settings</em> page.</p>
+<p><img src="../../img/resource_menu.png" class="image-box img-70" /></p>
+<blockquote>
+<p>Note: You cannot change the container type or the image type after the resource is created. Create a new resource to do so.</p>
+</blockquote>
+<h3 id="deleting-resources"><a class="toclink" href="#deleting-resources">Deleting Resources</a></h3>
+<p>After a resource is deleted, all containers for that resource will be shutdown and any notebooks that have the deleted resource attached will be set to the default resource. If you're trying to delete the default resource, the next available resource in the resource list will be set as the next default resource.</p>
+<h2 id="resource-permissions"><a class="toclink" href="#resource-permissions">Resource Permissions</a></h2>
+<p>Users share resources within an organization. You can make use of resource permissions to control the usage of these resources by members of the organization.
+After the introduction of resource permissions users can attach resources
+to notebooks and run them.</p>
+<blockquote>
+<p>Note: <a href="/guide/sharing_notebooks/#more-about-sharing-options">View only and Edit permissions</a> set while sharing
+notebooks can only be used to restrict editing of notebooks and not
+restrict their execution.</p>
+</blockquote>
+<p>There are three different permissions presets which can be applied to users
+or <a href="/faq/#what-are-the-different-roles-available-in-Zepl-what-rights-do-each-have">user groups</a> such as team groups (members/managers) or <em>Space</em> user groups
+ (members/collaborators/managers)</p>
+<ul>
+<li><em>Allow Attach, Detach Resource on a notebook</em></li>
+<li><em>Allow Start, Stop, Execute Resource</em></li>
+<li><em>Allow Modify Resource Setting</em></li>
+</ul>
+<p>Please note that these permissions do not depend on each other or have
+precedence over each other. You will have to be explicit on permissions.
+A user who doesn't have attach permission can still have edit permission.
+Also giving permission to a specific user group doesn't give permission
+to a higher user group. For example, giving edit permission to users of a <em>Space</em>
+doesn't give edit permission to managers of that space.</p>
+<h3 id="creating-a-resource-permission"><a class="toclink" href="#creating-a-resource-permission">Creating a Resource Permission</a></h3>
+<p>Initially only resource admins can configure permissions for resources after which users given edit permission would be able to do this.</p>
+<p><img src="../../img/resource-add-permission-button.png" class="image-box img-70" /></p>
+<ul>
+<li>To add permissions go to a resource's edit page and click the
+<code>Add permissions</code> button.</li>
+</ul>
+<p><img src="../../img/resource-permission-popup.png" class="image-box img-100" /></p>
+<ul>
+<li>
+<p>Fill in the name of a user, <em>Space</em> or <em>Team</em>.</p>
+</li>
+<li>
+<p>Check the desired permissions and click <code>Submit</code>.</p>
+</li>
+</ul>
+<h3 id="editing-or-deleting-resource-permissions"><a class="toclink" href="#editing-or-deleting-resource-permissions">Editing or Deleting Resource Permissions</a></h3>
+<p><img src="../../img/resource-permission-context-menu.png" class="image-box img-70" /></p>
+<p>You can use the "..." menu on the right of the permissions entry in the list to edit or delete specific resource permissions.</p>
+<h4 id="creating-generic-permissions"><a class="toclink" href="#creating-generic-permissions">Creating Generic Permissions</a></h4>
+<p>To give permission to all users of a certain type, such as
+all users or all space collaborators or all team managers, type <code>all</code>
+in the search box.</p>
+<p><img src="../../img/resource-permission-all.png" class="image-box img-100" /></p>
+<p>Be aware that permissions operate as follows:</p>
+<ul>
+<li>specific user rules will overwrite all-user rules</li>
+<li>specific team rules will overwrite all-team rules</li>
+<li>specific space rules will overwrite all-space rules</li>
+</ul></div>
+            
+        
+    </div>
+
+    <footer class="col-md-12">
+
+        <hr>
+        <p>
+    </footer>
+
+    <script src="http://docs.zepl.com/js/jquery-2.1.1.min.js"></script>
+    <script src="http://docs.zepl.com/js/bootstrap-3.0.3.min.js"></script>
+    <script src="http://docs.zepl.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script src="http://docs.zepl.com/js/base.js"></script>
+    <script src="http://docs.zepl.com/search/main.js"></script>
+    </body>
+
+</html>
