@@ -359,6 +359,78 @@
                     <li class="toctree-l3"><a href="#data-source-objects-and-libraries">Data Source Objects and Libraries</a></li>
                     
                 
+                    <li class="toctree-l3"><a href="#snowflake">Snowflake</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-from-snowflake">Read from Snowflake</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-snowflake">Write data to Snowflake</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#amazon-s3">Amazon S3</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_1">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-amazon-s3">Read data from Amazon S3</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-amazon-s3">Write data to Amazon S3</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#google-bigquery">Google BigQuery</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_2">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-bigquery">Read data from BigQuery</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-bigquery">Write data to BigQuery</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#mysql">MySQL</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_3">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-mysql">Read data from MySQL</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-mysql">Write data to MySQL</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#postgresql">PostgreSQL</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_4">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-postgresql">Read data from PostgreSQL</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-postgresql">Write data to PostgreSQL</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#apache-cassandra">Apache Cassandra</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_5">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-apache-cassandra">Read data from Apache Cassandra</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-apache-cassandra">Write data to Apache Cassandra</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#sap-hana">SAP HANA</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_6">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-sap-hana">Read data from SAP HANA</a></li>
+                    
+                        <li><a class="toctree-l4" href="#write-data-to-sap-hana">Write data to SAP HANA</a></li>
+                    
+                
+                    <li class="toctree-l3"><a href="#alibaba-maxcompute">Alibaba MaxCompute</a></li>
+                    
+                        <li><a class="toctree-l4" href="#configure_7">Configure</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-from-alibaba-maxcompute">Read data from Alibaba MaxCompute</a></li>
+                    
+                        <li><a class="toctree-l4" href="#read-data-to-alibaba-maxcompute">Read data to Alibaba MaxCompute</a></li>
+                    
+                
                 </ul>
             
         </li>
@@ -547,154 +619,302 @@
 <li><a href="#sap-hana">SAP HANA</a></li>
 <li><a href="#alibaba-maxcompute">Alibaba MaxCompute</a></li>
 </ul>
-<hr>
-
-# Snowflake
-
-### Configure
-* Account (required)
-* Warehouse (optional - can be specified at the beginning of the session)
-* Database (optional - can be specified in each query)
-* Schema (optional - can be specified in each query)
-
->Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:
-<br>
->
->`cur = z.getDatasource("<data source name>")` <br>
->`cur.execute("USE WAREHOUSE <warehouse>")`
-
-
-### Read from Snowflake
-
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python   |`cur = z.getDatasource("<data source name>")` <br> <br>`conn = z.getDatasource("<data source name>_con")`  | <a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-cursor">Snowflake Cursor Object</a><br><br><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-connection">Snowflake Connection Object</a> | Snowflake-connector-python - v2.0.3 |
-| R / SparkR | `conn <- z.getDatasource("<data source name>")` | [DBIConnection object:](https://www.rdocumentation.org/packages/DBI/versions/0.5-1/topics/DBIConnection-class){:target="_blank"} Zepl function uses the `dbConnect()` function from the DPLYR library |  |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"} |
-| SQL | `%datasource.<data source name>` | JDBC connection to Snowflake | |
-
->Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
-
-### Write data to Snowflake
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24){:target="_blank"}
-
-# Amazon S3
-### Configure
-* Bucket Name (required)
-
-
-### Read data from Amazon S3
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|---------|------|-----------------|---------|
-|Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket){:target="_blank"} | Boto3 - v1.10.9
-
-### Write data to Amazon S3
-[Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413){:target="_blank"}
-
-# Google BigQuery
-### Configure
-* Google Cloud Project ID (required)
-
-
-### Read data from BigQuery
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `client = z.getDatasource("<data source name>")` | [BigQuery Client Object](https://googleapis.dev/python/bigquery/latest/reference.html#client){:target="_blank"}| google-cloud-bigquery - v1.21.0 |
-
-### Write data to BigQuery
->Example coming soon!
-
-# MySQL
-### Configure
-* Host (required)
-* Port (required)
-* Database (optional)
-
-
-### Read data from MySQL
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [mysql.connector.connect](https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html){:target="_blank"}|mysql-connector-python - v8.0.18 |
-| SQL | `%datasource.<data source name>`| | |
-
-### Write data to MySQL
->Example coming soon!
-
-# PostgreSQL
-### Configure
-* Host (required)
-* Port (required)
-* Database (optional)
-
-### Read data from PostgreSQL
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html){:target="_blank"} | psycopg2-binary - v2.8.4 |
-| SQL | `%datasource.<data source name>`| | |
-
-### Write data to PostgreSQL
->Example coming soon!
-
-# Apache Cassandra
-### Configure
-* Host (required)
-* Port (required)
-* Keyspace (optional)
-
-
-### Read data from Apache Cassandra
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session){:target="_blank"}| cassandra-driver - v3.20.0 |
-
-### Write data to Apache Cassandra
->Example coming soon!
-
-# SAP HANA
-### Configure
-* Host (required)
-* Port (required)
-* Database (optional)
-
-### Read data from SAP HANA
->Example coming soon!
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [dbapi.connect](https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html){:target="_blank"} | hdbcli - v2.4.167 |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"}|
-
-### Write data to SAP HANA
->Example coming soon!
-
-# Alibaba MaxCompute
-### Configure
-* Endpoint (required)
-* Region (required)
-* Project (required)
-
-### Read data from Alibaba MaxCompute
->Example coming soon!
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `odps = z.getDatasource("<data source name>")` | [ODPS Object](https://pyodps.readthedocs.io/en/latest/index.html)| pyodps - v0.8.4 |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html) | odps-jdbc-3.1.0.jar |
-
-### Read data to Alibaba MaxCompute
->Example coming soon!</div>
+<hr />
+<h1 id="snowflake"><a class="toclink" href="#snowflake">Snowflake</a></h1>
+<h3 id="configure"><a class="toclink" href="#configure">Configure</a></h3>
+<ul>
+<li>Account (required)</li>
+<li>Warehouse (optional - can be specified at the beginning of the session)</li>
+<li>Database (optional - can be specified in each query)</li>
+<li>Schema (optional - can be specified in each query)</li>
+</ul>
+<blockquote>
+<p>Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:</p>
+<p><code>cur = z.getDatasource("&lt;data source name&gt;")</code> <br>
+<code>cur.execute("USE WAREHOUSE &lt;warehouse&gt;")</code></p>
+</blockquote>
+<h3 id="read-from-snowflake"><a class="toclink" href="#read-from-snowflake">Read from Snowflake</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>cur = z.getDatasource("&lt;data source name&gt;")</code> <br> <br><code>conn = z.getDatasource("&lt;data source name&gt;_con")</code></td>
+<td><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-cursor">Snowflake Cursor Object</a><br><br><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-connection">Snowflake Connection Object</a></td>
+<td>Snowflake-connector-python - v2.0.3</td>
+</tr>
+<tr>
+<td>R / SparkR</td>
+<td><code>conn &lt;- z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://www.rdocumentation.org/packages/DBI/versions/0.5-1/topics/DBIConnection-class" target="_blank">DBIConnection object:</a> Zepl function uses the <code>dbConnect()</code> function from the DPLYR library</td>
+<td></td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>val df = z.getDatasource("&lt;data source name&gt;").asInstanceOf[org.apache.spark.sql.DataFrameReader]</code></td>
+<td>Spark SQL Dataframe: <a href="https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html" target="_blank">org.apache.spark.sql.DataFrameReader</a></td>
+<td></td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>%datasource.&lt;data source name&gt;</code></td>
+<td>JDBC connection to Snowflake</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: <code>net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed</code></p>
+</blockquote>
+<h3 id="write-data-to-snowflake"><a class="toclink" href="#write-data-to-snowflake">Write data to Snowflake</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<h1 id="amazon-s3"><a class="toclink" href="#amazon-s3">Amazon S3</a></h1>
+<h3 id="configure_1"><a class="toclink" href="#configure_1">Configure</a></h3>
+<ul>
+<li>Bucket Name (required)</li>
+</ul>
+<h3 id="read-data-from-amazon-s3"><a class="toclink" href="#read-data-from-amazon-s3">Read data from Amazon S3</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>s3_bucket = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket">Boto3 Bucket Object</a></td>
+<td>Boto3 - v1.10.9</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-amazon-s3"><a class="toclink" href="#write-data-to-amazon-s3">Write data to Amazon S3</a></h3>
+<p><a href="https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413">Open Examples in Zepl</a></p>
+<h1 id="google-bigquery"><a class="toclink" href="#google-bigquery">Google BigQuery</a></h1>
+<h3 id="configure_2"><a class="toclink" href="#configure_2">Configure</a></h3>
+<ul>
+<li>Google Cloud Project ID (required)</li>
+</ul>
+<h3 id="read-data-from-bigquery"><a class="toclink" href="#read-data-from-bigquery">Read data from BigQuery</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>client = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://googleapis.dev/python/bigquery/latest/reference.html#client">BigQuery Client Object</a></td>
+<td>google-cloud-bigquery - v1.21.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-bigquery"><a class="toclink" href="#write-data-to-bigquery">Write data to BigQuery</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="mysql"><a class="toclink" href="#mysql">MySQL</a></h1>
+<h3 id="configure_3"><a class="toclink" href="#configure_3">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Database (optional)</li>
+</ul>
+<h3 id="read-data-from-mysql"><a class="toclink" href="#read-data-from-mysql">Read data from MySQL</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>conn = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html">mysql.connector.connect</a></td>
+<td>mysql-connector-python - v8.0.18</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>%datasource.&lt;data source name&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-mysql"><a class="toclink" href="#write-data-to-mysql">Write data to MySQL</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="postgresql"><a class="toclink" href="#postgresql">PostgreSQL</a></h1>
+<h3 id="configure_4"><a class="toclink" href="#configure_4">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Database (optional)</li>
+</ul>
+<h3 id="read-data-from-postgresql"><a class="toclink" href="#read-data-from-postgresql">Read data from PostgreSQL</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>conn = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://www.psycopg.org/docs/connection.html">psycopg2.connect</a></td>
+<td>psycopg2-binary - v2.8.4</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>%datasource.&lt;data source name&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-postgresql"><a class="toclink" href="#write-data-to-postgresql">Write data to PostgreSQL</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="apache-cassandra"><a class="toclink" href="#apache-cassandra">Apache Cassandra</a></h1>
+<h3 id="configure_5"><a class="toclink" href="#configure_5">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Keyspace (optional)</li>
+</ul>
+<h3 id="read-data-from-apache-cassandra"><a class="toclink" href="#read-data-from-apache-cassandra">Read data from Apache Cassandra</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>session  = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session">cluster.connect.session</a></td>
+<td>cassandra-driver - v3.20.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-apache-cassandra"><a class="toclink" href="#write-data-to-apache-cassandra">Write data to Apache Cassandra</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="sap-hana"><a class="toclink" href="#sap-hana">SAP HANA</a></h1>
+<h3 id="configure_6"><a class="toclink" href="#configure_6">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Database (optional)</li>
+</ul>
+<h3 id="read-data-from-sap-hana"><a class="toclink" href="#read-data-from-sap-hana">Read data from SAP HANA</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>conn = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html">dbapi.connect</a></td>
+<td>hdbcli - v2.4.167</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>val df = z.getDatasource("&lt;data source name&gt;").asInstanceOf[org.apache.spark.sql.DataFrameReader]</code></td>
+<td>Spark SQL Dataframe: <a href="https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html">org.apache.spark.sql.DataFrameReader</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-sap-hana"><a class="toclink" href="#write-data-to-sap-hana">Write data to SAP HANA</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="alibaba-maxcompute"><a class="toclink" href="#alibaba-maxcompute">Alibaba MaxCompute</a></h1>
+<h3 id="configure_7"><a class="toclink" href="#configure_7">Configure</a></h3>
+<ul>
+<li>Endpoint (required)</li>
+<li>Region (required)</li>
+<li>Project (required)</li>
+</ul>
+<h3 id="read-data-from-alibaba-maxcompute"><a class="toclink" href="#read-data-from-alibaba-maxcompute">Read data from Alibaba MaxCompute</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>odps = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://pyodps.readthedocs.io/en/latest/index.html">ODPS Object</a></td>
+<td>pyodps - v0.8.4</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>val df = z.getDatasource("&lt;data source name&gt;").asInstanceOf[org.apache.spark.sql.DataFrameReader]</code></td>
+<td>Spark SQL Dataframe: <a href="https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html">org.apache.spark.sql.DataFrameReader</a></td>
+<td>odps-jdbc-3.1.0.jar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="read-data-to-alibaba-maxcompute"><a class="toclink" href="#read-data-to-alibaba-maxcompute">Read data to Alibaba MaxCompute</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote></div>
                 <div class="visible-xs">
 <h1 id="data-source-objects-and-libraries"><a class="toclink" href="#data-source-objects-and-libraries">Data Source Objects and Libraries</a></h1>
 <p>This article will cover all of the data types that are returned by Zepl’s secure data source objects. In order to build a standard method for accessing any data source, Zepl has built data source connectors to support one or all of the four programming languages used by data scientists; Python, R, Scala, and SQL.</p>
@@ -710,154 +930,302 @@
 <li><a href="#sap-hana">SAP HANA</a></li>
 <li><a href="#alibaba-maxcompute">Alibaba MaxCompute</a></li>
 </ul>
-<hr>
-
-# Snowflake
-
-### Configure
-* Account (required)
-* Warehouse (optional - can be specified at the beginning of the session)
-* Database (optional - can be specified in each query)
-* Schema (optional - can be specified in each query)
-
->Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:
-<br>
->
->`cur = z.getDatasource("<data source name>")` <br>
->`cur.execute("USE WAREHOUSE <warehouse>")`
-
-
-### Read from Snowflake
-
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python   |`cur = z.getDatasource("<data source name>")` <br> <br>`conn = z.getDatasource("<data source name>_con")`  | <a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-cursor">Snowflake Cursor Object</a><br><br><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-connection">Snowflake Connection Object</a> | Snowflake-connector-python - v2.0.3 |
-| R / SparkR | `conn <- z.getDatasource("<data source name>")` | [DBIConnection object:](https://www.rdocumentation.org/packages/DBI/versions/0.5-1/topics/DBIConnection-class){:target="_blank"} Zepl function uses the `dbConnect()` function from the DPLYR library |  |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"} |
-| SQL | `%datasource.<data source name>` | JDBC connection to Snowflake | |
-
->Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
-
-### Write data to Snowflake
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24){:target="_blank"}
-
-# Amazon S3
-### Configure
-* Bucket Name (required)
-
-
-### Read data from Amazon S3
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|---------|------|-----------------|---------|
-|Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket){:target="_blank"} | Boto3 - v1.10.9
-
-### Write data to Amazon S3
-[Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413){:target="_blank"}
-
-# Google BigQuery
-### Configure
-* Google Cloud Project ID (required)
-
-
-### Read data from BigQuery
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `client = z.getDatasource("<data source name>")` | [BigQuery Client Object](https://googleapis.dev/python/bigquery/latest/reference.html#client){:target="_blank"}| google-cloud-bigquery - v1.21.0 |
-
-### Write data to BigQuery
->Example coming soon!
-
-# MySQL
-### Configure
-* Host (required)
-* Port (required)
-* Database (optional)
-
-
-### Read data from MySQL
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [mysql.connector.connect](https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html){:target="_blank"}|mysql-connector-python - v8.0.18 |
-| SQL | `%datasource.<data source name>`| | |
-
-### Write data to MySQL
->Example coming soon!
-
-# PostgreSQL
-### Configure
-* Host (required)
-* Port (required)
-* Database (optional)
-
-### Read data from PostgreSQL
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html){:target="_blank"} | psycopg2-binary - v2.8.4 |
-| SQL | `%datasource.<data source name>`| | |
-
-### Write data to PostgreSQL
->Example coming soon!
-
-# Apache Cassandra
-### Configure
-* Host (required)
-* Port (required)
-* Keyspace (optional)
-
-
-### Read data from Apache Cassandra
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session){:target="_blank"}| cassandra-driver - v3.20.0 |
-
-### Write data to Apache Cassandra
->Example coming soon!
-
-# SAP HANA
-### Configure
-* Host (required)
-* Port (required)
-* Database (optional)
-
-### Read data from SAP HANA
->Example coming soon!
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [dbapi.connect](https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html){:target="_blank"} | hdbcli - v2.4.167 |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"}|
-
-### Write data to SAP HANA
->Example coming soon!
-
-# Alibaba MaxCompute
-### Configure
-* Endpoint (required)
-* Region (required)
-* Project (required)
-
-### Read data from Alibaba MaxCompute
->Example coming soon!
-
-| Language | Code | Object Returned | Library |
-|----------|------|-----------------|---------|
-| Python | `odps = z.getDatasource("<data source name>")` | [ODPS Object](https://pyodps.readthedocs.io/en/latest/index.html)| pyodps - v0.8.4 |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html) | odps-jdbc-3.1.0.jar |
-
-### Read data to Alibaba MaxCompute
->Example coming soon!</div>
+<hr />
+<h1 id="snowflake"><a class="toclink" href="#snowflake">Snowflake</a></h1>
+<h3 id="configure"><a class="toclink" href="#configure">Configure</a></h3>
+<ul>
+<li>Account (required)</li>
+<li>Warehouse (optional - can be specified at the beginning of the session)</li>
+<li>Database (optional - can be specified in each query)</li>
+<li>Schema (optional - can be specified in each query)</li>
+</ul>
+<blockquote>
+<p>Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:</p>
+<p><code>cur = z.getDatasource("&lt;data source name&gt;")</code> <br>
+<code>cur.execute("USE WAREHOUSE &lt;warehouse&gt;")</code></p>
+</blockquote>
+<h3 id="read-from-snowflake"><a class="toclink" href="#read-from-snowflake">Read from Snowflake</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>cur = z.getDatasource("&lt;data source name&gt;")</code> <br> <br><code>conn = z.getDatasource("&lt;data source name&gt;_con")</code></td>
+<td><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-cursor">Snowflake Cursor Object</a><br><br><a href="https://docs.snowflake.com/en/user-guide/python-connector-api.html#object-connection">Snowflake Connection Object</a></td>
+<td>Snowflake-connector-python - v2.0.3</td>
+</tr>
+<tr>
+<td>R / SparkR</td>
+<td><code>conn &lt;- z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://www.rdocumentation.org/packages/DBI/versions/0.5-1/topics/DBIConnection-class" target="_blank">DBIConnection object:</a> Zepl function uses the <code>dbConnect()</code> function from the DPLYR library</td>
+<td></td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>val df = z.getDatasource("&lt;data source name&gt;").asInstanceOf[org.apache.spark.sql.DataFrameReader]</code></td>
+<td>Spark SQL Dataframe: <a href="https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html" target="_blank">org.apache.spark.sql.DataFrameReader</a></td>
+<td></td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>%datasource.&lt;data source name&gt;</code></td>
+<td>JDBC connection to Snowflake</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: <code>net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed</code></p>
+</blockquote>
+<h3 id="write-data-to-snowflake"><a class="toclink" href="#write-data-to-snowflake">Write data to Snowflake</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<h1 id="amazon-s3"><a class="toclink" href="#amazon-s3">Amazon S3</a></h1>
+<h3 id="configure_1"><a class="toclink" href="#configure_1">Configure</a></h3>
+<ul>
+<li>Bucket Name (required)</li>
+</ul>
+<h3 id="read-data-from-amazon-s3"><a class="toclink" href="#read-data-from-amazon-s3">Read data from Amazon S3</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>s3_bucket = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket">Boto3 Bucket Object</a></td>
+<td>Boto3 - v1.10.9</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-amazon-s3"><a class="toclink" href="#write-data-to-amazon-s3">Write data to Amazon S3</a></h3>
+<p><a href="https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413">Open Examples in Zepl</a></p>
+<h1 id="google-bigquery"><a class="toclink" href="#google-bigquery">Google BigQuery</a></h1>
+<h3 id="configure_2"><a class="toclink" href="#configure_2">Configure</a></h3>
+<ul>
+<li>Google Cloud Project ID (required)</li>
+</ul>
+<h3 id="read-data-from-bigquery"><a class="toclink" href="#read-data-from-bigquery">Read data from BigQuery</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>client = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://googleapis.dev/python/bigquery/latest/reference.html#client">BigQuery Client Object</a></td>
+<td>google-cloud-bigquery - v1.21.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-bigquery"><a class="toclink" href="#write-data-to-bigquery">Write data to BigQuery</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="mysql"><a class="toclink" href="#mysql">MySQL</a></h1>
+<h3 id="configure_3"><a class="toclink" href="#configure_3">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Database (optional)</li>
+</ul>
+<h3 id="read-data-from-mysql"><a class="toclink" href="#read-data-from-mysql">Read data from MySQL</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>conn = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html">mysql.connector.connect</a></td>
+<td>mysql-connector-python - v8.0.18</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>%datasource.&lt;data source name&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-mysql"><a class="toclink" href="#write-data-to-mysql">Write data to MySQL</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="postgresql"><a class="toclink" href="#postgresql">PostgreSQL</a></h1>
+<h3 id="configure_4"><a class="toclink" href="#configure_4">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Database (optional)</li>
+</ul>
+<h3 id="read-data-from-postgresql"><a class="toclink" href="#read-data-from-postgresql">Read data from PostgreSQL</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>conn = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://www.psycopg.org/docs/connection.html">psycopg2.connect</a></td>
+<td>psycopg2-binary - v2.8.4</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>%datasource.&lt;data source name&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-postgresql"><a class="toclink" href="#write-data-to-postgresql">Write data to PostgreSQL</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="apache-cassandra"><a class="toclink" href="#apache-cassandra">Apache Cassandra</a></h1>
+<h3 id="configure_5"><a class="toclink" href="#configure_5">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Keyspace (optional)</li>
+</ul>
+<h3 id="read-data-from-apache-cassandra"><a class="toclink" href="#read-data-from-apache-cassandra">Read data from Apache Cassandra</a></h3>
+<p><a href="https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24">Open Examples in Zepl</a></p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>session  = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session">cluster.connect.session</a></td>
+<td>cassandra-driver - v3.20.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-apache-cassandra"><a class="toclink" href="#write-data-to-apache-cassandra">Write data to Apache Cassandra</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="sap-hana"><a class="toclink" href="#sap-hana">SAP HANA</a></h1>
+<h3 id="configure_6"><a class="toclink" href="#configure_6">Configure</a></h3>
+<ul>
+<li>Host (required)</li>
+<li>Port (required)</li>
+<li>Database (optional)</li>
+</ul>
+<h3 id="read-data-from-sap-hana"><a class="toclink" href="#read-data-from-sap-hana">Read data from SAP HANA</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>conn = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html">dbapi.connect</a></td>
+<td>hdbcli - v2.4.167</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>val df = z.getDatasource("&lt;data source name&gt;").asInstanceOf[org.apache.spark.sql.DataFrameReader]</code></td>
+<td>Spark SQL Dataframe: <a href="https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html">org.apache.spark.sql.DataFrameReader</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="write-data-to-sap-hana"><a class="toclink" href="#write-data-to-sap-hana">Write data to SAP HANA</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<h1 id="alibaba-maxcompute"><a class="toclink" href="#alibaba-maxcompute">Alibaba MaxCompute</a></h1>
+<h3 id="configure_7"><a class="toclink" href="#configure_7">Configure</a></h3>
+<ul>
+<li>Endpoint (required)</li>
+<li>Region (required)</li>
+<li>Project (required)</li>
+</ul>
+<h3 id="read-data-from-alibaba-maxcompute"><a class="toclink" href="#read-data-from-alibaba-maxcompute">Read data from Alibaba MaxCompute</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Code</th>
+<th>Object Returned</th>
+<th>Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>odps = z.getDatasource("&lt;data source name&gt;")</code></td>
+<td><a href="https://pyodps.readthedocs.io/en/latest/index.html">ODPS Object</a></td>
+<td>pyodps - v0.8.4</td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>val df = z.getDatasource("&lt;data source name&gt;").asInstanceOf[org.apache.spark.sql.DataFrameReader]</code></td>
+<td>Spark SQL Dataframe: <a href="https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html">org.apache.spark.sql.DataFrameReader</a></td>
+<td>odps-jdbc-3.1.0.jar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="read-data-to-alibaba-maxcompute"><a class="toclink" href="#read-data-to-alibaba-maxcompute">Read data to Alibaba MaxCompute</a></h3>
+<blockquote>
+<p>Example coming soon!</p>
+</blockquote></div>
             
         
     </div>
