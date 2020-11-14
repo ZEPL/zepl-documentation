@@ -14,7 +14,7 @@ Each programming language supports different access methods to each of these dat
 * [SAP HANA](#sap-hana)
 * [Alibaba MaxCompute](#alibaba-maxcompute)
 
-<hr>
+----
 
 # Snowflake
 
@@ -25,7 +25,8 @@ Each programming language supports different access methods to each of these dat
 * Schema (optional - can be specified in each query)
 
 >Note: If your Warehouse is not specified, the user will need to run the "USE WAREHOUSE <warehouse>" command in the language of their choice. I.e. if you are connecting through python, select warehouse in this way:
-<br>
+
+
 >
 >`cur = z.getDatasource("<data source name>")` <br>
 >`cur.execute("USE WAREHOUSE <warehouse>")`
@@ -33,7 +34,7 @@ Each programming language supports different access methods to each of these dat
 
 ### Read from Snowflake
 
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS81MDA5Y2QyNTY4NmI0MmE3ODBlMGU5MzhmYjRhOGViYy9ub3RlLmpzb24)
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
@@ -42,10 +43,10 @@ Each programming language supports different access methods to each of these dat
 | Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"} |
 | SQL | `%datasource.<data source name>` | JDBC connection to Snowflake | |
 
->Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
+> Note: Spark (Scala and Pyspark) require 'STAGE' permissions on the Snowflake database or else this exception may be thrown: `net.snowflake.client.jdbc.SnowflakeSQLException: SQL execution error: Creating stage on shared database 'SNOWFLAKE_SAMPLE_DATA' is not allowed`
 
 ### Write data to Snowflake
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83ZGQzZWYwOTYxMmY0MzQ3YmRmMDA5Nzc5MDk2MzY2OS9ub3RlLmpzb24)
 
 # Amazon S3
 ### Configure
@@ -53,14 +54,14 @@ Each programming language supports different access methods to each of these dat
 
 
 ### Read data from Amazon S3
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24)
 
 | Language | Code | Object Returned | Library |
 |---------|------|-----------------|---------|
-|Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket){:target="_blank"} | Boto3 - v1.10.9
+|Python   | `s3_bucket = z.getDatasource("<data source name>")`| [Boto3 Bucket Object](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#bucket) | Boto3 - v1.10.9
 
 ### Write data to Amazon S3
-[Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/OQ4NBK79S/notebooks/9fb05a846a394f8788a22f65796fb413)
 
 # Google BigQuery
 ### Configure
@@ -68,14 +69,14 @@ Each programming language supports different access methods to each of these dat
 
 
 ### Read data from BigQuery
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24)
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
-| Python | `client = z.getDatasource("<data source name>")` | [BigQuery Client Object](https://googleapis.dev/python/bigquery/latest/reference.html#client){:target="_blank"}| google-cloud-bigquery - v1.21.0 |
+| Python | `client = z.getDatasource("<data source name>")` | [BigQuery Client Object](https://googleapis.dev/python/bigquery/latest/reference.html#client)| google-cloud-bigquery - v1.21.0 |
 
 ### Write data to BigQuery
->Example coming soon!
+> Example coming soon!
 
 # MySQL
 ### Configure
@@ -85,11 +86,11 @@ Each programming language supports different access methods to each of these dat
 
 
 ### Read data from MySQL
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24)
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [mysql.connector.connect](https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html){:target="_blank"}|mysql-connector-python - v8.0.18 |
+| Python | `conn = z.getDatasource("<data source name>")` | [mysql.connector.connect](https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-connect.html)|mysql-connector-python - v8.0.18 |
 | SQL | `%datasource.<data source name>`| | |
 
 ### Write data to MySQL
@@ -102,15 +103,15 @@ Each programming language supports different access methods to each of these dat
 * Database (optional)
 
 ### Read data from PostgreSQL
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24)
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html){:target="_blank"} | psycopg2-binary - v2.8.4 |
+| Python | `conn = z.getDatasource("<data source name>")` | [psycopg2.connect](https://www.psycopg.org/docs/connection.html) | psycopg2-binary - v2.8.4 |
 | SQL | `%datasource.<data source name>`| | |
 
 ### Write data to PostgreSQL
->Example coming soon!
+> Example coming soon!
 
 # Apache Cassandra
 ### Configure
@@ -120,14 +121,14 @@ Each programming language supports different access methods to each of these dat
 
 
 ### Read data from Apache Cassandra
-[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
+[Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24)
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
-| Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session){:target="_blank"}| cassandra-driver - v3.20.0 |
+| Python | `session  = z.getDatasource("<data source name>")` | [cluster.connect.session](https://docs.datastax.com/en/developer/python-driver/3.24/api/cassandra/cluster/#cassandra.cluster.Session)| cassandra-driver - v3.20.0 |
 
 ### Write data to Apache Cassandra
->Example coming soon!
+> Example coming soon!
 
 # SAP HANA
 ### Configure
@@ -140,11 +141,11 @@ Each programming language supports different access methods to each of these dat
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
-| Python | `conn = z.getDatasource("<data source name>")` | [dbapi.connect](https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html){:target="_blank"} | hdbcli - v2.4.167 |
-| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html){:target="_blank"}|
+| Python | `conn = z.getDatasource("<data source name>")` | [dbapi.connect](https://help.sap.com/viewer/f1b440ded6144a54ada97ff95dac7adf/2.5/en-US/3b5ebe388c1040ec83617c9e511ecda5.html) | hdbcli - v2.4.167 |
+| Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html)|
 
 ### Write data to SAP HANA
->Example coming soon!
+> Example coming soon!
 
 # Alibaba MaxCompute
 ### Configure
@@ -153,7 +154,7 @@ Each programming language supports different access methods to each of these dat
 * Project (required)
 
 ### Read data from Alibaba MaxCompute
->Example coming soon!
+> Example coming soon!
 
 | Language | Code | Object Returned | Library |
 |----------|------|-----------------|---------|
@@ -161,4 +162,4 @@ Each programming language supports different access methods to each of these dat
 | Scala | ```val df = z.getDatasource("<data source name>").asInstanceOf[org.apache.spark.sql.DataFrameReader]``` | Spark SQL Dataframe: [org.apache.spark.sql.DataFrameReader](https://spark.apache.org/docs/2.3.1/api/java/org/apache/spark/sql/DataFrameReader.html) | odps-jdbc-3.1.0.jar |
 
 ### Read data to Alibaba MaxCompute
->Example coming soon!
+> Example coming soon!
