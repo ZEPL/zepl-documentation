@@ -30,7 +30,6 @@ Each programming language supports different access methods to each of these dat
 >`cur = z.getDatasource("<data source name>")` <br>
 >`cur.execute("USE WAREHOUSE <warehouse>")`
 
-<!--<img src="../../../img/datasource/snowflake_create_popup_1.png" class="image-box img-100" />-->
 
 ### Read from Snowflake
 
@@ -52,7 +51,6 @@ Each programming language supports different access methods to each of these dat
 ### Configure
 * Bucket Name (required)
 
-<!--<img src="../../../img/datasource/s3_create_popup.png" class="image-box img-100" />-->
 
 ### Read data from Amazon S3
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yYWE1M2I1MjAzMzE0NGM4OWQ0NGYwMjNmNTRmOTAwMC9ub3RlLmpzb24){:target="_blank"}
@@ -68,7 +66,6 @@ Each programming language supports different access methods to each of these dat
 ### Configure
 * Google Cloud Project ID (required)
 
-<!--<img src="../../../img/datasource/bigquery_create_popup.png" class="image-box img-100" />-->
 
 ### Read data from BigQuery
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9iNTk4MjBjMjg0YmQ0NDkzYjdkZmI1NjU5ZDY4NTNkYi9ub3RlLmpzb24){:target="_blank"}
@@ -86,7 +83,6 @@ Each programming language supports different access methods to each of these dat
 * Port (required)
 * Database (optional)
 
-<!--<img src="../../../img/datasource/mysql_create_popup.png" class="image-box img-100" />-->
 
 ### Read data from MySQL
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS83YzY2MjkwMzIyMjY0OTk4OWM5YTgxNDA4YmQzOWRiYi9ub3RlLmpzb24){:target="_blank"}
@@ -105,8 +101,6 @@ Each programming language supports different access methods to each of these dat
 * Port (required)
 * Database (optional)
 
-<!--<img src="../../../img/datasource/postgresql_create_popup.png" class="image-box img-100" />-->
-
 ### Read data from PostgreSQL
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS8yMDc4ZWZmNjE0MDU0MzJlOTEyMWYwNjcxNjBlZjg4Ni9ub3RlLmpzb24){:target="_blank"}
 
@@ -124,7 +118,6 @@ Each programming language supports different access methods to each of these dat
 * Port (required)
 * Keyspace (optional)
 
-<!--<img src="../../../img/datasource/cassandra_create_popup.png" class="image-box img-100" />-->
 
 ### Read data from Apache Cassandra
 [Open Examples in Zepl](https://app.zepl.com/viewer/notebooks/bm90ZTovL3pzaGFpbnNreUB6ZXBsLmNvbS9kMmJjMWY5ZDlhZWI0NzIxYjgwZDEyZDQ2OGFiODVmNC9ub3RlLmpzb24){:target="_blank"}
@@ -142,8 +135,6 @@ Each programming language supports different access methods to each of these dat
 * Port (required)
 * Database (optional)
 
-<!--<img src="../../../img/datasource/hana_create_popup.png" class="image-box img-100" />-->
-
 ### Read data from SAP HANA
 >Example coming soon!
 
@@ -160,8 +151,6 @@ Each programming language supports different access methods to each of these dat
 * Endpoint (required)
 * Region (required)
 * Project (required)
-
-<!--<img src="../../../img/datasource/maxcompute_create_popup.png" class="image-box img-100" />-->
 
 ### Read data from Alibaba MaxCompute
 >Example coming soon!
